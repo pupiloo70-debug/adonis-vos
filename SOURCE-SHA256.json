@@ -1,0 +1,9 @@
+{
+  "README.md": "af6f01d5b6370556981f5cd79b8e1ec7108bbdb5249a0933673f3f49a7ecaca2",
+  "registry.json": "21ab836d7e86516df0b6d296f6e1af25670788e2fabaf7bda1326bd4b75631f4",
+  "package.json": "844adf9330476ba9dc1b7f41f78afa804769fd239e1a60e6b2cf5c9c09283c29",
+  "CHANGELOG.md": "067b4787631f1acb8cab650633a3bb095260ef7a7888fbc92eb7bc0cf6a853ff",
+  "docs/HANDOFF.md": "0c9e9a047392d635dac0360abe31a305808933a51725b2db948b3378203b663b",
+  "src/engine.mjs": "eed3e6c5f167e7717f2ffcb83d7358dd52864dcf7f7c5100f1d24f5b1b6294c4",
+  "src/test.mjs": "a9ec047faca70e9a093c9dcc15998e183010dff9c50efafe2d933cdb500d4448"
+}
