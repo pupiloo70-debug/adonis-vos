@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {evaluate} from './engine.mjs';
+const answer=(value,basis='USER_REPORT',refs=[])=>({value,basis,refs});
+assert(evaluate({}).items.every(i=>i.status==='NEEDS_CHECK'));
+assert.equal(evaluate({record_access:answer('NO')}).items[0].status,'NOT_REPORTED');
+assert.equal(evaluate({record_access:answer('YES')}).items[0].status,'SIGNAL_REPORTED');
+assert.equal(evaluate({record_loss:answer('YES','CONFLICTING')}).items[1].basis,'CONFLICTING');
+assert.equal(evaluate({preservation_risk:answer('YES')}).items[6].priority,'PRESERVATION_FIRST');
+assert.equal(evaluate({preservation_risk:answer('UNKNOWN')}).items[6].status,'NEEDS_CHECK');
+assert.throws(()=>evaluate({record_access:answer('MAYBE')}));
+assert.throws(()=>evaluate([]));
+const source={record_access:answer('YES','DOCUMENT_REFERENCED',['R1'])};
+const before=JSON.stringify(source);const out=evaluate(source);
+out.items[0].refs.push('R2');assert.equal(JSON.stringify(source),before);
+assert.deepEqual(evaluate(source),evaluate(source));
+assert.equal(evaluate(source).total_score,null);
+assert.equal(evaluate({record_access:answer('YES','DOCUMENT_REFERENCED')}).items[0].status,'SIGNAL_REPORTED');
+console.log('12 core checks passed');
