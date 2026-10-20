@@ -68,3 +68,16 @@ console.log(JSON.stringify(result, null, 2));
 홈페이지: https://sgp-qsv-archive.pupiloo70.chatgpt.site/adonis-vos/
 
 `registry.json`의 초기 상태는 업로드 전 준비 상태입니다. 실제 GitHub 공개 커밋이 확인된 뒤 등록 상태와 영수증을 갱신합니다.
+
+
+## 2026년 10월 20일 상세 설계 착수
+
+[상세 설계 문서](docs/DETAILED-DESIGN-20261020.md)를 개발 기준 초안으로 연결합니다. 기존 0.1.0-draft 핵심 함수를 유지하면서 사건 입력·7개 점검 결과·요청–제공–누락 표·후속 조치 초안·JSON 저장/불러오기를 구체화했습니다. 데이터 계약, TECH-01~06 대응, 실패 사례와 수용 시험은 문서에서 확인할 수 있습니다.
+
+현재 상태는 DESIGN_DRAFT / IMPLEMENTATION_NOT_COMPLETED입니다. 첫 구현 목표는 입력·결과 화면과 요청–제공–누락 표 및 JSON 다운로드·불러오기입니다. 새 패키지 버전·공리·0.4.6 승인·실제 기관 제출을 뜻하지 않습니다.
+
+### 공개 상태 설명 정정
+
+위 업로드 전 상태 설명은 초기 안내입니다. 현재 registry.json에는 PUBLISHED_ON_GITHUB / CONFIRMED가 기록되어 있습니다. 코드 공개와 전체 앱 구현 완료는 구분합니다. 기존 SOURCE-SHA256.json의 현재 파일 바이트 정합성은 재확인 전까지 미확인으로 읽습니다.
+
+[홈페이지 기계판독 원칙](https://sgp-qsv-archive.pupiloo70.chatgpt.site/machine/principles/2026-10-20/record.json)과 연결하되, 비공개 사건 원문을 이 저장소에 중복 게시하지 않습니다.
