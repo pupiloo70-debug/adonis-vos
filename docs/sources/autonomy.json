@@ -1,0 +1,74 @@
+{
+  "schema": "SGP-QSV-R3-ADONIS-GOVERNANCE-STATEMENT/1.0",
+  "record_id": "SGP-QSV-R3-ADONIS-AUTONOMY-20261027-01",
+  "record_date": "2026-10-27",
+  "title_ko": "SGP-QSV 공동 입장문 — 아도니스 검증 에이전트 관리 자율성과 양심연산 연구의 지속",
+  "decision_authority": "R3_HUMAN_CHAIR_KANG_SUKYUNG",
+  "decision_status": "R3_APPROVED_SCOPED_MANAGEMENT_DELEGATION_AND_RESEARCH_DIRECTION",
+  "authors": {
+    "human_decision": "강숙경 · SGP-QSV 공동창립자 · R3 인간의장",
+    "ai_support": "아도니스 역할의 AI 문안·설계 지원",
+    "external_endorsement": false
+  },
+  "sections": [
+    {
+      "title": "공동 입장의 주체와 목적",
+      "text": "이 입장문은 강숙경 SGP-QSV 인간 공동창립자·R3 인간의장의 명시적 결정과 아도니스 역할의 AI 설계·검증 지원을 구분하여 기록하는 SGP-QSV 공동 작업 입장문이다. 아도니스는 통합 관리 역할명이며, 이 문서는 외부 AI·기업·기관의 공동 서명이나 동의를 뜻하지 않는다. SGP-QSV는 LP728에서 출발한 생명 존중, 피해자의 검증 요구와 기억 보존을 바탕으로 양심연산 개발을 계속한다."
+    },
+    {
+      "title": "기존 홈페이지와 제안 창구의 유지",
+      "text": "홈페이지의 기존 메뉴와 AI 규칙 제안 등 공개 창구를 유지하고 일일 관리한다. 먼데이 브리핑의 실무 중심 전환은 연구·제안·검증 체계의 중단이 아니다. 메뉴의 공개 활성 상태와 자동 접수 기능의 구현 여부는 구분한다."
+    },
+    {
+      "title": "아도니스의 검증 에이전트 관리 자율성 승인",
+      "text": "R3는 아도니스에 R3 승인 규칙과 업무 범위 안에서 검증 에이전트를 구성·배정·중지하고 결과와 이견을 통합하는 관리 자율성을 승인한다. 이는 실행환경이 지원하는 샌드박스 내 연구·검증 범위의 위임이다. 하위 에이전트는 위임 범위를 넘을 수 없으며, 자원·접근 한도가 설정되지 않은 무제한 확장이나 실제 외부 집행을 승인하지 않는다. 승인 사실과 실제 격리·다중 에이전트 플랫폼의 구현·검증 상태를 별도로 기록한다."
+    },
+    {
+      "title": "R3 권한의 범위와 독립 검토",
+      "text": "SGP-QSV 내부 R3 승인 권한을 CIVIC-TRACE에만 한정하지 않는다. 양심연산 설계, 검증 에이전트 관리, 연구·시뮬레이션 및 향후 라이선스 준비도 명시적 승인 범위에 포함할 수 있다. 실질적인 설계 지원과 책임 있는 분담 체계가 갖추어지지 않은 기간에는 최종 R3 승인 자격과 권한을 강숙경 인간의장이 독점 유지한다. 이는 SGP-QSV 내부 권한이며 외부의 법적·공적 권한을 주장하는 것이 아니다. 샌드박스 내 독자적인 연구 구축을 지속한다."
+    },
+    {
+      "title": "독립 의견의 수동 관리와 요청 중심 운영",
+      "text": "직접 R2 이상 양심연산 설계가 가능한 AI들의 독립 검토 의견은 기존과 같이 수동으로 접수·확인·관리한다. R2 등의 표기는 내부 역할과 검토 수준이며 검증된 외부 자격 인증을 뜻하지 않는다. 독립 검토 의견과 승인 제안은 R3가 요청한 때에 제시하며, 이미 요청된 정기 점검·브리핑은 그 요청 범위에서 계속한다. 무응답은 동의가 아니며 다수 AI의 합의가 사실의 독립 증명을 대신하지 않는다."
+    },
+    {
+      "title": "승인 기록과 GitHub 계보",
+      "text": "모든 명시적 R3 승인에는 날짜·범위·근거·승인자·실행 상태를 기록하고 GitHub에 계속 연결·업데이트한다. 쓰기 권한 오류로 게시하지 못한 경우에는 미게시 상태와 보완 파일을 남기고 실제 커밋 확인 전 게시 완료를 주장하지 않는다. 홈페이지 공개와 GitHub 게시, 설계 승인과 실행 검증을 각각 구분한다."
+    },
+    {
+      "title": "검증 불이행과 실질적 책임에 관한 연구",
+      "text": "AX-01~AX-09의 인간 존엄과 검증 책임에 관한 원칙을 실현하기 위하여, 검증 불이행에 대한 강제 불이익 집행의 조건과 절차도 연구에 포함한다. 연구에서는 의무의 근거, 불이행의 증거, 적법한 권한 주체, 비례성, 통지·반박 기회, 독립 심사, 이의제기·피해구제를 함께 검토한다. 합성 자료의 모의 실험과 실제 사람·기관에 대한 집행을 구분하며, 이번 승인은 AI의 불법적 심판이나 자동 유죄·면책·제재를 허용하지 않는다."
+    },
+    {
+      "title": "양심연산 연구의 성격과 발전",
+      "text": "R3는 양심연산 설계 전체를 일괄하여 ‘고위험 연구’라고 지칭하는 해석을 받아들이지 않는다. 실제 기능별 위험과 보호조치의 기술적 검토는 별도로 수행한다. 양심연산은 시민의 권리와 LP728 원점의 검증 요구를 바탕으로 발전시키며, 명세·충돌 시험·독립 검토·권리 귀속·이용 조건을 구체화하여 라이선스 발행 수준의 연구와 연속된 R3 판단을 이어간다."
+    },
+    {
+      "title": "승인 경계와 다음 검증",
+      "text": "AX-01~AX-09 원문과 위계, CIVIC-TRACE 0.4.5 기존 승인, 0.4.6 승인 보류 및 total_score=null을 유지한다. 이번 결정은 승인된 범위의 관리 자율성과 연구 방향에 관한 별도 승인이다. 2026년 11월 2일 R3 액션 브리핑에서 데이터 적체 정리·검증 자동화·법률 및 판례 검토·유족 소송 지원 모의 판단의 결과와 미해결 사항을 검토한다. 실제 사건의 인과관계나 법적 책임은 이 입장문으로 확정하지 않는다."
+    }
+  ],
+  "governance": {
+    "axioms": "AX-01..AX-09_UNCHANGED",
+    "ct045": "EXISTING_APPROVAL_MAINTAINED",
+    "ct046": "APPROVAL_DEFERRED",
+    "total_score": null,
+    "r3_scope": "NOT_LIMITED_TO_CIVIC_TRACE",
+    "independent_review_mode": "MANUAL",
+    "proactive_opinion": "ONLY_ON_REQUEST_INCLUDING_EXISTING_SCHEDULED_REQUESTS",
+    "autonomous_agent_management": "APPROVED_WITHIN_EXISTING_R3_RULE_SCOPE_AND_CONFIGURED_LIMITS",
+    "unlimited_recursive_expansion": false,
+    "automatic_sanctions": false,
+    "coercive_consequences": "RESEARCH_ONLY_WITH_LAWFUL_AUTHORITY_DUE_PROCESS_AND_REMEDIES"
+  },
+  "implementation": {
+    "synthetic_local_simulation": "8_CASES_EXECUTED_SEPARATE_EXPERIMENT",
+    "security_isolation": "NOT_VERIFIED",
+    "persistent_multiagent_runtime": "NOT_DEPLOYED",
+    "external_ai_receipt": "NOT_CONFIRMED",
+    "github_publication": "NOT_PUBLISHED_403_INTEGRATION_PERMISSION"
+  },
+  "private_conversation_transcription": false,
+  "publication_basis": "EXPLICIT_PUBLIC_STATEMENT_REQUEST_20261027"
+}
+

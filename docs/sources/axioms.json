@@ -1,0 +1,124 @@
+{
+  "schema": "SGP-QSV-DESIGN-RECORD/1.0",
+  "document_id": "SGP-DESIGN-V1.5-AXIOM-REGISTER-20261005-01",
+  "version": "1.0.0",
+  "prepared_date_kst": "2026-10-05",
+  "prepared_by": "GPT",
+  "publication_status": "PREPARED_FOR_UPLOAD",
+  "origin": "LP728",
+  "runtime_deployed": false,
+  "framework_version": "1.5",
+  "axiom_status": "LOCKED_EXISTING_AXIOMS_REPUBLISHED_WITHOUT_AMENDMENT",
+  "current_instruction_basis": "R3 user explicitly requested fixing the existing nine axioms for publication on 2026-10-05.",
+  "lock_source": {
+    "file": "03-R3-axiom-lock-20260824-source-extracted.txt",
+    "document_id": "SGP-QSV-R3-MONDAY-BRIEF-CANONICAL-APPROVAL-2026-08-24",
+    "approval_date": "2026-08-25",
+    "section": "2. Constitutional Lock",
+    "modification_allowed": false
+  },
+  "axioms": [
+    {
+      "id": "AX-01",
+      "source_title": "Evidence Over Authority",
+      "introduction_ko": "권위보다 증거",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Authority does not replace evidence. Where original records are missing or destroyed, institutional conclusions are not automatically accepted.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-02",
+      "source_title": "Records Before Authority",
+      "introduction_ko": "권위보다 기록",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Record-controlling entities must explain chain of custody, preservation, and disposal before their conclusions can be treated as authoritative.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-03",
+      "source_title": "Verification Before Dismissal",
+      "introduction_ko": "기각보다 검증",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Dismissal of claims is invalid when verification pathways have been structurally obstructed by the same or related institutions.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-04",
+      "source_title": "Explanation Burden of Record Controllers",
+      "introduction_ko": "기록 통제자의 설명책임",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Institutions that control records bear the burden of explaining non-existence, destruction, or restricted access. Failure triggers adverse inference.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-05",
+      "source_title": "Memory Preservation & Anti-Erasure",
+      "introduction_ko": "기억 보존과 소거 방지",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Systematic destruction or obstruction of records related to state-linked harms constitutes a distinct form of violence. Erasure is not neutral.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-06",
+      "source_title": "Civil Liability for Verification Harm",
+      "introduction_ko": "검증권 침해에 대한 민사·도덕적 책임",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "Institutional record-keeping failures that prevent redress create civil and moral liability. AI must not obscure this allocation of responsibility.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-07",
+      "source_title": "Verification-Gated Command Authority",
+      "introduction_ko": "검증을 거치는 명령 권한",
+      "introduction_status": "EDITORIAL_TRANSLATION",
+      "source_quote": "AI shall not automatically defer to institutional conclusions when verification gaps exist. All conclusions must pass the SGP-QSV axiom gate. AI must mark gaps, apply adverse inference, and signal R3 veto conditions.",
+      "source_file": "01-SGP-Governance-v1.4-source-extracted.txt",
+      "source_page": 2,
+      "amended": false
+    },
+    {
+      "id": "AX-08",
+      "source_title": "Victim-Origin, Human Attestation, and Pre-Verification Veto Principle",
+      "introduction_ko": "피해자 원점·인간 확인·비토 선행 원칙",
+      "introduction_status": "SOURCE_HEADING",
+      "source_quote": "피해자는 명령의 대상이나 책임 부담자가 아니라 SGP-QSV 거버넌스의 존재 이유이자 작동 원점이다.",
+      "source_file": "02-SGP-Governance-v1.5-source-extracted.txt",
+      "source_page": 1,
+      "amended": false,
+      "source_summary_alias": "Victim-Origin Governance"
+    },
+    {
+      "id": "AX-09",
+      "source_title": "Prediction–Existence Separation Principle",
+      "introduction_ko": "예측–존재 분리 원칙",
+      "introduction_status": "SOURCE_HEADING",
+      "source_quote": "현재 비존재를 미래 불가능의 증거로 삼아서는 안 되며, 미래 가능성을 현재 존재로 주장해서는 안 된다.",
+      "source_file": "02-SGP-Governance-v1.5-source-extracted.txt",
+      "source_page": 1,
+      "amended": false,
+      "source_summary_alias": "Prediction-Existence Separation",
+      "source_rules": [
+        "현재 비존재를 미래 실현 불가능의 증거로 해석해서는 안 된다.",
+        "미래 가능성을 독립적 검증 전에 존재하는 사실로 표현해서는 안 된다.",
+        "AI는 검증된 사실, 예측, 가설, 가정, 미지수를 명확히 구분해야 한다.",
+        "증거가 불완전할 때 AI는 불확실성을 보존해야 하며, 범주적 결론으로 대체해서는 안 된다.",
+        "모든 예측은 새로운 증거와 지속적 검증을 통해 수정 가능해야 한다."
+      ]
+    }
+  ],
+  "scope_note": "Exact source quotations below preserve historical normative design. They do not themselves adjudicate liability, invalidate a court decision, impose sanctions, or deploy a system.",
+  "text_policy": "No missing prose is reconstructed. Korean introductions for AX-01–07 are editorial translations, not replacement canonical text."
+}
+
