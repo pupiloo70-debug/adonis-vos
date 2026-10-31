@@ -143,3 +143,4 @@ source_id와 evidence digest는 내용의 진실을 증명하지 않는다. 같�
 - [이번 주 브리핑 마감과 미완료 과제](https://sgp-qsv-archive.pupiloo70.chatgpt.site/machine/monday/2026-10-19-close/r3-action-brief-closeout.json).
 
 소송 원문은 이 저장소에 중복 게시하지 않는다. 공개 증거 색인과 제한된 개인 작업 파일을 구분한다. README와 registry의 상태 충돌은 역사값 삭제가 아니라 시점·근거를 명시한 정정으로 해소한다. 라이선스 미지정 상태를 유지한다.
+
