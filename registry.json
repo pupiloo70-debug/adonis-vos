@@ -4,12 +4,12 @@
   "ordinal_in_user_registry_plan": 4,
   "name": "Adonis VOS",
   "repository_target": "pupiloo70-debug/adonis-vos",
-  "record_date": "2026-10-18",
-  "version": "0.1.0-draft",
-  "status": "PUBLISHED_ON_GITHUB",
-  "source_code_status": "PUBLIC_CORE_MODULE_ON_WEBSITE_AND_GITHUB",
-  "github_publication_status": "CONFIRMED",
-  "runtime_status": "CORE_MODULE_ONLY_UI_IN_DEVELOPMENT",
+  "record_date": "2026-11-01",
+  "version": "0.2.0-draft",
+  "status": "SANDBOX_PREPARATION",
+  "source_code_status": "LOCAL_IMPLEMENTATION_READY_FOR_REVIEW",
+  "github_publication_status": "PENDING_FOR_0_2",
+  "runtime_status": "LOCAL_CORE_AND_CLI_IMPLEMENTED_EXTERNAL_MODELS_MANUAL",
   "license_status": "NOT_YET_SPECIFIED",
   "origin": "LP728 / Park Han-gyeol verification-rights demand",
   "homepage": "https://sgp-qsv-archive.pupiloo70.chatgpt.site/adonis-vos/",
@@ -23,5 +23,5 @@
   "real_victim_data_included": false,
   "github_commit": null,
   "receipt": null,
-  "verification": "npm test: 12 existing core checks; full application not tested"
+  "verification": "See execution-receipt.json for separate legacy and new test results"
 }

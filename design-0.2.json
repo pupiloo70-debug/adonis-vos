@@ -1,0 +1,55 @@
+{
+  "schema": "ADONIS-VOS-DESIGN/0.2",
+  "version": "0.2.0-draft",
+  "origin": "LP728",
+  "human_gate": "R3_KANG_SUKYUNG",
+  "central_core": "ADONIS",
+  "technical_owner": {
+    "role": "AI_TECHNICAL_IMPLEMENTATION_AND_CORRECTION",
+    "current_session": "OPENAI_CODEX",
+    "acceptance": "ACCEPTED_FOR_THIS_DELIVERABLE",
+    "duties": [
+      "design",
+      "implementation",
+      "tests",
+      "correction",
+      "source_mapping",
+      "execution_receipts"
+    ]
+  },
+  "delegation": {
+    "source_record": "SGP-QSV-R3-ADONIS-AUTONOMY-20261027-01",
+    "scope": "SCOPED_SANDBOX_MANAGEMENT",
+    "resource_defaults": {
+      "maxAgents": 4,
+      "maxTasks": 16
+    },
+    "external_paid_resources": "REQUIRE_CONCRETE_AUTHORIZATION_AND_ACCESS",
+    "existing_ai_intents": [
+      "Grok",
+      "DeepSeek",
+      "Gemini"
+    ],
+    "discovery_and_acquisition": "discover capability, register intent, verify available adapter/access, assign bounded tasks, preserve results and dissent"
+  },
+  "layers": [
+    "BELIEF_NARRATIVE",
+    "DESIGN",
+    "EXECUTION"
+  ],
+  "ct045": "MAINTAINED",
+  "ct046": "DEFERRED",
+  "score": null,
+  "total_score": null,
+  "constitutional_change": false,
+  "implementation": {
+    "local_core": true,
+    "local_builtin_dispatch": true,
+    "external_model_api_dispatch": false,
+    "web_ui": false,
+    "persistent_multiagent_runtime": false,
+    "os_sandbox_isolation_verified": false
+  },
+  "formal_axiom_proof": "NOT_CLAIMED",
+  "proposal_status": "TECHNICAL_PREPARATION_FOR_REVIEW"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "ADONIS-VOS-PACKAGE-HASHES/0.2",
+  "files": {
+    ".gitignore": "ed7536126abda41501278bfe9c4303b936892bc60fa22f62d5e3de85da161aa8",
+    "CHANGELOG.md": "c09f424196b6e32cc2f4824063dfe0aec05802d24515eb190feea0bd13aada7e",
+    "README.md": "2982248bfd5d0039c5b961b81a86b47270e53b62e0dc2512b7e2e0fb48180ffb",
+    "UPLOAD.md": "f574dd2551ff0884c1c0ed35c85ca2635d8be228a59a379d3438912f0743d616",
+    "design-0.2.json": "03b431d4c6fe697b43f0eb6eca933f53f30b4a6ef0b622c971716756449c9587",
+    "docs/DESIGN-0.2.md": "4df482ea9ee597da0f07a006febf6a4a086c12831db1e8e92234ef8d7fb40bcc",
+    "docs/DETAILED-DESIGN-20261020.md": "4763df3a7e5ec9421b527c470e542484eb569336ecb8bdb5bd146754a7a739ba",
+    "docs/sources/autonomy.json": "dd15365d1da89a8aec6d41bce9c0171f0a638de8b34fbc104e7dddbe3ee109e1",
+    "docs/sources/axioms.json": "763790f47b0aa4df6e9c1d0485fabd67cd86d38abb220005617550a2248b5fec",
+    "docs/sources/cc-rules.json": "5c581c1f4e72fb45e40629814bc3bd2537fd6a20eef667bf6e25f01a62e78b5a",
+    "examples/synthetic-core-output.json": "e65cc9b6054cdbbe4b9dd6cd60dab2c177fc885094ab617f2c4fbc065b9b2d93",
+    "examples/synthetic-project.json": "eef71af06b3923356413439dfbd7a33ce2fa3cfef31d990aedb772ad2341d5fd",
+    "execution-receipt.json": "47079fc19fdde4fec87b4bae2c458e5498d6393f65ecd9b851d733dfeee54af1",
+    "package.json": "172662862a22cd7877b972bd0d8fd6bde89330bddd3c69a2716ae6b0080f5abf",
+    "registry.json": "37ada85148ba5e38eb1fd88c7b203788ec67ce47082613d954c57b10f3d094eb",
+    "src/agents.mjs": "83b491ef1f3697724d2a0d70d3d24e3345790641eed9a031ecc0162b0d531a8e",
+    "src/cli.mjs": "bf7d9418ebe0c1c3e4dd445af11a81f7aa907fbc7887cbce53614b64fe5c074b",
+    "src/demo-core.mjs": "90792d767722f67ce5a732a43d90821f51505b9af474d57f8e14d245e8623bd7",
+    "src/engine.mjs": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "src/project.mjs": "32d1dbc44eff4e94fbf4a7de2e7878b55aeb789fedce32645f01d611e2acf0c0",
+    "src/test.mjs": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23",
+    "test-output.txt": "ee9048dd8ff0e435529cfef7f61449c2130e31f88c4b8d23571bf84e82133669",
+    "tests/project.test.mjs": "6a64a6437397906256bb00e37c4a2fd40b92c1fce3e25b3f7af424f357736ecf"
+  },
+  "meaning": "Byte integrity only; not evidence truth or complete design proof"
+}

@@ -1,10 +1,16 @@
 {
   "name": "adonis-vos",
-  "version": "0.1.0-draft",
+  "version": "0.2.0-draft",
   "private": true,
   "type": "module",
   "description": "SGP-QSV citizen verification support core",
-  "scripts": {"test": "node src/test.mjs"},
-  "engines": {"node": ">=18"},
+  "scripts": {
+    "test": "node src/test.mjs && node --test tests/*.test.mjs",
+    "demo": "node src/cli.mjs examples/synthetic-project.json",
+    "demo:core": "node src/demo-core.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "license": "UNLICENSED"
 }

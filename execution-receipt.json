@@ -1,0 +1,54 @@
+{
+  "schema": "ADONIS-VOS-LOCAL-EXECUTION-RECEIPT/0.2",
+  "started_at": "2026-10-31T22:21:33.844800+00:00",
+  "finished_at": "2026-10-31T22:21:34.490517+00:00",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+  },
+  "commands": [
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "legacy_core_checks": 12,
+      "new_tests": 24,
+      "new_pass": 24,
+      "new_fail": 0,
+      "output_file": "test-output.txt",
+      "output_sha256": "ee9048dd8ff0e435529cfef7f61449c2130e31f88c4b8d23571bf84e82133669"
+    },
+    {
+      "command": "node src/demo-core.mjs",
+      "exit_code": 0,
+      "output_file": "examples/synthetic-core-output.json",
+      "output_sha256": "e65cc9b6054cdbbe4b9dd6cd60dab2c177fc885094ab617f2c4fbc065b9b2d93"
+    }
+  ],
+  "files": {
+    "design-0.2.json": "03b431d4c6fe697b43f0eb6eca933f53f30b4a6ef0b622c971716756449c9587",
+    "docs/sources/autonomy.json": "dd15365d1da89a8aec6d41bce9c0171f0a638de8b34fbc104e7dddbe3ee109e1",
+    "docs/sources/axioms.json": "763790f47b0aa4df6e9c1d0485fabd67cd86d38abb220005617550a2248b5fec",
+    "docs/sources/cc-rules.json": "5c581c1f4e72fb45e40629814bc3bd2537fd6a20eef667bf6e25f01a62e78b5a",
+    "examples/synthetic-core-output.json": "e65cc9b6054cdbbe4b9dd6cd60dab2c177fc885094ab617f2c4fbc065b9b2d93",
+    "examples/synthetic-project.json": "eef71af06b3923356413439dfbd7a33ce2fa3cfef31d990aedb772ad2341d5fd",
+    "package.json": "172662862a22cd7877b972bd0d8fd6bde89330bddd3c69a2716ae6b0080f5abf",
+    "registry.json": "37ada85148ba5e38eb1fd88c7b203788ec67ce47082613d954c57b10f3d094eb",
+    "src/agents.mjs": "83b491ef1f3697724d2a0d70d3d24e3345790641eed9a031ecc0162b0d531a8e",
+    "src/cli.mjs": "bf7d9418ebe0c1c3e4dd445af11a81f7aa907fbc7887cbce53614b64fe5c074b",
+    "src/demo-core.mjs": "90792d767722f67ce5a732a43d90821f51505b9af474d57f8e14d245e8623bd7",
+    "src/engine.mjs": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "src/project.mjs": "32d1dbc44eff4e94fbf4a7de2e7878b55aeb789fedce32645f01d611e2acf0c0",
+    "src/test.mjs": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23",
+    "tests/project.test.mjs": "6a64a6437397906256bb00e37c4a2fd40b92c1fce3e25b3f7af424f357736ecf"
+  },
+  "scope": "Synthetic local core, reference validation, CLI and bounded builtin dispatch",
+  "not_tested": [
+    "browser UI",
+    "external model API connectivity",
+    "OS isolation",
+    "real medical or litigation data",
+    "full formal AX proof"
+  ],
+  "score": null,
+  "total_score": null
+}
