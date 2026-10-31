@@ -16,3 +16,4 @@ assert.deepEqual(evaluate(source),evaluate(source));
 assert.equal(evaluate(source).total_score,null);
 assert.equal(evaluate({record_access:answer('YES','DOCUMENT_REFERENCED')}).items[0].status,'SIGNAL_REPORTED');
 console.log('12 core checks passed');
+

@@ -1,0 +1,10 @@
+import {readFileSync} from 'node:fs';
+import {CentralCore} from './agents.mjs';
+import {importProject} from './project.mjs';
+const core=new CentralCore();
+for(const id of ['Grok','DeepSeek','Gemini']) core.register({id,layer:'DESIGN',connection:'INTENT_RECEIVED',capabilities:['SOURCE_REVIEW']});
+core.register({id:'Adonis-local-rules',layer:'EXECUTION',connection:'LOCAL_ADAPTER_CONFIGURED',runtime_ref:'src/project.mjs',capabilities:['LOCAL_RULE_EVALUATION']});
+core.assign({id:'DEMO-TASK-1',agent_id:'Adonis-local-rules',capability:'LOCAL_RULE_EVALUATION'});
+const p=importProject(readFileSync(new URL('../examples/synthetic-project.json',import.meta.url),'utf8'));
+const executed=core.runLocal('DEMO-TASK-1',p);
+console.log(JSON.stringify({coordination:core.snapshot(),...executed},null,2));

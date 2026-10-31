@@ -45,3 +45,4 @@ export function evaluate(answers) {
   return { ruleset_version: RULESET, mode: 'RULE_BASED',
     total_score: null, items };
 }
+
