@@ -1,0 +1,23 @@
+{
+  "schema": "SGP-QSV-MONDAY-ACTION/1.0",
+  "document_id": "SGP-QSV-MONDAY-ACTION-20261102-R3-RESEARCH",
+  "date": "2026-11-02",
+  "decision": "APPROVE_RESEARCH_TEST_SCOPE",
+  "CIVIC_TRACE_0_4_5": "APPROVAL_MAINTAINED",
+  "CIVIC_TRACE_0_4_6": "APPROVAL_DEFERRED",
+  "axioms": "AX-01_TO_AX-09_UNCHANGED",
+  "total_score": null,
+  "anti_corruption_priority": "PROCESSING_ORDER_ONLY",
+  "modules": ["CC-VERIFY-01", "CC-VERIFY-02", "CC-VERIFY-03"],
+  "review_status": "DESIGN_REVIEWED_IMPLEMENTATION_NOT_VERIFIED",
+  "friday_test": {
+    "date": "2026-11-06",
+    "status": "SCHEDULED_NOT_EXECUTED",
+    "focus": ["ADONIS_VOS", "ETHICAL_GRAVITY", "EVIDENCE_CONTROL", "DUPLICATION", "FALSE_POSITIVES", "R2_6_ESCALATION"],
+    "data": "SYNTHETIC_ONLY",
+    "post_test_decision": "R3_TO_DECIDE_FOLLOW_ON_0_3_DEVELOPMENT"
+  },
+  "archive_status": "LOCAL_FILE_ONLY_GITHUB_403_WEBSITE_NOT_UPDATED",
+  "external_enforcement": false,
+  "automatic_approval": false
+}
