@@ -1,0 +1,42 @@
+[
+  {
+    "path": "sources/CT045-approved.json",
+    "url": "https://github.com/pupiloo70-debug/SGP-DESIGN/blob/main/15-CIVIC-TRACE-0.4.5-R3-approved.json",
+    "git_blob_sha": "33a3cfb97a1c5b26ad9c4278d588e3a504a4e6ad",
+    "access": "FULL_TEXT_RETRIEVED_2026-11-03",
+    "source_type": "PUBLIC_GITHUB_RECORD",
+    "saved_bytes_sha256": "ef68512af7094cf502740f010df0c06654aad3b6c20b46d15c8b1b202fbe4796"
+  },
+  {
+    "path": "sources/Monday-20261102.json",
+    "url": "https://github.com/pupiloo70-debug/SGP-DESIGN/blob/main/SGP-QSV_Monday_Action_R3_20261102.json",
+    "git_blob_sha": "3d721d93e4e01b323afc356e9230bb9fd7fef5c4",
+    "access": "FULL_TEXT_RETRIEVED_2026-11-03",
+    "source_type": "PUBLIC_GITHUB_RECORD",
+    "saved_bytes_sha256": "407ecd539e37623fc45f81b132c75d4ea9fd590cc8a12af33613b040732faf03"
+  },
+  {
+    "path": "sources/VOS-0.2-design.json",
+    "url": "https://github.com/pupiloo70-debug/adonis-vos/blob/main/design-0.2.json",
+    "git_blob_sha": "a5f7d8ff7086abf61f3fb0ef720d3e54e9175104",
+    "access": "FULL_TEXT_RETRIEVED_2026-11-03",
+    "source_type": "PUBLIC_GITHUB_RECORD",
+    "saved_bytes_sha256": "03b431d4c6fe697b43f0eb6eca933f53f30b4a6ef0b622c971716756449c9587"
+  },
+  {
+    "path": "sources/adonis-vos-README.md",
+    "url": "https://github.com/pupiloo70-debug/adonis-vos/blob/main/README.md",
+    "git_blob_sha": "c8f38de7bac38d52f47f2259e47e58e223f10878",
+    "access": "FULL_TEXT_RETRIEVED_2026-11-03",
+    "source_type": "PUBLIC_GITHUB_CONTEXT_README",
+    "saved_bytes_sha256": "2982248bfd5d0039c5b961b81a86b47270e53b62e0dc2512b7e2e0fb48180ffb"
+  },
+  {
+    "path": "sources/SGP-DESIGN-README.md",
+    "url": "https://github.com/pupiloo70-debug/SGP-DESIGN/blob/main/README.md",
+    "git_blob_sha": "206e3e44901de003581021eddc7128d3d07e512d",
+    "access": "FULL_TEXT_RETRIEVED_2026-11-03",
+    "source_type": "PUBLIC_GITHUB_CONTEXT_README",
+    "saved_bytes_sha256": "efe6712dbf35bf30cce5255a2ea0022e476e0ec531a95763cadc74ae970dce5c"
+  }
+]
