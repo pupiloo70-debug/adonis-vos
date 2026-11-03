@@ -1,0 +1,92 @@
+{
+  "schema": "ADONIS-VOS-DESIGN/0.3",
+  "document_id": "ADONIS-VOS-03-VICTIM-SUPPORT-DESIGN-20261103-01",
+  "version": "0.3.0-design.2",
+  "status": "DESIGN_CANDIDATE",
+  "runtime": "LOCAL_TEST_ONLY_NOT_DEPLOYED",
+  "design_start_instruction": {
+    "date": "2026-11-03",
+    "source": "CURRENT_EXPLICIT_USER_INSTRUCTION",
+    "publicly_fixed": false,
+    "scope": "START_DESIGN_AND_BUILD_REVIEWABLE_LOCAL_PROTOTYPE"
+  },
+  "public_scope_record": {
+    "document_id": "SGP-QSV-MONDAY-ACTION-20261102-R3-RESEARCH",
+    "decision": "APPROVE_RESEARCH_TEST_SCOPE",
+    "canonical_review_status": "DESIGN_REVIEWED_IMPLEMENTATION_NOT_VERIFIED",
+    "modules": [
+      "CC-VERIFY-01",
+      "CC-VERIFY-02",
+      "CC-VERIFY-03"
+    ]
+  },
+  "locks": {
+    "axioms": "AX-01_TO_AX-09_UNCHANGED",
+    "stage": "STAGE_V_NON_THRONE_GOVERNANCE",
+    "CIVIC_TRACE_0_4_5": "APPROVAL_MAINTAINED",
+    "CIVIC_TRACE_0_4_6": "APPROVAL_DEFERRED",
+    "total_score": null,
+    "external_enforcement": false,
+    "automatic_approval": false,
+    "upper_computation_protocol_0_1": "RESEARCH_SPEC_NOT_DEPLOYED"
+  },
+  "objective_order": [
+    "FACT_AND_CITATION_INTEGRITY",
+    "SOURCE_LINKED_AND_ADVERSE_FACT_PRESERVING_ARGUMENT",
+    "CONTROLLER_EXPLANATION_AND_PRODUCTION_REQUESTS",
+    "REMEDY_SPECIFICITY",
+    "MINIMIZE_VICTIM_REPEAT_AND_COST_BURDEN"
+  ],
+  "review_nodes": [
+    "LAWYER_PROCEDURAL_AND_LEGAL_REVIEW",
+    "QUALIFIED_EXPERT_SUBSTANTIVE_REVIEW",
+    "R3_DESIGN_SCOPE_AND_FINAL_APPROVAL"
+  ],
+  "rule_mapping": {
+    "CT-RULE-6.3": "REVIEW_AND_ROUTING_ESCALATION_ONLY",
+    "R2.6-3": "SUBSTANTIATED_OBSTRUCTION_SEPARATE_EVIDENCE_STATE"
+  },
+  "corruption_index": {
+    "value": null,
+    "formula_status": "RESEARCH_CANDIDATE_NOT_APPROVED",
+    "score_to_sanction": false,
+    "missing_is_zero": false
+  },
+  "accountability_packet_fields": [
+    "specific_record_or_act",
+    "source_reference",
+    "controller_or_actor_link",
+    "applicable_rule_and_effective_date",
+    "alternative_explanations",
+    "records_needed",
+    "competent_route",
+    "lawyer_review",
+    "response_and_appeal_opportunity"
+  ],
+  "validation": {
+    "data": "SYNTHETIC_ONLY",
+    "external_source_retrieval": false,
+    "external_source_authentication": false,
+    "local_deterministic_tests": true,
+    "independent_replication": false,
+    "semantic_proof": false,
+    "production_benchmark": false,
+    "central_0_2_integration_tested": false
+  },
+  "friday_test": {
+    "date": "2026-11-06",
+    "canonical_status": "SCHEDULED_NOT_EXECUTED",
+    "today_local_tests_do_not_substitute": true
+  },
+  "roadmap_0_4": {
+    "component": "ADONIS_VOS",
+    "status": "LEGISLATIVE_RESEARCH_PROPOSAL",
+    "legislation_enacted": false,
+    "CIVIC_TRACE_0_4_6_approval": false
+  },
+  "license": {
+    "status": "UNLICENSED_INHERITED_FROM_PUBLIC_0_2",
+    "new_license_issued": false,
+    "legal_rights_secured_by_this_record": false
+  }
+}

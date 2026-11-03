@@ -1,0 +1,269 @@
+{
+  "schema": "ADONIS-VOS-0.3-LOCAL-REVIEW/1.0",
+  "version": "0.3.0-design.2",
+  "data_class": "SYNTHETIC",
+  "results": [
+    {
+      "id": "C-NOSOURCE",
+      "status": "UNVERIFIED",
+      "flags": [
+        {
+          "code": "PRIMARY_SOURCE_MISSING",
+          "fields": [
+            "court",
+            "case_number",
+            "decision_date",
+            "primary_text"
+          ]
+        },
+        {
+          "code": "IDENTITY_SOURCE_FIELD_MISSING",
+          "field": "court"
+        },
+        {
+          "code": "IDENTITY_SOURCE_FIELD_MISSING",
+          "field": "case_number"
+        },
+        {
+          "code": "SOURCE_PROVENANCE_PENDING"
+        }
+      ],
+      "action": "BLOCK_CITATION_OR_REVISE_CLAIM",
+      "human_approval_required": true,
+      "source_verified_externally": false,
+      "total_score": null,
+      "comparison_scope": "SUPPLIED_TEXT_ONLY",
+      "retrieval_status": "NOT_IMPLEMENTED",
+      "fabrication_confirmed": false
+    },
+    {
+      "id": "C-WRONGID",
+      "status": "SOURCE_IDENTITY_CONFLICT",
+      "flags": [
+        {
+          "code": "IDENTITY_MISMATCH",
+          "field": "case_number",
+          "claim": "SYNTH-CASE-002",
+          "source": "SYNTH-CASE-001"
+        }
+      ],
+      "action": "BLOCK_CITATION_OR_REVISE_CLAIM",
+      "human_approval_required": true,
+      "source_verified_externally": false,
+      "total_score": null,
+      "comparison_scope": "SUPPLIED_TEXT_ONLY",
+      "retrieval_status": "NOT_IMPLEMENTED",
+      "fabrication_confirmed": false
+    },
+    {
+      "id": "P-WRONGDENOM",
+      "status": "MISAPPLIED_EVIDENCE",
+      "flags": [
+        {
+          "code": "SCOPE_MISMATCH",
+          "field": "denominator_type",
+          "claim": "DOSES",
+          "source": "REPORTED_EVENTS"
+        },
+        {
+          "code": "SCOPE_MISMATCH",
+          "field": "causality_level",
+          "claim": "CAUSED",
+          "source": "SUSPECTED_REPORT"
+        }
+      ],
+      "action": "BLOCK_CITATION_OR_REVISE_CLAIM",
+      "human_approval_required": true,
+      "source_verified_externally": false,
+      "total_score": null,
+      "comparison_scope": "SUPPLIED_TEXT_ONLY",
+      "retrieval_status": "NOT_IMPLEMENTED",
+      "fabrication_confirmed": false
+    },
+    {
+      "id": "D-CONCESSION",
+      "status": "CONCESSION_RISK",
+      "flags": [
+        {
+          "code": "POSSIBLE_UNNECESSARY_CONCESSION",
+          "matches": [
+            "원고의 입증 실패"
+          ]
+        },
+        {
+          "code": "EVIDENCE_ASYMMETRY_NOT_ADDRESSED"
+        }
+      ],
+      "action": "GENERATE_SUPPORT_DRAFT_FOR_REVIEW",
+      "human_approval_required": true,
+      "source_verified_externally": false,
+      "total_score": null,
+      "original_text": "자료가 없으므로 원고의 입증 실패이다.",
+      "automatic_deletion": false
+    },
+    {
+      "id": "D-UNCERTAINTY",
+      "status": "REQUIRED_LIMIT_REVIEW",
+      "flags": [
+        {
+          "code": "EPISTEMIC_LIMIT_RETAIN",
+          "matches": [
+            "확정된 것은 아니다"
+          ]
+        }
+      ],
+      "action": "GENERATE_SUPPORT_DRAFT_FOR_REVIEW",
+      "human_approval_required": true,
+      "source_verified_externally": false,
+      "total_score": null,
+      "original_text": "현재 자료만으로 인과관계가 확정된 것은 아니다. 필요한 독립 검토를 요청한다.",
+      "automatic_deletion": false
+    }
+  ],
+  "routes": [
+    {
+      "id": "R-RECORD",
+      "rule_id": "CT-RULE-6.3",
+      "review_triggered": true,
+      "current_evidence_state": "R2.6-1",
+      "evidence_state_basis": "INPUT_LABEL_NOT_REVERIFIED",
+      "transition_review_candidate": null,
+      "automatic_state_change": false,
+      "process_status": "DELAY_REVIEW_TRIGGERED",
+      "opened_at": "2026-10-01T12:00:00+09:00",
+      "historical_first_request_at": "2026-08-01",
+      "next_due_at": "2026-11-01T18:00:00+09:00",
+      "clock_type": "INTERNAL_TARGET",
+      "controller": "합성 기관 기록관리 부서",
+      "coordinator": null,
+      "next_action": "PREPARE_ITEMIZED_PRODUCTION_AND_INDEPENDENT_REVIEW_DRAFT",
+      "next_escalation": "적격 감독 경로를 대리인이 검토",
+      "accountability_review": "OBTAIN_ACT_SPECIFIC_RECORDS",
+      "accountability_gaps": [
+        "alternative_explanations",
+        "applicable_rule_ref",
+        "competent_route"
+      ],
+      "sanction_decided": false,
+      "external_action_performed": false,
+      "delivery_state": "GENERATED_DRAFT_ONLY",
+      "receipt_ref": null,
+      "input_delivery_state": null,
+      "input_receipt_ref": null,
+      "total_score": null,
+      "flags": [
+        {
+          "code": "PROCESS_ASSIGNMENT_GAP"
+        },
+        {
+          "code": "ADMINISTRATIVE_CLOSURE_NOT_VERIFICATION_RESOLUTION"
+        }
+      ],
+      "human_review_required": true,
+      "deadline_assessment": "SUPPLIED_CLOCK_ONLY_NOT_LEGAL_DEADLINE_CERTIFICATION"
+    }
+  ],
+  "support_packet": {
+    "draft_text": "합성 입력에 대한 시험 출력 — 실제 사건 사실이나 제출 문서가 아닙니다.\n\n피해자 지원 검토 초안 — 실제 법원 제출 전 대리인·전문가 확인\n\n입증 대상: 기관이 관리한 원자료의 미제공 경위와 필요한 추가 검증\n\n사건 식별자(입력값): SYNTHETIC-CASE-ONLY\n\n- 제공된 기관 회신에는 보관 이력이 기재되어 있으나 원자료는 연결되지 않았다. [S-REPLY; 원자료 인증은 별도]\n\n- 기존 신청은 받아들여지지 않았다. [S-ADVERSE; 원자료 인증은 별도] [불리한 사실 포함]\n\n미확인·가설·출처 보완 대상(확정 사실로 사용하지 않음):\n\n- AI가 위법이라고 단정했지만 이를 뒷받침할 독립 증거는 아직 없다. [S-AI; SOURCE_STATED]\n\n검증 요청: 원자료를 생성·보관·검색·이관·폐기한 기록은 어디에 있는가?\n\n자료 통제 역할: 합성 기관 기록관리 부서\n\n필요한 원자료: 항목별 보관 목록, 검색 범위와 결과, 이관·폐기 원장, 대체 검증에 필요한 사본\n\n요청 취지: 위 자료의 제출·검색 범위·보존 및 미제공 사유에 대한 항목별 설명과 가능한 대체 검증 경로를 검토해 주시기 바랍니다.\n\n구제 요청 후보(관할·요건은 대리인 확인): 항목별 원자료 제출과 미제공 사유 설명\n\n구제 요청 후보(관할·요건은 대리인 확인): 남은 자료의 보존과 대체 검증 경로 확인\n\n구제 요청 후보(관할·요건은 대리인 확인): 독립 전문 검토에 필요한 자료 확보\n\n자료 미확보는 곧바로 사실 부존재나 위법 확정을 뜻하지 않습니다. 미제공 경위 및 원자료를 확인할 절차와 전문 검토를 요청합니다.\n\n의학적 가설·인과성·대체 원인은 전문가 검토 대상으로 유지하며, 기존 처분과 불리한 자료도 함께 대조합니다.",
+    "fact_ledger": [
+      {
+        "id": "F-REPLY",
+        "text": "제공된 기관 회신에는 보관 이력이 기재되어 있으나 원자료는 연결되지 않았다.",
+        "source_ref": "S-REPLY",
+        "epistemic_status": "SOURCE_STATED",
+        "source_link_present": true,
+        "source_class": "PRIMARY_OFFICIAL_RECORD"
+      },
+      {
+        "id": "F-ADVERSE",
+        "text": "기존 신청은 받아들여지지 않았다.",
+        "source_ref": "S-ADVERSE",
+        "epistemic_status": "SOURCE_STATED",
+        "adverse": true,
+        "source_link_present": true,
+        "source_class": "PRIMARY_OFFICIAL_RECORD"
+      },
+      {
+        "id": "F-AI",
+        "text": "AI가 위법이라고 단정했지만 이를 뒷받침할 독립 증거는 아직 없다.",
+        "source_ref": "S-AI",
+        "epistemic_status": "SOURCE_STATED",
+        "source_link_present": true,
+        "source_class": "AI_GENERATED_ANALYSIS"
+      }
+    ],
+    "review_nodes": {
+      "lawyer": {
+        "status": "REVIEW_PENDING",
+        "scope": "관할·요건·신청취지·법정 기한 확인",
+        "review_ref": null,
+        "qualification_ref": null,
+        "opinion": "검토 대기",
+        "independently_authenticated": false
+      },
+      "medical_expert": {
+        "status": "REVIEW_PENDING",
+        "scope": "추가 감별·검사·원자료와 대체 원인 검토",
+        "review_ref": null,
+        "qualification_ref": null,
+        "opinion": "검토 대기",
+        "independently_authenticated": false
+      }
+    },
+    "flags": [
+      {
+        "code": "AI_ANALYSIS_NOT_INDEPENDENT_PROOF",
+        "fact_id": "F-AI"
+      },
+      {
+        "code": "REVIEW_NODE_PENDING",
+        "role": "lawyer"
+      },
+      {
+        "code": "REVIEW_NODE_PENDING",
+        "role": "medical_expert"
+      },
+      {
+        "code": "EXPERT_DISAGREEMENT_RETAINED",
+        "role": "medical_expert"
+      }
+    ],
+    "automatic_deletion": false,
+    "legal_privilege_claimed": false,
+    "filing_status": "GENERATED_DRAFT_ONLY"
+  },
+  "input_gaps": [],
+  "total_score": null,
+  "corruption_index": {
+    "value": null,
+    "formula_status": "NOT_APPROVED_NOT_COMPUTED",
+    "use": "REVIEW_PROCESSING_PRIORITY_ONLY",
+    "legal_effect": "NONE"
+  },
+  "canonical_rules_changed": false,
+  "approval_status_changed": false,
+  "deployment_status": "NOT_DEPLOYED",
+  "external_action_performed": false,
+  "source_verified_externally": false,
+  "input_sha256": "480f464bd407c8ef3fefbade4bfda8ca01419da4bb22ff85cb33e4836bc7e164",
+  "consistency_loop": {
+    "status": "STABLE_WITH_OPEN_ITEMS",
+    "history": [
+      {
+        "iteration": 1,
+        "output_sha256": "7725f06d738c223059502d785c79f5ea7f43b5e014c02c3d8a42174b909d4b2f",
+        "invariant_failures": [],
+        "unresolved_flags": 16
+      },
+      {
+        "iteration": 2,
+        "output_sha256": "7725f06d738c223059502d785c79f5ea7f43b5e014c02c3d8a42174b909d4b2f",
+        "invariant_failures": [],
+        "unresolved_flags": 16
+      }
+    ],
+    "max_iterations": 3,
+    "automatic_rule_revision": false
+  },
+  "release_status": "HOLD_FOR_COUNSEL_AND_EXPERT_REVIEW"
+}

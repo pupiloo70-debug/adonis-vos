@@ -1,0 +1,120 @@
+{
+  "scope": "Exact packaged source, specification, synthetic input, output and review bytes; hashes do not authenticate factual truth.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "a436793650d91ba8d0e0c046e91c1032d41177d494ca33466f5bcdf972263546",
+      "bytes": 2892
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "ffab2772297d4bf652ead0aa7ac691df0ed0a7bcd825f53f364da2968fcc7d7e",
+      "bytes": 4354
+    },
+    {
+      "path": "additional-counterexamples-state.json",
+      "sha256": "554452220ed3d1021c79b5e5d8589d0372f032817ad6d18e1fa6e270ff62b09f",
+      "bytes": 371
+    },
+    {
+      "path": "additional-counterexamples.txt",
+      "sha256": "1d9906884ea60368f2a79581b8d8629e1cac7176fcc6d57524928ac51e9ba8b9",
+      "bytes": 1623
+    },
+    {
+      "path": "baseline-counterexamples.txt",
+      "sha256": "6c879f70eda4a2b7f0f202943e4f48b33f7d102759d7d60467dd36f44b408375",
+      "bytes": 2956
+    },
+    {
+      "path": "baseline_vos_verify.py",
+      "sha256": "9bfe74c704b658f61cc8bd12bd088d27f23f57d5785c600785cbdf3d8116e41e",
+      "bytes": 2924
+    },
+    {
+      "path": "design-0.3.json",
+      "sha256": "cf90db4d121cc309c217392e0e3fb1a414bd10bdb2888c08c9850912c54f14c8",
+      "bytes": 2913
+    },
+    {
+      "path": "docs/DESIGN-0.3.md",
+      "sha256": "08fe45d54ea1b63d2a713f29a39d10ed7ed1e5a7939ebe5e88f583487013b927",
+      "bytes": 12172
+    },
+    {
+      "path": "examples.json",
+      "sha256": "9ad7218ced3ddd4cec28d54f43c75bf91497cdff6cb967441b9fa112d43c9c1b",
+      "bytes": 5600
+    },
+    {
+      "path": "execution-record.json",
+      "sha256": "32cae9deb80ecbd9279acb4afed31f57e4a21187eda9e0a13b953b040d9b2cb5",
+      "bytes": 2304
+    },
+    {
+      "path": "sample-support-draft.txt",
+      "sha256": "a88b758c46fd8a85feb3bb05b7f85a631eab8df7251e00f8e4f4c76b53fef108",
+      "bytes": 1924
+    },
+    {
+      "path": "sample_results.json",
+      "sha256": "1957ba4b3c22d5f330e7e4603ce27293ce445d0352d95e92e37a885dae25467f",
+      "bytes": 10138
+    },
+    {
+      "path": "sources/CT045-approved.json",
+      "sha256": "ef68512af7094cf502740f010df0c06654aad3b6c20b46d15c8b1b202fbe4796",
+      "bytes": 32967
+    },
+    {
+      "path": "sources/Monday-20261102.json",
+      "sha256": "407ecd539e37623fc45f81b132c75d4ea9fd590cc8a12af33613b040732faf03",
+      "bytes": 955
+    },
+    {
+      "path": "sources/SGP-DESIGN-README.md",
+      "sha256": "efe6712dbf35bf30cce5255a2ea0022e476e0ec531a95763cadc74ae970dce5c",
+      "bytes": 11505
+    },
+    {
+      "path": "sources/VOS-0.2-design.json",
+      "sha256": "03b431d4c6fe697b43f0eb6eca933f53f30b4a6ef0b622c971716756449c9587",
+      "bytes": 1525
+    },
+    {
+      "path": "sources/adonis-vos-README.md",
+      "sha256": "2982248bfd5d0039c5b961b81a86b47270e53b62e0dc2512b7e2e0fb48180ffb",
+      "bytes": 2360
+    },
+    {
+      "path": "sources/provenance.json",
+      "sha256": "c05829da11f9a433bb0a43fc8d082238b40dcfbbdcc5eca127639a104af5feb9",
+      "bytes": 1985
+    },
+    {
+      "path": "test-output.txt",
+      "sha256": "62123cd19cc8644620f881b8ac0deb6e3ec0b41a42799021376c0adecfc3b14e",
+      "bytes": 5013
+    },
+    {
+      "path": "test_regressions_0302.py",
+      "sha256": "e80ca43cd0dd007cd989bc5274b8fec4113fe677c786480ed8d83fe4bbb1f0a0",
+      "bytes": 1569
+    },
+    {
+      "path": "test_vos_verify.py",
+      "sha256": "513e95a6f1bb74488ceaff4ecbf1fb801d84a11b1352045a3df4a4865ede9ee0",
+      "bytes": 1650
+    },
+    {
+      "path": "test_workflow.py",
+      "sha256": "0d94e71ebab933c077fa539b1eadaa8420da4755a88caa7cd019634d5ad20e0b",
+      "bytes": 10385
+    },
+    {
+      "path": "vos_verify.py",
+      "sha256": "e6df6f65f4fef6b5d5ae19b4134d28f7cebcb87789fff2d40f132b55b2a5012d",
+      "bytes": 20969
+    }
+  ]
+}

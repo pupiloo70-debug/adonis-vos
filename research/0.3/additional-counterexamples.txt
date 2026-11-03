@@ -1,0 +1,29 @@
+test_absent_case_identity_is_missing_not_conflicting (test_workflow.WorkflowCounterexamples.test_absent_case_identity_is_missing_not_conflicting) ... FAIL
+test_absent_text_cannot_prove_misquotation (test_workflow.WorkflowCounterexamples.test_absent_text_cannot_prove_misquotation) ... FAIL
+
+======================================================================
+FAIL: test_absent_case_identity_is_missing_not_conflicting (test_workflow.WorkflowCounterexamples.test_absent_case_identity_is_missing_not_conflicting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_workflow.py", line 33, in test_absent_case_identity_is_missing_not_conflicting
+    self.assertEqual(r['status'],'UNVERIFIED')
+AssertionError: 'SOURCE_IDENTITY_CONFLICT' != 'UNVERIFIED'
+- SOURCE_IDENTITY_CONFLICT
++ UNVERIFIED
+
+
+======================================================================
+FAIL: test_absent_text_cannot_prove_misquotation (test_workflow.WorkflowCounterexamples.test_absent_text_cannot_prove_misquotation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_workflow.py", line 37, in test_absent_text_cannot_prove_misquotation
+    self.assertEqual(r['status'],'UNVERIFIED')
+AssertionError: 'MISQUOTED' != 'UNVERIFIED'
+- MISQUOTED
++ UNVERIFIED
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)

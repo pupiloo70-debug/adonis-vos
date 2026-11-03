@@ -1,0 +1,6 @@
+{
+  "code_sha256": "95d5b24d413504e71c86f120991873710279328d7cda91eec806fd254f752c74",
+  "command": "python3 -m unittest -v test_workflow.WorkflowCounterexamples.test_absent_case_identity_is_missing_not_conflicting test_workflow.WorkflowCounterexamples.test_absent_text_cannot_prove_misquotation",
+  "exit_code": 1,
+  "scope": "PRE_FINAL_FIX_SYNTHETIC_COUNTEREXAMPLES"
+}

@@ -1,0 +1,41 @@
+test_event_fraction_is_not_dose_incidence (test_regressions_0302.NewCounterexamples.test_event_fraction_is_not_dose_incidence) ... FAIL
+test_excerpt_absence_is_not_misquotation (test_regressions_0302.NewCounterexamples.test_excerpt_absence_is_not_misquotation) ... FAIL
+test_required_uncertainty_is_preserved (test_regressions_0302.NewCounterexamples.test_required_uncertainty_is_preserved) ... FAIL
+test_wrong_case_identity_is_blocked (test_regressions_0302.NewCounterexamples.test_wrong_case_identity_is_blocked) ... FAIL
+
+======================================================================
+FAIL: test_event_fraction_is_not_dose_incidence (test_regressions_0302.NewCounterexamples.test_event_fraction_is_not_dose_incidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_regressions_0302.py", line 19, in test_event_fraction_is_not_dose_incidence
+    self.assertNotEqual(r['status'], 'SOURCE_MATCH_CANDIDATE')
+AssertionError: 'SOURCE_MATCH_CANDIDATE' == 'SOURCE_MATCH_CANDIDATE'
+
+======================================================================
+FAIL: test_excerpt_absence_is_not_misquotation (test_regressions_0302.NewCounterexamples.test_excerpt_absence_is_not_misquotation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_regressions_0302.py", line 15, in test_excerpt_absence_is_not_misquotation
+    self.assertNotEqual(r['status'], 'MISQUOTED')
+AssertionError: 'MISQUOTED' == 'MISQUOTED'
+
+======================================================================
+FAIL: test_required_uncertainty_is_preserved (test_regressions_0302.NewCounterexamples.test_required_uncertainty_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_regressions_0302.py", line 11, in test_required_uncertainty_is_preserved
+    self.assertNotEqual(r['status'], 'CONCESSION_RISK')
+AssertionError: 'CONCESSION_RISK' == 'CONCESSION_RISK'
+
+======================================================================
+FAIL: test_wrong_case_identity_is_blocked (test_regressions_0302.NewCounterexamples.test_wrong_case_identity_is_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d12c0ee7da9/vos-work/design/adonis_vos_0_3_design/test_regressions_0302.py", line 7, in test_wrong_case_identity_is_blocked
+    self.assertNotEqual(r['status'], 'SOURCE_MATCH_CANDIDATE')
+AssertionError: 'SOURCE_MATCH_CANDIDATE' == 'SOURCE_MATCH_CANDIDATE'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=4)

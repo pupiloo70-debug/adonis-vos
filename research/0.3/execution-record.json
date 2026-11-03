@@ -1,0 +1,52 @@
+{
+  "schema": "ADONIS-VOS-LOCAL-EXECUTION/1.0",
+  "document_id": "ADONIS-VOS-03-LOCAL-TEST-20261103-01",
+  "version": "0.3.0-design.2",
+  "executed_at_utc": "2026-11-03T12:40:04.947020+00:00",
+  "python": "3.12.14",
+  "data": "SYNTHETIC_ONLY",
+  "public_scope_record": "SGP-QSV-MONDAY-ACTION-20261102-R3-RESEARCH",
+  "governance_approval_changed": false,
+  "friday_2026_11_06_status": "SCHEDULED_NOT_EXECUTED",
+  "baseline": {
+    "archive_sha256": "3f94fa42c73605204b8a0cb5f2001d447b0ddcbc0c89662880531b2492dc77ab",
+    "code_sha256": "9bfe74c704b658f61cc8bd12bd088d27f23f57d5785c600785cbdf3d8116e41e",
+    "command": "python3 -m unittest -v test_regressions_0302.py",
+    "exit_code": 1,
+    "failed_counterexamples": 4,
+    "output": "baseline-counterexamples.txt"
+  },
+  "additional_pre_fix": {
+    "code_sha256": "95d5b24d413504e71c86f120991873710279328d7cda91eec806fd254f752c74",
+    "command": "python3 -m unittest -v test_workflow.WorkflowCounterexamples.test_absent_case_identity_is_missing_not_conflicting test_workflow.WorkflowCounterexamples.test_absent_text_cannot_prove_misquotation",
+    "exit_code": 1,
+    "scope": "PRE_FINAL_FIX_SYNTHETIC_COUNTEREXAMPLES"
+  },
+  "final_test": {
+    "command": "python3 -m unittest discover -v",
+    "exit_code": 0,
+    "tests_run": 40,
+    "passed": 40,
+    "output": "test-output.txt"
+  },
+  "cli": {
+    "command": "python3 vos_verify.py examples.json --now 2026-11-03T12:00:00+09:00",
+    "exit_code": 0,
+    "input": "examples.json",
+    "input_bytes_sha256": "9ad7218ced3ddd4cec28d54f43c75bf91497cdff6cb967441b9fa112d43c9c1b",
+    "input_canonical_json_sha256": "480f464bd407c8ef3fefbade4bfda8ca01419da4bb22ff85cb33e4836bc7e164",
+    "output": "sample_results.json",
+    "output_sha256": "1957ba4b3c22d5f330e7e4603ce27293ce445d0352d95e92e37a885dae25467f",
+    "draft": "sample-support-draft.txt",
+    "draft_sha256": "a88b758c46fd8a85feb3bb05b7f85a631eab8df7251e00f8e4f4c76b53fef108"
+  },
+  "code_sha256": "e6df6f65f4fef6b5d5ae19b4134d28f7cebcb87789fff2d40f132b55b2a5012d",
+  "loop_status": "STABLE_WITH_OPEN_ITEMS",
+  "open_flags": 16,
+  "independent_replication": false,
+  "source_authentication_performed": false,
+  "central_0_2_integration_tested": false,
+  "external_action_performed": false,
+  "total_score": null,
+  "review": "REVIEW.md"
+}
