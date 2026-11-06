@@ -1,0 +1,41 @@
+{
+  "schema": "ADONIS-VOS-03-TECHNICAL-DELTA/1.0",
+  "version": "0.3.0-design.2-local-correction.3",
+  "status": "RESEARCH_IMPLEMENTATION_CANDIDATE",
+  "purpose": "VICTIM_SUPPORT_NOT_REASSESSMENT_OF_GRANTED_RELIEF",
+  "new_module": "vos_support.py",
+  "new_warning_labels": [
+    "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+    "CIRCULAR_BURDEN_SHIFT_WARNING",
+    "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+    "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+    "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN"
+  ],
+  "warning_state": "SOURCE_LINKED_WARNING_FOR_REVIEW_NOT_FACT_FINDING",
+  "new_bridge": "unchanged src/agents.mjs -> bridge.mjs allowlisted research step -> bridge_entry.py",
+  "input_class": "SYNTHETIC_ONLY_FOR_RESEARCH_BRIDGE",
+  "source_labels_require_human_semantic_review": true,
+  "output_contract": {
+    "submission_candidate": "support_packet.draft_text",
+    "internal_review": "support_packet.review_notes",
+    "claims_and_evidence": "support_packet.fact_ledger",
+    "expert_nodes": "support_packet.review_nodes",
+    "evidence_control_review": "support_packet.access_reviews"
+  },
+  "canonical_changes": false,
+  "axioms_unchanged": [
+    "AX-01",
+    "AX-02",
+    "AX-03",
+    "AX-04",
+    "AX-05",
+    "AX-06",
+    "AX-07",
+    "AX-08",
+    "AX-09"
+  ],
+  "civic_trace": "0.4.5 maintained; 0.4.6 deferred",
+  "r26_state_changes": "NONE_AUTOMATIC",
+  "total_score": null,
+  "human_r3_interpretation_required_for_axiom_conflicts": true
+}

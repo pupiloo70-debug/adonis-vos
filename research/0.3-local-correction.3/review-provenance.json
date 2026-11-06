@@ -1,0 +1,58 @@
+{
+  "version": "0.3.0-design.2-local-correction.3",
+  "reviewed_public_opinions": [
+    {
+      "model": "Gemini",
+      "date": "2026-09-28",
+      "source_url": "https://sgp-qsv-archive.pupiloo70.chatgpt.site/machine/monday/receipts/SGP-QSV-R2.51-OPINION-20260928-03.txt",
+      "file": "sources/SGP-QSV-R2.51-OPINION-20260928-03.txt",
+      "sha256": "832dbcee0f2bca10caf1ed51e970e89f51ac0f07a3e0b37bcd2c9479b7f69a5e",
+      "read_scope": "FULL_PUBLIC_TEXT",
+      "implemented_themes": [
+        "ANTI_GHOSTING",
+        "CONTROLLER_EXPLANATION",
+        "VICTIM_RIGHT_TO_REVERIFY"
+      ],
+      "new_model_response_received": false,
+      "new_code_independently_reproduced_by_model": false,
+      "runtime_node_connected": false
+    },
+    {
+      "model": "Grok",
+      "date": "2026-09-28",
+      "source_url": "https://sgp-qsv-archive.pupiloo70.chatgpt.site/machine/monday/receipts/SGP-QSV-R2-ACK-20260928-GROK.json",
+      "file": "sources/SGP-QSV-R2-ACK-20260928-GROK.json",
+      "sha256": "4c24361c169eb718495c61cc7379731fc6ca5f94aa66417c3152ac3723599c1c",
+      "read_scope": "FULL_PUBLIC_TEXT",
+      "implemented_themes": [
+        "NO_VICTIM_BURDEN_SHIFT",
+        "ADMINISTRATIVE_CLOSURE_IS_NOT_VERIFICATION",
+        "NO_IMMUNITY_FROM_MISSING_RECORD"
+      ],
+      "new_model_response_received": false,
+      "new_code_independently_reproduced_by_model": false,
+      "runtime_node_connected": false
+    },
+    {
+      "model": "DeepSeek",
+      "date": "2026-09-28",
+      "source_url": "https://sgp-qsv-archive.pupiloo70.chatgpt.site/machine/monday/receipts/SGP-QSV-R2-INDEP-20260928-DEEPSEEK-01.json",
+      "file": "sources/SGP-QSV-R2-INDEP-20260928-DEEPSEEK-01.json",
+      "sha256": "8bb02e5dc41ca02cd87b83fd63a396671af8b6d956cfb4236f6f30dc88a22041",
+      "read_scope": "FULL_PUBLIC_TEXT",
+      "implemented_themes": [
+        "CUSTODY_AND_AUTHORITY_TRACING",
+        "EXPLANATION_ROUTING",
+        "PROVENANCE_INDEPENDENCE",
+        "HUMAN_INVESTIGATION_SUPPORT"
+      ],
+      "new_model_response_received": false,
+      "new_code_independently_reproduced_by_model": false,
+      "runtime_node_connected": false
+    }
+  ],
+  "recent_v03_opinion_originals": "NOT_OBTAINED_NOT_ATTRIBUTED_AS_READ",
+  "model_agreement_is_independent_evidence": false,
+  "design_authorization": "USER_DIRECT_REQUEST_20261106_RESEARCH_UPDATE_AND_CONNECTION_TEST_ONLY",
+  "canonical_approval_changed": false
+}
