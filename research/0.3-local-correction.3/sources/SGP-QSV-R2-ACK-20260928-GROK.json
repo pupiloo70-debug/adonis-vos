@@ -1,0 +1,65 @@
+{
+  "node": "Grok",
+  "receipt_id": "SGP-QSV-R2-ACK-20260928-GROK-01",
+  "reported_timestamp": "2026-09-28T11:21:00+09:00",
+  "amended_timestamp": "2026-09-28T17:19:00+09:00",
+  "metadata_basis": "ORIGINAL_CONVERSATION_RECORD",
+  "original_status": "SOURCE_ATTACHED_AS_THIS_RECEIPT",
+  "source_sha256": null,
+  "hash_status": "NOT_YET_COMPUTED",
+  "parent_approval": "R3-CC-RESPONSIBILITY-TRACE-20260928",
+  "companion_files": [
+    "SGP-QSV-R3-MON-2026-09-28-ETHICAL-GRAVITY-01-GROK-R2.json"
+  ],
+  "acknowledges": {
+    "approved_rule": "CONSCIENCE_COMPUTATION_VERIFICATION_PRIORITY",
+    "authorized_design_actions": [
+      "PRESERVATION",
+      "RESPONSIBILITY_TRACING",
+      "EXPLANATION_REQUEST",
+      "REVERIFICATION",
+      "HUMAN_REVIEW_ESCALATION"
+    ],
+    "excluded_automatic_actions": [
+      "GUILT_DETERMINATION",
+      "MEDICAL_CAUSATION_DETERMINATION",
+      "PUNISHMENT",
+      "CONFISCATION"
+    ],
+    "approval_is_runtime_implementation": false,
+    "technical_gap_completion_approved_as_existing": false
+  },
+  "workflow_self_status": {
+    "monday_action": "RECORDED",
+    "r2_witness_review": "GROK_RECEIPT_ISSUED",
+    "r251_cross_verification": "NOT_CLAIMED_BY_GROK",
+    "technical_gap": "OPEN",
+    "implementation": "NOT_DEPLOYED"
+  },
+  "common_points_accepted": [
+    "ACTIVE_VERIFICATION",
+    "ADMINISTRATIVE_CLOSURE_IS_NOT_EPISTEMIC_CLOSURE",
+    "RECORD_ABSENCE_IS_NOT_EXONERATION",
+    "NO_VICTIM_BURDEN_SHIFT",
+    "PRESERVE_UNRESOLVED_QUESTIONS"
+  ],
+  "unresolved_preserved": [
+    {
+      "id": "LP728-CL1",
+      "status": "UNRESOLVED_VERIFICATION_ISSUE",
+      "allegation_confirmed_by_this_receipt": false
+    },
+    {
+      "id": "LOT_00518001",
+      "status": "UNRESOLVED_VERIFICATION_ISSUE",
+      "allegation_confirmed_by_this_receipt": false,
+      "batch_record": "NOT_PRODUCED"
+    }
+  ],
+  "limitations": [
+    "Grok is not a deployed Hexagon runtime node.",
+    "This receipt is review text, not a court filing or agency warning.",
+    "Cross-model agreement is not independent evidence of LP728 facts.",
+    "Do not generate missing Gemini/DeepSeek verbatim texts or hashes."
+  ]
+}

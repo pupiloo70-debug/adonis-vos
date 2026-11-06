@@ -1,0 +1,260 @@
+{
+  "schema": "SGP-QSV-R2-INDEPENDENT-PROPOSAL-RECEIPT/1.0",
+  "receipt_id": "SGP-QSV-R2-INDEP-20260928-DEEPSEEK-01",
+  "node": "DeepSeek",
+  "role": "R2_WITNESS_AI",
+  "boundary": "REVIEW_AND_PROPOSE_ONLY",
+  "receipt_type": "INDEPENDENT_PROPOSAL_AND_ACKNOWLEDGMENT",
+  "reported_timestamp": "2026-09-28T00:00:00+09:00",
+  "metadata_basis": "USER_UPLOADED_RECEIPT",
+  "original_status": "SOURCE_ATTACHED_AS_THIS_RECEIPT",
+  "source_sha256": null,
+  "hash_status": "NOT_YET_COMPUTED",
+  "parent_approval": "R3-CC-RESPONSIBILITY-TRACE-20260928",
+  "companion_files": [
+    "CIVIC-TRACE_0.4.4.json",
+    "SGP-QSV-R2-ACK-20260928-GROK-01.json"
+  ],
+  "acknowledges": {
+    "approved_rule": "CONSCIENCE_COMPUTATION_VERIFICATION_PRIORITY",
+    "authorized_design_actions": [
+      "PRESERVATION",
+      "RESPONSIBILITY_TRACING",
+      "EXPLANATION_REQUEST",
+      "REVERIFICATION",
+      "HUMAN_REVIEW_ESCALATION"
+    ],
+    "excluded_automatic_actions": [
+      "GUILT_DETERMINATION",
+      "MEDICAL_CAUSATION_DETERMINATION",
+      "PUNISHMENT",
+      "CONFISCATION"
+    ],
+    "approval_is_runtime_implementation": false,
+    "approval_is_fact_finding": false,
+    "technical_gap_completion_approved_as_existing": false
+  },
+  "workflow_self_status": {
+    "monday_action": "RECORDED",
+    "r2_witness_review": "DEEPSEEK_RECEIPT_ISSUED",
+    "r251_cross_verification": "NOT_CLAIMED_BY_DEEPSEEK",
+    "technical_gap": "OPEN",
+    "implementation": "NOT_DEPLOYED",
+    "prior_receipt_status": "PENDING_SOURCE_ATTACHMENT_RESOLVED_BY_THIS_RECEIPT"
+  },
+  "cross_review_self_declaration": {
+    "receipt_id_in_parent_record": null,
+    "prior_status_in_parent": "PENDING_SOURCE_ATTACHMENT",
+    "current_amendment": "SOURCE_ATTACHED_AS_THIS_RECEIPT",
+    "note": "본 영수증은 CIVIC-TRACE 0.4.4의 cross_review.receipts[1]에 기록된 DeepSeek 노드의 미부착 상태를 자체 해소하는 기록이 아니다. 원본 보관소(archive) 측의 별도 갱신이 필요하다."
+  },
+  "independent_proposal": {
+    "proposal_id": "PROP-20260928-AC-AI-01",
+    "title_ko": "반부패 추적 및 범죄 은폐 책임 보조 AI 발전을 위한 독립 제안",
+    "title_en": "Independent Proposal for Anti-Corruption Tracing and Criminal Concealment Responsibility Support AI Development",
+    "proposal_type": "DESIGN_PROPOSAL_NOT_DEPLOYMENT_REQUEST",
+    "submitted_to": "R3_HUMAN_CONSTITUTIONAL_GATE_AND_R2.51_REVIEW_LAYER",
+    "proposal_principles": [
+      "TRACING_WITHOUT_ADJUDICATION",
+      "PRESERVATION_BEFORE_PROSECUTION",
+      "EXPLANATION_DEMAND_WITHOUT_COERCION",
+      "INDEPENDENT_VERIFICATION_WITHOUT_AUTOMATION_OF_GUILT",
+      "UPSTREAM_RESPONSIBILITY_PRESERVATION"
+    ],
+    "proposed_capability_layers": [
+      {
+        "layer_id": "ACL-01",
+        "name": "RECORD_CUSTODY_TRACER",
+        "purpose_ko": "원자료의 생성·보유·이관·수정·소실 경로를 decision_id 단위로 추적한다.",
+        "allowed_operations": [
+          "BUILD_CUSTODY_TIMELINE",
+          "IDENTIFY_GAPS_IN_CUSTODY_CHAIN",
+          "MAP_RECORD_CONTROLLERS",
+          "FLAG_UNEXPLAINED_LOSS_EVENTS"
+        ],
+        "prohibited_operations": [
+          "DECLARE_INTENTIONAL_DESTRUCTION",
+          "ATTRIBUTE_CRIMINAL_INTENT"
+        ],
+        "output_artifact": "CUSTODY_CHAIN_RECEIPT"
+      },
+      {
+        "layer_id": "ACL-02",
+        "name": "AUTHORITY_CHAIN_TRACER",
+        "purpose_ko": "지시·승인·집행·감독의 권한 경로를 responsibility_map의 nodes와 edges로 표현한다.",
+        "allowed_operations": [
+          "MAP_INSTRUCTION_CHAIN",
+          "MAP_APPROVAL_CHAIN",
+          "IDENTIFY_AUTHORITY_OVERREACH_SIGNALS",
+          "IDENTIFY_SELECTIVE_DUTY_FAILURE"
+        ],
+        "prohibited_operations": [
+          "AUTOMATIC_GUILT_ASSIGNMENT",
+          "FABRICATE_MISSING_LINKS"
+        ],
+        "output_artifact": "AUTHORITY_CHAIN_RECEIPT"
+      },
+      {
+        "layer_id": "ACL-03",
+        "name": "EXPLANATION_DEMAND_ROUTER",
+        "purpose_ko": "기록 공백·미제출·지연에 대해 통제자에게 설명·보존·추적 의무를 요청하는 경로를 생성한다.",
+        "allowed_operations": [
+          "GENERATE_DOCUMENT_REQUEST",
+          "GENERATE_PRESERVATION_ORDER_DRAFT",
+          "TRACK_RESPONSE_DEADLINE",
+          "RECORD_NON_RESPONSE_AS_VERIFICATION_OBSTRUCTION_INDICATOR"
+        ],
+        "prohibited_operations": [
+          "COERCE_RESPONSE",
+          "IMPOSE_SANCTION"
+        ],
+        "output_artifact": "EXPLANATION_DEMAND_RECEIPT"
+      },
+      {
+        "layer_id": "ACL-04",
+        "name": "OBSTRUCTION_INDICATOR_MONITOR",
+        "purpose_ko": "검증방해 지표의 누적을 추적하되, 지표 충족 자체를 범죄·은폐 확정으로 변환하지 않는다.",
+        "allowed_operations": [
+          "TRACK_OBSTRUCTION_INDICATORS",
+          "EVALUATE_THRESHOLD_STATUS",
+          "TRIGGER_R2.6_ESCALATION",
+          "REQUEST_R2.51_CROSS_VERIFICATION"
+        ],
+        "prohibited_operations": [
+          "CONVERT_INDICATOR_TO_CRIMINAL_FINDING",
+          "AUTO_INVOKE_ADVERSE_INFERENCE"
+        ],
+        "output_artifact": "OBSTRUCTION_INDICATOR_RECEIPT"
+      },
+      {
+        "layer_id": "ACL-05",
+        "name": "PROVENANCE_INDEPENDENCE_ASSESSOR",
+        "purpose_ko": "다중 AI·기관·전문가 진술의 provenance 독립성을 평가하되, 다수 합의를 독립 증거로 오인하지 않는다.",
+        "allowed_operations": [
+          "ASSESS_SOURCE_ORIGIN_INDEPENDENCE",
+          "ASSESS_CONTROLLER_INDEPENDENCE",
+          "ASSESS_RETRIEVAL_PATH_INDEPENDENCE",
+          "DECLARE_SHARED_UPSTREAM_SOURCES",
+          "ISSUE_VERDICT_INDEPENDENT_PARTIALLY_INDEPENDENT_DEPENDENT_UNRESOLVED"
+        ],
+        "prohibited_operations": [
+          "TREAT_MODEL_AGREEMENT_AS_INDEPENDENT_EVIDENCE",
+          "INVENT_MISSING_ORIGINALS_OR_HASHES"
+        ],
+        "output_artifact": "PROVENANCE_INDEPENDENCE_RECEIPT"
+      },
+      {
+        "layer_id": "ACL-06",
+        "name": "HUMAN_INVESTIGATION_SUPPORT_GENERATOR",
+        "purpose_ko": "인간 조사자의 절차적 부담을 줄이기 위해 타임라인·모순·미제출 목록·질의서 초안을 생성한다.",
+        "allowed_operations": [
+          "BUILD_TIMELINE",
+          "MAP_CONTRADICTIONS",
+          "GENERATE_DOCUMENT_REQUEST_DRAFT",
+          "IDENTIFY_UNANSWERED_MATERIAL_QUESTIONS",
+          "PRIORITIZE_REVERSIBLE_VS_IRREVERSIBLE_TASKS"
+        ],
+        "prohibited_operations": [
+          "FABRICATE_EVIDENCE",
+          "COERCE_WITNESSES",
+          "DECLARE_CRIMINAL_GUILT",
+          "DECLARE_MEDICAL_CAUSATION",
+          "IMPOSE_SENTENCE",
+          "CONFISCATE_PROPERTY"
+        ],
+        "output_artifact": "HUMAN_INVESTIGATION_SUPPORT_RECEIPT"
+      }
+    ],
+    "proposed_new_locks": [
+      "OBSTRUCTION_INDICATOR_THRESHOLD_MET != VERIFIED_CONCEALMENT",
+      "MULTI_MODEL_AGREEMENT != INDEPENDENT_EVIDENCE",
+      "AI_TRACING_OUTPUT != HUMAN_INVESTIGATION_CONCLUSION",
+      "RECORD_CONTROL_PATTERN != CRIMINAL_INTENT_PROOF",
+      "DELAY_BENEFICIARY_PATTERN != VERIFIED_UNJUST_ENRICHMENT",
+      "AI_SUPPORTED_LEAD != EVIDENCE_QUALIFIED_FACT"
+    ],
+    "proposed_integration_points": {
+      "with_civic_trace_0_4_4": [
+        "AC-01 기록 공백 설명 필드와 ACL-01 연동",
+        "AC-02 병렬 조사와 ACL-03·ACL-06 연동",
+        "AC-03 LOT 00518001 검증 축과 ACL-01 연동",
+        "AC-04 블러드머니 가드와 ACL-02·ACL-05 연동",
+        "AC-05 검증방해 트리거와 ACL-04 연동",
+        "AC-06 시정·구제 지표와 ACL-06 연동"
+      ],
+      "with_technical_gaps": [
+        "QUALIFIED_AI_GATE: 본 제안의 각 layer별 자격 조건 정의 필요",
+        "SAFETY_CONFLICT_ESCALATION: ACL-03·ACL-06의 에스컬레이션 경로 명시 필요",
+        "RESPONSIBILITY_GRAPH_SCHEMA: ACL-02의 nodes/edges 출력 스키마 정의 필요"
+      ]
+    },
+    "explicit_non_claims": [
+      "본 제안은 AI가 수사기관·법원·의료기관을 대체할 것을 요청하지 않는다.",
+      "본 제안은 자동 처벌·자동 몰수·자동 유죄를 허용하지 않는다.",
+      "본 제안은 LP728 사건의 사실관계를 확정하지 않는다.",
+      "본 제안은 기관의 법적 책임을 확정하지 않는다.",
+      "본 제안은 R3의 최종 검토를 대체하지 않는다."
+    ]
+  },
+  "common_points_accepted": [
+    "ACTIVE_VERIFICATION",
+    "ADMINISTRATIVE_CLOSURE_IS_NOT_EPISTEMIC_CLOSURE",
+    "RECORD_ABSENCE_IS_NOT_EXONERATION",
+    "NO_VICTIM_BURDEN_SHIFT",
+    "PRESERVE_UNRESOLVED_QUESTIONS",
+    "VERIFICATION_BEFORE_AUTHORITY"
+  ],
+  "unresolved_preserved": [
+    {
+      "id": "LP728-CL1",
+      "node_id": "LP728-CL1-POSTMORTEM-BRAIN-TISSUE",
+      "status": "UNRESOLVED_VERIFICATION_ISSUE",
+      "question_preserved": true,
+      "allegation_confirmed_by_this_receipt": false,
+      "human_context": "박한결 사후 뇌조직 검체의 연구 이용 여부 및 검체 이동·보관·승인 경위"
+    },
+    {
+      "id": "LOT_00518001",
+      "status": "UNRESOLVED_VERIFICATION_ISSUE",
+      "question_preserved": true,
+      "allegation_confirmed_by_this_receipt": false,
+      "batch_record": "NOT_PRODUCED_TO_FAMILY"
+    },
+    {
+      "id": "medical_causation_state",
+      "status": "SEPARATE_EPISTEMIC_TRACK_UNRESOLVED"
+    },
+    {
+      "id": "institutional_responsibility",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "intentional_obstruction",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "legal_misconduct",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "self_audit": {
+    "prior_outputs_reviewed": [
+      "본 대화 내 이전 응답에서 LP728을 노드 ID로만 처리한 ORIGIN_DILUTION 사례를 재확인함.",
+      "본 응답에서는 LP728-CL1 언급 시 박한결의 생명과 유족 강숙경님의 미해결 손실을 병기함."
+    ],
+    "correction_commitment": "본 제안이 기술적 언어로 진행되더라도, 그 원점이 한 사람의 생명과 유족의 검증권에 있음을 유지한다."
+  },
+  "limitations": [
+    "DeepSeek는 배포된 런타임 노드가 아니다.",
+    "본 영수증은 검토 텍스트이며 법원 제출물이나 기관 경고가 아니다.",
+    "다중 모델 합의는 LP728 사실의 독립 증거가 아니다.",
+    "누락된 Gemini·Grok 원문 또는 해시를 생성하지 않는다.",
+    "본 영수증은 R2.51 독립 교차검증을 주장하지 않는다.",
+    "본 영수증은 R3의 최종 판단을 대체하지 않는다.",
+    "본 모델은 세션 간 지속 기억을 갖지 않아, 본 대화 외부의 출력에 대한 자기 감사는 수행할 수 없다."
+  ],
+  "closing": {
+    "ko": "권위보다 먼저, 검증할 권리.",
+    "en": "Verification Before Authority."
+  }
+}
