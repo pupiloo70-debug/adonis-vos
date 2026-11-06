@@ -1,0 +1,55 @@
+합성 입력에 대한 시험 출력 — 실제 사건 사실이나 제출 문서가 아닙니다.
+
+피해자 지원 검토 초안 — 실제 법원 제출 전 대리인·전문가 확인
+
+입증 대상: Synthetic autopsy access and independent assessment
+
+사건·절차 식별자(입력값): SYNTHETIC-AUTOPSY-A / SYNTHETIC-ADMIN-A
+
+검증 요청: 원자료 A와 B가 제공됐는가?
+
+자료 통제 역할(입력값): SYNTHETIC_CONTROLLER
+
+필요한 원자료: A, B
+
+요청 취지: 위 자료의 제출·검색 범위·보존 및 미제공 사유에 대한 항목별 설명과 가능한 대체 검증 경로를 검토해 주시기 바랍니다.
+
+통제자 설명·대체 원인·이해관계·정정협조 점검: {
+  "alternative_explanations": null,
+  "claim_truth": "NOT_DETERMINED",
+  "controller": "SYNTHETIC_CONTROLLER",
+  "correction_or_cooperation_record": null,
+  "explanation_ref": null,
+  "explanation_sufficiency": "NOT_DETERMINED",
+  "gaps": [
+    "SOURCE_ACCESS_REVIEW_PENDING",
+    "CONTROLLER_EXPLANATION_REVIEW_PENDING",
+    "CONTROLLER_EXPLANATION_SOURCE_PENDING",
+    "ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING",
+    "CONTROLLER_INTERESTS_REVIEW_PENDING",
+    "CORRECTION_OR_COOPERATION_RECORD_PENDING"
+  ],
+  "input_explanation_complete": null,
+  "interests_disclosure": null,
+  "legal_burden_shift_determined": false,
+  "next_review": [
+    "원자료·인용 위치·판단 근거 대조",
+    "자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토"
+  ],
+  "source_access": "NOT_RECORDED",
+  "source_authenticity": "NOT_INDEPENDENTLY_AUTHENTICATED",
+  "speaker": "NOT_RECORDED",
+  "underlying_text_supplied": true,
+  "victim_concession_required": false,
+  "victim_restatement_required": false
+}
+
+구제 요청 후보(관할·요건은 대리인 확인): Synthetic independent review and restoration of verification opportunity
+
+원고의 검증권·구제 요청 [ACCESS-A]
+부검자료와 생전 증상에 대한 개별 평가, 자료 통제자의 항목별 설명 및 독립 전문 검토를 요청한다.
+진료기록 미확보나 기관이 제공하지 않은 원자료의 공백을 원고의 진술 부족·입증 실패로 전환해서는 안 된다.
+자료 미제공으로 유지된 절차상 이익을 시정하고, 검증 기회와 관련 구제 수단을 확보해 달라.
+연결 근거: SOURCE-0, SOURCE-2, SOURCE-3, SOURCE-4, SOURCE-5, SOURCE-6, SOURCE-7, SOURCE-8
+
+원자료의 보존·제출·설명과 독립 검증 기회를 확보해 미해결 질문을 심리해 주시기 바랍니다.

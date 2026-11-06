@@ -1,0 +1,172 @@
+{
+  "record_id": "ADONIS-VOS03-VICTIM-SUPPORT-BRIDGE-REPLAY-20261106-01",
+  "recorded_at": "2026-11-06T12:21:36.472317+09:00",
+  "version": "0.3.0-design.2-local-correction.3",
+  "base_execution_version": "0.3.0-design.2-local-correction.2",
+  "public_core_commit": "8176c5d04d3569ec916b73101a14f669970b4919",
+  "public_core_version": "0.2.0-draft",
+  "environment": {
+    "python": "3.12.14",
+    "node": "v24.22.1",
+    "os": "Linux"
+  },
+  "public_core_files_match_git_blobs": {
+    "package.json": {
+      "git_blob_sha": "88d3fae689269e3ad1d53a97c3d1dd85b254a7f7",
+      "sha256": "172662862a22cd7877b972bd0d8fd6bde89330bddd3c69a2716ae6b0080f5abf"
+    },
+    "src/test.mjs": {
+      "git_blob_sha": "1c9fbaf0bc24cf2718405cb1a82e082493aee9bc",
+      "sha256": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+    },
+    "tests/project.test.mjs": {
+      "git_blob_sha": "de6c4d910931ad27f78ba7861651a0b5993ab0d2",
+      "sha256": "6a64a6437397906256bb00e37c4a2fd40b92c1fce3e25b3f7af424f357736ecf"
+    },
+    "src/cli.mjs": {
+      "git_blob_sha": "9ae64f4569db92453395b8085882cd0ccd83c279",
+      "sha256": "bf7d9418ebe0c1c3e4dd445af11a81f7aa907fbc7887cbce53614b64fe5c074b"
+    },
+    "src/demo-core.mjs": {
+      "git_blob_sha": "84472f16642f02cebe092ac92b27537479eeb388",
+      "sha256": "90792d767722f67ce5a732a43d90821f51505b9af474d57f8e14d245e8623bd7"
+    },
+    "docs/sources/axioms.json": {
+      "git_blob_sha": "a702a40cf19efcbb942e83e2d41f2d6d8aff194e",
+      "sha256": "763790f47b0aa4df6e9c1d0485fabd67cd86d38abb220005617550a2248b5fec"
+    },
+    "docs/sources/cc-rules.json": {
+      "git_blob_sha": "e66eb9340924876705acd3089bad6cacfe817641",
+      "sha256": "5c581c1f4e72fb45e40629814bc3bd2537fd6a20eef667bf6e25f01a62e78b5a"
+    },
+    "docs/sources/autonomy.json": {
+      "git_blob_sha": "725eca4d5736876221cb14b7e780949c321f6785",
+      "sha256": "dd15365d1da89a8aec6d41bce9c0171f0a638de8b34fbc104e7dddbe3ee109e1"
+    },
+    "src/agents.mjs": {
+      "git_blob_sha": "328b3e6f1916b2780fff9a1aa17327be8c1234f8",
+      "sha256": "83b491ef1f3697724d2a0d70d3d24e3345790641eed9a031ecc0162b0d531a8e"
+    },
+    "src/engine.mjs": {
+      "git_blob_sha": "43ad65aa1227fef66fd6e3ed7a939e32c7e0d089",
+      "sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430"
+    },
+    "src/project.mjs": {
+      "git_blob_sha": "8e19946db317736679c270384937fce77dae9335",
+      "sha256": "32d1dbc44eff4e94fbf4a7de2e7878b55aeb789fedce32645f01d611e2acf0c0"
+    },
+    "examples/synthetic-project.json": {
+      "git_blob_sha": "78e995025a254a42ee166f577762559f4fd07988",
+      "sha256": "eef71af06b3923356413439dfbd7a33ce2fa3cfef31d990aedb772ad2341d5fd"
+    }
+  },
+  "unchanged_baseline_test_sources": [
+    {
+      "path": "test_workflow.py",
+      "sha256": "05fa3a0c12a605035e1787b3c65c2716568ac38f4e13e15bf22c816193d270dc"
+    },
+    {
+      "path": "test_regressions_0302.py",
+      "sha256": "e80ca43cd0dd007cd989bc5274b8fec4113fe677c786480ed8d83fe4bbb1f0a0"
+    },
+    {
+      "path": "test_v02_bridge.py",
+      "sha256": "fb7182d80dd853eb358de612decbda6dbb9ddd719d17ba34fa81c8908d115726"
+    },
+    {
+      "path": "test_vos_verify.py",
+      "sha256": "513e95a6f1bb74488ceaff4ecbf1fb801d84a11b1352045a3df4a4865ede9ee0"
+    },
+    {
+      "path": "test_safety_refinement.py",
+      "sha256": "b0ea15a7775a9154191f0d21d1e77e18266d95e1e8b218916a22590a6fc25f77"
+    },
+    {
+      "path": "test_recursive_provenance.py",
+      "sha256": "bebf3cded7afdf7895f988137a12a22dc30294f93d272f42db2a62de926df1c0"
+    }
+  ],
+  "runs": [
+    {
+      "command": "python3 -B -m unittest discover -v",
+      "cwd": "prior correction.2",
+      "passed": 107,
+      "total": 107,
+      "output": "baseline-107-rerun.txt",
+      "scope": "UNCHANGED_BASELINE_REPLAY"
+    },
+    {
+      "command": "npm test",
+      "cwd": "repository root",
+      "core_checks": 12,
+      "passed": 24,
+      "total": 24,
+      "output": "node-core.txt",
+      "scope": "UNCHANGED_V02_CORE"
+    },
+    {
+      "command": "python3 -B -m unittest discover -v",
+      "cwd": "research/0.3-local-correction.3",
+      "passed": 132,
+      "total": 132,
+      "retained_previous_tests": 107,
+      "new_tests": 25,
+      "output": "python-regression.txt",
+      "scope": "LOCAL_SYNTHETIC_REGRESSION"
+    },
+    {
+      "command": "node --test bridge.test.mjs",
+      "cwd": "research/0.3-local-correction.3",
+      "passed": 14,
+      "total": 14,
+      "output": "node-bridge.txt",
+      "scope": "REAL_LOCAL_V02_NODE_TO_PYTHON_RESEARCH_ADAPTER"
+    },
+    {
+      "command": "python3 -B evidence/audit_probes.py .",
+      "passed": 21,
+      "total": 21,
+      "output": "audit-probes.json",
+      "count_relation": "SEPARATE_PROBE_SET_NOT_ADDED_TO_UNIT_TEST_TOTAL"
+    },
+    {
+      "command": "python3 -B evidence/audit_robustness.py .",
+      "passed": 11,
+      "total": 11,
+      "output": "audit-robustness.json",
+      "count_relation": "SEPARATE_PROBE_SET_NOT_ADDED_TO_UNIT_TEST_TOTAL"
+    },
+    {
+      "command": "python3 -B evidence/compare-before-after.py",
+      "output": "before-after-review.json",
+      "before_passed": 0,
+      "after_passed": 5,
+      "check_count": 5,
+      "scope": "SAME_SYNTHETIC_COUNTEREXAMPLE_NOT_INDEPENDENT_BENCHMARK"
+    },
+    {
+      "command": "node run-example.mjs",
+      "output": "runtime-example-output.json",
+      "result": "LOCAL_RESEARCH_CONNECTION_SUCCEEDED",
+      "production_integration": false
+    }
+  ],
+  "source_identity_and_semantics": "SUPPLIED_TEXT_AND_LABEL_CHECK_ONLY; NO_EXTERNAL_AUTHENTICITY_CERTIFICATION",
+  "three_model_review": "2026-09-28_PUBLIC_OPINIONS_READ_AND_MAPPED; NO_FRESH_0.3_MODEL_REVIEWS_RECEIVED",
+  "canonical_rules_changed": false,
+  "approval_status_changed": false,
+  "deployment_status": "NOT_DEPLOYED",
+  "external_api_calls": 0,
+  "court_filing_performed": false,
+  "criminal_finding": false,
+  "repayment_executed": false,
+  "total_score": null,
+  "corruption_index": null,
+  "remaining": [
+    "Real-case false-positive/false-negative evaluation",
+    "Independent reproduction of new code",
+    "Recent 0.3 review originals",
+    "Source semantic and legal/medical applicability review",
+    "Production adapter permission and migration review"
+  ]
+}

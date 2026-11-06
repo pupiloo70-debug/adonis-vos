@@ -1,0 +1,55 @@
+{
+  "scope": "SYNTHETIC_COUNTEREXAMPLE_COMPARISON_NOT_INDEPENDENT_PERFORMANCE_BENCHMARK",
+  "input": "comparison-input.json",
+  "input_sha256": "43333bc3eaa5bb07094ad4c210aaee75ca52700f4967123a5c51c423ca030374",
+  "results": {
+    "before": {
+      "version": "0.3.0-design.2-local-correction.2",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/e5460123d05b/vos-update-20261106/repo/research/0.3-local-correction.3/evidence/baseline/vos_verify.py",
+        "/workspace/scratch/e5460123d05b/vos-update-20261106/repo/research/0.3-local-correction.3/evidence/comparison-input.json",
+        "--now",
+        "2026-11-06T12:00:00+09:00"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "8bece421cb6bff0cb3c77046e3736a7b3239f418347365723af801251fd89145",
+      "checks": {
+        "autopsy_exclusion_review": false,
+        "circular_burden_shift_review": false,
+        "source_linked_cartel_pattern_warning": false,
+        "no_generated_blanket_concession_in_submission_draft": false,
+        "controller_concession_and_benefit_review": false
+      },
+      "pass_count": 0,
+      "check_count": 5,
+      "automatic_approval": false,
+      "total_score": null
+    },
+    "after": {
+      "version": "0.3.0-design.2-local-correction.3",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/e5460123d05b/vos-update-20261106/repo/research/0.3-local-correction.3/vos_verify.py",
+        "/workspace/scratch/e5460123d05b/vos-update-20261106/repo/research/0.3-local-correction.3/evidence/comparison-input.json",
+        "--now",
+        "2026-11-06T12:00:00+09:00"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "1369e47ee01bb80a7a7efc7dfd7ef70144a1d91227cfcb277c5e1374cea64b99",
+      "checks": {
+        "autopsy_exclusion_review": true,
+        "circular_burden_shift_review": true,
+        "source_linked_cartel_pattern_warning": true,
+        "no_generated_blanket_concession_in_submission_draft": true,
+        "controller_concession_and_benefit_review": true
+      },
+      "pass_count": 5,
+      "check_count": 5,
+      "automatic_approval": false,
+      "total_score": null
+    }
+  }
+}

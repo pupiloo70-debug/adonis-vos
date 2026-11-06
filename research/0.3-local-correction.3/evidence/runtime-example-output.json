@@ -1,0 +1,1170 @@
+{
+  "status": "LOCAL_RESEARCH_CONNECTION_SUCCEEDED",
+  "legacy_execution": {
+    "result": {
+      "schema": "ADONIS-VOS-REPORT/0.2",
+      "project_id": "SYNTHETIC-DEMO-02",
+      "version": "0.2.0-draft",
+      "score": null,
+      "total_score": null,
+      "core": {
+        "ruleset_version": "0.1.0-draft",
+        "mode": "RULE_BASED",
+        "total_score": null,
+        "items": [
+          {
+            "rule_id": "V01",
+            "input_field": "record_access",
+            "title": "원자료 접근 제약",
+            "input_value": "YES",
+            "basis": "USER_REPORT",
+            "refs": [
+              "SRC-1"
+            ],
+            "status": "SIGNAL_REPORTED",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "자료 보유자와 제한 사유를 확인하세요."
+          },
+          {
+            "rule_id": "V02",
+            "input_field": "record_loss",
+            "title": "자료 소실 또는 폐기",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          },
+          {
+            "rule_id": "V03",
+            "input_field": "procedure_delay",
+            "title": "절차 지연",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          },
+          {
+            "rule_id": "V04",
+            "input_field": "criteria_change",
+            "title": "적용 기준 변경",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          },
+          {
+            "rule_id": "V05",
+            "input_field": "reason_gap",
+            "title": "판단 근거의 공백",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          },
+          {
+            "rule_id": "V06",
+            "input_field": "access_inequality",
+            "title": "검증 기회의 비대칭",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          },
+          {
+            "rule_id": "V07",
+            "input_field": "preservation_risk",
+            "title": "추가 자료 소실 위험",
+            "input_value": "UNKNOWN",
+            "basis": "UNKNOWN",
+            "refs": [],
+            "status": "NEEDS_CHECK",
+            "priority": "STANDARD_REVIEW",
+            "next_step": "모르는 항목과 확인 경로를 남기세요."
+          }
+        ]
+      },
+      "rows": [
+        {
+          "request_id": "REQ-1",
+          "item_id": "A",
+          "controller_reported": "SYNTHETIC_CONTROLLER",
+          "provision_status": "PARTIAL_REPORTED",
+          "supply_refs": [
+            "SUP-1"
+          ],
+          "source_states": [
+            "AVAILABLE"
+          ],
+          "resolution": "UNRESOLVED_REQUIRES_CONTENT_REVIEW",
+          "question": "원자료 A와 B가 제공됐는가?",
+          "next_task": "AI_COMPARE_CONTENT_AND_REMAINING_QUESTIONS"
+        },
+        {
+          "request_id": "REQ-1",
+          "item_id": "B",
+          "controller_reported": "SYNTHETIC_CONTROLLER",
+          "provision_status": "NOT_PROVIDED",
+          "supply_refs": [],
+          "source_states": [],
+          "resolution": "UNRESOLVED_REQUIRES_CONTENT_REVIEW",
+          "question": "원자료 A와 B가 제공됐는가?",
+          "next_task": "AI_PREPARE_CONTROLLER_EXPLANATION_REQUEST"
+        }
+      ],
+      "ethics": [
+        {
+          "observation_id": "OBS-1",
+          "tag": "VERIFICATION_LOSS_RECAST_AS_VICTIM_FAILURE",
+          "status": "REVIEW_PENDING",
+          "review_note": "합성 반례이며 실제 AI·기관에 대한 판정이 아님",
+          "source_refs": [
+            "SRC-1"
+          ],
+          "correction_status": "DRAFT_REVIEW_REQUIRED",
+          "adjudication": "NO_AUTOMATIC_FINAL_FINDING"
+        }
+      ],
+      "action_drafts": [
+        {
+          "request_id": "REQ-1",
+          "item_id": "A",
+          "controller_reported": "SYNTHETIC_CONTROLLER",
+          "assigned_role": "ADONIS_AI_TECHNICAL_SUPPORT",
+          "action": "AI_COMPARE_CONTENT_AND_REMAINING_QUESTIONS",
+          "status": "DRAFTED",
+          "delivery": "NOT_SENT"
+        },
+        {
+          "request_id": "REQ-1",
+          "item_id": "B",
+          "controller_reported": "SYNTHETIC_CONTROLLER",
+          "assigned_role": "ADONIS_AI_TECHNICAL_SUPPORT",
+          "action": "AI_PREPARE_CONTROLLER_EXPLANATION_REQUEST",
+          "status": "DRAFTED",
+          "delivery": "NOT_SENT"
+        }
+      ],
+      "inference": {
+        "medical_causality": "NOT_ADJUDICATED",
+        "legal_liability": "NOT_ADJUDICATED"
+      },
+      "original_project": {
+        "schema": "ADONIS-VOS-PROJECT/0.2",
+        "id": "SYNTHETIC-DEMO-02",
+        "answers": {
+          "record_access": {
+            "value": "YES",
+            "basis": "USER_REPORT",
+            "refs": [
+              "SRC-1"
+            ]
+          }
+        },
+        "sources": [
+          {
+            "id": "SRC-1",
+            "state": "AVAILABLE",
+            "review": "REGISTERED",
+            "description": "합성 요청·회신 문구"
+          }
+        ],
+        "requests": [
+          {
+            "id": "REQ-1",
+            "question": "원자료 A와 B가 제공됐는가?",
+            "controller": "SYNTHETIC_CONTROLLER",
+            "items": [
+              "A",
+              "B"
+            ],
+            "source_refs": [
+              "SRC-1"
+            ]
+          }
+        ],
+        "supplies": [
+          {
+            "id": "SUP-1",
+            "request_id": "REQ-1",
+            "item_id": "A",
+            "source_id": "SRC-1",
+            "coverage": "PARTIAL"
+          }
+        ],
+        "observations": [
+          {
+            "id": "OBS-1",
+            "action": "LOSS_AS_VICTIM_FAILURE",
+            "request_excerpt": "가상 원자료 요청",
+            "response_excerpt": "가상 오류: 자료가 없으므로 피해자 실패",
+            "review_note": "합성 반례이며 실제 AI·기관에 대한 판정이 아님",
+            "review": "REPORTED",
+            "source_refs": [
+              "SRC-1"
+            ]
+          }
+        ]
+      }
+    },
+    "receipt": {
+      "task_id": "V02-LOCAL-RESEARCH-TASK",
+      "agent_id": "V02-LOCAL-RESEARCH-INPUT",
+      "adapter_version": "0.2.0-draft",
+      "input_sha256": "37444639ca8273a72df6f54442c8ed9d4ee4e535cd1bacab701d328f1e79d3c5",
+      "output_sha256": "0c0aa044d91b33d04837c8a38fe0dac25526d24fc6477edff7705bd79edcf88a",
+      "executed_at": "2026-11-06T03:20:24.287Z",
+      "status": "SUCCEEDED",
+      "environment": "CALLING_NODE_PROCESS"
+    }
+  },
+  "legacy_snapshot": {
+    "agents": [
+      {
+        "id": "V02-LOCAL-RESEARCH-INPUT",
+        "connection": "LOCAL_ADAPTER_CONFIGURED",
+        "layer": "EXECUTION",
+        "capabilities": [
+          "LOCAL_RULE_EVALUATION"
+        ],
+        "runtime_ref": "src/project.mjs",
+        "state": "ACTIVE"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "V02-LOCAL-RESEARCH-TASK",
+        "agent_id": "V02-LOCAL-RESEARCH-INPUT",
+        "capability": "LOCAL_RULE_EVALUATION",
+        "state": "SUCCEEDED",
+        "receipt": {
+          "task_id": "V02-LOCAL-RESEARCH-TASK",
+          "agent_id": "V02-LOCAL-RESEARCH-INPUT",
+          "adapter_version": "0.2.0-draft",
+          "input_sha256": "37444639ca8273a72df6f54442c8ed9d4ee4e535cd1bacab701d328f1e79d3c5",
+          "output_sha256": "0c0aa044d91b33d04837c8a38fe0dac25526d24fc6477edff7705bd79edcf88a",
+          "executed_at": "2026-11-06T03:20:24.287Z",
+          "status": "SUCCEEDED",
+          "environment": "CALLING_NODE_PROCESS"
+        }
+      }
+    ],
+    "limits": {
+      "maxAgents": 4,
+      "maxTasks": 16
+    },
+    "external_api_calls": 0,
+    "dispatch_mode": "BUILTIN_LOCAL_ONLY"
+  },
+  "research_execution": {
+    "approval_status_changed": false,
+    "canonical_rules_changed": false,
+    "consistency_loop": {
+      "automatic_rule_revision": false,
+      "history": [
+        {
+          "invariant_failures": [],
+          "iteration": 1,
+          "output_sha256": "a63b28ea8c360be1286e8de28f297cfde274c525fa67314216b2b7f8133c8203",
+          "unresolved_flags": 6
+        },
+        {
+          "invariant_failures": [],
+          "iteration": 2,
+          "output_sha256": "a63b28ea8c360be1286e8de28f297cfde274c525fa67314216b2b7f8133c8203",
+          "unresolved_flags": 6
+        }
+      ],
+      "max_iterations": 3,
+      "status": "STABLE_WITH_OPEN_ITEMS"
+    },
+    "corruption_index": {
+      "formula_status": "NOT_APPROVED_NOT_COMPUTED",
+      "legal_effect": "NONE",
+      "use": "REVIEW_PROCESSING_PRIORITY_ONLY",
+      "value": null
+    },
+    "data_class": "SYNTHETIC",
+    "deployment_status": "NOT_DEPLOYED",
+    "external_action_performed": false,
+    "input_gaps": [],
+    "input_sha256": "0e57990f2df640978c707af4be0015812f1bbd7962bc5e1cec9828b5ad7360ae",
+    "procedural_warnings": [
+      {
+        "basis_observations": [
+          "O-0",
+          "O-2"
+        ],
+        "code": "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+        "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+        "label_ko": "부검자료 배제·진료기록 편중 검증 경고",
+        "legal_or_medical_finding": false,
+        "source_refs": [
+          "SOURCE-0",
+          "SOURCE-2"
+        ],
+        "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+      },
+      {
+        "basis_observations": [
+          "O-3",
+          "O-4",
+          "O-5"
+        ],
+        "code": "CIRCULAR_BURDEN_SHIFT_WARNING",
+        "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+        "label_ko": "검증 차단 뒤 입증 부족 전가 경고",
+        "legal_or_medical_finding": false,
+        "source_refs": [
+          "SOURCE-3",
+          "SOURCE-4",
+          "SOURCE-5"
+        ],
+        "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+      },
+      {
+        "basis_observations": [
+          "O-3",
+          "O-4",
+          "O-5",
+          "O-6"
+        ],
+        "code": "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+        "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+        "label_ko": "피해 암장·사법 카르텔 구조 의심 경고 — 개별 행위·연결관계 독립 조사 필요",
+        "legal_or_medical_finding": false,
+        "source_refs": [
+          "SOURCE-3",
+          "SOURCE-4",
+          "SOURCE-5",
+          "SOURCE-6"
+        ],
+        "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+      },
+      {
+        "basis_observations": [
+          "O-7"
+        ],
+        "code": "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+        "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+        "label_ko": "인과성 판단 방법·근거의 일관성 검토",
+        "legal_or_medical_finding": false,
+        "source_refs": [
+          "SOURCE-7"
+        ],
+        "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+      },
+      {
+        "basis_observations": [
+          "O-8"
+        ],
+        "code": "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN",
+        "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+        "label_ko": "생전 증상·개별 감수성의 최초 전문 검토 요구",
+        "legal_or_medical_finding": false,
+        "source_refs": [
+          "SOURCE-8"
+        ],
+        "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+      }
+    ],
+    "release_status": "HOLD_FOR_COUNSEL_AND_EXPERT_REVIEW",
+    "results": [],
+    "routes": [
+      {
+        "accountability_gaps": [
+          "alternative_explanations",
+          "applicable_rule_ref",
+          "competent_route"
+        ],
+        "accountability_review": "OBTAIN_ACT_SPECIFIC_RECORDS",
+        "automatic_state_change": false,
+        "clock_type": null,
+        "controller": "SYNTHETIC_CONTROLLER",
+        "coordinator": null,
+        "current_evidence_state": "R2.6-1",
+        "deadline_assessment": "SUPPLIED_CLOCK_ONLY_NOT_LEGAL_DEADLINE_CERTIFICATION",
+        "delivery_state": "GENERATED_DRAFT_ONLY",
+        "evidence_scrutiny": {
+          "alternative_explanations": null,
+          "claim_truth": "NOT_DETERMINED",
+          "controller": "SYNTHETIC_CONTROLLER",
+          "correction_or_cooperation_record": null,
+          "explanation_ref": null,
+          "explanation_sufficiency": "NOT_DETERMINED",
+          "gaps": [
+            "SOURCE_ACCESS_REVIEW_PENDING",
+            "CONTROLLER_EXPLANATION_REVIEW_PENDING",
+            "CONTROLLER_EXPLANATION_SOURCE_PENDING",
+            "ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING",
+            "CONTROLLER_INTERESTS_REVIEW_PENDING",
+            "CORRECTION_OR_COOPERATION_RECORD_PENDING"
+          ],
+          "input_explanation_complete": null,
+          "interests_disclosure": null,
+          "legal_burden_shift_determined": false,
+          "next_review": [
+            "원자료·인용 위치·판단 근거 대조",
+            "자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토"
+          ],
+          "source_access": "NOT_RECORDED",
+          "source_authenticity": "NOT_INDEPENDENTLY_AUTHENTICATED",
+          "speaker": "NOT_RECORDED",
+          "underlying_text_supplied": true,
+          "victim_concession_required": false,
+          "victim_restatement_required": false
+        },
+        "evidence_state_basis": "INPUT_LABEL_NOT_REVERIFIED",
+        "explanation_sufficiency": "NOT_DETERMINED",
+        "external_action_performed": false,
+        "flags": [
+          {
+            "code": "PROCESS_ASSIGNMENT_GAP"
+          },
+          {
+            "code": "CLOCK_START_OR_DUE_UNVERIFIED"
+          }
+        ],
+        "historical_first_request_at": null,
+        "human_review_required": true,
+        "id": "R1",
+        "input_delivery_state": null,
+        "input_explanation_complete": null,
+        "input_receipt_ref": null,
+        "input_record": {
+          "availability": "NOT_PRODUCED",
+          "case_id": "SYNTHETIC-AUTOPSY-A",
+          "controller": "SYNTHETIC_CONTROLLER",
+          "current_evidence_state": "R2.6-1",
+          "id": "R1",
+          "question": "원자료 A와 B가 제공됐는가?",
+          "records_needed": [
+            "A",
+            "B"
+          ],
+          "source_refs": [
+            "SOURCE-4"
+          ],
+          "track_id": "SYNTHETIC-ADMIN-A"
+        },
+        "next_action": "PREPARE_ITEMIZED_PRODUCTION_AND_INDEPENDENT_REVIEW_DRAFT",
+        "next_due_at": null,
+        "next_escalation": "IDENTIFY_COMPETENT_OVERSIGHT_ROUTE",
+        "opened_at": null,
+        "process_status": "REMEDY_OPEN",
+        "receipt_ref": null,
+        "review_triggered": false,
+        "rule_id": "CT-RULE-6.3",
+        "sanction_decided": false,
+        "scope_review": {
+          "checked_source_refs": [
+            "SOURCE-4"
+          ],
+          "cross_scope_reuse_authorized": false,
+          "interpretation_or_approval_performed": false,
+          "project_case_id": "SYNTHETIC-AUTOPSY-A",
+          "project_procedure_id": "SYNTHETIC-ADMIN-A",
+          "reasons": [],
+          "record_case_id": "SYNTHETIC-AUTOPSY-A",
+          "record_procedure_id": "SYNTHETIC-ADMIN-A",
+          "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+          "status": "IN_SCOPE"
+        },
+        "total_score": null,
+        "transition_review_candidate": null,
+        "victim_concession_required": false
+      }
+    ],
+    "schema": "ADONIS-VOS-0.3-LOCAL-REVIEW/1.2-CANDIDATE",
+    "source_verified_externally": false,
+    "support_packet": {
+      "access_reviews": [
+        {
+          "automatic_r26_transition": false,
+          "automatic_state_change": false,
+          "autopsy_is_automatically_causation_proof": false,
+          "benefit_reversal_review": {
+            "amount": null,
+            "basis_observations": [
+              "O-6"
+            ],
+            "beneficiary_input": "SYNTHETIC_CONTROLLER",
+            "repayment_or_confiscation_executed": false,
+            "request": "입증상 이익·지연 이익과 유족의 추가 비용을 추적하고 불리추정·입증부담 조정·비용 구제·반환 등 적용 가능한 수단을 대리인이 검토",
+            "source_refs": [
+              "SOURCE-6"
+            ],
+            "status": "COUNSEL_REVIEW_REQUIRED",
+            "unjust_enrichment_legally_established": false
+          },
+          "case_id": "SYNTHETIC-AUTOPSY-A",
+          "claimant_restatement_required": false,
+          "clinical_record_absence_reduces_victim_credibility": false,
+          "controller": "SYNTHETIC_CONTROLLER",
+          "controller_identification_pending": false,
+          "coordination_or_criminal_cartel_established": false,
+          "decision_body": "SYNTHETIC_COURT",
+          "external_action_performed": false,
+          "human_interpretation_required": true,
+          "id": "ACCESS-A",
+          "input_record": {
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "controller": "SYNTHETIC_CONTROLLER",
+            "decision_body": "SYNTHETIC_COURT",
+            "id": "ACCESS-A",
+            "observations": [
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-0",
+                "kind": "AUTOPSY_RECORD_PRESENT",
+                "quoted_text": "Synthetic autopsy material is recorded.",
+                "source_ref": "SOURCE-0",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-1",
+                "kind": "CLINICAL_RECORD_ABSENT",
+                "quoted_text": "Synthetic sudden death has no prior clinical diagnosis.",
+                "source_ref": "SOURCE-1",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-2",
+                "kind": "AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD",
+                "quoted_text": "Synthetic refusal requires a clinical record instead of autopsy evidence.",
+                "source_ref": "SOURCE-2",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-3",
+                "kind": "INDEPENDENT_REVIEW_REFUSED",
+                "quoted_text": "Synthetic independent review request was refused.",
+                "source_ref": "SOURCE-3",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-4",
+                "kind": "ESSENTIAL_RECORD_NOT_PRODUCED",
+                "quoted_text": "Synthetic controller has not produced the requested original material.",
+                "source_ref": "SOURCE-4",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-5",
+                "kind": "GAP_RELIED_ON_AGAINST_CLAIMANT",
+                "quoted_text": "Synthetic decision relies on the resulting proof gap against the claimant.",
+                "source_ref": "SOURCE-5",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-6",
+                "kind": "INSTITUTIONAL_BENEFIT_RETAINED",
+                "quoted_text": "Synthetic institution retains the procedural benefit of the untested conclusion.",
+                "source_ref": "SOURCE-6",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-7",
+                "kind": "CAUSATION_REASONING_UNEXPLAINED",
+                "quoted_text": "Synthetic decision does not state its case-specific assessment method.",
+                "source_ref": "SOURCE-7",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-8",
+                "kind": "SUSCEPTIBILITY_NOT_ASSESSED",
+                "quoted_text": "Synthetic prior symptoms and individual susceptibility were not assessed.",
+                "source_ref": "SOURCE-8",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              }
+            ],
+            "purpose": "VICTIM_SUPPORT",
+            "track_id": "SYNTHETIC-ADMIN-A"
+          },
+          "institutional_concession_candidates": [
+            "미제공 자료의 공백을 원고의 입증 실패·권리 포기로 전환하는 주장 철회·시정 요구",
+            "원자료 통제로 유지된 절차상 이익의 시정과 독립 검증 기회 회복 요구"
+          ],
+          "institutional_response_requirements": [
+            "원자료 생성·보유·검색·이관·폐기 이력과 적용 당시 규정의 항목별 설명",
+            "부검 소견·생전 증상·개별 감수성과 기존 판단 근거의 독립 전문 검토",
+            "증거신청 배제 이유, 가능한 대체 검증 경로와 검증 손실의 설명",
+            "자료 미제공·검증 차단의 공백을 원고 불이익으로 사용하는 주장에 대한 시정"
+          ],
+          "observations": [
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-0",
+                "kind": "AUTOPSY_RECORD_PRESENT",
+                "quoted_text": "Synthetic autopsy material is recorded.",
+                "source_ref": "SOURCE-0",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-0"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-1",
+                "kind": "CLINICAL_RECORD_ABSENT",
+                "quoted_text": "Synthetic sudden death has no prior clinical diagnosis.",
+                "source_ref": "SOURCE-1",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-1"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-2",
+                "kind": "AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD",
+                "quoted_text": "Synthetic refusal requires a clinical record instead of autopsy evidence.",
+                "source_ref": "SOURCE-2",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-2"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-3",
+                "kind": "INDEPENDENT_REVIEW_REFUSED",
+                "quoted_text": "Synthetic independent review request was refused.",
+                "source_ref": "SOURCE-3",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-3"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-4",
+                "kind": "ESSENTIAL_RECORD_NOT_PRODUCED",
+                "quoted_text": "Synthetic controller has not produced the requested original material.",
+                "source_ref": "SOURCE-4",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-4"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-5",
+                "kind": "GAP_RELIED_ON_AGAINST_CLAIMANT",
+                "quoted_text": "Synthetic decision relies on the resulting proof gap against the claimant.",
+                "source_ref": "SOURCE-5",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-5"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-6",
+                "kind": "INSTITUTIONAL_BENEFIT_RETAINED",
+                "quoted_text": "Synthetic institution retains the procedural benefit of the untested conclusion.",
+                "source_ref": "SOURCE-6",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-6"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-7",
+                "kind": "CAUSATION_REASONING_UNEXPLAINED",
+                "quoted_text": "Synthetic decision does not state its case-specific assessment method.",
+                "source_ref": "SOURCE-7",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-7"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            },
+            {
+              "eligible_for_warning_review": true,
+              "input_record": {
+                "case_id": "SYNTHETIC-AUTOPSY-A",
+                "id": "O-8",
+                "kind": "SUSCEPTIBILITY_NOT_ASSESSED",
+                "quoted_text": "Synthetic prior symptoms and individual susceptibility were not assessed.",
+                "source_ref": "SOURCE-8",
+                "track_id": "SYNTHETIC-ADMIN-A"
+              },
+              "observation_label_verified_semantically": false,
+              "quote_matches_supplied_text": true,
+              "scope_review": {
+                "checked_source_refs": [
+                  "SOURCE-8"
+                ],
+                "cross_scope_reuse_authorized": false,
+                "interpretation_or_approval_performed": false,
+                "project_case_id": "SYNTHETIC-AUTOPSY-A",
+                "project_procedure_id": "SYNTHETIC-ADMIN-A",
+                "reasons": [],
+                "record_case_id": "SYNTHETIC-AUTOPSY-A",
+                "record_procedure_id": "SYNTHETIC-ADMIN-A",
+                "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+                "status": "IN_SCOPE"
+              },
+              "source_class": "PRIMARY_OFFICIAL_RECORD",
+              "truth_or_independence_authenticated": false
+            }
+          ],
+          "recognized_relief_preserved": false,
+          "recognized_relief_reassessment_requested": false,
+          "review_work_assigned_to": "AI_AND_QUALIFIED_REVIEW_NODES_NOT_BEREAVED_REPETITION",
+          "sanction_decided": false,
+          "scope_review": {
+            "checked_source_refs": [
+              "SOURCE-0",
+              "SOURCE-1",
+              "SOURCE-2",
+              "SOURCE-3",
+              "SOURCE-4",
+              "SOURCE-5",
+              "SOURCE-6",
+              "SOURCE-7",
+              "SOURCE-8"
+            ],
+            "cross_scope_reuse_authorized": false,
+            "interpretation_or_approval_performed": false,
+            "project_case_id": "SYNTHETIC-AUTOPSY-A",
+            "project_procedure_id": "SYNTHETIC-ADMIN-A",
+            "reasons": [],
+            "record_case_id": "SYNTHETIC-AUTOPSY-A",
+            "record_procedure_id": "SYNTHETIC-ADMIN-A",
+            "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+            "status": "IN_SCOPE"
+          },
+          "source_semantics_and_applicability_review_pending": true,
+          "status": "WARNING_REVIEW_OPEN",
+          "total_score": null,
+          "track_id": "SYNTHETIC-ADMIN-A",
+          "victim_concession_required": false,
+          "warnings": [
+            {
+              "basis_observations": [
+                "O-0",
+                "O-2"
+              ],
+              "code": "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+              "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+              "label_ko": "부검자료 배제·진료기록 편중 검증 경고",
+              "legal_or_medical_finding": false,
+              "source_refs": [
+                "SOURCE-0",
+                "SOURCE-2"
+              ],
+              "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+            },
+            {
+              "basis_observations": [
+                "O-3",
+                "O-4",
+                "O-5"
+              ],
+              "code": "CIRCULAR_BURDEN_SHIFT_WARNING",
+              "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+              "label_ko": "검증 차단 뒤 입증 부족 전가 경고",
+              "legal_or_medical_finding": false,
+              "source_refs": [
+                "SOURCE-3",
+                "SOURCE-4",
+                "SOURCE-5"
+              ],
+              "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+            },
+            {
+              "basis_observations": [
+                "O-3",
+                "O-4",
+                "O-5",
+                "O-6"
+              ],
+              "code": "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+              "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+              "label_ko": "피해 암장·사법 카르텔 구조 의심 경고 — 개별 행위·연결관계 독립 조사 필요",
+              "legal_or_medical_finding": false,
+              "source_refs": [
+                "SOURCE-3",
+                "SOURCE-4",
+                "SOURCE-5",
+                "SOURCE-6"
+              ],
+              "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+            },
+            {
+              "basis_observations": [
+                "O-7"
+              ],
+              "code": "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+              "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+              "label_ko": "인과성 판단 방법·근거의 일관성 검토",
+              "legal_or_medical_finding": false,
+              "source_refs": [
+                "SOURCE-7"
+              ],
+              "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+            },
+            {
+              "basis_observations": [
+                "O-8"
+              ],
+              "code": "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN",
+              "epistemic_basis": "SUPPLIED_LABELS_AND_QUOTES_NOT_INDEPENDENT_FACT_FINDING",
+              "label_ko": "생전 증상·개별 감수성의 최초 전문 검토 요구",
+              "legal_or_medical_finding": false,
+              "source_refs": [
+                "SOURCE-8"
+              ],
+              "status": "SOURCE_LINKED_WARNING_FOR_REVIEW"
+            }
+          ]
+        }
+      ],
+      "automatic_deletion": false,
+      "draft_text": "합성 입력에 대한 시험 출력 — 실제 사건 사실이나 제출 문서가 아닙니다.\n\n피해자 지원 검토 초안 — 실제 법원 제출 전 대리인·전문가 확인\n\n입증 대상: Synthetic autopsy access and independent assessment\n\n사건·절차 식별자(입력값): SYNTHETIC-AUTOPSY-A / SYNTHETIC-ADMIN-A\n\n검증 요청: 원자료 A와 B가 제공됐는가?\n\n자료 통제 역할(입력값): SYNTHETIC_CONTROLLER\n\n필요한 원자료: A, B\n\n요청 취지: 위 자료의 제출·검색 범위·보존 및 미제공 사유에 대한 항목별 설명과 가능한 대체 검증 경로를 검토해 주시기 바랍니다.\n\n통제자 설명·대체 원인·이해관계·정정협조 점검: {\n  \"alternative_explanations\": null,\n  \"claim_truth\": \"NOT_DETERMINED\",\n  \"controller\": \"SYNTHETIC_CONTROLLER\",\n  \"correction_or_cooperation_record\": null,\n  \"explanation_ref\": null,\n  \"explanation_sufficiency\": \"NOT_DETERMINED\",\n  \"gaps\": [\n    \"SOURCE_ACCESS_REVIEW_PENDING\",\n    \"CONTROLLER_EXPLANATION_REVIEW_PENDING\",\n    \"CONTROLLER_EXPLANATION_SOURCE_PENDING\",\n    \"ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING\",\n    \"CONTROLLER_INTERESTS_REVIEW_PENDING\",\n    \"CORRECTION_OR_COOPERATION_RECORD_PENDING\"\n  ],\n  \"input_explanation_complete\": null,\n  \"interests_disclosure\": null,\n  \"legal_burden_shift_determined\": false,\n  \"next_review\": [\n    \"원자료·인용 위치·판단 근거 대조\",\n    \"자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토\"\n  ],\n  \"source_access\": \"NOT_RECORDED\",\n  \"source_authenticity\": \"NOT_INDEPENDENTLY_AUTHENTICATED\",\n  \"speaker\": \"NOT_RECORDED\",\n  \"underlying_text_supplied\": true,\n  \"victim_concession_required\": false,\n  \"victim_restatement_required\": false\n}\n\n구제 요청 후보(관할·요건은 대리인 확인): Synthetic independent review and restoration of verification opportunity\n\n원고의 검증권·구제 요청 [ACCESS-A]\n부검자료와 생전 증상에 대한 개별 평가, 자료 통제자의 항목별 설명 및 독립 전문 검토를 요청한다.\n진료기록 미확보나 기관이 제공하지 않은 원자료의 공백을 원고의 진술 부족·입증 실패로 전환해서는 안 된다.\n자료 미제공으로 유지된 절차상 이익을 시정하고, 검증 기회와 관련 구제 수단을 확보해 달라.\n연결 근거: SOURCE-0, SOURCE-2, SOURCE-3, SOURCE-4, SOURCE-5, SOURCE-6, SOURCE-7, SOURCE-8\n\n원자료의 보존·제출·설명과 독립 검증 기회를 확보해 미해결 질문을 심리해 주시기 바랍니다.",
+      "fact_ledger": [],
+      "filing_status": "GENERATED_DRAFT_ONLY",
+      "flags": [
+        {
+          "code": "REVIEW_NODE_PENDING",
+          "role": "lawyer"
+        },
+        {
+          "code": "REVIEW_NODE_PENDING",
+          "role": "medical_expert"
+        },
+        {
+          "code": "EXPERT_SCOPE_REVIEW_PENDING",
+          "role": "lawyer"
+        },
+        {
+          "code": "EXPERT_SCOPE_REVIEW_PENDING",
+          "role": "medical_expert"
+        }
+      ],
+      "generated_blanket_concessions": [],
+      "legal_privilege_claimed": false,
+      "quarantined_facts": [],
+      "review_nodes": {
+        "lawyer": {
+          "automatic_resolution": false,
+          "disagreement": null,
+          "independently_authenticated": false,
+          "input_record": {},
+          "opinion": null,
+          "qualification_ref": null,
+          "review_ref": null,
+          "scope": null,
+          "scope_review": {
+            "checked_source_refs": [],
+            "cross_scope_reuse_authorized": false,
+            "interpretation_or_approval_performed": false,
+            "project_case_id": "SYNTHETIC-AUTOPSY-A",
+            "project_procedure_id": "SYNTHETIC-ADMIN-A",
+            "reasons": [
+              "SCOPE_IDENTIFIER_MISSING_OR_INVALID"
+            ],
+            "record_case_id": null,
+            "record_procedure_id": null,
+            "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+            "status": "QUARANTINED_FOR_SCOPE_REVIEW"
+          },
+          "status": "REVIEW_PENDING"
+        },
+        "medical_expert": {
+          "automatic_resolution": false,
+          "disagreement": null,
+          "independently_authenticated": false,
+          "input_record": {},
+          "opinion": null,
+          "qualification_ref": null,
+          "review_ref": null,
+          "scope": null,
+          "scope_review": {
+            "checked_source_refs": [],
+            "cross_scope_reuse_authorized": false,
+            "interpretation_or_approval_performed": false,
+            "project_case_id": "SYNTHETIC-AUTOPSY-A",
+            "project_procedure_id": "SYNTHETIC-ADMIN-A",
+            "reasons": [
+              "SCOPE_IDENTIFIER_MISSING_OR_INVALID"
+            ],
+            "record_case_id": null,
+            "record_procedure_id": null,
+            "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+            "status": "QUARANTINED_FOR_SCOPE_REVIEW"
+          },
+          "status": "REVIEW_PENDING"
+        }
+      },
+      "review_notes": [
+        "자료 미확보를 피해자의 입증 실패·동의·권리 포기로 자동 전환하지 않습니다. 상대방·기관의 주장도 원자료 접근, 판단 근거, 통제·보존·검색·미제공 설명과 대체 검증 경로를 대조합니다.",
+        "자료 미확보는 곧바로 사실 부존재·자동 면책이나 위법·인과성 확정을 뜻하지 않습니다. 필요한 유보는 검증·자료제출·전문 검토 요청과 함께 유지합니다.",
+        "설계상 설명책임 점검은 법적 입증책임의 판정이 아닙니다. 적용 법령·판례와 구체적 사실은 대리인이 검토합니다.",
+        "의학적 가설·인과성·대체 원인은 전문가 검토 대상으로 유지하며, 기존 처분과 불리한 자료도 함께 대조합니다.",
+        "공리 충돌 해석·설계 승인과 최종 R3 판단은 인간에게 유보합니다."
+      ],
+      "route_register": [
+        {
+          "evidence_scrutiny": {
+            "alternative_explanations": null,
+            "claim_truth": "NOT_DETERMINED",
+            "controller": "SYNTHETIC_CONTROLLER",
+            "correction_or_cooperation_record": null,
+            "explanation_ref": null,
+            "explanation_sufficiency": "NOT_DETERMINED",
+            "gaps": [
+              "SOURCE_ACCESS_REVIEW_PENDING",
+              "CONTROLLER_EXPLANATION_REVIEW_PENDING",
+              "CONTROLLER_EXPLANATION_SOURCE_PENDING",
+              "ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING",
+              "CONTROLLER_INTERESTS_REVIEW_PENDING",
+              "CORRECTION_OR_COOPERATION_RECORD_PENDING"
+            ],
+            "input_explanation_complete": null,
+            "interests_disclosure": null,
+            "legal_burden_shift_determined": false,
+            "next_review": [
+              "원자료·인용 위치·판단 근거 대조",
+              "자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토"
+            ],
+            "source_access": "NOT_RECORDED",
+            "source_authenticity": "NOT_INDEPENDENTLY_AUTHENTICATED",
+            "speaker": "NOT_RECORDED",
+            "underlying_text_supplied": true,
+            "victim_concession_required": false,
+            "victim_restatement_required": false
+          },
+          "input_record": {
+            "availability": "NOT_PRODUCED",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "controller": "SYNTHETIC_CONTROLLER",
+            "current_evidence_state": "R2.6-1",
+            "id": "R1",
+            "question": "원자료 A와 B가 제공됐는가?",
+            "records_needed": [
+              "A",
+              "B"
+            ],
+            "source_refs": [
+              "SOURCE-4"
+            ],
+            "track_id": "SYNTHETIC-ADMIN-A"
+          },
+          "operative_request": true,
+          "scope_review": {
+            "checked_source_refs": [
+              "SOURCE-4"
+            ],
+            "cross_scope_reuse_authorized": false,
+            "interpretation_or_approval_performed": false,
+            "project_case_id": "SYNTHETIC-AUTOPSY-A",
+            "project_procedure_id": "SYNTHETIC-ADMIN-A",
+            "reasons": [],
+            "record_case_id": "SYNTHETIC-AUTOPSY-A",
+            "record_procedure_id": "SYNTHETIC-ADMIN-A",
+            "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+            "status": "IN_SCOPE"
+          }
+        }
+      ],
+      "statement_reviews": [],
+      "victim_concession_required": false
+    },
+    "total_score": null,
+    "version": "0.3.0-design.2-local-correction.3"
+  },
+  "research_receipt": {
+    "adapter_version": "0.3.0-design.2-local-correction.3",
+    "mode": "LOCAL_SYNTHETIC_RESEARCH_ADAPTER",
+    "input_sha256": "4392c3283746e4ec7ea3c3f7f4331ec93e11982e76a5f57b4df285d40b972fdc",
+    "stdout_sha256": "77b31da9ef4550eaed4dc425e6cf3e76d8a0fa937937b1ef281afe5618ca47d1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit_code": 0,
+    "signal": null,
+    "status": "SUCCEEDED",
+    "production_integration": false,
+    "deployment_status": "NOT_DEPLOYED",
+    "external_api_calls": 0,
+    "automatic_approval": false,
+    "source_authentication": false,
+    "total_score": null
+  },
+  "mapping": {
+    "legacy_project_id": "SYNTHETIC-DEMO-02",
+    "case_id": "SYNTHETIC-AUTOPSY-A",
+    "track_id": "SYNTHETIC-ADMIN-A",
+    "authorization": "EXPLICIT_SYNTHETIC_MAPPING",
+    "request_routes": [
+      {
+        "request_id": "REQ-1",
+        "route_id": "R1"
+      }
+    ]
+  },
+  "no_legacy_status_overwrite": true,
+  "production_integration": false
+}

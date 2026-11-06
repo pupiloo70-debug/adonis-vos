@@ -1,0 +1,38 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> adonis-vos@0.2.0-draft test
+> node src/test.mjs && node --test tests/*.test.mjs
+
+12 core checks passed
+✔ partial A provision leaves B missing and both questions unresolved (2.136866ms)
+✔ reported FULL is not content verification (0.441554ms)
+✔ cannot supply an item outside its request (0.447454ms)
+✔ duplicate source IDs rejected (0.233341ms)
+✔ dangling answer references rejected (0.277968ms)
+✔ unknown answer keys rejected rather than discarded (0.209495ms)
+✔ unreviewed stigma observation cannot become evidence linked (1.157402ms)
+✔ content reviewed basis supports a review record, never guilt (0.327423ms)
+✔ withdrawn observation remains in output with references (0.293932ms)
+✔ observation without evidence rejected (0.420764ms)
+✔ destroyed source cannot be silently marked read (0.235945ms)
+✔ unknown remains distinct from NO (0.202484ms)
+✔ analysis preserves original input and unknown narrative metadata (1.063961ms)
+✔ unsupported version and oversized import rejected (1.436122ms)
+✔ named willingness cannot be dispatched as connected agent (0.319881ms)
+✔ bounded local assignment is recorded as not executed (0.204127ms)
+✔ capability mismatch is denied (0.24586ms)
+✔ resource limits and duplicate task IDs enforced (0.206731ms)
+✔ suspension holds queued tasks and denies further assignment (0.249095ms)
+✔ registry cannot promote narrative into execution by assertion (0.12596ms)
+✔ snapshot cannot mutate coordinator (0.101923ms)
+✔ central core actually executes built-in task and emits content hashes (1.650714ms)
+✔ invalid local task input records failure rather than success (0.158047ms)
+✔ CLI JSON roundtrip, no overwrite, malformed input failure (258.00555ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 360.270233

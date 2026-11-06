@@ -1,0 +1,289 @@
+{
+  "schema": "ADONIS-VOS-0.3-LOCAL-REVIEW/1.1-CANDIDATE",
+  "version": "0.3.0-design.2-local-correction.2",
+  "data_class": "SYNTHETIC",
+  "results": [],
+  "routes": [
+    {
+      "id": "R1",
+      "rule_id": "CT-RULE-6.3",
+      "review_triggered": false,
+      "current_evidence_state": "R2.6-1",
+      "evidence_state_basis": "INPUT_LABEL_NOT_REVERIFIED",
+      "transition_review_candidate": null,
+      "automatic_state_change": false,
+      "process_status": "REMEDY_OPEN",
+      "opened_at": null,
+      "historical_first_request_at": null,
+      "next_due_at": null,
+      "clock_type": null,
+      "controller": "SYNTHETIC_CONTROLLER",
+      "coordinator": null,
+      "next_action": "PREPARE_ITEMIZED_PRODUCTION_AND_INDEPENDENT_REVIEW_DRAFT",
+      "next_escalation": "IDENTIFY_COMPETENT_OVERSIGHT_ROUTE",
+      "accountability_review": "OBTAIN_ACT_SPECIFIC_RECORDS",
+      "accountability_gaps": [
+        "alternative_explanations",
+        "applicable_rule_ref",
+        "competent_route"
+      ],
+      "sanction_decided": false,
+      "external_action_performed": false,
+      "delivery_state": "GENERATED_DRAFT_ONLY",
+      "receipt_ref": null,
+      "input_delivery_state": null,
+      "input_receipt_ref": null,
+      "total_score": null,
+      "flags": [
+        {
+          "code": "PROCESS_ASSIGNMENT_GAP"
+        },
+        {
+          "code": "CLOCK_START_OR_DUE_UNVERIFIED"
+        }
+      ],
+      "human_review_required": true,
+      "deadline_assessment": "SUPPLIED_CLOCK_ONLY_NOT_LEGAL_DEADLINE_CERTIFICATION",
+      "explanation_sufficiency": "NOT_DETERMINED",
+      "input_explanation_complete": null,
+      "victim_concession_required": false,
+      "scope_review": {
+        "status": "IN_SCOPE",
+        "project_case_id": "SYNTHETIC-AUTOPSY-A",
+        "project_procedure_id": "SYNTHETIC-ADMIN-A",
+        "record_case_id": "SYNTHETIC-AUTOPSY-A",
+        "record_procedure_id": "SYNTHETIC-ADMIN-A",
+        "reasons": [],
+        "checked_source_refs": [
+          "SOURCE-4"
+        ],
+        "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+        "cross_scope_reuse_authorized": false,
+        "interpretation_or_approval_performed": false
+      },
+      "input_record": {
+        "id": "R1",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "question": "원자료 A와 B가 제공됐는가?",
+        "controller": "SYNTHETIC_CONTROLLER",
+        "records_needed": [
+          "A",
+          "B"
+        ],
+        "source_refs": [
+          "SOURCE-4"
+        ],
+        "availability": "NOT_PRODUCED",
+        "current_evidence_state": "R2.6-1"
+      },
+      "evidence_scrutiny": {
+        "speaker": "NOT_RECORDED",
+        "source_access": "NOT_RECORDED",
+        "underlying_text_supplied": true,
+        "source_authenticity": "NOT_INDEPENDENTLY_AUTHENTICATED",
+        "claim_truth": "NOT_DETERMINED",
+        "controller": "SYNTHETIC_CONTROLLER",
+        "explanation_ref": null,
+        "input_explanation_complete": null,
+        "explanation_sufficiency": "NOT_DETERMINED",
+        "alternative_explanations": null,
+        "interests_disclosure": null,
+        "correction_or_cooperation_record": null,
+        "gaps": [
+          "SOURCE_ACCESS_REVIEW_PENDING",
+          "CONTROLLER_EXPLANATION_REVIEW_PENDING",
+          "CONTROLLER_EXPLANATION_SOURCE_PENDING",
+          "ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING",
+          "CONTROLLER_INTERESTS_REVIEW_PENDING",
+          "CORRECTION_OR_COOPERATION_RECORD_PENDING"
+        ],
+        "next_review": [
+          "원자료·인용 위치·판단 근거 대조",
+          "자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토"
+        ],
+        "legal_burden_shift_determined": false,
+        "victim_concession_required": false,
+        "victim_restatement_required": false
+      }
+    }
+  ],
+  "support_packet": {
+    "draft_text": "합성 입력에 대한 시험 출력 — 실제 사건 사실이나 제출 문서가 아닙니다.\n\n피해자 지원 검토 초안 — 실제 법원 제출 전 대리인·전문가 확인\n\n입증 대상: Synthetic autopsy access and independent assessment\n\n사건·절차 식별자(입력값): SYNTHETIC-AUTOPSY-A / SYNTHETIC-ADMIN-A\n\n검증 요청: 원자료 A와 B가 제공됐는가?\n\n자료 통제 역할(입력값): SYNTHETIC_CONTROLLER\n\n필요한 원자료: A, B\n\n요청 취지: 위 자료의 제출·검색 범위·보존 및 미제공 사유에 대한 항목별 설명과 가능한 대체 검증 경로를 검토해 주시기 바랍니다.\n\n통제자 설명·대체 원인·이해관계·정정협조 점검: {\n  \"alternative_explanations\": null,\n  \"claim_truth\": \"NOT_DETERMINED\",\n  \"controller\": \"SYNTHETIC_CONTROLLER\",\n  \"correction_or_cooperation_record\": null,\n  \"explanation_ref\": null,\n  \"explanation_sufficiency\": \"NOT_DETERMINED\",\n  \"gaps\": [\n    \"SOURCE_ACCESS_REVIEW_PENDING\",\n    \"CONTROLLER_EXPLANATION_REVIEW_PENDING\",\n    \"CONTROLLER_EXPLANATION_SOURCE_PENDING\",\n    \"ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING\",\n    \"CONTROLLER_INTERESTS_REVIEW_PENDING\",\n    \"CORRECTION_OR_COOPERATION_RECORD_PENDING\"\n  ],\n  \"input_explanation_complete\": null,\n  \"interests_disclosure\": null,\n  \"legal_burden_shift_determined\": false,\n  \"next_review\": [\n    \"원자료·인용 위치·판단 근거 대조\",\n    \"자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토\"\n  ],\n  \"source_access\": \"NOT_RECORDED\",\n  \"source_authenticity\": \"NOT_INDEPENDENTLY_AUTHENTICATED\",\n  \"speaker\": \"NOT_RECORDED\",\n  \"underlying_text_supplied\": true,\n  \"victim_concession_required\": false,\n  \"victim_restatement_required\": false\n}\n\n구제 요청 후보(관할·요건은 대리인 확인): Synthetic independent review and restoration of verification opportunity\n\n자료 미확보를 피해자의 입증 실패·동의·권리 포기로 자동 전환하지 않습니다. 상대방·기관의 주장도 원자료 접근, 판단 근거, 통제·보존·검색·미제공 설명과 대체 검증 경로를 대조합니다.\n\n자료 미확보는 곧바로 사실 부존재·자동 면책이나 위법·인과성 확정을 뜻하지 않습니다. 필요한 유보는 검증·자료제출·전문 검토 요청과 함께 유지합니다.\n\n설계상 설명책임 점검은 법적 입증책임의 판정이 아닙니다. 적용 법령·판례와 구체적 사실은 대리인이 검토합니다.\n\n의학적 가설·인과성·대체 원인은 전문가 검토 대상으로 유지하며, 기존 처분과 불리한 자료도 함께 대조합니다.\n\n공리 충돌 해석·설계 승인과 최종 R3 판단은 인간에게 유보합니다.",
+    "fact_ledger": [],
+    "review_nodes": {
+      "lawyer": {
+        "status": "REVIEW_PENDING",
+        "scope": null,
+        "review_ref": null,
+        "qualification_ref": null,
+        "opinion": null,
+        "disagreement": null,
+        "input_record": {},
+        "independently_authenticated": false,
+        "automatic_resolution": false,
+        "scope_review": {
+          "status": "QUARANTINED_FOR_SCOPE_REVIEW",
+          "project_case_id": "SYNTHETIC-AUTOPSY-A",
+          "project_procedure_id": "SYNTHETIC-ADMIN-A",
+          "record_case_id": null,
+          "record_procedure_id": null,
+          "reasons": [
+            "SCOPE_IDENTIFIER_MISSING_OR_INVALID"
+          ],
+          "checked_source_refs": [],
+          "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+          "cross_scope_reuse_authorized": false,
+          "interpretation_or_approval_performed": false
+        }
+      },
+      "medical_expert": {
+        "status": "REVIEW_PENDING",
+        "scope": null,
+        "review_ref": null,
+        "qualification_ref": null,
+        "opinion": null,
+        "disagreement": null,
+        "input_record": {},
+        "independently_authenticated": false,
+        "automatic_resolution": false,
+        "scope_review": {
+          "status": "QUARANTINED_FOR_SCOPE_REVIEW",
+          "project_case_id": "SYNTHETIC-AUTOPSY-A",
+          "project_procedure_id": "SYNTHETIC-ADMIN-A",
+          "record_case_id": null,
+          "record_procedure_id": null,
+          "reasons": [
+            "SCOPE_IDENTIFIER_MISSING_OR_INVALID"
+          ],
+          "checked_source_refs": [],
+          "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+          "cross_scope_reuse_authorized": false,
+          "interpretation_or_approval_performed": false
+        }
+      }
+    },
+    "quarantined_facts": [],
+    "route_register": [
+      {
+        "input_record": {
+          "id": "R1",
+          "case_id": "SYNTHETIC-AUTOPSY-A",
+          "track_id": "SYNTHETIC-ADMIN-A",
+          "question": "원자료 A와 B가 제공됐는가?",
+          "controller": "SYNTHETIC_CONTROLLER",
+          "records_needed": [
+            "A",
+            "B"
+          ],
+          "source_refs": [
+            "SOURCE-4"
+          ],
+          "availability": "NOT_PRODUCED",
+          "current_evidence_state": "R2.6-1"
+        },
+        "scope_review": {
+          "status": "IN_SCOPE",
+          "project_case_id": "SYNTHETIC-AUTOPSY-A",
+          "project_procedure_id": "SYNTHETIC-ADMIN-A",
+          "record_case_id": "SYNTHETIC-AUTOPSY-A",
+          "record_procedure_id": "SYNTHETIC-ADMIN-A",
+          "reasons": [],
+          "checked_source_refs": [
+            "SOURCE-4"
+          ],
+          "scope_audit": "RECURSIVE_INLINE_AND_TRANSITIVE_SOURCES",
+          "cross_scope_reuse_authorized": false,
+          "interpretation_or_approval_performed": false
+        },
+        "evidence_scrutiny": {
+          "speaker": "NOT_RECORDED",
+          "source_access": "NOT_RECORDED",
+          "underlying_text_supplied": true,
+          "source_authenticity": "NOT_INDEPENDENTLY_AUTHENTICATED",
+          "claim_truth": "NOT_DETERMINED",
+          "controller": "SYNTHETIC_CONTROLLER",
+          "explanation_ref": null,
+          "input_explanation_complete": null,
+          "explanation_sufficiency": "NOT_DETERMINED",
+          "alternative_explanations": null,
+          "interests_disclosure": null,
+          "correction_or_cooperation_record": null,
+          "gaps": [
+            "SOURCE_ACCESS_REVIEW_PENDING",
+            "CONTROLLER_EXPLANATION_REVIEW_PENDING",
+            "CONTROLLER_EXPLANATION_SOURCE_PENDING",
+            "ALTERNATIVE_EXPLANATIONS_REVIEW_PENDING",
+            "CONTROLLER_INTERESTS_REVIEW_PENDING",
+            "CORRECTION_OR_COOPERATION_RECORD_PENDING"
+          ],
+          "next_review": [
+            "원자료·인용 위치·판단 근거 대조",
+            "자료 통제자의 보존·검색·미제공 사유 및 대체 검증 경로 검토"
+          ],
+          "legal_burden_shift_determined": false,
+          "victim_concession_required": false,
+          "victim_restatement_required": false
+        },
+        "operative_request": true
+      }
+    ],
+    "statement_reviews": [],
+    "flags": [
+      {
+        "code": "REVIEW_NODE_PENDING",
+        "role": "lawyer"
+      },
+      {
+        "code": "REVIEW_NODE_PENDING",
+        "role": "medical_expert"
+      },
+      {
+        "code": "EXPERT_SCOPE_REVIEW_PENDING",
+        "role": "lawyer"
+      },
+      {
+        "code": "EXPERT_SCOPE_REVIEW_PENDING",
+        "role": "medical_expert"
+      }
+    ],
+    "automatic_deletion": false,
+    "legal_privilege_claimed": false,
+    "victim_concession_required": false,
+    "filing_status": "GENERATED_DRAFT_ONLY"
+  },
+  "input_gaps": [],
+  "total_score": null,
+  "corruption_index": {
+    "value": null,
+    "formula_status": "NOT_APPROVED_NOT_COMPUTED",
+    "use": "REVIEW_PROCESSING_PRIORITY_ONLY",
+    "legal_effect": "NONE"
+  },
+  "canonical_rules_changed": false,
+  "approval_status_changed": false,
+  "deployment_status": "NOT_DEPLOYED",
+  "external_action_performed": false,
+  "source_verified_externally": false,
+  "input_sha256": "0e57990f2df640978c707af4be0015812f1bbd7962bc5e1cec9828b5ad7360ae",
+  "consistency_loop": {
+    "status": "STABLE_WITH_OPEN_ITEMS",
+    "history": [
+      {
+        "iteration": 1,
+        "output_sha256": "960abc9a0aaf6bf270e06e3b8dda05e5296e8dde4dc27353b6c482a3afc5383a",
+        "invariant_failures": [],
+        "unresolved_flags": 6
+      },
+      {
+        "iteration": 2,
+        "output_sha256": "960abc9a0aaf6bf270e06e3b8dda05e5296e8dde4dc27353b6c482a3afc5383a",
+        "invariant_failures": [],
+        "unresolved_flags": 6
+      }
+    ],
+    "max_iterations": 3,
+    "automatic_rule_revision": false
+  },
+  "release_status": "HOLD_FOR_COUNSEL_AND_EXPERT_REVIEW"
+}
