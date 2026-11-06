@@ -104,7 +104,7 @@ EAS는 자료·사본·행위자·확인 시점별로 AVAILABLE / RESTRICTED / W
 저장소 루트에서:
 
 ```sh
-python3 -B research/0.3-correction.4-proposal-20261106/probe_current_support.py
+python3 -B research/0.3-local-correction.4/probe_current_support.py
 ```
 
 이 탐침은 현재 correction.3을 읽고 표준출력에 진단 결과를 내며 실행 모듈이나 기준 출력 파일을 수정하지 않는다. 새 기능 구현이나 법원·기관 제출을 수행하지 않는다.
