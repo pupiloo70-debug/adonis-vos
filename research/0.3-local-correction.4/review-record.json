@@ -1,3 +1,4 @@
+
 {
   "schema": "ADONIS-VOS-CORRECTION4-PROPOSAL-REVIEW/1.0",
   "document_id": "ADONIS-VOS-03-CORRECTION4-PROPOSAL-20261106-01",
@@ -52,7 +53,7 @@
   "additional_probes": {
     "script": "probe_current_support.py",
     "output": "probe-output.json",
-    "command": "python3 -B research/0.3-correction.4-proposal-20261106/probe_current_support.py",
+    "command": "python3 -B research/0.3-local-correction.4/probe_current_support.py",
     "exit_code": 0,
     "summary": {
       "baseline_controls": 1,
