@@ -1,0 +1,123 @@
+{
+  "schema": "ADONIS-VOS-CORRECTION4-DESIGN-PROBES/1.0",
+  "reference_date": "2026-11-06",
+  "base_version": "0.3.0-design.2-local-correction.3",
+  "data": "SYNTHETIC_ONLY",
+  "implementation_changed": false,
+  "published_test_suite_modified": false,
+  "summary": {
+    "baseline_controls": 1,
+    "baseline_controls_satisfied": 1,
+    "additional_design_probes": 5,
+    "current_proposed_criteria_evaluated": 4,
+    "current_proposed_criteria_satisfied": 0,
+    "lifecycle_extension_supported": false
+  },
+  "results": [
+    {
+      "id": "B00",
+      "kind": "BASELINE_CONTROL",
+      "observed": {
+        "status": "WARNING_REVIEW_OPEN",
+        "warning_codes": [
+          "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+          "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+          "CIRCULAR_BURDEN_SHIFT_WARNING",
+          "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+          "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN"
+        ],
+        "eligible_observations": 9,
+        "decision_body_input": "SYNTHETIC_COURT",
+        "input_unchanged": true
+      },
+      "check_satisfied": true
+    },
+    {
+      "id": "P01",
+      "kind": "ATTRIBUTION_AND_EVENT_TYPE_GAP",
+      "mutation": "An observation remains mislabeled as a refusal although its quote and speaker say opponent request only.",
+      "proposed_requirement": "Hold the refusal-dependent warning until actor, speech act, and decision type are reconciled.",
+      "observed": {
+        "status": "WARNING_REVIEW_OPEN",
+        "warning_codes": [
+          "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+          "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+          "CIRCULAR_BURDEN_SHIFT_WARNING",
+          "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+          "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN"
+        ],
+        "eligible_observations": 9,
+        "decision_body_input": "SYNTHETIC_COURT",
+        "input_unchanged": true
+      },
+      "proposed_criterion_satisfied": false,
+      "limit": "Current module explicitly relies on supplied human labels; this does not show automatic natural-language misreading."
+    },
+    {
+      "id": "P02",
+      "kind": "REVIEW_WIDE_QUARANTINE_TRADEOFF",
+      "proposed_requirement": "Quarantine the foreign observation and its dependants while retaining independently supported in-scope baseline warnings.",
+      "observed": {
+        "status": "SCOPE_REVIEW_REQUIRED",
+        "warning_codes": [],
+        "eligible_observations": 0,
+        "decision_body_input": "SYNTHETIC_COURT",
+        "input_unchanged": true
+      },
+      "proposed_criterion_satisfied": false,
+      "limit": "Correction.3 deliberately quarantines the whole review; changing this requires dependency-aware checks and revised acceptance tests."
+    },
+    {
+      "id": "P03",
+      "kind": "ACTOR_TO_ACT_BINDING_GAP",
+      "proposed_requirement": "Do not attach the judicial-pattern warning to an arbitrary named body without a reviewed actor-action-source relationship.",
+      "observed": {
+        "status": "WARNING_REVIEW_OPEN",
+        "warning_codes": [
+          "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+          "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+          "CIRCULAR_BURDEN_SHIFT_WARNING",
+          "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+          "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN"
+        ],
+        "eligible_observations": 9,
+        "decision_body_input": "UNLINKED-OTHER-COURT",
+        "input_unchanged": true
+      },
+      "proposed_criterion_satisfied": false,
+      "limit": "The output is already marked a review warning, not an authenticated finding of misconduct."
+    },
+    {
+      "id": "P04",
+      "kind": "SAME_PROCEEDING_DIFFERENT_PERSON_GAP",
+      "proposed_requirement": "Hold the other person's autopsy source without suppressing unrelated valid observations for the target person.",
+      "observed": {
+        "status": "WARNING_REVIEW_OPEN",
+        "warning_codes": [
+          "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+          "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+          "CIRCULAR_BURDEN_SHIFT_WARNING",
+          "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+          "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN"
+        ],
+        "eligible_observations": 9,
+        "decision_body_input": "SYNTHETIC_COURT",
+        "input_unchanged": true
+      },
+      "proposed_criterion_satisfied": false,
+      "limit": "subject_id is a proposed field and is not an implemented correction.3 scope dimension."
+    },
+    {
+      "id": "P05",
+      "kind": "UNIMPLEMENTED_LIFECYCLE_EXTENSION",
+      "proposed_requirement": "Represent a later grant and actual access separately without erasing the earlier restriction and costs.",
+      "observed": {
+        "controlled_rejection": "Unknown support observation kind"
+      },
+      "extension_supported": false,
+      "limit": "Rejecting an unknown kind is correct under the current closed schema; this probe identifies an extension, not an uncontrolled crash."
+    }
+  ],
+  "not_a_real_case_or_independent_institutional_audit": true,
+  "total_score": null
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "ADONIS-VOS-CORRECTION4-PROPOSAL-REVIEW/1.0",
+  "document_id": "ADONIS-VOS-03-CORRECTION4-PROPOSAL-20261106-01",
+  "date": "2026-11-06",
+  "status": "PROPOSED_DESIGN_NOT_IMPLEMENTED",
+  "design_approval": "R3_REVIEW_PENDING",
+  "publication_authorization": "USER_EXPLICIT_REQUEST_TO_UPLOAD_TECHNICAL_PROPOSAL_AND_REVIEW",
+  "base": {
+    "repository": "pupiloo70-debug/adonis-vos",
+    "commit": "f68d690351ddfdff83caf29928551f8a63af3cb0",
+    "path": "research/0.3-local-correction.3",
+    "version": "0.3.0-design.2-local-correction.3"
+  },
+  "verification": {
+    "code_and_test_git_blob_matches": {
+      "checked": 26,
+      "matched": 26
+    },
+    "provided_suite_reexecution": {
+      "python": {
+        "passed": 132,
+        "total": 132,
+        "retained": 107,
+        "new": 25
+      },
+      "node_python_bridge": {
+        "passed": 14,
+        "total": 14
+      },
+      "unchanged_v02_core": {
+        "core_checks": 12,
+        "tests_passed": 24,
+        "tests_total": 24
+      }
+    },
+    "commands": [
+      "python3 -B -m unittest discover -q",
+      "node --test bridge.test.mjs",
+      "npm test"
+    ],
+    "data": "SYNTHETIC_ONLY",
+    "environment": {
+      "python": "3.12.14",
+      "node": "v24.22.1",
+      "platform": "Linux"
+    },
+    "execution_scope": "SAME_AI_ASSISTED_WORKSPACE_LOCAL_REEXECUTION_OF_PUBLIC_SOURCE",
+    "independent_institutional_audit": false,
+    "real_case_verification": false,
+    "code_semantics_and_authenticity_certified": false
+  },
+  "additional_probes": {
+    "script": "probe_current_support.py",
+    "output": "probe-output.json",
+    "command": "python3 -B research/0.3-correction.4-proposal-20261106/probe_current_support.py",
+    "exit_code": 0,
+    "summary": {
+      "baseline_controls": 1,
+      "baseline_controls_satisfied": 1,
+      "additional_design_probes": 5,
+      "current_proposed_criteria_evaluated": 4,
+      "current_proposed_criteria_satisfied": 0,
+      "lifecycle_extension_supported": false
+    },
+    "not_included_in_published_unit_test_count": true,
+    "criterion_source": "NEW_PROPOSED_DESIGN_NOT_EXISTING_RELEASE_REQUIREMENTS"
+  },
+  "existing_accountability_path": {
+    "file": "research/0.3-local-correction.3/vos_verify.py",
+    "function": "review_route",
+    "status": "GENERIC_COUNSEL_DISCIPLINARY_OR_OVERSIGHT_PACKET_PRESENT"
+  },
+  "proposed_deltas": [
+    "ITEM_LEVEL_DEPENDENCY_QUARANTINE",
+    "SUBJECT_AND_MATERIAL_SCOPE",
+    "SPEAKER_EVENT_AND_ACTOR_SOURCE_BINDING",
+    "SUBMISSION_VS_SUBSTANTIVE_CONSIDERATION_MATRIX",
+    "PRODUCT_LINEAGE_QUESTION_AND_CONTROLLER_EXPLANATION",
+    "CURRENT_STAGE_JUDICIAL_ACCOUNTABILITY_REVIEW",
+    "CORRECTION_AND_PARTIAL_REMEDY_LIFECYCLE"
+  ],
+  "warning_conditions_implemented": false,
+  "disciplinary_or_legal_findings_made": false,
+  "appeal_or_final_loss_required_for_initial_warning": false,
+  "scope": {
+    "existing_runtime_modified": false,
+    "existing_tests_modified": false,
+    "correction4_implemented": false,
+    "website_modified": false,
+    "external_dispatch_or_court_filing": false
+  },
+  "invariants": {
+    "axioms": "AX-01_TO_AX-09_UNCHANGED",
+    "stage_v": "UNCHANGED",
+    "civic_trace_045": "APPROVAL_MAINTAINED",
+    "civic_trace_046": "APPROVAL_DEFERRED",
+    "r3_final_authority": "PRESERVED",
+    "total_score": null,
+    "automatic_approval": false,
+    "constitutional_change": false
+  },
+  "files": [
+    "README.md",
+    "review-record.json",
+    "probe_current_support.py",
+    "probe-output.json"
+  ]
+}
