@@ -1,0 +1,397 @@
+{
+  "legacy_project": {
+    "schema": "ADONIS-VOS-PROJECT/0.2",
+    "id": "SYNTHETIC-DEMO-02",
+    "answers": {
+      "record_access": {
+        "value": "YES",
+        "basis": "USER_REPORT",
+        "refs": [
+          "SRC-1"
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "SRC-1",
+        "state": "AVAILABLE",
+        "review": "REGISTERED",
+        "description": "합성 요청·회신 문구"
+      }
+    ],
+    "requests": [
+      {
+        "id": "REQ-1",
+        "question": "원자료 A와 B가 제공됐는가?",
+        "controller": "SYNTHETIC_CONTROLLER",
+        "items": [
+          "A",
+          "B"
+        ],
+        "source_refs": [
+          "SRC-1"
+        ]
+      }
+    ],
+    "supplies": [
+      {
+        "id": "SUP-1",
+        "request_id": "REQ-1",
+        "item_id": "A",
+        "source_id": "SRC-1",
+        "coverage": "PARTIAL"
+      }
+    ],
+    "observations": [
+      {
+        "id": "OBS-1",
+        "action": "LOSS_AS_VICTIM_FAILURE",
+        "request_excerpt": "가상 원자료 요청",
+        "response_excerpt": "가상 오류: 자료가 없으므로 피해자 실패",
+        "review_note": "합성 반례이며 실제 AI·기관에 대한 판정이 아님",
+        "review": "REPORTED",
+        "source_refs": [
+          "SRC-1"
+        ]
+      }
+    ],
+    "synthetic": true
+  },
+  "project": {
+    "schema": "ADONIS-VOS-0.3-INPUT/1.0",
+    "case_id": "SYNTHETIC-AUTOPSY-A",
+    "track_id": "SYNTHETIC-ADMIN-A",
+    "synthetic": true,
+    "question": "Synthetic autopsy access and independent assessment",
+    "sources": {
+      "SOURCE-0": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic autopsy material is recorded.",
+        "locator": "synthetic paragraph 0",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "AUTOPSY",
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "SOURCE_REPORT",
+        "statement_role": "WITNESS_REPORT"
+      },
+      "SOURCE-1": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic sudden death has no prior clinical diagnosis.",
+        "locator": "synthetic paragraph 1",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "SOURCE_REPORT",
+        "statement_role": "WITNESS_REPORT"
+      },
+      "SOURCE-2": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic refusal requires a clinical record instead of autopsy evidence.",
+        "locator": "synthetic paragraph 2",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "AUTOPSY",
+        "actor_id": "SYNTHETIC_COURT",
+        "actor_role": "DECISION_BODY",
+        "event_type": "DECISION",
+        "statement_role": "DECISION_RECORD",
+        "decision_status": "EXCLUDED"
+      },
+      "SOURCE-3": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic independent review request was refused.",
+        "locator": "synthetic paragraph 3",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_COURT",
+        "actor_role": "DECISION_BODY",
+        "event_type": "DECISION",
+        "statement_role": "DECISION_RECORD",
+        "decision_status": "REFUSED"
+      },
+      "SOURCE-4": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic controller has not produced the requested original material.",
+        "locator": "synthetic paragraph 4",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_CONTROLLER",
+        "actor_role": "CONTROLLER",
+        "event_type": "NONPRODUCTION",
+        "statement_role": "CONTROLLER_RECORD"
+      },
+      "SOURCE-5": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic decision relies on the resulting proof gap against the claimant.",
+        "locator": "synthetic paragraph 5",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_COURT",
+        "actor_role": "DECISION_BODY",
+        "event_type": "DECISION",
+        "statement_role": "DECISION_RECORD",
+        "decision_status": "PROOF_GAP_APPLIED"
+      },
+      "SOURCE-6": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic institution retains the procedural benefit of the untested conclusion.",
+        "locator": "synthetic paragraph 6",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "ASSESSMENT",
+        "statement_role": "WITNESS_REPORT"
+      },
+      "SOURCE-7": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic decision does not state its case-specific assessment method.",
+        "locator": "synthetic paragraph 7",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "SOURCE_REPORT",
+        "statement_role": "WITNESS_REPORT"
+      },
+      "SOURCE-8": {
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "primary_text": "Synthetic prior symptoms and individual susceptibility were not assessed.",
+        "locator": "synthetic paragraph 8",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1",
+        "material_id": "GENERAL",
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "SOURCE_REPORT",
+        "statement_role": "WITNESS_REPORT"
+      }
+    },
+    "facts": [],
+    "routes": [
+      {
+        "id": "R1",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "question": "원자료 A와 B가 제공됐는가?",
+        "controller": "SYNTHETIC_CONTROLLER",
+        "records_needed": [
+          "A",
+          "B"
+        ],
+        "source_refs": [
+          "SOURCE-4"
+        ],
+        "availability": "NOT_PRODUCED",
+        "current_evidence_state": "R2.6-1",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "question_id": "Q1"
+      }
+    ],
+    "items": [],
+    "review_nodes": {},
+    "requested_remedies": [
+      "Synthetic independent review and restoration of verification opportunity"
+    ],
+    "support_reviews": [
+      {
+        "id": "ACCESS-A",
+        "purpose": "VICTIM_SUPPORT",
+        "case_id": "SYNTHETIC-AUTOPSY-A",
+        "track_id": "SYNTHETIC-ADMIN-A",
+        "controller": "SYNTHETIC_CONTROLLER",
+        "decision_body": "SYNTHETIC_COURT",
+        "observations": [
+          {
+            "id": "O-0",
+            "kind": "AUTOPSY_RECORD_PRESENT",
+            "quoted_text": "Synthetic autopsy material is recorded.",
+            "source_ref": "SOURCE-0",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "AUTOPSY",
+            "actor_id": "SYNTHETIC_WITNESS",
+            "actor_role": "WITNESS",
+            "event_type": "SOURCE_REPORT",
+            "statement_role": "WITNESS_REPORT"
+          },
+          {
+            "id": "O-1",
+            "kind": "CLINICAL_RECORD_ABSENT",
+            "quoted_text": "Synthetic sudden death has no prior clinical diagnosis.",
+            "source_ref": "SOURCE-1",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_WITNESS",
+            "actor_role": "WITNESS",
+            "event_type": "SOURCE_REPORT",
+            "statement_role": "WITNESS_REPORT"
+          },
+          {
+            "id": "O-2",
+            "kind": "AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD",
+            "quoted_text": "Synthetic refusal requires a clinical record instead of autopsy evidence.",
+            "source_ref": "SOURCE-2",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "decision_status": "EXCLUDED",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "AUTOPSY",
+            "actor_id": "SYNTHETIC_COURT",
+            "actor_role": "DECISION_BODY",
+            "event_type": "DECISION",
+            "statement_role": "DECISION_RECORD"
+          },
+          {
+            "id": "O-3",
+            "kind": "INDEPENDENT_REVIEW_REFUSED",
+            "quoted_text": "Synthetic independent review request was refused.",
+            "source_ref": "SOURCE-3",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "decision_status": "REFUSED",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_COURT",
+            "actor_role": "DECISION_BODY",
+            "event_type": "DECISION",
+            "statement_role": "DECISION_RECORD"
+          },
+          {
+            "id": "O-4",
+            "kind": "ESSENTIAL_RECORD_NOT_PRODUCED",
+            "quoted_text": "Synthetic controller has not produced the requested original material.",
+            "source_ref": "SOURCE-4",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_CONTROLLER",
+            "actor_role": "CONTROLLER",
+            "event_type": "NONPRODUCTION",
+            "statement_role": "CONTROLLER_RECORD"
+          },
+          {
+            "id": "O-5",
+            "kind": "GAP_RELIED_ON_AGAINST_CLAIMANT",
+            "quoted_text": "Synthetic decision relies on the resulting proof gap against the claimant.",
+            "source_ref": "SOURCE-5",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "decision_status": "PROOF_GAP_APPLIED",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_COURT",
+            "actor_role": "DECISION_BODY",
+            "event_type": "DECISION",
+            "statement_role": "DECISION_RECORD"
+          },
+          {
+            "id": "O-6",
+            "kind": "INSTITUTIONAL_BENEFIT_RETAINED",
+            "quoted_text": "Synthetic institution retains the procedural benefit of the untested conclusion.",
+            "source_ref": "SOURCE-6",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_WITNESS",
+            "actor_role": "WITNESS",
+            "event_type": "ASSESSMENT",
+            "statement_role": "WITNESS_REPORT"
+          },
+          {
+            "id": "O-7",
+            "kind": "CAUSATION_REASONING_UNEXPLAINED",
+            "quoted_text": "Synthetic decision does not state its case-specific assessment method.",
+            "source_ref": "SOURCE-7",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_WITNESS",
+            "actor_role": "WITNESS",
+            "event_type": "SOURCE_REPORT",
+            "statement_role": "WITNESS_REPORT"
+          },
+          {
+            "id": "O-8",
+            "kind": "SUSCEPTIBILITY_NOT_ASSESSED",
+            "quoted_text": "Synthetic prior symptoms and individual susceptibility were not assessed.",
+            "source_ref": "SOURCE-8",
+            "case_id": "SYNTHETIC-AUTOPSY-A",
+            "track_id": "SYNTHETIC-ADMIN-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "question_id": "Q1",
+            "material_id": "GENERAL",
+            "actor_id": "SYNTHETIC_WITNESS",
+            "actor_role": "WITNESS",
+            "event_type": "SOURCE_REPORT",
+            "statement_role": "WITNESS_REPORT"
+          }
+        ],
+        "subject_id": "SYNTHETIC-PERSON-A"
+      }
+    ],
+    "subject_id": "SYNTHETIC-PERSON-A"
+  },
+  "mapping": {
+    "legacy_project_id": "SYNTHETIC-DEMO-02",
+    "case_id": "SYNTHETIC-AUTOPSY-A",
+    "track_id": "SYNTHETIC-ADMIN-A",
+    "authorization": "EXPLICIT_SYNTHETIC_MAPPING",
+    "request_routes": [
+      {
+        "request_id": "REQ-1",
+        "route_id": "R1"
+      }
+    ],
+    "subject_id": "SYNTHETIC-PERSON-A",
+    "review_routes": [
+      {
+        "review_id": "ACCESS-A",
+        "route_id": "R1",
+        "question_id": "Q1"
+      }
+    ]
+  },
+  "now": "2026-11-06T12:00:00+09:00"
+}
