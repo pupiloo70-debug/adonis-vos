@@ -1,0 +1,67 @@
+{
+  "schema": "ADONIS-VOS-CORE-GUARD-INTEGRATION-EXECUTION/1.0",
+  "executed_at_utc": "2026-11-07T07:20:27.091604+00:00",
+  "scope": "LOCAL_SYNTHETIC_CORE_GUARD_INTEGRATION",
+  "base_repository": "https://github.com/pupiloo70-debug/adonis-vos",
+  "base_commit": "aa77d9f5922e53e22156492360e66a5da0bbfb24",
+  "node_version": "v24.22.1",
+  "python_version": "Python 3.12.14",
+  "results": {
+    "core02": {
+      "checks": 12,
+      "unit_tests": 24,
+      "failed": 0
+    },
+    "original03": {
+      "unit_tests": 40,
+      "failed": 0
+    },
+    "correction3": {
+      "unit_tests": 132,
+      "failed": 0
+    },
+    "original_node_python_bridge": {
+      "unit_tests": 14,
+      "failed": 0
+    },
+    "guard_v02": {
+      "unit_tests": 68,
+      "failed": 0
+    },
+    "new_integration": {
+      "unit_tests": 33,
+      "failed": 0
+    },
+    "independent_integration": {
+      "probes": 35,
+      "failed": 0
+    },
+    "public_baseline_integrity": {
+      "files_checked": 85,
+      "changed": 0
+    }
+  },
+  "count_note": "Suites have overlapping coverage. Mutation subcases and graph sizes are not extra test counts. Do not sum counts as independent validation cases.",
+  "verified_chain": [
+    "unchanged src/agents.mjs CentralCore register/assign/runLocal",
+    "unchanged correction.3 bridge_entry.py through real Node child process",
+    "unchanged correction4_guard.py evaluate through bounded guard_entry.py",
+    "current integration report composed from guard and explicit route bindings"
+  ],
+  "source_sha256": {
+    "core_guard.mjs": "165bad3cf211da1b2c8e39bba355b07c8c6f542fa80bf32b1b6c30ebe60e8537",
+    "guard_entry.py": "2f16296523436df4201e7853c9573e432f15dbc2e97a46d2839b737ca262d15f",
+    "integration.test.mjs": "c89cc258d97d7cc70d985e3096abd7c39216c1a1771e1880375330c69f41d567",
+    "synthetic-input.json": "216448a4b9d036ae4ae47ee4305bed7e3f421a68a9d8cf7dab92bea015df294e"
+  },
+  "input_class": "SYNTHETIC_ONLY",
+  "real_case_data_used": false,
+  "external_api_calls": 0,
+  "github_write_performed": false,
+  "production_integration": false,
+  "default_entrypoint_modified": false,
+  "canonical_rules_changed": false,
+  "release_or_R3_approval_changed": false,
+  "total_score": null,
+  "status": "LOCAL_IMPLEMENTATION_AND_SYNTHETIC_VERIFICATION_COMPLETED"
+}
