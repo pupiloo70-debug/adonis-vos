@@ -1,0 +1,66 @@
+{
+  "schema": "ADONIS-VOS-CORRECTION4-REPAIR-EXECUTION/1.0",
+  "recorded_at": "2026-11-07T00:19:44.656058+00:00",
+  "synthetic_only": true,
+  "status": "LOCAL_RESEARCH_CANDIDATE_NOT_INTEGRATED_NOT_DEPLOYED",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "received_candidate_sha256": "666298647dfef07875a34d2a8a48fe5fd495527a2370f362809d645d7a31068d",
+  "repaired_candidate_sha256": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+  "original_test_file_unchanged": true,
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest -v test_correction4_guard.py test_correction4_regressions.py",
+      "exit_code": 0,
+      "original_tests": 25,
+      "new_tests": 43,
+      "total_tests": 68,
+      "passed": 68,
+      "failed": 0,
+      "original_fuzz_subcases": 1000,
+      "fuzz_seed": 41,
+      "note": "Fuzz mutations are inside one original unit test, not additional tests."
+    },
+    {
+      "command": "python3 -B independent_probes.py",
+      "exit_code": 0,
+      "note": "Original independent probe script unchanged; output is evidence, not assertion-based unit-test count."
+    },
+    {
+      "command": "compile source and new tests with Python built-in compile()",
+      "exit_code": 0
+    }
+  ],
+  "independent_audit": {
+    "scope": "Separate local synthetic code review, not real-source authentication or external institutional approval",
+    "guard_sha256": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+    "unit_tests_rerun_passed": 68,
+    "additional_graph_oracle_cases_reported": 2000,
+    "additional_malformed_mutations_reported": 3000,
+    "additional_mutation_seed": 10891,
+    "controlled_rejections_reported": 72,
+    "uncontrolled_exceptions_reported": 0,
+    "input_mutations_reported": 0,
+    "cycle_size_reported": 4000,
+    "original_unrelated_observations_preserved": 9,
+    "original_unrelated_warnings_preserved": 5,
+    "simultaneous_event_id_swap_probe": "PASS_REVIEW_OPEN",
+    "harness_included": "Included unit tests and original probe script; additional exploratory audit harness/logs not included",
+    "report": "independent-audit-summary.md"
+  },
+  "not_run": [
+    "correction.3 legacy 132 tests",
+    "Node-Python bridge 14 tests",
+    "0.2 Node checks and tests",
+    "actual repository integration",
+    "production or real-case validation"
+  ],
+  "repository_write_performed": false,
+  "release_or_R3_approval_changed": false,
+  "civic_trace_045_maintained": true,
+  "civic_trace_046_approval_deferred": true,
+  "axioms_AX01_to_AX09_unchanged": true,
+  "total_score": null,
+  "legal_or_medical_finding": false,
+  "external_execution": false
+}

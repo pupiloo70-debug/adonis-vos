@@ -1,0 +1,294 @@
+{
+  "schema": "ADONIS-VOS-CORRECTION4-GUARD-CANDIDATE/0.2",
+  "scope": "ISOLATED_SYNTHETIC_RESEARCH_NOT_INTEGRATED",
+  "reviews": [
+    {
+      "id": "R1",
+      "status": "WARNING_REVIEW_OPEN",
+      "warnings": [
+        {
+          "code": "AUTOPSY_EVIDENCE_EXCLUSION_WARNING",
+          "context": {
+            "case_id": "SYNTHETIC-CASE-X",
+            "track_id": "SYNTHETIC-TRACK-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "material_id": "SYNTHETIC-AUTOPSY",
+            "question_id": null
+          },
+          "basis_observations": [
+            "O0",
+            "O2"
+          ],
+          "source_refs": [
+            "SOURCE-0",
+            "SOURCE-2"
+          ],
+          "status": "SOURCE_LINKED_WARNING_FOR_HUMAN_REVIEW",
+          "asserted_actor_or_event_not_independently_authenticated": true,
+          "not_a_legal_or_medical_finding": true
+        },
+        {
+          "code": "CIRCULAR_BURDEN_SHIFT_WARNING",
+          "context": {
+            "case_id": "SYNTHETIC-CASE-X",
+            "track_id": "SYNTHETIC-TRACK-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "material_id": "SYNTHETIC-GENERAL",
+            "question_id": null
+          },
+          "basis_observations": [
+            "O3",
+            "O4",
+            "O5"
+          ],
+          "source_refs": [
+            "SOURCE-3",
+            "SOURCE-4",
+            "SOURCE-5"
+          ],
+          "status": "SOURCE_LINKED_WARNING_FOR_HUMAN_REVIEW",
+          "asserted_actor_or_event_not_independently_authenticated": true,
+          "not_a_legal_or_medical_finding": true
+        },
+        {
+          "code": "HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING",
+          "context": {
+            "case_id": "SYNTHETIC-CASE-X",
+            "track_id": "SYNTHETIC-TRACK-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "material_id": "SYNTHETIC-GENERAL",
+            "question_id": null
+          },
+          "basis_observations": [
+            "O3",
+            "O4",
+            "O5",
+            "O6"
+          ],
+          "source_refs": [
+            "SOURCE-3",
+            "SOURCE-4",
+            "SOURCE-5",
+            "SOURCE-6"
+          ],
+          "status": "SOURCE_LINKED_WARNING_FOR_HUMAN_REVIEW",
+          "asserted_actor_or_event_not_independently_authenticated": true,
+          "not_a_legal_or_medical_finding": true
+        },
+        {
+          "code": "CAUSATION_METHOD_CONSISTENCY_REVIEW",
+          "context": {
+            "case_id": "SYNTHETIC-CASE-X",
+            "track_id": "SYNTHETIC-TRACK-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "material_id": "SYNTHETIC-GENERAL",
+            "question_id": null
+          },
+          "basis_observations": [
+            "O7"
+          ],
+          "source_refs": [
+            "SOURCE-7"
+          ],
+          "status": "SOURCE_LINKED_WARNING_FOR_HUMAN_REVIEW",
+          "asserted_actor_or_event_not_independently_authenticated": true,
+          "not_a_legal_or_medical_finding": true
+        },
+        {
+          "code": "INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN",
+          "context": {
+            "case_id": "SYNTHETIC-CASE-X",
+            "track_id": "SYNTHETIC-TRACK-A",
+            "subject_id": "SYNTHETIC-PERSON-A",
+            "material_id": "SYNTHETIC-GENERAL",
+            "question_id": null
+          },
+          "basis_observations": [
+            "O8"
+          ],
+          "source_refs": [
+            "SOURCE-8"
+          ],
+          "status": "SOURCE_LINKED_WARNING_FOR_HUMAN_REVIEW",
+          "asserted_actor_or_event_not_independently_authenticated": true,
+          "not_a_legal_or_medical_finding": true
+        }
+      ],
+      "accepted_observations": [
+        {
+          "id": "O0",
+          "kind": "AUTOPSY_RECORD_PRESENT",
+          "source_ref": "SOURCE-0",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-AUTOPSY",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_WITNESS",
+          "actor_role": "WITNESS",
+          "event_type": "SOURCE_REPORT",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O1",
+          "kind": "CLINICAL_RECORD_ABSENT",
+          "source_ref": "SOURCE-1",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_WITNESS",
+          "actor_role": "WITNESS",
+          "event_type": "SOURCE_REPORT",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O2",
+          "kind": "AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD",
+          "source_ref": "SOURCE-2",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-AUTOPSY",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_COURT",
+          "actor_role": "DECISION_BODY",
+          "event_type": "DECISION",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O3",
+          "kind": "INDEPENDENT_REVIEW_REFUSED",
+          "source_ref": "SOURCE-3",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_COURT",
+          "actor_role": "DECISION_BODY",
+          "event_type": "DECISION",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O4",
+          "kind": "ESSENTIAL_RECORD_NOT_PRODUCED",
+          "source_ref": "SOURCE-4",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_CONTROLLER",
+          "actor_role": "CONTROLLER",
+          "event_type": "NONPRODUCTION",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O5",
+          "kind": "GAP_RELIED_ON_AGAINST_CLAIMANT",
+          "source_ref": "SOURCE-5",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_COURT",
+          "actor_role": "DECISION_BODY",
+          "event_type": "DECISION",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O6",
+          "kind": "INSTITUTIONAL_BENEFIT_RETAINED",
+          "source_ref": "SOURCE-6",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_WITNESS",
+          "actor_role": "WITNESS",
+          "event_type": "ASSESSMENT",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O7",
+          "kind": "CAUSATION_REASONING_UNEXPLAINED",
+          "source_ref": "SOURCE-7",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_WITNESS",
+          "actor_role": "WITNESS",
+          "event_type": "SOURCE_REPORT",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        },
+        {
+          "id": "O8",
+          "kind": "SUSCEPTIBILITY_NOT_ASSESSED",
+          "source_ref": "SOURCE-8",
+          "depends_on": [],
+          "source_class": "PRIMARY_OFFICIAL_RECORD",
+          "case_id": "SYNTHETIC-CASE-X",
+          "track_id": "SYNTHETIC-TRACK-A",
+          "subject_id": "SYNTHETIC-PERSON-A",
+          "material_id": "SYNTHETIC-GENERAL",
+          "question_id": null,
+          "actor_id": "SYNTHETIC_WITNESS",
+          "actor_role": "WITNESS",
+          "event_type": "SOURCE_REPORT",
+          "label_semantically_verified": false,
+          "source_truth_authenticated": false
+        }
+      ],
+      "held_observations": [],
+      "remediation": {
+        "question_material_states": [],
+        "held_events": [],
+        "prior_burdens_preserved": true,
+        "access_truth_independently_authenticated": false,
+        "previous_cost_amount": null
+      },
+      "unresolved_source_and_provenance_questions": false,
+      "clinical_record_absence_reduces_victim_credibility": false,
+      "recognized_relief_reassessment_requested": false,
+      "benefit_reversal_executed": false,
+      "specific_actor_criminal_or_disciplinary_guilt_established": false
+    }
+  ],
+  "release_or_R3_approval_changed": false,
+  "civic_trace_045_maintained": true,
+  "civic_trace_046_approval_deferred": true,
+  "axioms_AX01_to_AX09_unchanged": true,
+  "legal_or_medical_finding": false,
+  "external_execution": false,
+  "total_score": null
+}
