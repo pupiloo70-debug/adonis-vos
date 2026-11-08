@@ -1,0 +1,506 @@
+{
+  "source_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "scope": "Both implementations invoke actual CentralCore and both actual Python stages before test-only guard stdout mutation.",
+  "expected_warning_counts": {
+    "REVIEW-A": 1,
+    "REVIEW-B": 5,
+    "REVIEW-C": 0
+  },
+  "results": [
+    {
+      "scenario": "original_order",
+      "v1": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "BOUND",
+          "input_count": 3,
+          "output_count": 3,
+          "matched_count": 3,
+          "quarantined_outputs": []
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    },
+    {
+      "scenario": "reversed_order",
+      "v1": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "BOUND",
+          "input_count": 3,
+          "output_count": 3,
+          "matched_count": 3,
+          "quarantined_outputs": []
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    },
+    {
+      "scenario": "unexpected_id_same_count",
+      "v1": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_WITH_QUARANTINE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_REVIEW_ID_MISSING"
+            ]
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "QUARANTINED",
+          "input_count": 3,
+          "output_count": 3,
+          "matched_count": 2,
+          "quarantined_outputs": [
+            {
+              "output_index": 0,
+              "id": "UNEXPECTED",
+              "reasons": [
+                "GUARD_REVIEW_ID_UNEXPECTED"
+              ]
+            }
+          ]
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    },
+    {
+      "scenario": "duplicate_id_same_count",
+      "v1": {
+        "status": "LOCAL_INTEGRATION_SUCCEEDED",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_WITH_QUARANTINE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_REVIEW_ID_MISSING"
+            ]
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_REVIEW_ID_DUPLICATE"
+            ]
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "QUARANTINED",
+          "input_count": 3,
+          "output_count": 3,
+          "matched_count": 1,
+          "quarantined_outputs": [
+            {
+              "output_index": 0,
+              "id": "REVIEW-B",
+              "reasons": [
+                "GUARD_REVIEW_ID_DUPLICATE"
+              ]
+            },
+            {
+              "output_index": 1,
+              "id": "REVIEW-B",
+              "reasons": [
+                "GUARD_REVIEW_ID_DUPLICATE"
+              ]
+            }
+          ]
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    },
+    {
+      "scenario": "missing_review",
+      "v1": {
+        "status": "PARTIAL_STAGE_FAILURE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "FAILED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_WITH_QUARANTINE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_REVIEW_ID_MISSING"
+            ]
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "QUARANTINED",
+          "input_count": 3,
+          "output_count": 2,
+          "matched_count": 2,
+          "quarantined_outputs": []
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    },
+    {
+      "scenario": "extra_unexpected_review",
+      "v1": {
+        "status": "PARTIAL_STAGE_FAILURE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "FAILED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "INTEGRATION_REVIEW_HELD",
+            "held_reason": [
+              "GUARD_RESULT_UNAVAILABLE"
+            ]
+          }
+        ],
+        "binding": null,
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      },
+      "v2": {
+        "status": "LOCAL_INTEGRATION_WITH_QUARANTINE",
+        "stage_statuses": {
+          "legacy": "SUCCEEDED",
+          "correction3": "SUCCEEDED",
+          "guard": "SUCCEEDED"
+        },
+        "reviews": [
+          {
+            "id": "REVIEW-A",
+            "warnings": 1,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-B",
+            "warnings": 5,
+            "status": "WARNING_REVIEW_OPEN",
+            "held_reason": []
+          },
+          {
+            "id": "REVIEW-C",
+            "warnings": 0,
+            "status": "SOURCE_OR_PROVENANCE_REVIEW_OPEN",
+            "held_reason": []
+          }
+        ],
+        "binding": {
+          "method": "EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE",
+          "status": "QUARANTINED",
+          "input_count": 3,
+          "output_count": 4,
+          "matched_count": 3,
+          "quarantined_outputs": [
+            {
+              "output_index": 3,
+              "id": "UNEXPECTED",
+              "reasons": [
+                "GUARD_REVIEW_ID_UNEXPECTED"
+              ]
+            }
+          ]
+        },
+        "approval_status_changed": false,
+        "total_score": null,
+        "victim_concession_required": false
+      }
+    }
+  ]
+}
