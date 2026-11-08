@@ -1,0 +1,22 @@
+✔ actual v02 core -> bounded Python research execution emits separate receipts and warning (46.163851ms)
+✔ missing clinical diagnosis does not reduce credibility or erase the autopsy (41.056139ms)
+✔ legacy partial and missing provision remain unresolved, not silently migrated (42.434037ms)
+✔ R3 labels and named external-model willingness are not runtime consent (40.4335ms)
+✔ wrong case or procedure mapping is rejected before dispatch (1.04134ms)
+✔ cross-case original evidence is held without becoming a current-case warning (40.065094ms)
+✔ private input is not accepted by the synthetic research adapter (0.435156ms)
+✔ input R3 string cannot waive synthetic-only gate (0.311329ms)
+✔ invalid Python review records produce a failed research receipt, not a success claim (37.152924ms)
+✔ request maps are explicit, complete, one-to-one and content preserving (1.827385ms)
+✔ research execution does not mutate either version input (40.928637ms)
+✔ no score, sanction, repayment, approval or production integration is asserted (39.168682ms)
+✔ shell-like data is inert and not interpolated into subprocess command (39.379181ms)
+✔ invalid clock, unsupported version and excessive input fail closed (9.706917ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 478.313767

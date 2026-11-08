@@ -1,0 +1,38 @@
+✔ independent baseline: actual core, correction3 and guard with distinct sibling warnings (1.53194ms)
+✔ independent permutation 012: attribution and actions remain stable (139.645635ms)
+✔ independent permutation 021: attribution and actions remain stable (127.57888ms)
+✔ independent permutation 102: attribution and actions remain stable (118.020478ms)
+✔ independent permutation 120: attribution and actions remain stable (135.705724ms)
+✔ independent permutation 201: attribution and actions remain stable (128.101508ms)
+✔ independent permutation 210: attribution and actions remain stable (127.482826ms)
+✔ independent duplicate expected ID quarantines every occurrence, not first/last wins (122.454463ms)
+✔ independent missing expected ID preserves two valid siblings (124.20434ms)
+✔ independent unknown extra cannot issue proposals or suppress valid siblings (125.279034ms)
+✔ independent malformed extra None isolated (118.10731ms)
+✔ independent malformed extra {} isolated (116.419301ms)
+✔ independent malformed extra [] isolated (116.262059ms)
+✔ independent malformed extra 0 isolated (125.078799ms)
+✔ independent malformed extra {'id': '   '} isolated (118.951028ms)
+✔ independent exact matching does not trim IDs or guess absent identity (120.031725ms)
+✔ independent matching ID with another review payload is held (121.21102ms)
+✔ independent matching ID with foreign case_id is held (133.360395ms)
+✔ independent matching ID with foreign track_id is held (127.043114ms)
+✔ independent matching ID with foreign subject_id is held (121.081755ms)
+✔ independent matching ID with foreign source_ref is held (139.421751ms)
+✔ independent warning basis cannot reference absent observations (120.379515ms)
+✔ independent malformed warning row cannot suppress valid siblings (118.935175ms)
+✔ independent malformed held-state remediation must not crash or suppress siblings (121.805767ms)
+✔ independent invalid JSON guard fails closed while real core and correction3 survive (116.485702ms)
+✔ independent nonzero guard exit preserves core receipt and holds all reviews (117.607065ms)
+✔ independent correction3 failure still runs real guard and preserves review warnings (120.371153ms)
+✔ independent null held-state remediation row is quarantined, not dereferenced (118.169117ms)
+✔ independent malformed optional held_reason cannot crash an existing mapping hold (115.287514ms)
+✔ independent valid scope-held result still preserves valid sibling reviews (124.821694ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3757.796338

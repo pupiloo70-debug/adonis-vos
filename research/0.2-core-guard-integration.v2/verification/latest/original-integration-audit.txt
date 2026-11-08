@@ -1,0 +1,148 @@
+{
+  "schema": "INDEPENDENT-SYNTHETIC-INTEGRATION-AUDIT/1",
+  "tests": 35,
+  "passed": 35,
+  "failed": 0,
+  "results": [
+    {
+      "name": "actual core and two Python stages succeed with distinct receipts",
+      "status": "PASS"
+    },
+    {
+      "name": "input snapshot, sources, dissent, adverse facts and proposals are retained without mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "partial provision and missing provision remain distinct unresolved core rows",
+      "status": "PASS"
+    },
+    {
+      "name": "no score, adjudication, approval, rule change, automatic concession or deployment",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign-case observation and source are held without suppressing independent warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "source case_id mismatch only quarantines its dependent evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "source track_id mismatch only quarantines its dependent evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "source subject_id mismatch only quarantines its dependent evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "source material_id mismatch only quarantines its dependent evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "source question_id mismatch only quarantines its dependent evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "matching separate materials retain facts but cannot combine autopsy warning",
+      "status": "PASS"
+    },
+    {
+      "name": "opposing request cannot become judicial refusal; stale correction3 warning stays audit-only",
+      "status": "PASS"
+    },
+    {
+      "name": "one nested foreign source scope does not erase unrelated valid evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "cross-question observation is explicitly quarantined, never wildcarded",
+      "status": "PASS"
+    },
+    {
+      "name": "post-binding quarantine propagates to dependent observations and their warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "post-binding quarantine propagates transitively, preserving independent branches",
+      "status": "PASS"
+    },
+    {
+      "name": "source-held dependency propagates while unrelated warnings remain",
+      "status": "PASS"
+    },
+    {
+      "name": "missing observation question is quarantined even if source also omits it",
+      "status": "PASS"
+    },
+    {
+      "name": "review-route controller mismatch cannot authorize warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "review-route subject_id mismatch cannot authorize warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "review-route question_id mismatch cannot authorize warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "missing and ambiguous review map fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "unbound sibling review cannot suppress valid review warnings",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate observation IDs hold all ambiguous occurrences, preserving independent evidence even if correction3 fails",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed observation is held while independent valid items survive",
+      "status": "PASS"
+    },
+    {
+      "name": "shadow guard payload cannot replace the project sent to either Python stage",
+      "status": "PASS"
+    },
+    {
+      "name": "private inputs and subject-free projects are rejected before integration",
+      "status": "PASS"
+    },
+    {
+      "name": "request route mapping remains exact, complete, and one-to-one",
+      "status": "PASS"
+    },
+    {
+      "name": "grant does not become access or erase prior burdens",
+      "status": "PASS"
+    },
+    {
+      "name": "partial access, revocation, and simultaneous conflict remain reported open states",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign-question remedy state cannot become a current route remedy",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid guard stdout cannot produce a succeeded guard receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "redundant held method basis does not erase an independent valid method warning",
+      "status": "PASS"
+    },
+    {
+      "name": "redundant held circular basis does not erase valid three-kind warning or accountability action",
+      "status": "PASS"
+    },
+    {
+      "name": "well-formed envelope but malformed guard review output is a controlled stage failure preserving core",
+      "status": "PASS"
+    }
+  ]
+}

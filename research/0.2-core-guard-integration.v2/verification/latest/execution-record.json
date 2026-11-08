@@ -1,0 +1,209 @@
+{
+  "checked_at": "2026-11-08T00:48:45.217803+00:00",
+  "source_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "candidate_source_sha256": "7c5740928ef212d0563cf667b695930f305d369bf0c1557a6212916b07e6e0c0",
+  "all_passed": true,
+  "node": "v24.22.1",
+  "python": "Python 3.12.14",
+  "results": [
+    {
+      "suite": "baseline-before",
+      "cwd": ".",
+      "command": [
+        "python3",
+        "-B",
+        "research/0.2-core-guard-integration.v2/verify-baseline.py"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/baseline-before.txt"
+    },
+    {
+      "suite": "core02",
+      "cwd": ".",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/core02.txt",
+      "tests": 24
+    },
+    {
+      "suite": "original03",
+      "cwd": "research/0.3",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/original03.txt",
+      "tests": 40
+    },
+    {
+      "suite": "correction3",
+      "cwd": "research/0.3-local-correction.3",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/correction3.txt",
+      "tests": 132
+    },
+    {
+      "suite": "original-bridge",
+      "cwd": "research/0.3-local-correction.3",
+      "command": [
+        "node",
+        "--test",
+        "bridge.test.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/original-bridge.txt",
+      "tests": 14
+    },
+    {
+      "suite": "guard-v02",
+      "cwd": "research/0.3-local-correction.4/guard-candidate-v0.2",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_correction4_guard.py",
+        "test_correction4_regressions.py"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/guard-v02.txt",
+      "tests": 68
+    },
+    {
+      "suite": "guard-probes",
+      "cwd": "research/0.3-local-correction.4/guard-candidate-v0.2",
+      "command": [
+        "python3",
+        "-B",
+        "independent_probes.py"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/guard-probes.txt"
+    },
+    {
+      "suite": "original-integration",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "research/0.2-core-guard-integration.v1/integration.test.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/original-integration.txt",
+      "tests": 33
+    },
+    {
+      "suite": "original-integration-audit",
+      "cwd": ".",
+      "command": [
+        "node",
+        "research/0.2-core-guard-integration.v1/verification/independent_integration_audit.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/original-integration-audit.txt",
+      "tests": 35,
+      "passed": 35,
+      "failed": 0
+    },
+    {
+      "suite": "candidate-inherited-integration",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "research/0.2-core-guard-integration.v2/integration.test.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/candidate-inherited-integration.txt",
+      "tests": 33
+    },
+    {
+      "suite": "candidate-review-identity",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "research/0.2-core-guard-integration.v2/review-identity.test.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/candidate-review-identity.txt",
+      "tests": 28
+    },
+    {
+      "suite": "candidate-independent-identity",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "research/0.2-core-guard-integration.v2/verification/independent-identity.test.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/candidate-independent-identity.txt",
+      "tests": 30
+    },
+    {
+      "suite": "original-example",
+      "cwd": ".",
+      "command": [
+        "node",
+        "research/0.2-core-guard-integration.v1/run-example.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/original-example.txt",
+      "status": "LOCAL_INTEGRATION_SUCCEEDED",
+      "warnings": 5,
+      "accepted_observations": 9,
+      "stage_statuses": {
+        "legacy": "SUCCEEDED",
+        "correction3": "SUCCEEDED",
+        "guard": "SUCCEEDED"
+      }
+    },
+    {
+      "suite": "candidate-example",
+      "cwd": ".",
+      "command": [
+        "node",
+        "research/0.2-core-guard-integration.v2/run-example.mjs"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/candidate-example.txt",
+      "status": "LOCAL_INTEGRATION_SUCCEEDED",
+      "warnings": 5,
+      "accepted_observations": 9,
+      "stage_statuses": {
+        "legacy": "SUCCEEDED",
+        "correction3": "SUCCEEDED",
+        "guard": "SUCCEEDED"
+      }
+    },
+    {
+      "suite": "baseline-after",
+      "cwd": ".",
+      "command": [
+        "python3",
+        "-B",
+        "research/0.2-core-guard-integration.v2/verify-baseline.py"
+      ],
+      "exit_code": 0,
+      "log": "verification/latest/baseline-after.txt"
+    }
+  ]
+}

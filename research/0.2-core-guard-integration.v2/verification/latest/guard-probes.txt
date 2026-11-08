@@ -1,0 +1,76 @@
+[
+  {
+    "probe": "cross_material_combination",
+    "accepted": 9,
+    "held": 0,
+    "autopsy_exclusion_warning": false,
+    "warning_basis_materials": [
+      "SYNTHETIC-AUTOPSY",
+      "SYNTHETIC-OTHER-MATERIAL"
+    ]
+  },
+  {
+    "probe": "missing_project_subject_cross_person",
+    "warning_codes": [],
+    "held": []
+  },
+  {
+    "probe": "long_dependency_chain_1200",
+    "exception": null
+  },
+  {
+    "probe": "duplicate_observation_ids_first_retained",
+    "accepted_ids": [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7",
+      "O8"
+    ],
+    "held": [
+      {
+        "id": "SAME",
+        "kind": "AUTOPSY_RECORD_PRESENT",
+        "source_ref": "SOURCE-0",
+        "depends_on": [],
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "case_id": "SYNTHETIC-CASE-X",
+        "track_id": "SYNTHETIC-TRACK-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "material_id": "SYNTHETIC-AUTOPSY",
+        "question_id": null,
+        "actor_id": "SYNTHETIC_WITNESS",
+        "actor_role": "WITNESS",
+        "event_type": "SOURCE_REPORT",
+        "label_semantically_verified": false,
+        "source_truth_authenticated": false,
+        "reason": [
+          "INVALID_OR_DUPLICATE_OBSERVATION_ID"
+        ]
+      },
+      {
+        "id": "SAME",
+        "kind": "AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD",
+        "source_ref": "SOURCE-2",
+        "depends_on": [],
+        "source_class": "PRIMARY_OFFICIAL_RECORD",
+        "case_id": "SYNTHETIC-CASE-X",
+        "track_id": "SYNTHETIC-TRACK-A",
+        "subject_id": "SYNTHETIC-PERSON-A",
+        "material_id": "SYNTHETIC-AUTOPSY",
+        "question_id": null,
+        "actor_id": "SYNTHETIC_COURT",
+        "actor_role": "DECISION_BODY",
+        "event_type": "DECISION",
+        "label_semantically_verified": false,
+        "source_truth_authenticated": false,
+        "reason": [
+          "INVALID_OR_DUPLICATE_OBSERVATION_ID"
+        ]
+      }
+    ]
+  }
+]

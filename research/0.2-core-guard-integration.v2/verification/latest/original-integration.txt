@@ -1,0 +1,41 @@
+✔ actual CentralCore and both Python stages execute with hashed receipts (82.403788ms)
+✔ original 0.2 supply statuses and separate task receipt survive (72.504601ms)
+✔ frozen input remains unchanged and returned copies are isolated (69.593382ms)
+✔ both inputs must be explicitly synthetic (1.659041ms)
+✔ subject and case mapping cannot be inferred from another record (1.198588ms)
+✔ complete one-to-one request routes and unchanged content are required (0.705794ms)
+✔ duplicate route IDs cannot pass Map first/last-wins behavior (0.351961ms)
+✔ orphan review mapping is rejected rather than silently ignored (0.312921ms)
+✔ missing review route mapping holds current warnings without changing old statuses (74.478082ms)
+✔ opponent request never becomes judicial refusal in current output (77.464309ms)
+✔ foreign person source holds only affected observation and warnings (77.854067ms)
+✔ same-person different material cannot form joint warning, facts retained (81.847604ms)
+✔ missing material scope holds item rather than inferring it (77.539062ms)
+✔ different question quarantines dependent path without erasing independent warnings (84.686515ms)
+✔ missing question is not wildcard or automatic migration (78.57533ms)
+✔ invalid sibling review does not erase valid scoped review (87.860282ms)
+✔ duplicate review IDs quarantine all occurrences (70.561751ms)
+✔ malformed observation fails .3 but guard retains valid siblings (69.482724ms)
+✔ malformed review is explicitly retained and held, not silently dropped (70.843105ms)
+✔ duplicate observation IDs and dependencies are held without first-ID winner (73.820655ms)
+✔ valid dissent, requested relief and adverse facts are preserved without consensus (85.077861ms)
+✔ controller and institutional review actions are retained, no sanctions executed (82.558091ms)
+✔ claims of R3 approval or model connection cannot change authority (74.08245ms)
+✔ missing Python keeps the core success receipt and produces failed stage receipts (2.608884ms)
+✔ nonzero Python exit is a failed stage, not successful integration (3.683184ms)
+✔ invalid Python JSON preserves core receipt and holds report (3.573488ms)
+✔ falsy Python JSON never yields a succeeded stage receipt (9.203759ms)
+✔ valid JSON with wrong schema fails output contract (3.045333ms)
+✔ bounded timeout returns partial failure without rewriting core status (42.07154ms)
+✔ oversized input, bad timeout, unknown schema and missing clock are rejected (8.985569ms)
+✔ shell metacharacters in data remain inert (87.546838ms)
+✔ held redundant basis preserves single-kind warning supported by independent row (84.119787ms)
+✔ held redundant basis preserves multifact warning with complete surviving prerequisites (87.197436ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1821.693038

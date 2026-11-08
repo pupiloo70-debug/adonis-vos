@@ -1,0 +1,38 @@
+
+> adonis-vos@0.2.0-draft test
+> node src/test.mjs && node --test tests/*.test.mjs
+
+12 core checks passed
+✔ partial A provision leaves B missing and both questions unresolved (1.885844ms)
+✔ reported FULL is not content verification (0.258389ms)
+✔ cannot supply an item outside its request (0.628117ms)
+✔ duplicate source IDs rejected (0.231039ms)
+✔ dangling answer references rejected (0.264048ms)
+✔ unknown answer keys rejected rather than discarded (0.249065ms)
+✔ unreviewed stigma observation cannot become evidence linked (0.263557ms)
+✔ content reviewed basis supports a review record, never guilt (0.435918ms)
+✔ withdrawn observation remains in output with references (0.345551ms)
+✔ observation without evidence rejected (1.048341ms)
+✔ destroyed source cannot be silently marked read (0.214243ms)
+✔ unknown remains distinct from NO (0.25255ms)
+✔ analysis preserves original input and unknown narrative metadata (1.000168ms)
+✔ unsupported version and oversized import rejected (1.617128ms)
+✔ named willingness cannot be dispatched as connected agent (0.323548ms)
+✔ bounded local assignment is recorded as not executed (0.209426ms)
+✔ capability mismatch is denied (0.167263ms)
+✔ resource limits and duplicate task IDs enforced (0.193322ms)
+✔ suspension holds queued tasks and denies further assignment (0.250437ms)
+✔ registry cannot promote narrative into execution by assertion (0.127843ms)
+✔ snapshot cannot mutate coordinator (0.102314ms)
+✔ central core actually executes built-in task and emits content hashes (1.417257ms)
+✔ invalid local task input records failure rather than success (0.155224ms)
+✔ CLI JSON roundtrip, no overwrite, malformed input failure (249.586175ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 357.041618
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

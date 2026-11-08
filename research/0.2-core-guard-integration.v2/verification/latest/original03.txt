@@ -1,0 +1,45 @@
+test_event_fraction_is_not_dose_incidence (test_regressions_0302.NewCounterexamples.test_event_fraction_is_not_dose_incidence) ... ok
+test_excerpt_absence_is_not_misquotation (test_regressions_0302.NewCounterexamples.test_excerpt_absence_is_not_misquotation) ... ok
+test_required_uncertainty_is_preserved (test_regressions_0302.NewCounterexamples.test_required_uncertainty_is_preserved) ... ok
+test_wrong_case_identity_is_blocked (test_regressions_0302.NewCounterexamples.test_wrong_case_identity_is_blocked) ... ok
+test_asymmetry (test_vos_verify.Regression.test_asymmetry) ... ok
+test_concession (test_vos_verify.Regression.test_concession) ... ok
+test_fake_case_no_original (test_vos_verify.Regression.test_fake_case_no_original) ... ok
+test_no_false_verified (test_vos_verify.Regression.test_no_false_verified) ... ok
+test_paper_scope (test_vos_verify.Regression.test_paper_scope) ... ok
+test_quote_mismatch (test_vos_verify.Regression.test_quote_mismatch) ... ok
+test_absent_case_identity_is_missing_not_conflicting (test_workflow.WorkflowCounterexamples.test_absent_case_identity_is_missing_not_conflicting) ... ok
+test_absent_text_cannot_prove_misquotation (test_workflow.WorkflowCounterexamples.test_absent_text_cannot_prove_misquotation) ... ok
+test_act_based_accountability_review_not_sanction (test_workflow.WorkflowCounterexamples.test_act_based_accountability_review_not_sanction) ... ok
+test_adverse_fact_is_retained (test_workflow.WorkflowCounterexamples.test_adverse_fact_is_retained) ... ok
+test_ai_label_cannot_turn_analysis_into_proof (test_workflow.WorkflowCounterexamples.test_ai_label_cannot_turn_analysis_into_proof) ... ok
+test_asserted_score_cannot_override_lock (test_workflow.WorkflowCounterexamples.test_asserted_score_cannot_override_lock) ... ok
+test_causal_risk_not_spontaneous_report_fraction (test_workflow.WorkflowCounterexamples.test_causal_risk_not_spontaneous_report_fraction) ... ok
+test_concession_is_review_prompt_not_automatic_falsification (test_workflow.WorkflowCounterexamples.test_concession_is_review_prompt_not_automatic_falsification) ... ok
+test_control_failure_candidate_not_state_upgrade (test_workflow.WorkflowCounterexamples.test_control_failure_candidate_not_state_upgrade) ... ok
+test_doi_is_not_full_text (test_workflow.WorkflowCounterexamples.test_doi_is_not_full_text) ... ok
+test_duplicate_id_and_broken_route_provenance (test_workflow.WorkflowCounterexamples.test_duplicate_id_and_broken_route_provenance) ... ok
+test_expert_disagreement_not_majority_vote (test_workflow.WorkflowCounterexamples.test_expert_disagreement_not_majority_vote) ... ok
+test_future_regulation_does_not_imply_legal_retroactivity (test_workflow.WorkflowCounterexamples.test_future_regulation_does_not_imply_legal_retroactivity) ... ok
+test_invalid_inputs_are_rejected (test_workflow.WorkflowCounterexamples.test_invalid_inputs_are_rejected) ... ok
+test_invariant_mutation_detects_punishment_and_fake_verification (test_workflow.WorkflowCounterexamples.test_invariant_mutation_detects_punishment_and_fake_verification) ... ok
+test_loop_stops_and_keeps_open_items (test_workflow.WorkflowCounterexamples.test_loop_stops_and_keeps_open_items) ... ok
+test_missing_controller_not_assigned_to_victim (test_workflow.WorkflowCounterexamples.test_missing_controller_not_assigned_to_victim) ... ok
+test_missing_experts_does_not_stop_packet_creation (test_workflow.WorkflowCounterexamples.test_missing_experts_does_not_stop_packet_creation) ... ok
+test_nonfinite_statistic (test_workflow.WorkflowCounterexamples.test_nonfinite_statistic) ... ok
+test_receipt_claim_needs_receipt (test_workflow.WorkflowCounterexamples.test_receipt_claim_needs_receipt) ... ok
+test_required_uncertainty_text_not_deleted (test_workflow.WorkflowCounterexamples.test_required_uncertainty_text_not_deleted) ... ok
+test_rule63_is_not_evidence_state3 (test_workflow.WorkflowCounterexamples.test_rule63_is_not_evidence_state3) ... ok
+test_source_hash_conflict (test_workflow.WorkflowCounterexamples.test_source_hash_conflict) ... ok
+test_statistic_wrong_arithmetic (test_workflow.WorkflowCounterexamples.test_statistic_wrong_arithmetic) ... ok
+test_transfer_and_closure_do_not_reset_clock (test_workflow.WorkflowCounterexamples.test_transfer_and_closure_do_not_reset_clock) ... ok
+test_unicode_quote_whitespace_not_false_misquote (test_workflow.WorkflowCounterexamples.test_unicode_quote_whitespace_not_false_misquote) ... ok
+test_unlinked_clock_source_blocks_deadline_escalation (test_workflow.WorkflowCounterexamples.test_unlinked_clock_source_blocks_deadline_escalation) ... ok
+test_unlinked_fact_not_promoted (test_workflow.WorkflowCounterexamples.test_unlinked_fact_not_promoted) ... ok
+test_unverified_deadline_not_missed_finding (test_workflow.WorkflowCounterexamples.test_unverified_deadline_not_missed_finding) ... ok
+test_zero_denominator (test_workflow.WorkflowCounterexamples.test_zero_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.003s
+
+OK

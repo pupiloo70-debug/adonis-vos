@@ -1,0 +1,36 @@
+✔ actual full integration keeps three distinct input review identities (81.470145ms)
+✔ full subprocess boundary permutation 012 preserves attribution (142.568347ms)
+✔ full subprocess boundary permutation 021 preserves attribution (144.093186ms)
+✔ full subprocess boundary permutation 102 preserves attribution (138.276575ms)
+✔ full subprocess boundary permutation 120 preserves attribution (140.630109ms)
+✔ full subprocess boundary permutation 201 preserves attribution (140.554651ms)
+✔ full subprocess boundary permutation 210 preserves attribution (143.564819ms)
+✔ missing output holds only missing review even when count changes (148.103483ms)
+✔ duplicate output quarantines every duplicate and keeps valid sibling warnings (135.702955ms)
+✔ malformed duplicate cannot win over a well-formed output with same ID (138.356697ms)
+✔ unknown replacement is retained only in audit output and missing expected review is held (138.524499ms)
+✔ extra unexpected output does not suppress any valid review (139.746814ms)
+✔ invalid IDs and nonobjects are individually quarantined without global contract failure (138.628496ms)
+✔ numeric string coercion and trimming never match an expected review (153.736041ms)
+✔ malformed review is isolated rather than discarding valid sibling outputs (146.108015ms)
+✔ scope-held malformed remediation is isolated without an uncaught exception (142.609338ms)
+✔ returned cross-case_id observation cannot attach through a valid review ID (146.843499ms)
+✔ returned cross-track_id observation cannot attach through a valid review ID (157.458833ms)
+✔ returned cross-subject_id observation cannot attach through a valid review ID (139.607758ms)
+✔ foreign warning context is held even if accepted observations remain correct (142.939562ms)
+✔ swapped IDs with unchanged payloads cannot impersonate another input review (158.510014ms)
+✔ unknown warning basis cannot be resolved against a sibling review (167.899813ms)
+✔ returned source or actor substitution cannot be accepted by ID alone (139.731113ms)
+✔ duplicate accepted observation identity is not a first-or-last winner (158.601608ms)
+✔ input duplicate identity remains held without suppressing independent review (72.518607ms)
+✔ prototype property names are exact Map keys, not accidental matches (166.99903ms)
+✔ all missing reviews is quarantine, not successful complete integration (169.14785ms)
+✔ wrong envelope still fails the entire guard stage (155.361102ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4100.917927
