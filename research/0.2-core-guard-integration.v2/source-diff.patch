@@ -1,0 +1,184 @@
+--- research/0.2-core-guard-integration.v1/core_guard.mjs
++++ research/0.2-core-guard-integration.v2/core_guard.mjs
+@@ -5,8 +5,8 @@
+ import { createHash } from 'node:crypto';
+ import { fileURLToPath } from 'node:url';
+ 
+-export const VERSION = '0.2-core-guard-integration/1.0.0-synthetic';
+-const ENTRY = fileURLToPath(new URL('./guard_entry.py', import.meta.url));
++export const VERSION = '0.2-core-guard-integration/2.0.0-synthetic';
++const ENTRY = fileURLToPath(new URL('../0.2-core-guard-integration.v1/guard_entry.py', import.meta.url));
+ const RESEARCH_ENTRY = fileURLToPath(new URL('../0.3-local-correction.3/bridge_entry.py', import.meta.url));
+ const LIMIT = 2 * 1024 * 1024;
+ const sha = value => createHash('sha256').update(value).digest('hex');
+@@ -81,16 +81,115 @@
+     Array.isArray(result.reviews) && result.release_or_R3_approval_changed === false &&
+     result.civic_trace_045_maintained === true && result.civic_trace_046_approval_deferred === true &&
+     result.axioms_AX01_to_AX09_unchanged === true && result.legal_or_medical_finding === false &&
+-    result.external_execution === false && result.total_score === null && result.reviews.every(r =>
+-      obj(r) && ['REVIEW_SCOPE_HELD','WARNING_REVIEW_OPEN','SOURCE_OR_PROVENANCE_REVIEW_OPEN'].includes(r.status) &&
++    result.external_execution === false && result.total_score === null;
++}
++
++// Envelope failure stops the stage. A bad review holds only that review.
++function guardReviewContract(r) {
++  return obj(r) && text(r.id) && ['REVIEW_SCOPE_HELD','WARNING_REVIEW_OPEN','SOURCE_OR_PROVENANCE_REVIEW_OPEN'].includes(r.status) &&
++      (!Object.hasOwn(r, 'held_reason') || Array.isArray(r.held_reason) && r.held_reason.every(text)) &&
+       Array.isArray(r.warnings) && Array.isArray(r.accepted_observations) && Array.isArray(r.held_observations) &&
+       r.accepted_observations.every(o => obj(o) && text(o.id) && Array.isArray(o.depends_on) && o.depends_on.every(text)) &&
+       r.warnings.every(w => obj(w) && Object.hasOwn(ACTIONS, w.code) && obj(w.context) &&
+         Array.isArray(w.basis_observations) && w.basis_observations.every(text) && Array.isArray(w.source_refs) &&
+         w.source_refs.every(text) && w.not_a_legal_or_medical_finding === true) &&
+-      obj(r.remediation) && (r.status === 'REVIEW_SCOPE_HELD' ? Array.isArray(r.held_reason) :
++      obj(r.remediation) && (r.status === 'REVIEW_SCOPE_HELD' ?
++        Array.isArray(r.held_reason) && r.held_reason.every(text) &&
++        r.accepted_observations.length === 0 && r.warnings.length === 0 &&
++        Object.keys(r.remediation).length === 0 :
+         Array.isArray(r.remediation.question_material_states) && r.remediation.question_material_states.every(obj) &&
+-        Array.isArray(r.remediation.held_events)));
++        Array.isArray(r.remediation.held_events));
++}
++
++function indexIDs(rows) {
++  const index = new Map();
++  rows.forEach((row, i) => {
++    if (!obj(row) || !text(row.id)) return;
++    if (!index.has(row.id)) index.set(row.id, []);
++    index.get(row.id).push(i);
++  });
++  return index;
++}
++
++// ID equality establishes correspondence to this input, not authentication of
++// the source's truth. Recheck returned evidence against the unique input review
++// so a matching ID cannot import another review's or another case's payload.
++function reviewPayloadMatchesInput(native, raw, project) {
++  const inputRows = Array.isArray(raw.observations) ? raw.observations : [];
++  const original = indexIDs(inputRows), returned = indexIDs(native.accepted_observations);
++  const fields = [...CONTEXT, 'material_id', 'question_id', 'kind', 'source_ref',
++    'actor_id', 'actor_role', 'event_type'];
++  for (const row of native.accepted_observations) {
++    const indices = original.get(row.id) ?? [];
++    if (indices.length !== 1 || returned.get(row.id).length !== 1) return false;
++    const input = inputRows[indices[0]];
++    if (CONTEXT.some(k => row[k] !== project[k] || raw[k] !== project[k]) ||
++        fields.some(k => row[k] !== (input[k] ?? null)) ||
++        JSON.stringify(row.depends_on) !== JSON.stringify(input.depends_on ?? []) ||
++        row.source_class !== project.sources[row.source_ref]?.source_class) return false;
++  }
++  const accepted = new Map(native.accepted_observations.map(row => [row.id, row]));
++  for (const warning of native.warnings) {
++    if (!warning.basis_observations.length || CONTEXT.some(k => warning.context[k] !== project[k])) return false;
++    const basis = warning.basis_observations.map(id => accepted.get(id));
++    if (basis.some(row => !row || [...CONTEXT, 'material_id', 'question_id'].some(k => row[k] !== warning.context[k]))) return false;
++    const refs = [...new Set(basis.map(row => row.source_ref))].sort();
++    if (JSON.stringify(refs) !== JSON.stringify([...new Set(warning.source_refs)].sort())) return false;
++  }
++  // Remediation outputs omit case/track, so bind their explicit event IDs back
++  // to the input's case/track/person/material/question instead of inferring it.
++  const events = Array.isArray(raw.remediation_events) ? raw.remediation_events : [];
++  const eventIDs = indexIDs(events);
++  for (const state of native.remediation.question_material_states ?? []) {
++    if (state.subject_id !== project.subject_id || !Array.isArray(state.event_history) || !state.event_history.length) return false;
++    for (const id of state.event_history) {
++      const positions = eventIDs.get(id) ?? [];
++      if (positions.length !== 1) return false;
++      const event = events[positions[0]];
++      if (CONTEXT.some(k => event[k] !== project[k]) ||
++          ['subject_id', 'material_id', 'question_id'].some(k => event[k] !== state[k])) return false;
++    }
++  }
++  return true;
++}
++
++function bindGuardReviews(x, result) {
++  const inputs = x.project.support_reviews, outputs = result?.reviews ?? [];
++  const inputIDs = indexIDs(inputs), outputIDs = indexIDs(outputs);
++  const matches = new Map(), quarantined = [];
++  outputs.forEach((row, output_index) => {
++    const reasons = [];
++    const id = obj(row) && text(row.id) ? row.id : null;
++    if (id === null) reasons.push('GUARD_REVIEW_ID_INVALID');
++    else {
++      const positions = inputIDs.get(id) ?? [];
++      if (!positions.length) reasons.push('GUARD_REVIEW_ID_UNEXPECTED');
++      if (positions.length > 1) reasons.push('INPUT_REVIEW_ID_AMBIGUOUS');
++      if (outputIDs.get(id).length !== 1) reasons.push('GUARD_REVIEW_ID_DUPLICATE');
++      if (!guardReviewContract(row)) reasons.push('GUARD_REVIEW_CONTRACT_VIOLATION');
++      if (!reasons.length && !reviewPayloadMatchesInput(row, inputs[positions[0]], x.project)) reasons.push('GUARD_REVIEW_INPUT_PAYLOAD_CONFLICT');
++    }
++    if (reasons.length) quarantined.push({output_index, id, reasons});
++    else matches.set(id, {row, output_index});
++  });
++  const reviews = inputs.map(raw => {
++    const id = obj(raw) && text(raw.id) ? raw.id : null;
++    const reasons = [];
++    if (!result) reasons.push('GUARD_RESULT_UNAVAILABLE');
++    else if (id === null) reasons.push('INVALID_REVIEW_ID');
++    else {
++      if (inputIDs.get(id).length !== 1) reasons.push('INPUT_REVIEW_ID_AMBIGUOUS');
++      const positions = outputIDs.get(id) ?? [];
++      if (!positions.length) reasons.push('GUARD_REVIEW_ID_MISSING');
++      for (const item of quarantined) if (item.id === id) reasons.push(...item.reasons);
++    }
++    const match = reasons.length ? null : matches.get(id);
++    return {native:match?.row ?? null, output_index:match?.output_index ?? null, reasons:[...new Set(reasons)]};
++  });
++  return {reviews, audit:{method:'EXACT_UNIQUE_INPUT_REVIEW_ID_AND_PAYLOAD_SCOPE',
++    status:!result ? 'UNAVAILABLE' : quarantined.length || reviews.some(r => r.reasons.length) ? 'QUARANTINED' : 'BOUND',
++    input_count:inputs.length, output_count:outputs.length, matched_count:reviews.filter(r => r.native).length,
++    quarantined_outputs:quarantined}};
+ }
+ 
+ function pythonStep(payload, entry, stage, contract, timeout_ms) {
+@@ -122,10 +221,9 @@
+ 
+ function combine(x, base, guard, bindings) {
+   const inputReviews = x.project.support_reviews;
+-  // Guard skips nonobjects; correlate its native result only against objects.
+-  let cursor = 0;
++  const correlated = bindGuardReviews(x, guard.result);
+   const reviews = inputReviews.map((raw, index) => {
+-    const native = obj(raw) && guard.result ? guard.result.reviews[cursor++] : null;
++    const {native, output_index, reasons:identityReasons} = correlated.reviews[index];
+     const binding = bindings[index];
+     const held = !native || binding.status !== 'BOUND' || native.status === 'REVIEW_SCOPE_HELD';
+     const accepted = held ? [] : native.accepted_observations;
+@@ -162,12 +260,12 @@
+       remediation.unbound_question_states = foreign;
+       remediation.unresolved_route_binding = foreign.length > 0;
+     }
+-    return {input_index:index, id:binding.review_id, binding, status:held ? 'INTEGRATION_REVIEW_HELD' :
++    return {input_index:index, id:binding.review_id, binding, guard_output_index:output_index, status:held ? 'INTEGRATION_REVIEW_HELD' :
+       (native.held_observations.length || native.remediation.held_events.length || extraHeld.length || remediation.unresolved_route_binding ? 'PARTIAL_REVIEW_WITH_QUARANTINE' : native.status),
+       warnings, accepted_observations:eligible,
+       held_observations:held ? [] : [...native.held_observations, ...extraHeld],
+       items_not_evaluated_for_integrated_use:held,
+-      held_reason:held ? [...binding.reasons, ...(native?.held_reason ?? []), ...(!native ? ['GUARD_RESULT_UNAVAILABLE'] : [])] : [],
++      held_reason:held ? [...new Set([...binding.reasons, ...identityReasons, ...(native?.held_reason ?? [])])] : [],
+       remediation, original_review:clone(raw)};
+   });
+   const warnings = reviews.flatMap(r => r.warnings.map(w => ({...w, review_id:r.id, route_id:r.binding.route_id})));
+@@ -176,7 +274,8 @@
+     status:'LOCAL_REVIEW_PROPOSAL', delivery:'NOT_SENT', automatic_sanction:false,
+     victim_concession_required:false}));
+   return {schema:'ADONIS-VOS-CORE-GUARD-REPORT/1.0',
+-    warning_authority:'GUARD_V02_PLUS_EXPLICIT_ROUTE_BINDING',
++    warning_authority:'GUARD_V02_PLUS_EXACT_REVIEW_AND_EXPLICIT_ROUTE_BINDING',
++    guard_review_binding:correlated.audit,
+     legacy_rows:clone(base.legacy_execution.result.rows),
+     legacy_ethics:clone(base.legacy_execution.result.ethics),
+     legacy_action_drafts:clone(base.legacy_execution.result.action_drafts),
+@@ -209,10 +308,10 @@
+     ['STABLE_WITH_OPEN_ITEMS', 'STABLE_LOCAL_CHECK_ONLY'].includes(r.consistency_loop?.status), timeout_ms);
+   const base = {legacy_execution:legacy, legacy_snapshot:core.snapshot(),
+     research_execution:research.result, research_receipt:research.receipt};
+-  const guard = pythonStep(x.project, ENTRY, 'UNCHANGED_GUARD_V02', r => guardContract(r) && r.reviews.length === x.project.support_reviews.filter(obj).length, timeout_ms);
++  const guard = pythonStep(x.project, ENTRY, 'UNCHANGED_GUARD_V02', guardContract, timeout_ms);
+   const report = combine(x, base, guard, bindings);
+   const stageFailure = base.research_receipt.status !== 'SUCCEEDED' || guard.receipt.status !== 'SUCCEEDED';
+-  const quarantine = report.support_reviews.some(r => r.status === 'INTEGRATION_REVIEW_HELD' || r.status === 'PARTIAL_REVIEW_WITH_QUARANTINE');
++  const quarantine = report.guard_review_binding.status !== 'BOUND' || report.support_reviews.some(r => r.status === 'INTEGRATION_REVIEW_HELD' || r.status === 'PARTIAL_REVIEW_WITH_QUARANTINE');
+   return {status:stageFailure ? 'PARTIAL_STAGE_FAILURE' : quarantine ? 'LOCAL_INTEGRATION_WITH_QUARANTINE' : 'LOCAL_INTEGRATION_SUCCEEDED',
+     integration_version:VERSION, report,
+     legacy_execution:base.legacy_execution, legacy_snapshot:base.legacy_snapshot,
