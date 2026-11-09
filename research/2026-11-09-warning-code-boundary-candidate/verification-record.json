@@ -1,0 +1,76 @@
+{
+  "record_type": "ADONIS_VOS_LOCAL_SYNTHETIC_RESEARCH_RECORD",
+  "date": "2026-11-09",
+  "status": "LOCAL_CANDIDATE_NOT_MERGED_NOT_RELEASED",
+  "repository": "pupiloo70-debug/adonis-vos",
+  "main_commit": "ff9d961ced23462666d88e1103edd78ac2384ebe",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "main_vs_baseline": {
+    "ahead_by": 7,
+    "changed_existing_v1_or_correction3_or_correction4": false,
+    "change_summary": "Added research/0.2-core-guard-integration.v2 research materials and logs only."
+  },
+  "v2_core_git_blob_sha1": "54be71045615206ab9de5fd111585cea390abc20",
+  "input": "Public synthetic-input.json plus saved public synthetic-output.json (no non-public data)",
+  "test_mode": "Fetched and executed exact public core_guard.mjs JavaScript validator and binder function bodies in isolated V8, NOT Node full integration",
+  "finding": "BINDING-WARNING-CODE-PREREQUISITE-001",
+  "issue": "Replacing AUTOPSY_EVIDENCE_EXCLUSION_WARNING with HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING without changing evidence passes existing review contract and review-payload checks, incorrectly remapping action type.",
+  "observed_cases": [
+    {
+      "case": "saved original synthetic guard result",
+      "before": "BOUND (1/1)",
+      "patched": "BOUND (1/1)"
+    },
+    {
+      "case": "single forged warning code",
+      "before": "BOUND (1/1)",
+      "patched": "QUARANTINED (0/1); GUARD_REVIEW_INPUT_PAYLOAD_CONFLICT"
+    },
+    {
+      "case": "forged warning plus independent healthy sibling",
+      "before": "BOUND (2/2)",
+      "patched": "QUARANTINED (1/2), healthy sibling survives"
+    }
+  ],
+  "patch": "candidate.patch",
+  "proposed_regression": "Extension of review-identity.test.mjs uses existing real-python boundary shim; pending full Node/Python execution in cloned repo.",
+  "actual_executions": {
+    "isolated_source_extraction": 3,
+    "full_Node_Python_replay": 0,
+    "historical_repo_results_reused_as_fixtures": true
+  },
+  "limitations": [
+    "No network access from local Node/Python runtime; cannot clone or execute full repo here.",
+    "Prior 33/28/30/68/132 numbers are preserved as historical, not new runs.",
+    "A mirrored warning-rule map needs version binding and drift tests; exact IDs and rule sets do not certify source truth.",
+    "Candidate holds an entire invalid review at present; warning-level quarantine may be preferable after independent review."
+  ],
+  "invariants": {
+    "AX_01_to_09": "UNCHANGED",
+    "CIVIC_TRACE_0_4_5": "MAINTAINED",
+    "CIVIC_TRACE_0_4_6": "DEFERRED",
+    "total_score": null,
+    "R3_authority": "PRESERVED",
+    "automatic_guilt": false,
+    "automatic_immunity": false,
+    "benefit_from_obstruction": false
+  },
+  "public_references": [
+    "https://github.com/pupiloo70-debug/adonis-vos/blob/ff9d961ced23462666d88e1103edd78ac2384ebe/research/0.2-core-guard-integration.v2/core_guard.mjs",
+    "https://github.com/pupiloo70-debug/adonis-vos/blob/ff9d961ced23462666d88e1103edd78ac2384ebe/research/0.3-local-correction.4/guard-candidate-v0.2/correction4_guard.py"
+  ],
+  "additional_boundary_mutations": {
+    "description": "For each of 5 genuine public guard warnings, replace code with each of other 4 valid warning codes (5 x 4 = 20).",
+    "mutation_cases": 20,
+    "old_binding_accepted": 20,
+    "patched_binding_quarantined": 20,
+    "baseline_nonmutant_bound": true,
+    "tool": "Isolated V8 executing exact fetched public validator and binder bodies"
+  },
+  "github_write_attempt": {
+    "operation": "create research branch from verified main ff9d961ced23462666d88e1103edd78ac2384ebe",
+    "outcome": "403 FORBIDDEN: Resource not accessible by integration",
+    "branch_created": false,
+    "public_repo_modified": false
+  }
+}

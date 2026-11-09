@@ -1,0 +1,48 @@
+diff --git a/research/0.2-core-guard-integration.v2/core_guard.mjs b/research/0.2-core-guard-integration.v2/core_guard.mjs
+--- a/research/0.2-core-guard-integration.v2/core_guard.mjs
++++ b/research/0.2-core-guard-integration.v2/core_guard.mjs
+@@ -15,6 +15,15 @@
+ const fail = code => { throw new Error(code); };
+ const clone = x => structuredClone(x);
+ const CONTEXT = ['case_id', 'track_id', 'subject_id'];
++// Version-pinned mirror of guard-candidate-v0.2 WARNING_RULES. Do not infer
++// a warning code from a successful review ID or source list alone.
++const WARNING_KINDS = {
++  AUTOPSY_EVIDENCE_EXCLUSION_WARNING:['AUTOPSY_RECORD_PRESENT','AUTOPSY_EXCLUDED_FOR_NO_CLINICAL_RECORD'],
++  CIRCULAR_BURDEN_SHIFT_WARNING:['ESSENTIAL_RECORD_NOT_PRODUCED','INDEPENDENT_REVIEW_REFUSED','GAP_RELIED_ON_AGAINST_CLAIMANT'],
++  HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING:['ESSENTIAL_RECORD_NOT_PRODUCED','INDEPENDENT_REVIEW_REFUSED','GAP_RELIED_ON_AGAINST_CLAIMANT','INSTITUTIONAL_BENEFIT_RETAINED'],
++  CAUSATION_METHOD_CONSISTENCY_REVIEW:['CAUSATION_REASONING_UNEXPLAINED'],
++  INDIVIDUAL_SUSCEPTIBILITY_REVIEW_OPEN:['SUSCEPTIBILITY_NOT_ASSESSED'],
++};
+ 
+ // One serialized JSON input is shared by both Python stages. Nothing migrates
+ // labels, actors, material IDs, evidence states, decisions or approvals.
+@@ -133,5 +133,11 @@
+     if (!warning.basis_observations.length || CONTEXT.some(k => warning.context[k] !== project[k])) return false;
+     const basis = warning.basis_observations.map(id => accepted.get(id));
+     if (basis.some(row => !row || [...CONTEXT, 'material_id', 'question_id'].some(k => row[k] !== warning.context[k]))) return false;
++    // Guard output is a boundary: a valid code is not necessarily supported by
++    // the returned observations. Hold forged/misbound code+prerequisite pairs.
++    const requiredKinds = WARNING_KINDS[warning.code];
++    const returnedKinds = new Set(basis.map(row => row.kind));
++    if (!requiredKinds || returnedKinds.size !== requiredKinds.length ||
++        requiredKinds.some(kind => !returnedKinds.has(kind))) return false;
+     const refs = [...new Set(basis.map(row => row.source_ref))].sort();
+     if (JSON.stringify(refs) !== JSON.stringify([...new Set(warning.source_refs)].sort())) return false;
+diff --git a/research/0.2-core-guard-integration.v2/review-identity.test.mjs b/research/0.2-core-guard-integration.v2/review-identity.test.mjs
+--- a/research/0.2-core-guard-integration.v2/review-identity.test.mjs
++++ b/research/0.2-core-guard-integration.v2/review-identity.test.mjs
+@@ -169,3 +169,13 @@
+   assert.equal(r.receipts.guard.status,'FAILED');assert.equal(r.status,'PARTIAL_STAGE_FAILURE');
+   assert.equal(r.report.procedural_warnings.length,0);assert.equal(r.audit_only.guard_execution,null);
+ });
++test('foreign warning code cannot borrow a valid review ID and unrelated evidence',()=>{
++  // The actual guard runs first; only its serialized output is mutated.
++  const r=inject(g=>{g.reviews[0].warnings[0].code='HARM_BURIAL_JUDICIAL_CARTEL_PATTERN_WARNING';});
++  assert.equal(review(r,'REVIEW-A').warnings.length,0);
++  assert(review(r,'REVIEW-A').held_reason.includes('GUARD_REVIEW_INPUT_PAYLOAD_CONFLICT'));
++  assert.equal(review(r,'REVIEW-B').warnings.length,5);
++  assert.equal(r.status,'LOCAL_INTEGRATION_WITH_QUARANTINE');
++  assert.equal(r.receipts.guard.status,'SUCCEEDED');
++  noAuthorityChange(r);
++});
