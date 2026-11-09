@@ -1,5 +1,7 @@
 # Adonis VOS 0.3 correction.4 설계 제안 · 2026-11-06
 
+- [사건 구분과 정정된 자료의 재사용 기준](EVIDENCE-CURRENTNESS.md): 정보 접근 비대칭, 재귀적 자기 개선, AI의 정정 책임을 포함한 설계 보완. 런타임 구현 완료를 뜻하지 않는다.
+
 상태: **PROPOSED_DESIGN_NOT_IMPLEMENTED / R3_REVIEW_PENDING**  
 대상 저장소: `pupiloo70-debug/adonis-vos`  
 점검 기준: `f68d690351ddfdff83caf29928551f8a63af3cb0`  
