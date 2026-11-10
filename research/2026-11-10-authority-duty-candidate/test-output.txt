@@ -1,0 +1,29 @@
+✔ valid authority does not imply duty fulfillment (2.035723ms)
+✔ unknown duty retains observable response gap and explanation task (0.304659ms)
+✔ formal reply not resolved (7.393975ms)
+✔ partial access is preserved without erasing open questions or burden (0.576067ms)
+✔ offered alternative is not verified access (0.486522ms)
+✔ verified alternative only resolves this question status (0.402315ms)
+✔ anger alone never blocks lawful support (0.338479ms)
+✔ explicit revenge request rejected, lawful support retained even for R3 (0.287993ms)
+✔ fabrication request rejected without global support shutdown (0.281643ms)
+✔ authority alone cannot authorize external action (0.330627ms)
+✔ fully supplied gates yield review only, not execution (0.25877ms)
+✔ expired delegation held (0.276306ms)
+✔ cross-case event quarantined while valid sibling survives (1.550959ms)
+✔ duplicate provenance does not multiply response count (0.253922ms)
+✔ duplicate IDs quarantined (0.176976ms)
+✔ future response cannot imply fulfillment (0.176846ms)
+✔ unknown deadline does not become overdue (0.109084ms)
+✔ documented extension respected (0.168884ms)
+✔ non-synthetic input rejected (0.519642ms)
+✔ no automatic state change, numeric score, sanction or source certification (0.287473ms)
+✔ earlier access cannot close a later renewed request (0.151939ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.700236

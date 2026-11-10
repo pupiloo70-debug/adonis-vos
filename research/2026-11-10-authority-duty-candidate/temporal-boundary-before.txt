@@ -1,0 +1,54 @@
+✔ valid authority does not imply duty fulfillment (1.990576ms)
+✔ unknown duty retains observable response gap and explanation task (0.271639ms)
+✔ formal reply not resolved (7.197523ms)
+✔ partial access is preserved without erasing open questions or burden (0.389777ms)
+✔ offered alternative is not verified access (0.242735ms)
+✔ verified alternative only resolves this question status (0.274133ms)
+✔ anger alone never blocks lawful support (0.257157ms)
+✔ explicit revenge request rejected, lawful support retained even for R3 (0.390158ms)
+✔ fabrication request rejected without global support shutdown (0.21261ms)
+✔ authority alone cannot authorize external action (0.768587ms)
+✔ fully supplied gates yield review only, not execution (0.486412ms)
+✔ expired delegation held (0.169235ms)
+✔ cross-case event quarantined while valid sibling survives (1.072484ms)
+✔ duplicate provenance does not multiply response count (0.216696ms)
+✔ duplicate IDs quarantined (0.138318ms)
+✔ future response cannot imply fulfillment (0.188124ms)
+✔ unknown deadline does not become overdue (0.119079ms)
+✔ documented extension respected (0.15923ms)
+✔ non-synthetic input rejected (0.365099ms)
+✔ no automatic state change, numeric score, sanction or source certification (0.191178ms)
+✖ earlier access cannot close a later renewed request (1.227377ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 119.519467
+
+✖ failing tests:
+
+test at authority-duty.test.mjs:27:1
+✖ earlier access cannot close a later renewed request (1.227377ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'VERIFIED_FOR_THIS_QUESTION'
+  - 'NO_RESPONSE_AFTER_VERIFIED_DEADLINE'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/a844c28997fd/authority-duty-update-20261110/local-reproduction/authority-duty.test.mjs:27:207)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'VERIFIED_FOR_THIS_QUESTION',
+    expected: 'NO_RESPONSE_AFTER_VERIFIED_DEADLINE',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

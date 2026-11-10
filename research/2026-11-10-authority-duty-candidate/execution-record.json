@@ -1,0 +1,48 @@
+{
+  "schema": "SGP-QSV-LOCAL-CANDIDATE-EXECUTION/1.0",
+  "date": "2026-11-10",
+  "version": "authority-duty-review/0.1.0-candidate",
+  "status": "STANDALONE_SYNTHETIC_CANDIDATE_NOT_CORE_INTEGRATED",
+  "executed_at_utc": "2026-11-10T00:32:25.398326+00:00",
+  "command": "node --test authority-duty.test.mjs",
+  "runtime": "v24.22.1",
+  "input_scope": "synthetic fixtures embedded in authority-duty.test.mjs",
+  "current_result": {
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "log": "test-output.txt"
+  },
+  "temporal_boundary_reproduction": {
+    "method": "same 21 tests against pre-correction latest-response selection",
+    "expected_failed_test": "earlier access cannot close a later renewed request",
+    "exit_code": 1,
+    "log": "temporal-boundary-before.txt",
+    "patch": "select only responses at or after latest received request; preserve historical events"
+  },
+  "scope_limits": [
+    "Caller-supplied source and authority assertions are not independently authenticated",
+    "Same-environment local tests, not external independent audit",
+    "No integration into CentralCore or production executor",
+    "No Node/Python whole-repository regression replay",
+    "No implementation of the separate 2026-11-09 warning-code patch",
+    "No numeric ethical gravity or escalation thresholds",
+    "No new canonical state or approval transition",
+    "No real-case accuracy or legal-process availability certification"
+  ],
+  "source_hashes": {
+    "authority-duty.mjs": "0aa43c2a8aa45c40360e32931795fb2adc51c973ea9bf11f69bafcd3929e50ca",
+    "authority-duty.test.mjs": "be9c9532a91b00f813272fe26db2372015aa0a68b67edc3bb398830f006d58df",
+    "test-output.txt": "ee568b4ce45602fe40238d1bfe9278b8a69ca131c6d1a9af10c1d2f24b865887",
+    "temporal-boundary-before.txt": "8ae100166afdcd8af8ace50effeea4680092838a4bc0605b5711ab890d99a0df"
+  },
+  "invariants": {
+    "total_score": null,
+    "r26_transition": false,
+    "production_deployed": false,
+    "external_action_performed": false,
+    "AX_01_to_09": "UNCHANGED",
+    "CT045": "MAINTAINED",
+    "CT046": "DEFERRED"
+  }
+}
