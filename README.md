@@ -1,5 +1,7 @@
 # Adonis VOS 0.2 준비안
 
+- [권한·의무 분리 알고리즘 후보](research/2026-11-10-authority-duty-candidate/README-KO.md): 독립 합성시험 21건·오류 재현·수정 결과. 중앙코어 통합·운영 배포 아님.
+
 - [사건 구분·정정 자료 재사용 기준](research/0.3-local-correction.4/EVIDENCE-CURRENTNESS.md): 사건별 수량 구분과 정정 우선 적용에 관한 0.3 설계 보완.
 
 LP728의 검증권에서 출발한 SGP-QSV 로컬 검증 지원 코어입니다. 강숙경 R3의 목적·범위 승인 아래, 아도니스 역할의 AI가 기술 설계·구현·시험·정정 업무를 맡습니다.
