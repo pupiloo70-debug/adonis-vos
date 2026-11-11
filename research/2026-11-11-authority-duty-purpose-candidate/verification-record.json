@@ -1,0 +1,124 @@
+{
+  "schema": "ADONIS-VOS-SYNTHETIC-RESEARCH-VERIFICATION/1.0",
+  "report_date": "2026-11-11",
+  "source": {
+    "repository": "pupiloo70-debug/adonis-vos",
+    "branch": "main",
+    "latest_observed_sha": "ff769045dc7d8f0f6d2a0ed48a192d3ff6116561",
+    "latest_commit_utc": "2026-11-10T08:01:06Z",
+    "prior_reference_sha": "d8ef4f72f02a971a598d81444cd9426cfe3cce9d",
+    "main_difference": "3 commits; new standalone authority-duty candidate and README linking; no observed c3/c4/v1 core code changes",
+    "source_module_path": "research/2026-11-10-authority-duty-candidate/authority-duty.mjs",
+    "source_module_published_sha256": "0aa43c2a8aa45c40360e32931795fb2adc51c973ea9bf11f69bafcd3929e50ca",
+    "local_source_hash_verified_against_published_execution_record": true
+  },
+  "candidate": {
+    "finding_id": "AUTHORITY_DUTY_SIMULTANEOUS_RESPONSE_ID_SORT_001",
+    "focus": "Correction4 P05 / authority-duty separation",
+    "status": "LOCAL_CANDIDATE_NOT_INTEGRATED_NOT_PUBLISHED",
+    "fault": "Two incompatible same-timestamp response types are sorted by event ID, making duty fulfillment dependent on lexical ID ordering rather than source-supported chronology.",
+    "expected": "Unresolved conflict with all events retained and explanation task; no verified access or omission attribution from tie alone.",
+    "baseline_result": [
+      {
+        "ids": "E2=CORE_ACCESS_VERIFIED,E3=REFUSAL",
+        "observed": "REFUSAL_RECORDED"
+      },
+      {
+        "ids": "E2=REFUSAL,E3=CORE_ACCESS_VERIFIED",
+        "observed": "VERIFIED_FOR_THIS_QUESTION"
+      }
+    ],
+    "patch_result": "Both map to SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN; no automatic omission; original events and independent support retained",
+    "patched_source_sha256": "029e5d75c47b20ec6ee4287a8b25c9d434051e2920fe4fd927339b0ca6acf774",
+    "patch_file": "candidate.patch",
+    "test_file": "simultaneous-response.test.mjs"
+  },
+  "actual_execution": {
+    "environment": {
+      "node": "v22.16.0",
+      "python": "Python 3.13.5"
+    },
+    "commands": [
+      {
+        "command": "node --test authority-duty.test.mjs",
+        "phase": "baseline",
+        "tests": 21,
+        "passed": 21,
+        "failed": 0,
+        "exit_code": 0,
+        "log": "baseline-test-output.txt"
+      },
+      {
+        "command": "node --test authority-duty.test.mjs simultaneous-response.test.mjs",
+        "phase": "before_patch",
+        "tests": 29,
+        "passed": 27,
+        "failed": 2,
+        "exit_code": 1,
+        "log": "before-test-output.txt"
+      },
+      {
+        "command": "node --test authority-duty.test.mjs simultaneous-response.test.mjs",
+        "phase": "after_patch",
+        "tests": 29,
+        "passed": 29,
+        "failed": 0,
+        "exit_code": 0,
+        "log": "after-test-output.txt"
+      },
+      {
+        "command": "git apply --check candidate.patch && git apply candidate.patch",
+        "phase": "clean_local_copy",
+        "exit_code": 0,
+        "result": "Patched file SHA-256 matched tested local patched file"
+      }
+    ],
+    "old_and_new_test_collections": "21 published inherited tests, 8 newly authored independent tests. Distinct test cases total 29; repeated before/after runs are not 58 distinct tests.",
+    "compared_result_file": "comparison.json"
+  },
+  "historical_records_not_replayed": {
+    "v1_integration_tests": 33,
+    "v1_independent_audit": 35,
+    "guard_tests": 68,
+    "correction3_python_tests": 132,
+    "correction3_bridge": 14,
+    "v2_review_identity": 28,
+    "v2_independent_identity": 30
+  },
+  "observed_source_scope": {
+    "correction3": "vos_support.py, vos_verify.py public source read; no code change in latest comparison",
+    "correction4": "README.md, EVIDENCE-CURRENTNESS.md and correction4_guard.py _remedies examined; guard candidate already marks simultaneous conflicting types as unresolved; new standalone module did not",
+    "integration_v1": "baseline remains public 42122a... historical reference",
+    "not_integrated": "The patched authority-duty module is standalone and not imported by CentralCore, correction3, guard, or CLI."
+  },
+  "limitations": [
+    "Source_ref is a declared input, not externally authenticated evidence",
+    "Response event same-time as request not resolved by this patch; separate design acceptance case",
+    "Events with different timestamps but unverified clock accuracy remain an evidentiary limitation",
+    "No complete repository checkout or whole-node/python integration replay in this runtime",
+    "No GitHub write or public release; no actual legal, medical, or external action"
+  ],
+  "governance": {
+    "r3_interpretation_and_final_release_authority": "PRESERVED",
+    "AX_01_to_AX_09": "UNCHANGED",
+    "CIVIC_TRACE_0_4_5": "MAINTAINED",
+    "CIVIC_TRACE_0_4_6": "APPROVAL_DEFERRED",
+    "total_score": null,
+    "no_automatic_guilt": true,
+    "no_automatic_immunity": true,
+    "no_benefit_from_obstruction": true,
+    "execution_authority": "LOCAL_SYNTHETIC_RESEARCH_ONLY"
+  },
+  "files_sha256": {
+    "authority-duty.original.mjs": "0aa43c2a8aa45c40360e32931795fb2adc51c973ea9bf11f69bafcd3929e50ca",
+    "authority-duty.mjs": "029e5d75c47b20ec6ee4287a8b25c9d434051e2920fe4fd927339b0ca6acf774",
+    "authority-duty.test.mjs": "be9c9532a91b00f813272fe26db2372015aa0a68b67edc3bb398830f006d58df",
+    "simultaneous-response.test.mjs": "be0101f4f9bf174fa7a8576e6ff80d3a4e3d5a0c437e252f7836a0890304d0e0",
+    "candidate.patch": "5318d67c27d78927c8da809de665f735412d9cf90500300271b1828b731107b4",
+    "comparison.mjs": "e2c34206adbe2fee2073a30038d07ca373bca37ed9daf58c81a0255b8513ec6e",
+    "comparison.json": "6aa76af80c0f00c4285cb06319f6a1667f4d7a5a381bdc38ba04fac78df183d6",
+    "baseline-test-output.txt": "9c33d1843c0cc36e3981b0ddf904c11ee93fac285d4f3b1216b16cc1ef93877c",
+    "before-test-output.txt": "e65fc07c5e1bb92e9ccf4fd04322ebb8ec72cc079a7a2ea7a56ccb6dd5d5e80e",
+    "after-test-output.txt": "3e56cef2a53ab8a7cf3f81deb271aa4672ccad68243a1475e59596a6441e7920"
+  }
+}

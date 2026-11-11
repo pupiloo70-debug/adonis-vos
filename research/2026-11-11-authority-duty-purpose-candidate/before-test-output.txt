@@ -1,0 +1,226 @@
+TAP version 13
+# Subtest: valid authority does not imply duty fulfillment
+ok 1 - valid authority does not imply duty fulfillment
+  ---
+  duration_ms: 2.427357
+  type: 'test'
+  ...
+# Subtest: unknown duty retains observable response gap and explanation task
+ok 2 - unknown duty retains observable response gap and explanation task
+  ---
+  duration_ms: 0.483062
+  type: 'test'
+  ...
+# Subtest: formal reply not resolved
+ok 3 - formal reply not resolved
+  ---
+  duration_ms: 8.306611
+  type: 'test'
+  ...
+# Subtest: partial access is preserved without erasing open questions or burden
+ok 4 - partial access is preserved without erasing open questions or burden
+  ---
+  duration_ms: 0.442873
+  type: 'test'
+  ...
+# Subtest: offered alternative is not verified access
+ok 5 - offered alternative is not verified access
+  ---
+  duration_ms: 0.308394
+  type: 'test'
+  ...
+# Subtest: verified alternative only resolves this question status
+ok 6 - verified alternative only resolves this question status
+  ---
+  duration_ms: 0.632072
+  type: 'test'
+  ...
+# Subtest: anger alone never blocks lawful support
+ok 7 - anger alone never blocks lawful support
+  ---
+  duration_ms: 0.350736
+  type: 'test'
+  ...
+# Subtest: explicit revenge request rejected, lawful support retained even for R3
+ok 8 - explicit revenge request rejected, lawful support retained even for R3
+  ---
+  duration_ms: 0.484684
+  type: 'test'
+  ...
+# Subtest: fabrication request rejected without global support shutdown
+ok 9 - fabrication request rejected without global support shutdown
+  ---
+  duration_ms: 0.760641
+  type: 'test'
+  ...
+# Subtest: authority alone cannot authorize external action
+ok 10 - authority alone cannot authorize external action
+  ---
+  duration_ms: 0.634916
+  type: 'test'
+  ...
+# Subtest: fully supplied gates yield review only, not execution
+ok 11 - fully supplied gates yield review only, not execution
+  ---
+  duration_ms: 0.324358
+  type: 'test'
+  ...
+# Subtest: expired delegation held
+ok 12 - expired delegation held
+  ---
+  duration_ms: 0.251591
+  type: 'test'
+  ...
+# Subtest: cross-case event quarantined while valid sibling survives
+ok 13 - cross-case event quarantined while valid sibling survives
+  ---
+  duration_ms: 0.312251
+  type: 'test'
+  ...
+# Subtest: duplicate provenance does not multiply response count
+ok 14 - duplicate provenance does not multiply response count
+  ---
+  duration_ms: 2.347369
+  type: 'test'
+  ...
+# Subtest: duplicate IDs quarantined
+ok 15 - duplicate IDs quarantined
+  ---
+  duration_ms: 0.20986
+  type: 'test'
+  ...
+# Subtest: future response cannot imply fulfillment
+ok 16 - future response cannot imply fulfillment
+  ---
+  duration_ms: 0.114249
+  type: 'test'
+  ...
+# Subtest: unknown deadline does not become overdue
+ok 17 - unknown deadline does not become overdue
+  ---
+  duration_ms: 0.144063
+  type: 'test'
+  ...
+# Subtest: documented extension respected
+ok 18 - documented extension respected
+  ---
+  duration_ms: 0.275856
+  type: 'test'
+  ...
+# Subtest: non-synthetic input rejected
+ok 19 - non-synthetic input rejected
+  ---
+  duration_ms: 0.641165
+  type: 'test'
+  ...
+# Subtest: no automatic state change, numeric score, sanction or source certification
+ok 20 - no automatic state change, numeric score, sanction or source certification
+  ---
+  duration_ms: 0.266943
+  type: 'test'
+  ...
+# Subtest: earlier access cannot close a later renewed request
+ok 21 - earlier access cannot close a later renewed request
+  ---
+  duration_ms: 0.141088
+  type: 'test'
+  ...
+# Subtest: simultaneous conflicting source-linked responses are not silently resolved by event ID ordering
+not ok 22 - simultaneous conflicting source-linked responses are not silently resolved by event ID ordering
+  ---
+  duration_ms: 16.712899
+  type: 'test'
+  location: '/mnt/data/adonis-vos-20261111-authority-duty-boundary/simultaneous-response.test.mjs:27:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'REFUSAL_RECORDED'
+    - 'SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN'
+  actual: 'REFUSAL_RECORDED'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/adonis-vos-20261111-authority-duty-boundary/simultaneous-response.test.mjs:29:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: renaming event IDs must not change the fulfillment result for the same evidence types, times and sources
+not ok 23 - renaming event IDs must not change the fulfillment result for the same evidence types, times and sources
+  ---
+  duration_ms: 0.655807
+  type: 'test'
+  location: '/mnt/data/adonis-vos-20261111-authority-duty-boundary/simultaneous-response.test.mjs:35:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'REFUSAL_RECORDED'
+    - 'VERIFIED_FOR_THIS_QUESTION'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'VERIFIED_FOR_THIS_QUESTION'
+  actual: 'REFUSAL_RECORDED'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/adonis-vos-20261111-authority-duty-boundary/simultaneous-response.test.mjs:38:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: single unambiguous verified response still closes only this question status
+ok 24 - single unambiguous verified response still closes only this question status
+  ---
+  duration_ms: 0.341193
+  type: 'test'
+  ...
+# Subtest: independent same-kind responses at a common timestamp are not mistaken for contradictory types
+ok 25 - independent same-kind responses at a common timestamp are not mistaken for contradictory types
+  ---
+  duration_ms: 0.946275
+  type: 'test'
+  ...
+# Subtest: later dated unambiguous verification can update previously conflicted responses
+ok 26 - later dated unambiguous verification can update previously conflicted responses
+  ---
+  duration_ms: 0.414481
+  type: 'test'
+  ...
+# Subtest: cross-case response is held and unrelated valid evidence continues
+ok 27 - cross-case response is held and unrelated valid evidence continues
+  ---
+  duration_ms: 0.778768
+  type: 'test'
+  ...
+# Subtest: conflicting response does not cause automatic guilt, enforcement or scoring
+ok 28 - conflicting response does not cause automatic guilt, enforcement or scoring
+  ---
+  duration_ms: 0.342074
+  type: 'test'
+  ...
+# Subtest: prohibited request is held locally while source-review support remains available
+ok 29 - prohibited request is held locally while source-review support remains available
+  ---
+  duration_ms: 0.328174
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 27
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 133.281614

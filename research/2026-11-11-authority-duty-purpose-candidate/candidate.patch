@@ -1,0 +1,36 @@
+--- a/research/2026-11-10-authority-duty-candidate/authority-duty.mjs
++++ b/research/2026-11-10-authority-duty-candidate/authority-duty.mjs
+@@ -40,10 +40,17 @@
+   const effectiveDeadline = deadlineVerified ? (extensionVerified ? Math.max(deadline,extension) : deadline) : null;
+   const overdue = has('REQUEST_RECEIVED') && effectiveDeadline !== null && effectiveDeadline < now;
+   const latestRequest = accepted.filter(e=>e.type==='REQUEST_RECEIVED').at(-1);
+-  const latestResponse = accepted.filter(e=>e.type!=='REQUEST_RECEIVED' && (!latestRequest || time(e.at)>=time(latestRequest.at))).at(-1);
++  const eligibleResponses = accepted.filter(e=>e.type!=='REQUEST_RECEIVED' && (!latestRequest || time(e.at)>=time(latestRequest.at)));
++  const latestResponse = eligibleResponses.at(-1);
++  // Event IDs break sorting ties for deterministic logs, but cannot prove causal order.
++  const simultaneousResponseTypes = new Set(eligibleResponses
++    .filter(e=>latestResponse && time(e.at)===time(latestResponse.at))
++    .map(e=>e.type));
++  const simultaneousResponseConflict = simultaneousResponseTypes.size > 1;
+   // No total-case closure, guilt finding, legal burden shift or authority revocation.
+   let fulfillment = 'UNKNOWN';
+-  if (latestResponse?.type==='CORE_ACCESS_VERIFIED' || latestResponse?.type==='ALTERNATIVE_VERIFIED') fulfillment='VERIFIED_FOR_THIS_QUESTION';
++  if (simultaneousResponseConflict) fulfillment='SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN';
++  else if (latestResponse?.type==='CORE_ACCESS_VERIFIED' || latestResponse?.type==='ALTERNATIVE_VERIFIED') fulfillment='VERIFIED_FOR_THIS_QUESTION';
+   else if (latestResponse?.type==='PARTIAL_ACCESS') fulfillment='PARTIAL_ACCESS_WITH_OPEN_SCOPE';
+   else if (latestResponse?.type==='ALTERNATIVE_OFFERED') fulfillment='ALTERNATIVE_OFFERED_EFFECTIVENESS_UNVERIFIED';
+   else if (latestResponse?.type==='FORMAL_REPLY') fulfillment='FORMAL_REPLY_ONLY';
+@@ -51,10 +58,11 @@
+   else if (overdue) fulfillment='NO_RESPONSE_AFTER_VERIFIED_DEADLINE';
+   else if (has('REQUEST_RECEIVED')) fulfillment='REQUEST_RECEIVED_RESPONSE_UNVERIFIED';
+   const needsExplanation = fulfillment !== 'VERIFIED_FOR_THIS_QUESTION';
+-  const observedNonfulfillment = has('REQUEST_RECEIVED') && needsExplanation && (overdue || ['FORMAL_REPLY_ONLY','REFUSAL_RECORDED','PARTIAL_ACCESS_WITH_OPEN_SCOPE'].includes(fulfillment));
++  const observedNonfulfillment = !simultaneousResponseConflict && has('REQUEST_RECEIVED') && needsExplanation && (overdue || ['FORMAL_REPLY_ONLY','REFUSAL_RECORDED','PARTIAL_ACCESS_WITH_OPEN_SCOPE'].includes(fulfillment));
+   const explanation = needsExplanation ? {
+     status:'DRAFT_NOT_SENT', assignee:'SUPPORT_AI_AND_VERIFIED_RECORD_CONTROLLER',
+-    tasks:['Review already linked sources first','Identify missing scope and controller explanation','Check applicable independent review pathways'],
++    tasks:['Review already linked sources first','Identify missing scope and controller explanation','Check applicable independent review pathways',
++      ...(simultaneousResponseConflict ? ['Resolve simultaneous response event order and corroborate source links'] : [])],
+     victim_repeat_submission_required:false
+   } : null;
+   const action = input.action ?? {kind:'RESEARCH_SUPPORT'};

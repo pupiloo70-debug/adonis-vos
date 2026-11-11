@@ -1,0 +1,84 @@
+[
+  {
+    "name": "verified_id_E2",
+    "input_events": [
+      {
+        "id": "REQ",
+        "type": "REQUEST_RECEIVED",
+        "at": "2026-11-08T00:00:00Z",
+        "source_ref": "SRC-REQUEST"
+      },
+      {
+        "id": "E2",
+        "type": "CORE_ACCESS_VERIFIED",
+        "at": "2026-11-09T06:00:00Z",
+        "source_ref": "SRC-V"
+      },
+      {
+        "id": "E3",
+        "type": "REFUSAL",
+        "at": "2026-11-09T06:00:00Z",
+        "source_ref": "SRC-R"
+      }
+    ],
+    "before": {
+      "status": "REFUSAL_RECORDED",
+      "omission_review": "EXPLANATION_GAP_DUTY_BASIS_OPEN",
+      "explanation_created": true
+    },
+    "after": {
+      "status": "SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN",
+      "omission_review": "NO_ADDITIONAL_OMISSION_CLASSIFICATION",
+      "explanation_created": true,
+      "accepted_event_ids": [
+        "REQ",
+        "E2",
+        "E3"
+      ],
+      "prior_burdens_preserved": 1,
+      "source_truth_verified": false,
+      "total_score": null
+    }
+  },
+  {
+    "name": "verified_id_E3",
+    "input_events": [
+      {
+        "id": "REQ",
+        "type": "REQUEST_RECEIVED",
+        "at": "2026-11-08T00:00:00Z",
+        "source_ref": "SRC-REQUEST"
+      },
+      {
+        "id": "E3",
+        "type": "CORE_ACCESS_VERIFIED",
+        "at": "2026-11-09T06:00:00Z",
+        "source_ref": "SRC-V"
+      },
+      {
+        "id": "E2",
+        "type": "REFUSAL",
+        "at": "2026-11-09T06:00:00Z",
+        "source_ref": "SRC-R"
+      }
+    ],
+    "before": {
+      "status": "VERIFIED_FOR_THIS_QUESTION",
+      "omission_review": "NO_ADDITIONAL_OMISSION_CLASSIFICATION",
+      "explanation_created": false
+    },
+    "after": {
+      "status": "SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN",
+      "omission_review": "NO_ADDITIONAL_OMISSION_CLASSIFICATION",
+      "explanation_created": true,
+      "accepted_event_ids": [
+        "REQ",
+        "E2",
+        "E3"
+      ],
+      "prior_burdens_preserved": 1,
+      "source_truth_verified": false,
+      "total_score": null
+    }
+  }
+]
