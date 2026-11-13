@@ -1,0 +1,69 @@
+{
+  "schema": "vos-r3-fixture-proposal-v0.1",
+  "status": "SPEC_ONLY_NOT_INTEGRATED",
+  "cases": [
+    {
+      "id": "SYN-ASYM-01",
+      "synthetic_scenario": "controller_only_source",
+      "expected_research_status": "CONTROLLER_EXPLANATION_REVIEW",
+      "reason": "자료 미보유 피해자에게 자동 입증실패 귀속 금지",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-CIRC-02",
+      "synthetic_scenario": "missing_source_used_to_deny_inquiry",
+      "expected_research_status": "CIRCULAR_JUSTIFICATION_REVIEW",
+      "reason": "순환 위험은 검토 트리거이며 은폐 자동 판정 아님",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-END-03",
+      "synthetic_scenario": "formal_case_closed_but_source_unverified",
+      "expected_research_status": "EVIDENCE_REVIEW_OPEN",
+      "reason": "법적 종결을 별도 유지",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-BEN-04",
+      "synthetic_scenario": "sample_benefit_without_person_link",
+      "expected_research_status": "MATERIAL_BENEFIT_UNVERIFIED",
+      "reason": "대표사례 처리 전체 구제 인정 금지",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-TIME-05",
+      "synthetic_scenario": "request_response_same_timestamp",
+      "expected_research_status": "REQUEST_RESPONSE_ORDER_UNVERIFIED",
+      "reason": "동시각 순서 증거 없음",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-ID-06",
+      "synthetic_scenario": "review_identity_mismatch",
+      "expected_research_status": "REVIEW_ID_BINDING_UNVERIFIED",
+      "reason": "검토 ID 혼동 차단",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-INDEP-07",
+      "synthetic_scenario": "independent_result_overwrite_attempt",
+      "expected_research_status": "INDEPENDENT_RESULT_PRESERVATION_REVIEW",
+      "reason": "독립 결과 원본 보호",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-REMEDY-08",
+      "synthetic_scenario": "correction_claim_without_artifact",
+      "expected_research_status": "REMEDIATION_UNVERIFIED",
+      "reason": "시정 선언 ≠ 이행",
+      "automatic_legal_finding": false
+    },
+    {
+      "id": "SYN-GATE-09",
+      "synthetic_scenario": "python_bridge_exception",
+      "expected_research_status": "GATE_EXECUTION_UNVERIFIED",
+      "reason": "게이트 실패는 인증 실패",
+      "automatic_legal_finding": false
+    }
+  ]
+}
