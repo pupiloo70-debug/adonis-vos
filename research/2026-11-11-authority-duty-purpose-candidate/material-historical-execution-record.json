@@ -1,0 +1,24 @@
+{
+  "version": "vos03-purpose-review/0.3.0-research.3",
+  "date": "2026-11-13",
+  "status": "SYNTHETIC_RESEARCH_CANDIDATE_NOT_INTEGRATED_NOT_DEPLOYED",
+  "public_base_commit": "f8d8a1489a93a5a57cc7d9a80b27ec7f1f1e141b",
+  "runtime": "Node v24.22.1",
+  "command": "node --test *.test.mjs",
+  "passed": 82,
+  "failed": 0,
+  "tests_are_synthetic": true,
+  "files_sha256": {
+    "README-MATERIAL-HISTORICAL-KO.md": "5d226a3d7d9c216f528d4841402acf8b082ade852825fd2d38541ffe03a25349",
+    "authority-duty.mjs": "029e5d75c47b20ec6ee4287a8b25c9d434051e2920fe4fd927339b0ca6acf774",
+    "authority-duty.test.mjs": "be9c9532a91b00f813272fe26db2372015aa0a68b67edc3bb398830f006d58df",
+    "benefit-source.test.mjs": "6d1719828bf7d0280436488ba7300713338dd13cdb31983f69f443033508b6a5",
+    "binding.test.mjs": "f42e6a1357f58ec6cc55f8518e828841506607d967d0359cfd10a536558b03ef",
+    "historical-lot.test.mjs": "71155834cf5f163c9817f89da03ef8cd04106f7a6193b78665e216325e54f606",
+    "material-historical-test-output.txt": "a1048766764f76bc54572eb90d1fb06676c0fdb8e583ef77aab5f9a551563386",
+    "material-outcome.test.mjs": "f46411107ca38a68c3703fbbabb04562e6d6390510fb2754b32c2274f2b7479c",
+    "purpose-review.mjs": "7782b6ced56584df1a2ec31942e0c6c774944eeb15bcfe982289e7bee704b61c",
+    "purpose-review.test.mjs": "5a55c526a257efb9531873abb065d9b8937ef51971b79f499afa0ab648258de4",
+    "simultaneous-response.test.mjs": "be0101f4f9bf174fa7a8576e6ff80d3a4e3d5a0c437e252f7836a0890304d0e0"
+  }
+}
