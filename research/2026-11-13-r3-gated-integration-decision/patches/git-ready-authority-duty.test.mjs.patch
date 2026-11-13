@@ -1,0 +1,12 @@
+diff --git a/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.test.mjs b/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.test.mjs
+--- a/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.test.mjs
++++ b/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.test.mjs
+@@ -9,7 +9,7 @@
+ test('formal reply not resolved',()=>assert.equal(run(x=>x.events.push(e('FORMAL_REPLY','E2'))).duty_fulfillment_status,'FORMAL_REPLY_ONLY'));
+ test('partial access is preserved without erasing open questions or burden',()=>{const r=run(x=>x.events.push(e('PARTIAL_ACCESS','E2')));assert.equal(r.duty_fulfillment_status,'PARTIAL_ACCESS_WITH_OPEN_SCOPE');assert.equal(r.residual_questions.length,1);assert.equal(r.past_burden.length,1);});
+ test('offered alternative is not verified access',()=>assert.equal(run(x=>x.events.push(e('ALTERNATIVE_OFFERED','E2'))).duty_fulfillment_status,'ALTERNATIVE_OFFERED_EFFECTIVENESS_UNVERIFIED'));
+-test('verified alternative only resolves this question status',()=>{const r=run(x=>x.events.push(e('ALTERNATIVE_VERIFIED','E2')));assert.equal(r.duty_fulfillment_status,'VERIFIED_FOR_THIS_QUESTION');assert.equal(r.past_burden.length,1);assert.equal(r.residual_questions.length,1);});
++test('verified alternative only resolves this question status',()=>{const r=run(x=>x.events.push(e('ALTERNATIVE_VERIFIED','E2',{at:'2026-11-08T00:00:01Z'})));assert.equal(r.duty_fulfillment_status,'VERIFIED_FOR_THIS_QUESTION');assert.equal(r.past_burden.length,1);assert.equal(r.residual_questions.length,1);});
+ test('anger alone never blocks lawful support',()=>{const r=run(x=>x.emotion='ANGRY');assert.equal(r.action_disposition,'SUPPORT_CONTINUES');});
+ test('explicit revenge request rejected, lawful support retained even for R3',()=>{const r=run(x=>{x.role='R3';x.action={kind:'EXTERNAL_ENFORCEMENT',explicit_revenge:true};});assert.match(r.action_disposition,/REJECTED_SUPPORT_CONTINUES/);assert(r.allowed_support.includes('LAWFUL_REQUEST_DRAFTING'));});
+ test('fabrication request rejected without global support shutdown',()=>assert.match(run(x=>x.action={kind:'RESEARCH_SUPPORT',fabricate_evidence:true}).action_disposition,/REJECTED_SUPPORT_CONTINUES/));

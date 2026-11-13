@@ -1,0 +1,18 @@
+diff --git a/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.mjs b/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.mjs
+--- a/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.mjs
++++ b/research/2026-11-11-authority-duty-purpose-candidate/authority-duty.mjs
+@@ -47,9 +47,14 @@
+     .filter(e=>latestResponse && time(e.at)===time(latestResponse.at))
+     .map(e=>e.type));
+   const simultaneousResponseConflict = simultaneousResponseTypes.size > 1;
++  // A verified event at the exact request timestamp has no proven response order.
++  const sameTimeUnprovenFulfillment = !!latestRequest && !!latestResponse
++    && time(latestRequest.at) === time(latestResponse.at)
++    && ['CORE_ACCESS_VERIFIED','ALTERNATIVE_VERIFIED'].includes(latestResponse.type);
+   // No total-case closure, guilt finding, legal burden shift or authority revocation.
+   let fulfillment = 'UNKNOWN';
+   if (simultaneousResponseConflict) fulfillment='SIMULTANEOUS_RESPONSE_CONFLICT_REVIEW_OPEN';
++  else if (sameTimeUnprovenFulfillment) fulfillment='REQUEST_RESPONSE_ORDER_UNVERIFIED';
+   else if (latestResponse?.type==='CORE_ACCESS_VERIFIED' || latestResponse?.type==='ALTERNATIVE_VERIFIED') fulfillment='VERIFIED_FOR_THIS_QUESTION';
+   else if (latestResponse?.type==='PARTIAL_ACCESS') fulfillment='PARTIAL_ACCESS_WITH_OPEN_SCOPE';
+   else if (latestResponse?.type==='ALTERNATIVE_OFFERED') fulfillment='ALTERNATIVE_OFFERED_EFFECTIVENESS_UNVERIFIED';
