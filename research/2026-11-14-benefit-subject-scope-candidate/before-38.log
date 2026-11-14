@@ -1,0 +1,351 @@
+TAP version 13
+# Subtest: POLICY_PROPOSAL_OR_ANNOUNCEMENT is recorded separately even when tagged independently verified
+ok 1 - POLICY_PROPOSAL_OR_ANNOUNCEMENT is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 2.073342
+  type: 'test'
+  ...
+# Subtest: SPEAKING_OPPORTUNITY is recorded separately even when tagged independently verified
+ok 2 - SPEAKING_OPPORTUNITY is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.300323
+  type: 'test'
+  ...
+# Subtest: MEDIA_COVERAGE is recorded separately even when tagged independently verified
+ok 3 - MEDIA_COVERAGE is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.203069
+  type: 'test'
+  ...
+# Subtest: PUBLIC_EVENT is recorded separately even when tagged independently verified
+ok 4 - PUBLIC_EVENT is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.154379
+  type: 'test'
+  ...
+# Subtest: STATEMENT_SHARING is recorded separately even when tagged independently verified
+ok 5 - STATEMENT_SHARING is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.182732
+  type: 'test'
+  ...
+# Subtest: funding instead of receipt stays unverified
+ok 6 - funding instead of receipt stays unverified
+  ---
+  duration_ms: 0.192823
+  type: 'test'
+  ...
+# Subtest: press coverage disguised as payment stays unverified
+ok 7 - press coverage disguised as payment stays unverified
+  ---
+  duration_ms: 0.209986
+  type: 'test'
+  ...
+# Subtest: promised payment stays unverified
+ok 8 - promised payment stays unverified
+  ---
+  duration_ms: 0.14282
+  type: 'test'
+  ...
+# Subtest: wrong beneficiary stays unverified
+ok 9 - wrong beneficiary stays unverified
+  ---
+  duration_ms: 0.468003
+  type: 'test'
+  ...
+# Subtest: wrong case stays unverified
+ok 10 - wrong case stays unverified
+  ---
+  duration_ms: 0.437638
+  type: 'test'
+  ...
+# Subtest: wrong question stays unverified
+ok 11 - wrong question stays unverified
+  ---
+  duration_ms: 0.156744
+  type: 'test'
+  ...
+# Subtest: wrong outcome stays unverified
+ok 12 - wrong outcome stays unverified
+  ---
+  duration_ms: 0.077484
+  type: 'test'
+  ...
+# Subtest: unlinked source stays unverified
+ok 13 - unlinked source stays unverified
+  ---
+  duration_ms: 0.057223
+  type: 'test'
+  ...
+# Subtest: legacy source without a corresponding outcome is preserved for review
+ok 14 - legacy source without a corresponding outcome is preserved for review
+  ---
+  duration_ms: 0.767547
+  type: 'test'
+  ...
+# Subtest: linked material result is pending verification; media does not count or erase it
+ok 15 - linked material result is pending verification; media does not count or erase it
+  ---
+  duration_ms: 0.159062
+  type: 'test'
+  ...
+# Subtest: RECORD_ACCESS_USED with matching evidence is linked but not certified
+ok 16 - RECORD_ACCESS_USED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.085789
+  type: 'test'
+  ...
+# Subtest: INDEPENDENT_REVIEW_COMPLETED with matching evidence is linked but not certified
+ok 17 - INDEPENDENT_REVIEW_COMPLETED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.047669
+  type: 'test'
+  ...
+# Subtest: REMEDY_IMPLEMENTED with matching evidence is linked but not certified
+ok 18 - REMEDY_IMPLEMENTED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.142091
+  type: 'test'
+  ...
+# Subtest: reported controller possession routes explanation first without treating as certified fact
+ok 19 - reported controller possession routes explanation first without treating as certified fact
+  ---
+  duration_ms: 2.810801
+  type: 'test'
+  ...
+# Subtest: absence of verified duty never becomes automatic misconduct or inference
+ok 20 - absence of verified duty never becomes automatic misconduct or inference
+  ---
+  duration_ms: 0.579467
+  type: 'test'
+  ...
+# Subtest: lack of access does not prove controller ownership
+ok 21 - lack of access does not prove controller ownership
+  ---
+  duration_ms: 0.255562
+  type: 'test'
+  ...
+# Subtest: minor language variation does not trigger deletion
+ok 22 - minor language variation does not trigger deletion
+  ---
+  duration_ms: 0.321616
+  type: 'test'
+  ...
+# Subtest: material meaning conflict gets review, not auto deletion
+ok 23 - material meaning conflict gets review, not auto deletion
+  ---
+  duration_ms: 0.632889
+  type: 'test'
+  ...
+# Subtest: repeated accessible source is reused instead of requiring victim resubmission
+ok 24 - repeated accessible source is reused instead of requiring victim resubmission
+  ---
+  duration_ms: 0.292475
+  type: 'test'
+  ...
+# Subtest: controller-only material is routed to explanation not victim proof
+ok 25 - controller-only material is routed to explanation not victim proof
+  ---
+  duration_ms: 0.494899
+  type: 'test'
+  ...
+# Subtest: provider receives benefit yet victim outcome unverified stays review not corruption
+ok 26 - provider receives benefit yet victim outcome unverified stays review not corruption
+  ---
+  duration_ms: 0.53741
+  type: 'test'
+  ...
+# Subtest: linked outcome review is not erased by an unrelated bad record
+ok 27 - linked outcome review is not erased by an unrelated bad record
+  ---
+  duration_ms: 1.171825
+  type: 'test'
+  ...
+# Subtest: no benefit record does not automatically mark support failure
+ok 28 - no benefit record does not automatically mark support failure
+  ---
+  duration_ms: 0.767247
+  type: 'test'
+  ...
+# Subtest: prior case evidence is not introduced by code
+ok 29 - prior case evidence is not introduced by code
+  ---
+  duration_ms: 0.353311
+  type: 'test'
+  ...
+# Subtest: explicit improper action remains blocked while independent research continues
+ok 30 - explicit improper action remains blocked while independent research continues
+  ---
+  duration_ms: 0.367835
+  type: 'test'
+  ...
+# Subtest: core invariants and future R3 interpretation preserved
+ok 31 - core invariants and future R3 interpretation preserved
+  ---
+  duration_ms: 0.112383
+  type: 'test'
+  ...
+# Subtest: cannot evaluate real records without synthetic gate
+ok 32 - cannot evaluate real records without synthetic gate
+  ---
+  duration_ms: 0.481758
+  type: 'test'
+  ...
+# Subtest: reported source and reviewed duty still do not equate to legal finding
+ok 33 - reported source and reviewed duty still do not equate to legal finding
+  ---
+  duration_ms: 1.586622
+  type: 'test'
+  ...
+# Subtest: P04: another person receipt cannot be assigned to the current person
+not ok 34 - P04: another person receipt cannot be assigned to the current person
+  ---
+  duration_ms: 6.887041
+  type: 'test'
+  location: '/mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:26:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+    - 'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+  actual: 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:28:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: P02: keep correct sibling while holding only the other-person benefit
+not ok 35 - P02: keep correct sibling while holding only the other-person benefit
+  ---
+  duration_ms: 1.994169
+  type: 'test'
+  location: '/mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING',
+    +   'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+    -   'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+    1: 'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+  actual:
+    0: 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+    1: 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:34:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: P04: absent person scope is unverified rather than borrowed
+not ok 36 - P04: absent person scope is unverified rather than borrowed
+  ---
+  duration_ms: 0.487622
+  type: 'test'
+  location: '/mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:38:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+    - 'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+  actual: 'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:40:25)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: P04: explicitly same-person linked outcome remains pending, never certified
+not ok 37 - P04: explicitly same-person linked outcome remains pending, never certified
+  ---
+  duration_ms: 0.56974
+  type: 'test'
+  location: '/mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:42:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'SUBJECT_BOUND_TO_INPUT'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'SUBJECT_BOUND_TO_INPUT'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:45:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: scope unspecified legacy input does not automatically authenticate the outcome
+not ok 38 - scope unspecified legacy input does not automatically authenticate the outcome
+  ---
+  duration_ms: 0.713988
+  type: 'test'
+  location: '/mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:49:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'SUBJECT_SCOPE_NOT_SUPPLIED'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'SUBJECT_SCOPE_NOT_SUPPLIED'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/vos_20261114/purpose-subject-scope-regression.test.mjs:52:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 33
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 125.144371

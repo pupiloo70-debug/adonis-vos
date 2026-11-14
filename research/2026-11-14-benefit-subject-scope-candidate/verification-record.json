@@ -1,0 +1,65 @@
+{
+  "schema": "ADONIS-VOS-RECURSIVE-RESEARCH/2026-11-14/P04",
+  "date_kst": "2026-11-14",
+  "repository": "https://github.com/pupiloo70-debug/adonis-vos",
+  "read_main_commit": "01d8fe089e15025b6ddfeabdd893265c87d1446f",
+  "basis_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "source_blob_shas": {
+    "purpose-review.mjs": "eb37ee2075829ce46f9be998aceae616d9d66290",
+    "authority-duty.mjs": "fa12749f7e68c62474a235ce1aefa1c9e9398f6a",
+    "purpose-review.test.mjs": "bd4785afd5570549a240383652e3a51325550c5e",
+    "material-outcome.test.mjs": "006053f96917f326cc7ddd8f6fdfbaed07a30423",
+    "correction3-bridge.mjs": "a54dff90be1d621cd405d813c98bc67dc854de1b",
+    "correction4-guard.py": "cd165d4267c1f3958e3103ce2876756fe387c91f",
+    "integration-v1-core_guard.mjs": "32e24c3f13b4871b04ae281cbf9db9610b392e2b"
+  },
+  "reproduced_with": "node v22.16.0",
+  "command": "node --test purpose-review.test.mjs material-outcome.test.mjs purpose-subject-scope-regression.test.mjs",
+  "new_synthetic_test_cases": 5,
+  "existing_published_tests": 33,
+  "before": {
+    "pass": 33,
+    "fail": 5,
+    "total": 38,
+    "exit_code": 1
+  },
+  "patch_application": {
+    "git_apply_check_exit_code": 0,
+    "git_apply_exit_code": 0,
+    "clean_copy": true
+  },
+  "after": {
+    "pass": 38,
+    "fail": 0,
+    "total": 38,
+    "exit_code": 0
+  },
+  "previous_integration_records": {
+    "integration_v1": 33,
+    "independent_audit": 35,
+    "guard": 68,
+    "reexecuted": false
+  },
+  "unverified": [
+    "entire correction.3 Python suite",
+    "entire correction.4 guard suite",
+    "v1/v2 full Node-to-Python integrated suite",
+    "A-R3 default-path gate",
+    "real-source authentication"
+  ],
+  "public_status_discrepancy": "A-R3 design approved status/manifest versus older README/DECISION pending; default_path_connected=false",
+  "github_write": false,
+  "release": false,
+  "external_action": false,
+  "real_case_data_used": false,
+  "invariants": {
+    "civic_trace_045": "MAINTAINED",
+    "civic_trace_046": "DEFERRED",
+    "AX_01_to_09": "UNCHANGED",
+    "total_score": null,
+    "automatic_guilt": false,
+    "automatic_immunity": false,
+    "automatic_benefit_from_obstruction": false,
+    "R3_final_authority": "PRESERVED"
+  }
+}

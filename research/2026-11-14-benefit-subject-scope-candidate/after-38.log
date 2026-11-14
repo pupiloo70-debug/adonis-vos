@@ -1,0 +1,238 @@
+TAP version 13
+# Subtest: POLICY_PROPOSAL_OR_ANNOUNCEMENT is recorded separately even when tagged independently verified
+ok 1 - POLICY_PROPOSAL_OR_ANNOUNCEMENT is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 2.840017
+  type: 'test'
+  ...
+# Subtest: SPEAKING_OPPORTUNITY is recorded separately even when tagged independently verified
+ok 2 - SPEAKING_OPPORTUNITY is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.364842
+  type: 'test'
+  ...
+# Subtest: MEDIA_COVERAGE is recorded separately even when tagged independently verified
+ok 3 - MEDIA_COVERAGE is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.150465
+  type: 'test'
+  ...
+# Subtest: PUBLIC_EVENT is recorded separately even when tagged independently verified
+ok 4 - PUBLIC_EVENT is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.223507
+  type: 'test'
+  ...
+# Subtest: STATEMENT_SHARING is recorded separately even when tagged independently verified
+ok 5 - STATEMENT_SHARING is recorded separately even when tagged independently verified
+  ---
+  duration_ms: 0.174676
+  type: 'test'
+  ...
+# Subtest: funding instead of receipt stays unverified
+ok 6 - funding instead of receipt stays unverified
+  ---
+  duration_ms: 0.180809
+  type: 'test'
+  ...
+# Subtest: press coverage disguised as payment stays unverified
+ok 7 - press coverage disguised as payment stays unverified
+  ---
+  duration_ms: 0.1716
+  type: 'test'
+  ...
+# Subtest: promised payment stays unverified
+ok 8 - promised payment stays unverified
+  ---
+  duration_ms: 0.118136
+  type: 'test'
+  ...
+# Subtest: wrong beneficiary stays unverified
+ok 9 - wrong beneficiary stays unverified
+  ---
+  duration_ms: 0.776696
+  type: 'test'
+  ...
+# Subtest: wrong case stays unverified
+ok 10 - wrong case stays unverified
+  ---
+  duration_ms: 2.967294
+  type: 'test'
+  ...
+# Subtest: wrong question stays unverified
+ok 11 - wrong question stays unverified
+  ---
+  duration_ms: 0.693219
+  type: 'test'
+  ...
+# Subtest: wrong outcome stays unverified
+ok 12 - wrong outcome stays unverified
+  ---
+  duration_ms: 0.269863
+  type: 'test'
+  ...
+# Subtest: unlinked source stays unverified
+ok 13 - unlinked source stays unverified
+  ---
+  duration_ms: 0.080146
+  type: 'test'
+  ...
+# Subtest: legacy source without a corresponding outcome is preserved for review
+ok 14 - legacy source without a corresponding outcome is preserved for review
+  ---
+  duration_ms: 1.640319
+  type: 'test'
+  ...
+# Subtest: linked material result is pending verification; media does not count or erase it
+ok 15 - linked material result is pending verification; media does not count or erase it
+  ---
+  duration_ms: 0.484639
+  type: 'test'
+  ...
+# Subtest: RECORD_ACCESS_USED with matching evidence is linked but not certified
+ok 16 - RECORD_ACCESS_USED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.298086
+  type: 'test'
+  ...
+# Subtest: INDEPENDENT_REVIEW_COMPLETED with matching evidence is linked but not certified
+ok 17 - INDEPENDENT_REVIEW_COMPLETED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.209092
+  type: 'test'
+  ...
+# Subtest: REMEDY_IMPLEMENTED with matching evidence is linked but not certified
+ok 18 - REMEDY_IMPLEMENTED with matching evidence is linked but not certified
+  ---
+  duration_ms: 0.137382
+  type: 'test'
+  ...
+# Subtest: reported controller possession routes explanation first without treating as certified fact
+ok 19 - reported controller possession routes explanation first without treating as certified fact
+  ---
+  duration_ms: 1.836987
+  type: 'test'
+  ...
+# Subtest: absence of verified duty never becomes automatic misconduct or inference
+ok 20 - absence of verified duty never becomes automatic misconduct or inference
+  ---
+  duration_ms: 0.792883
+  type: 'test'
+  ...
+# Subtest: lack of access does not prove controller ownership
+ok 21 - lack of access does not prove controller ownership
+  ---
+  duration_ms: 0.172101
+  type: 'test'
+  ...
+# Subtest: minor language variation does not trigger deletion
+ok 22 - minor language variation does not trigger deletion
+  ---
+  duration_ms: 0.271424
+  type: 'test'
+  ...
+# Subtest: material meaning conflict gets review, not auto deletion
+ok 23 - material meaning conflict gets review, not auto deletion
+  ---
+  duration_ms: 0.30563
+  type: 'test'
+  ...
+# Subtest: repeated accessible source is reused instead of requiring victim resubmission
+ok 24 - repeated accessible source is reused instead of requiring victim resubmission
+  ---
+  duration_ms: 0.197958
+  type: 'test'
+  ...
+# Subtest: controller-only material is routed to explanation not victim proof
+ok 25 - controller-only material is routed to explanation not victim proof
+  ---
+  duration_ms: 0.261815
+  type: 'test'
+  ...
+# Subtest: provider receives benefit yet victim outcome unverified stays review not corruption
+ok 26 - provider receives benefit yet victim outcome unverified stays review not corruption
+  ---
+  duration_ms: 0.32002
+  type: 'test'
+  ...
+# Subtest: linked outcome review is not erased by an unrelated bad record
+ok 27 - linked outcome review is not erased by an unrelated bad record
+  ---
+  duration_ms: 0.610517
+  type: 'test'
+  ...
+# Subtest: no benefit record does not automatically mark support failure
+ok 28 - no benefit record does not automatically mark support failure
+  ---
+  duration_ms: 0.385766
+  type: 'test'
+  ...
+# Subtest: prior case evidence is not introduced by code
+ok 29 - prior case evidence is not introduced by code
+  ---
+  duration_ms: 0.300328
+  type: 'test'
+  ...
+# Subtest: explicit improper action remains blocked while independent research continues
+ok 30 - explicit improper action remains blocked while independent research continues
+  ---
+  duration_ms: 0.252594
+  type: 'test'
+  ...
+# Subtest: core invariants and future R3 interpretation preserved
+ok 31 - core invariants and future R3 interpretation preserved
+  ---
+  duration_ms: 0.086199
+  type: 'test'
+  ...
+# Subtest: cannot evaluate real records without synthetic gate
+ok 32 - cannot evaluate real records without synthetic gate
+  ---
+  duration_ms: 0.299693
+  type: 'test'
+  ...
+# Subtest: reported source and reviewed duty still do not equate to legal finding
+ok 33 - reported source and reviewed duty still do not equate to legal finding
+  ---
+  duration_ms: 0.147688
+  type: 'test'
+  ...
+# Subtest: P04: another person receipt cannot be assigned to the current person
+ok 34 - P04: another person receipt cannot be assigned to the current person
+  ---
+  duration_ms: 2.700616
+  type: 'test'
+  ...
+# Subtest: P02: keep correct sibling while holding only the other-person benefit
+ok 35 - P02: keep correct sibling while holding only the other-person benefit
+  ---
+  duration_ms: 1.180372
+  type: 'test'
+  ...
+# Subtest: P04: absent person scope is unverified rather than borrowed
+ok 36 - P04: absent person scope is unverified rather than borrowed
+  ---
+  duration_ms: 1.066587
+  type: 'test'
+  ...
+# Subtest: P04: explicitly same-person linked outcome remains pending, never certified
+ok 37 - P04: explicitly same-person linked outcome remains pending, never certified
+  ---
+  duration_ms: 0.306052
+  type: 'test'
+  ...
+# Subtest: scope unspecified legacy input does not automatically authenticate the outcome
+ok 38 - scope unspecified legacy input does not automatically authenticate the outcome
+  ---
+  duration_ms: 0.292947
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 114.601444

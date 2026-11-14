@@ -1,0 +1,34 @@
+diff --git a/research/2026-11-11-authority-duty-purpose-candidate/purpose-review.mjs b/research/2026-11-11-authority-duty-purpose-candidate/purpose-review.mjs
+--- a/research/2026-11-11-authority-duty-purpose-candidate/purpose-review.mjs
++++ b/research/2026-11-11-authority-duty-purpose-candidate/purpose-review.mjs
+@@ -94,7 +94,10 @@
+     const effectKind = r?.effect_kind ?? null;
+     const activityOnly = activityKinds.has(effectKind) || activityKinds.has(outcome?.source_type);
+     const expectedSourceType = effectEvidenceTypes.get(effectKind);
+-    const matchedOutcome = !activityOnly && expectedSourceType !== undefined
++    const subjectScopeRequired = validRef(input.subject_id);
++    const subjectScopeBound = !subjectScopeRequired || (r?.subject_id === input.subject_id
++      && outcome?.subject_id === input.subject_id);
++    const matchedOutcome = subjectScopeBound && !activityOnly && expectedSourceType !== undefined
+       && outcome?.kind === 'VICTIM_OUTCOME' && outcome.source_type === expectedSourceType
+       && outcome.effect_kind === effectKind && outcome.delivery_status === 'REALIZED'
+       && validRef(outcome.ref) && refs.includes(outcome.ref)
+@@ -110,8 +113,10 @@
+       victim_realized_input:declaredRealized, victim_realized_claimed:r?.victim_realized === true,
+       effect_kind:effectKind, outcome_id:r?.outcome_id ?? null, beneficiary_id:r?.beneficiary_id ?? null,
+       evidence_refs:refs, outcome_evidence:copy(outcome ?? null), outcome_binding_checked:matchedOutcome,
++      subject_scope_binding:subjectScopeRequired?(subjectScopeBound?'SUBJECT_BOUND_TO_INPUT':'SUBJECT_SCOPE_UNVERIFIED_OR_CONFLICT'):'SUBJECT_SCOPE_NOT_SUPPLIED',
+       realized_benefit_confirmed:false, actual_benefit_review_open:!activityOnly || benefitConcern,
+       status:activityOnly?'ACTIVITY_ONLY_NOT_REALIZED_BENEFIT'
++        :subjectScopeRequired && !subjectScopeBound?'BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN'
+         :candidateLinked?'MATERIAL_OUTCOME_EVIDENCE_LINKED_REVIEW_PENDING'
+         :benefitConcern?'BENEFIT_RETURN_REVIEW_OPEN':'BENEFIT_OUTCOME_UNVERIFIED',
+       automatic_corruption_finding:false, direct_victim_compensation_awarded:false};
+@@ -126,6 +131,7 @@
+   if(gapPriority && !requested) tasks.push('LINK_OR_PREPARE_SOURCE_SPECIFIC_REQUEST_WITHOUT_REPEAT_VICTIM_PROOF');
+   if(benefitEntries.some(x=>x.actual_benefit_review_open)) tasks.push('AUDIT_SUPPORT_BENEFIT_FLOW_CONFLICTS_AND_REALIZED_VICTIM_OUTCOMES');
+   if(benefitEntries.some(x=>x.outcome_binding_checked)) tasks.push('CHECK_OUTCOME_SOURCE_ORIGINAL_AND_INDEPENDENT_REVIEW');
++  if(benefitEntries.some(x=>x.status==='BENEFIT_SUBJECT_SCOPE_REVIEW_OPEN')) tasks.push('REVIEW_BENEFIT_SUBJECT_LINK_WITHOUT_REASSIGNMENT');
+   if(differences.some(x=>x.human_review_required)) tasks.push('REVIEW_MATERIAL_SEMANTIC_DIFFERENCE_WITHOUT_AUTOMATIC_DELETION');
+   return {
+     version:VERSION, status:'SYNTHETIC_RESEARCH_CANDIDATE',
