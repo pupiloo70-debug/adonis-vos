@@ -1,0 +1,23 @@
+{
+  "date_kst": "2026-11-14",
+  "status": "STANDALONE_SYNTHETIC_RESEARCH_CANDIDATE_NOT_RELEASED",
+  "public_baseline": "affb4f547c56f604a765837da9c2060577dc873f",
+  "node": "v24.22.1",
+  "command": "node --test gate.test.mjs",
+  "working_directory": "research/2026-11-14-rfc-002-failsafe",
+  "synthetic_scenario_groups": 5,
+  "pass": 5,
+  "fail": 0,
+  "integration_suites_rerun": false,
+  "external_enforcement": false,
+  "total_score": null,
+  "files_sha256": {
+    "../../RFC-002-FAILSAFE.md": "3e6721366df61afcb748291821ea27a368e91853ce4483a6ea61ac912ce72731",
+    "README.md": "40bb9e2b8d356c590cb2d997877f1b78a57bfefa22bddc282d5bdbf1932acd03",
+    "vos-gate-input.schema.json": "79c29d46fff5883eeb813f06ac523194a753bdef001953ca1b5c24ec5b83b6ec",
+    "gate.mjs": "66b9518a134482412f192cfb9104044ec203935115b78cce95502421ca8e351c",
+    "synthetic-worker.mjs": "8c131c84cec36728c823cec08ef06109982d29bb534633e89e28812aea344268",
+    "gate.test.mjs": "462ceb8a73c3c0fad123534461b3a6d6187a5c8b22697ddb132451dfe516c492",
+    "test-output.txt": "f4dade9796a760d2cc86ae98b0afab9c901dedc87c93483e237a4597e6e2d62a"
+  }
+}

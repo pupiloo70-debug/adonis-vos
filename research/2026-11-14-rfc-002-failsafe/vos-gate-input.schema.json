@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Adonis VOS RFC-002 reference-only synthetic input",
+  "type": "object",
+  "required": ["case_id", "external_status", "evidence_manifest"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^SYN-[A-Za-z0-9_-]{1,60}$"},
+    "external_status": {"enum": ["OPEN", "CLOSED", "UNKNOWN"]},
+    "evidence_manifest": {
+      "type": "array", "maxItems": 50,
+      "items": {
+        "type": "object",
+        "required": ["doc_id", "sha256", "access_state"],
+        "additionalProperties": false,
+        "properties": {
+          "doc_id": {"type": "string", "pattern": "^SYN-[A-Za-z0-9_-]{1,60}$"},
+          "sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"},
+          "access_state": {"enum": ["AVAILABLE", "WITHHELD", "MISSING_CLAIMED", "CORRUPTED"]}
+        },
+        "allOf": [
+          {"if": {"properties": {"access_state": {"const": "AVAILABLE"}}},
+           "then": {"properties": {"sha256": {"type": "string"}}}}
+        ]
+      }
+    }
+  }
+}

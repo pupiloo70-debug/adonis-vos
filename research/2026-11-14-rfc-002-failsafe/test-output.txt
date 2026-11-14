@@ -1,0 +1,13 @@
+✔ 1. overflow: exact 64 KiB accepted; 64 KiB + 1 and 51 evidence entries rejected (123.706413ms)
+✔ 2. invalid schema/digest: no work on invalid input; revision-bound result cache (155.374933ms)
+✔ 3. timeout: terminate the synthetic worker, preserve reasons, and continue processing (577.10182ms)
+✔ 4. module conflict or exception: neither can certify, and formal closure stays separate (142.631851ms)
+✔ 5. bounded FIFO: explicit not-queued outcome, with retry required (715.528623ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1863.262431
