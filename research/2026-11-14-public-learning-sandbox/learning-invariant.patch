@@ -1,0 +1,16 @@
+--- a/virtual-integration/a-r3-virtual.mjs
++++ b/virtual-integration/a-r3-virtual.mjs
+@@ -21,7 +21,12 @@
+  else if(x.denial_depends_on_same_missing_evidence===true && x.independent_review_available!==true) status='CIRCULAR_JUSTIFICATION_REVIEW';
+  else if(x.sample_benefit_only===true && x.victim_outcome_source_linked!==true) status='MATERIAL_BENEFIT_UNVERIFIED';
+  // Even verified question evidence would only qualify for candidate review, never total remedy.
+- return {status,technical_certification:'HELD',formal_procedure_status:x.formal_procedure_status??'UNKNOWN',
++ const review_flags = [...new Set([
++  status,
++  ...(x.controller_only_source===true && x.claimant_has_access!==true ? ['CONTROLLER_EXPLANATION_REVIEW'] : []),
++  ...(x.denial_depends_on_same_missing_evidence===true && x.independent_review_available!==true ? ['CIRCULAR_JUSTIFICATION_REVIEW'] : []),
++ ])];
++ return {status,review_flags,technical_certification:'HELD',formal_procedure_status:x.formal_procedure_status??'UNKNOWN',
+  duty_status:duty.duty_fulfillment_status,rights_review:purpose.rights_review,benefit_return:purpose.benefit_return,
+  original_independent_result:x.independent_result_original??null,proposed_independent_result:x.independent_result_next??null,
+  original_events:events,unresolved_questions:input.residual_questions,claimant_repeat_proof_required:false,

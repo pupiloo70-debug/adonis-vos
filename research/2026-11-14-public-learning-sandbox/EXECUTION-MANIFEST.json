@@ -1,0 +1,35 @@
+{
+  "date_kst": "2026-11-14",
+  "status": "LOCAL_RESEARCH_CANDIDATE_NOT_RELEASED",
+  "node": "v24.22.1",
+  "command": "node --test virtual-integration/a-r3-virtual.test.mjs virtual-integration/learning-scope.test.mjs",
+  "input": "synthetic-only; 11 existing + 3 new regressions",
+  "source_zip_sha256": "da0539603d0f5a7e1bd1e6f86c5f6ab15fd7960137180f80444a642b2e76e396",
+  "target_module": "virtual-integration/a-r3-virtual.mjs",
+  "target_sha256_before": "491aef89b332963f87e2e9bba0673308ec0d1573379b09d9fdc2c4c29b36ffc2",
+  "target_sha256_after": "2451b38fc6c49abf890330a88c82a918416d5d28fb1b0f43ad89a4549817edbc",
+  "before": {
+    "pass": 11,
+    "fail": 3,
+    "exit_code": 1,
+    "log": "before.log"
+  },
+  "after": {
+    "pass": 14,
+    "fail": 0,
+    "exit_code": 0,
+    "log": "after.log"
+  },
+  "git_apply_check_exit_code": 0,
+  "new_model_training": false,
+  "default_path_connected": false,
+  "production_released": false,
+  "package_files_sha256": {
+    "README-KO.md": "5264a93f739f729d16635fb7010913d1c95b2f05ab9f3bb185e4abde28b67f46",
+    "after.log": "8b4b4c62358fd2f7f4b59343b79dd5183e09e52db874af71669b14581c044d7b",
+    "before.log": "9b94f39e60e67655653ce33a9ee786fe336365dc80474e069886087aeb3dd1c4",
+    "learning-invariant.patch": "83ddad195d5ec2eee545e57f044494af5e263e82e30c44d856b84569f8166c91",
+    "learning-scope.test.mjs": "1193a6b92e05568d785ee77b472eb18e667c37d209831916a99da676d46e1f46"
+  },
+  "public_copy_note": "README baseline pointer and 3 local stack-frame path prefixes normalized for publication; original test counts unchanged; not a rerun."
+}

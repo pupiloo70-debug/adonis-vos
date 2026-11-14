@@ -1,0 +1,22 @@
+✔ SYN-ASYM-01 controller_only_source (4.073517ms)
+✔ SYN-CIRC-02 missing_source_used_to_deny_inquiry (0.416672ms)
+✔ SYN-END-03 formal_case_closed_but_source_unverified (0.280937ms)
+✔ SYN-BEN-04 sample_benefit_without_person_link (0.260603ms)
+✔ SYN-TIME-05 request_response_same_timestamp (9.911234ms)
+✔ SYN-ID-06 review_identity_mismatch (0.632205ms)
+✔ SYN-INDEP-07 independent_result_overwrite_attempt (0.270535ms)
+✔ SYN-REMEDY-08 correction_claim_without_artifact (0.297513ms)
+✔ SYN-GATE-09 python_bridge_exception (0.575872ms)
+✔ non-synthetic actual case blocked (2.199878ms)
+✔ approved design != connected default path (0.198917ms)
+✔ bridge failure must not erase pending controller and circularity reviews (3.913744ms)
+✔ without bridge failure, controller and circularity flags both remain (0.374228ms)
+✔ actual access and an independent review path prevent stale flags (0.379219ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 175.899358

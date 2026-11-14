@@ -1,0 +1,100 @@
+✔ SYN-ASYM-01 controller_only_source (3.841827ms)
+✔ SYN-CIRC-02 missing_source_used_to_deny_inquiry (0.368059ms)
+✔ SYN-END-03 formal_case_closed_but_source_unverified (0.275426ms)
+✔ SYN-BEN-04 sample_benefit_without_person_link (0.27434ms)
+✔ SYN-TIME-05 request_response_same_timestamp (14.515903ms)
+✔ SYN-ID-06 review_identity_mismatch (0.330229ms)
+✔ SYN-INDEP-07 independent_result_overwrite_attempt (0.255218ms)
+✔ SYN-REMEDY-08 correction_claim_without_artifact (0.232431ms)
+✔ SYN-GATE-09 python_bridge_exception (0.461535ms)
+✔ non-synthetic actual case blocked (1.148094ms)
+✔ approved design != connected default path (0.218683ms)
+✖ bridge failure must not erase pending controller and circularity reviews (5.591763ms)
+✖ without bridge failure, controller and circularity flags both remain (0.830895ms)
+✖ actual access and an independent review path prevent stale flags (0.480852ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 11
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.875693
+
+✖ failing tests:
+
+test at virtual-integration/learning-scope.test.mjs:23:1
+✖ bridge failure must not erase pending controller and circularity reviews (5.591763ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - [
+  -   'GATE_EXECUTION_UNVERIFIED',
+  -   'CONTROLLER_EXPLANATION_REVIEW',
+  -   'CIRCULAR_JUSTIFICATION_REVIEW'
+  - ]
+  
+      at TestContext.<anonymous> (./virtual-integration/learning-scope.test.mjs:27:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [ 'GATE_EXECUTION_UNVERIFIED', 'CONTROLLER_EXPLANATION_REVIEW', 'CIRCULAR_JUSTIFICATION_REVIEW' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at virtual-integration/learning-scope.test.mjs:33:1
+✖ without bridge failure, controller and circularity flags both remain (0.830895ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - [
+  -   'CONTROLLER_EXPLANATION_REVIEW',
+  -   'CIRCULAR_JUSTIFICATION_REVIEW'
+  - ]
+  
+      at TestContext.<anonymous> (./virtual-integration/learning-scope.test.mjs:37:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [ 'CONTROLLER_EXPLANATION_REVIEW', 'CIRCULAR_JUSTIFICATION_REVIEW' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at virtual-integration/learning-scope.test.mjs:42:1
+✖ actual access and an independent review path prevent stale flags (0.480852ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - [
+  -   'EVIDENCE_REVIEW_OPEN'
+  - ]
+  
+      at TestContext.<anonymous> (./virtual-integration/learning-scope.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [ 'EVIDENCE_REVIEW_OPEN' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
