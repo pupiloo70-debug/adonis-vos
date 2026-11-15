@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: 01 duplicate statements collapse into one claim, without weight inflation
+ok 1 - 01 duplicate statements collapse into one claim, without weight inflation
+  ---
+  duration_ms: 2.363012
+  type: 'test'
+  ...
+# Subtest: 02 normalized whitespace does not alter the meaning
+ok 2 - 02 normalized whitespace does not alter the meaning
+  ---
+  duration_ms: 0.354452
+  type: 'test'
+  ...
+# Subtest: 03 differing duplicate summary requires human merge review
+ok 3 - 03 differing duplicate summary requires human merge review
+  ---
+  duration_ms: 0.516775
+  type: 'test'
+  ...
+# Subtest: 04 direct and hearsay labels are not silently converted
+ok 4 - 04 direct and hearsay labels are not silently converted
+  ---
+  duration_ms: 0.300608
+  type: 'test'
+  ...
+# Subtest: 05 raw private transcript rejected
+ok 5 - 05 raw private transcript rejected
+  ---
+  duration_ms: 0.580244
+  type: 'test'
+  ...
+# Subtest: 06 nonsynthetic input rejected
+ok 6 - 06 nonsynthetic input rejected
+  ---
+  duration_ms: 0.205066
+  type: 'test'
+  ...
+# Subtest: 07 document-linked missing record calls for explanation and preservation review
+ok 7 - 07 document-linked missing record calls for explanation and preservation review
+  ---
+  duration_ms: 0.298472
+  type: 'test'
+  ...
+# Subtest: 08 claim-only missing record cannot become investigation finding
+ok 8 - 08 claim-only missing record cannot become investigation finding
+  ---
+  duration_ms: 1.591665
+  type: 'test'
+  ...
+# Subtest: 09 documented status requires actual source reference
+ok 9 - 09 documented status requires actual source reference
+  ---
+  duration_ms: 0.503426
+  type: 'test'
+  ...
+# Subtest: 10 payment does not close investigation or material remedy
+ok 10 - 10 payment does not close investigation or material remedy
+  ---
+  duration_ms: 0.491851
+  type: 'test'
+  ...
+# Subtest: 11 unverified remedy component cannot count as verified
+ok 11 - 11 unverified remedy component cannot count as verified
+  ---
+  duration_ms: 0.29616
+  type: 'test'
+  ...
+# Subtest: 12 no automatic causality/guilt/adverse inference, score null
+ok 12 - 12 no automatic causality/guilt/adverse inference, score null
+  ---
+  duration_ms: 0.730387
+  type: 'test'
+  ...
+# Subtest: 13 no outbound dispatch
+ok 13 - 13 no outbound dispatch
+  ---
+  duration_ms: 0.200547
+  type: 'test'
+  ...
+# Subtest: 14 distinct claim keys preserved independently
+ok 14 - 14 distinct claim keys preserved independently
+  ---
+  duration_ms: 0.157764
+  type: 'test'
+  ...
+# Subtest: 15 missing record remains missing even if controller uses authority
+ok 15 - 15 missing record remains missing even if controller uses authority
+  ---
+  duration_ms: 0.226521
+  type: 'test'
+  ...
+# Subtest: 16 empty statements supported without fabricating victim statement
+ok 16 - 16 empty statements supported without fabricating victim statement
+  ---
+  duration_ms: 0.121504
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 109.106334

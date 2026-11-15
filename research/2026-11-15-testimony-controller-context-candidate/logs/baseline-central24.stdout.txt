@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: partial A provision leaves B missing and both questions unresolved
+ok 1 - partial A provision leaves B missing and both questions unresolved
+  ---
+  duration_ms: 4.398678
+  type: 'test'
+  ...
+# Subtest: reported FULL is not content verification
+ok 2 - reported FULL is not content verification
+  ---
+  duration_ms: 0.441957
+  type: 'test'
+  ...
+# Subtest: cannot supply an item outside its request
+ok 3 - cannot supply an item outside its request
+  ---
+  duration_ms: 0.57022
+  type: 'test'
+  ...
+# Subtest: duplicate source IDs rejected
+ok 4 - duplicate source IDs rejected
+  ---
+  duration_ms: 0.653664
+  type: 'test'
+  ...
+# Subtest: dangling answer references rejected
+ok 5 - dangling answer references rejected
+  ---
+  duration_ms: 0.402426
+  type: 'test'
+  ...
+# Subtest: unknown answer keys rejected rather than discarded
+ok 6 - unknown answer keys rejected rather than discarded
+  ---
+  duration_ms: 0.489176
+  type: 'test'
+  ...
+# Subtest: unreviewed stigma observation cannot become evidence linked
+ok 7 - unreviewed stigma observation cannot become evidence linked
+  ---
+  duration_ms: 0.454301
+  type: 'test'
+  ...
+# Subtest: content reviewed basis supports a review record, never guilt
+ok 8 - content reviewed basis supports a review record, never guilt
+  ---
+  duration_ms: 0.628466
+  type: 'test'
+  ...
+# Subtest: withdrawn observation remains in output with references
+ok 9 - withdrawn observation remains in output with references
+  ---
+  duration_ms: 1.081337
+  type: 'test'
+  ...
+# Subtest: observation without evidence rejected
+ok 10 - observation without evidence rejected
+  ---
+  duration_ms: 0.813302
+  type: 'test'
+  ...
+# Subtest: destroyed source cannot be silently marked read
+ok 11 - destroyed source cannot be silently marked read
+  ---
+  duration_ms: 0.650637
+  type: 'test'
+  ...
+# Subtest: unknown remains distinct from NO
+ok 12 - unknown remains distinct from NO
+  ---
+  duration_ms: 0.499866
+  type: 'test'
+  ...
+# Subtest: analysis preserves original input and unknown narrative metadata
+ok 13 - analysis preserves original input and unknown narrative metadata
+  ---
+  duration_ms: 1.897439
+  type: 'test'
+  ...
+# Subtest: unsupported version and oversized import rejected
+ok 14 - unsupported version and oversized import rejected
+  ---
+  duration_ms: 3.118434
+  type: 'test'
+  ...
+# Subtest: named willingness cannot be dispatched as connected agent
+ok 15 - named willingness cannot be dispatched as connected agent
+  ---
+  duration_ms: 0.879872
+  type: 'test'
+  ...
+# Subtest: bounded local assignment is recorded as not executed
+ok 16 - bounded local assignment is recorded as not executed
+  ---
+  duration_ms: 0.582652
+  type: 'test'
+  ...
+# Subtest: capability mismatch is denied
+ok 17 - capability mismatch is denied
+  ---
+  duration_ms: 0.322251
+  type: 'test'
+  ...
+# Subtest: resource limits and duplicate task IDs enforced
+ok 18 - resource limits and duplicate task IDs enforced
+  ---
+  duration_ms: 0.197916
+  type: 'test'
+  ...
+# Subtest: suspension holds queued tasks and denies further assignment
+ok 19 - suspension holds queued tasks and denies further assignment
+  ---
+  duration_ms: 0.35403
+  type: 'test'
+  ...
+# Subtest: registry cannot promote narrative into execution by assertion
+ok 20 - registry cannot promote narrative into execution by assertion
+  ---
+  duration_ms: 0.178555
+  type: 'test'
+  ...
+# Subtest: snapshot cannot mutate coordinator
+ok 21 - snapshot cannot mutate coordinator
+  ---
+  duration_ms: 2.557427
+  type: 'test'
+  ...
+# Subtest: central core actually executes built-in task and emits content hashes
+ok 22 - central core actually executes built-in task and emits content hashes
+  ---
+  duration_ms: 3.133375
+  type: 'test'
+  ...
+# Subtest: invalid local task input records failure rather than success
+ok 23 - invalid local task input records failure rather than success
+  ---
+  duration_ms: 0.242188
+  type: 'test'
+  ...
+# Subtest: CLI JSON roundtrip, no overwrite, malformed input failure
+ok 24 - CLI JSON roundtrip, no overwrite, malformed input failure
+  ---
+  duration_ms: 184.105453
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 313.783964
