@@ -1,0 +1,159 @@
+{
+  "schema": "ADONIS-EXECUTION-MANIFEST/RESEARCH-1",
+  "entries": [
+    {
+      "run_id": "060e54c0-b2ba-464c-9f40-fd26643ca88c",
+      "run_name": "baseline-core12",
+      "executed_at_utc": "2026-11-15T00:14:48.982804+00:00",
+      "executed_at_kst": "2026-11-15T09:14:48.982804+09:00",
+      "main_commit_observed": "94fcbce3e171c20eee4f679fa44ab3482cb3d750",
+      "integration_reference": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "3.13.5",
+        "working_directory": "offline public-source reconstruction"
+      },
+      "command": [
+        "node",
+        "src/test.mjs"
+      ],
+      "command_sha256": "e1832d5db7f4c9120b34952f812f31375dffcf8422a39e5d12b40bfef513753f",
+      "input_files": [
+        {
+          "path": "prior/repo/src/test.mjs",
+          "sha256": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+        },
+        {
+          "path": "prior/repo/src/engine.mjs",
+          "sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430"
+        }
+      ],
+      "stdout": "logs/baseline-core12.stdout.txt",
+      "stdout_sha256": "2d1000699248f36053ec2bdedd3b4613b3f3e92de665f12ceca4f1cd783d4dd8",
+      "stderr": "logs/baseline-core12.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "observed": {
+        "passed": 12,
+        "failed": 0
+      },
+      "execution_status": "PASS",
+      "previous_execution_reused": false,
+      "patch_applied_to_main": false,
+      "rollback": "NOT_REQUIRED",
+      "previous_receipt_sha256": null,
+      "output_count_parse_correction": {
+        "reason": "core output is summary-only, not TAP",
+        "original_observed_passed": 0,
+        "original_manifest_sha256": "87ae03692c3296c80aeed88157465ada733fa928a91ccd34322c40053f1c6e67",
+        "original_manifest_backup": "logs/EXECUTION-MANIFEST-before-parser-correction.json"
+      },
+      "receipt_sha256": "d5baab4ef0856b93dc5f224bcd379b56eaa2b1656e7acaaed2c5bb4320c91e4a"
+    },
+    {
+      "run_id": "739d2193-079b-4525-9512-5814bd08918d",
+      "run_name": "baseline-central24",
+      "executed_at_utc": "2026-11-15T00:14:49.062308+00:00",
+      "executed_at_kst": "2026-11-15T09:14:49.062308+09:00",
+      "main_commit_observed": "94fcbce3e171c20eee4f679fa44ab3482cb3d750",
+      "integration_reference": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "3.13.5",
+        "working_directory": "offline public-source reconstruction"
+      },
+      "command": [
+        "node",
+        "--test",
+        "tests/project.test.mjs"
+      ],
+      "command_sha256": "30309248b2492e08717eb464fa34a817ba211335a851341a380731fb5c628d61",
+      "input_files": [
+        {
+          "path": "prior/repo/tests/project.test.mjs",
+          "sha256": "6a64a6437397906256bb00e37c4a2fd40b92c1fce3e25b3f7af424f357736ecf"
+        },
+        {
+          "path": "prior/repo/src/project.mjs",
+          "sha256": "32d1dbc44eff4e94fbf4a7de2e7878b55aeb789fedce32645f01d611e2acf0c0"
+        },
+        {
+          "path": "prior/repo/src/agents.mjs",
+          "sha256": "83b491ef1f3697724d2a0d70d3d24e3345790641eed9a031ecc0162b0d531a8e"
+        }
+      ],
+      "stdout": "logs/baseline-central24.stdout.txt",
+      "stdout_sha256": "baf7e3d21c07f4e9aa05cca5395ae9a00c9089b285f6fc507947c56e4cc7fb75",
+      "stderr": "logs/baseline-central24.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "observed": {
+        "passed": 24,
+        "failed": 0
+      },
+      "execution_status": "PASS",
+      "previous_execution_reused": false,
+      "patch_applied_to_main": false,
+      "rollback": "NOT_REQUIRED",
+      "previous_receipt_sha256": "d5baab4ef0856b93dc5f224bcd379b56eaa2b1656e7acaaed2c5bb4320c91e4a",
+      "receipt_sha256": "4f62fa30cd88b42c8f358c77f4a48b48776ffcdc5622510332bdbb7c661cad0e"
+    },
+    {
+      "run_id": "9f0ec71e-9da9-433e-93c3-e337cf10219d",
+      "run_name": "new-candidate16",
+      "executed_at_utc": "2026-11-15T00:14:49.418391+00:00",
+      "executed_at_kst": "2026-11-15T09:14:49.418391+09:00",
+      "main_commit_observed": "94fcbce3e171c20eee4f679fa44ab3482cb3d750",
+      "integration_reference": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "3.13.5",
+        "working_directory": "offline public-source reconstruction"
+      },
+      "command": [
+        "node",
+        "--test",
+        "/mnt/data/adonis_20261115_upgrade/release/research/2026-11-15-testimony-controller-context-candidate/testimony-controller.test.mjs"
+      ],
+      "command_sha256": "d8822023c96a5e37d966a850918b659e9ba4f8c75c0c536307951be7ff1e14e8",
+      "input_files": [
+        {
+          "path": "release/research/2026-11-15-testimony-controller-context-candidate/testimony-controller.mjs",
+          "sha256": "270467d30592099878ca46dbc4395930d314fd72d2093e5af77c8d095011bad8"
+        },
+        {
+          "path": "release/research/2026-11-15-testimony-controller-context-candidate/testimony-controller.test.mjs",
+          "sha256": "6fb55a42db25e87c3a56606022dcd828a22072a7831cda9fa761cb735def1984"
+        },
+        {
+          "path": "release/research/2026-11-15-testimony-controller-context-candidate/synthetic-fixture.json",
+          "sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8"
+        }
+      ],
+      "stdout": "logs/new-candidate16.stdout.txt",
+      "stdout_sha256": "965160cd75539b8f7724444c633eb06f8c5c37164ca8a9df0fd31b362f0b1beb",
+      "stderr": "logs/new-candidate16.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "observed": {
+        "passed": 16,
+        "failed": 0
+      },
+      "execution_status": "PASS",
+      "previous_execution_reused": false,
+      "patch_applied_to_main": false,
+      "rollback": "NOT_REQUIRED",
+      "previous_receipt_sha256": "4f62fa30cd88b42c8f358c77f4a48b48776ffcdc5622510332bdbb7c661cad0e",
+      "receipt_sha256": "b99958e7316e4e874a9214db25137289d9db68f0f9bfe73a9e837262e9683d02"
+    }
+  ],
+  "legacy_unverified_this_run": {
+    "correction3_python": 132,
+    "bridge": 14,
+    "integration_v1": 33,
+    "audit": 35,
+    "correction4_guard": 68
+  },
+  "note": "Manifest hash in SHA256SUMS; hashes are byte integrity, not source truth.",
+  "record_correction": "Output parser metadata correction; original manifest retained unchanged in logs; test executions not rerun."
+}

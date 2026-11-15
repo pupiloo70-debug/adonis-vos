@@ -1,0 +1,10 @@
+{
+  "checked_current_main": "94fcbce3e171c20eee4f679fa44ab3482cb3d750",
+  "known_integration_reference": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "0.2_project_blob_sha1": "8e19946db317736679c270384937fce77dae9335",
+  "0.2_agents_blob_sha1": "328b3e6f1916b2780fff9a1aa17327be8c1234f8",
+  "correction3_bridge_blob_sha1": "a54dff90be1d621cd405d813c98bc67dc854de1b",
+  "correction4_guard_blob_sha1": "cd165d4267c1f3958e3103ce2876756fe387c91f",
+  "integration_v1_core_guard_blob_sha1": "32e24c3f13b4871b04ae281cbf9db9610b392e2b",
+  "source_method": "GitHub connector file reads and prior verified locally mounted public-source snapshot; correction3/4 not executed this run"
+}
