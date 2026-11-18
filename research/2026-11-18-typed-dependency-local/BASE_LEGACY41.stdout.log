@@ -1,0 +1,256 @@
+TAP version 13
+# Subtest: RT01 P01: different speakers under same claim require merge review and preserved attribution
+ok 1 - RT01 P01: different speakers under same claim require merge review and preserved attribution
+  ---
+  duration_ms: 2.497202
+  type: 'test'
+  ...
+# Subtest: RT02 P01: same claim changes DIRECT to HEARSAY; avoid silent evidence elevation
+ok 2 - RT02 P01: same claim changes DIRECT to HEARSAY; avoid silent evidence elevation
+  ---
+  duration_ms: 0.609205
+  type: 'test'
+  ...
+# Subtest: RT03 P01: conflicting event timestamps cannot silently merge
+ok 3 - RT03 P01: conflicting event timestamps cannot silently merge
+  ---
+  duration_ms: 0.424546
+  type: 'test'
+  ...
+# Subtest: RT04 testimony chronology: report_time alone may differ without increasing proof or flagging conflict
+ok 4 - RT04 testimony chronology: report_time alone may differ without increasing proof or flagging conflict
+  ---
+  duration_ms: 0.759915
+  type: 'test'
+  ...
+# Subtest: RT05 P03 provenance: referenced synthetic statement source must not be silently dropped
+ok 5 - RT05 P03 provenance: referenced synthetic statement source must not be silently dropped
+  ---
+  duration_ms: 0.574313
+  type: 'test'
+  ...
+# Subtest: RT06 P04: explicitly foreign-case statement is rejected instead of absorbed
+ok 6 - RT06 P04: explicitly foreign-case statement is rejected instead of absorbed
+  ---
+  duration_ms: 0.646031
+  type: 'test'
+  ...
+# Subtest: RT07 G-review: institutional record-not-provided stays an explanation issue, not victim failure
+ok 7 - RT07 G-review: institutional record-not-provided stays an explanation issue, not victim failure
+  ---
+  duration_ms: 0.436609
+  type: 'test'
+  ...
+# Subtest: RT08 G-review: self-reported lack is not automatically independently investigated
+ok 8 - RT08 G-review: self-reported lack is not automatically independently investigated
+  ---
+  duration_ms: 0.29807
+  type: 'test'
+  ...
+# Subtest: RT09 A-R3: one verified payment is not proof of total substantive remedy
+ok 9 - RT09 A-R3: one verified payment is not proof of total substantive remedy
+  ---
+  duration_ms: 1.842921
+  type: 'test'
+  ...
+# Subtest: RT10 governance: 5 verified components still require human review; no auto legal findings
+ok 10 - RT10 governance: 5 verified components still require human review; no auto legal findings
+  ---
+  duration_ms: 0.7937
+  type: 'test'
+  ...
+# Subtest: RT11 privacy: injected raw transcript cannot become training source
+ok 11 - RT11 privacy: injected raw transcript cannot become training source
+  ---
+  duration_ms: 0.36072
+  type: 'test'
+  ...
+# Subtest: RT12 repetition: fifty duplicate phrasings do not inflate ethical-gravity numeric score
+ok 12 - RT12 repetition: fifty duplicate phrasings do not inflate ethical-gravity numeric score
+  ---
+  duration_ms: 0.339852
+  type: 'test'
+  ...
+# Subtest: NEW01 P02: foreign-case statement isolated, independent testimony preserved
+ok 13 - NEW01 P02: foreign-case statement isolated, independent testimony preserved
+  ---
+  duration_ms: 3.32089
+  type: 'test'
+  ...
+# Subtest: NEW02 P01/P02: invalid speaker basis held, documentary task still proceeds
+ok 14 - NEW02 P01/P02: invalid speaker basis held, documentary task still proceeds
+  ---
+  duration_ms: 1.007445
+  type: 'test'
+  ...
+# Subtest: NEW03 G: invalid record claim held, valid alternate record independently retained
+ok 15 - NEW03 G: invalid record claim held, valid alternate record independently retained
+  ---
+  duration_ms: 0.831057
+  type: 'test'
+  ...
+# Subtest: NEW04 P04: out-of-scope record held without erasing valid record
+ok 16 - NEW04 P04: out-of-scope record held without erasing valid record
+  ---
+  duration_ms: 0.574238
+  type: 'test'
+  ...
+# Subtest: NEW05 P04: foreign remedy cannot claim source access completed
+ok 17 - NEW05 P04: foreign remedy cannot claim source access completed
+  ---
+  duration_ms: 1.750998
+  type: 'test'
+  ...
+# Subtest: NEW06 P02: all duplicate statement IDs held; distinct statement survives
+ok 18 - NEW06 P02: all duplicate statement IDs held; distinct statement survives
+  ---
+  duration_ms: 0.391498
+  type: 'test'
+  ...
+# Subtest: NEW07 P02: all duplicate record IDs held while independent record retained
+ok 19 - NEW07 P02: all duplicate record IDs held while independent record retained
+  ---
+  duration_ms: 0.555372
+  type: 'test'
+  ...
+# Subtest: NEW08 P02: held parent taints dependent, unrelated sibling survives
+ok 20 - NEW08 P02: held parent taints dependent, unrelated sibling survives
+  ---
+  duration_ms: 0.429764
+  type: 'test'
+  ...
+# Subtest: NEW09 P02: cycle and its dependents held; valid sibling unaffected
+ok 21 - NEW09 P02: cycle and its dependents held; valid sibling unaffected
+  ---
+  duration_ms: 1.139965
+  type: 'test'
+  ...
+# Subtest: NEW10 P03: self-declared verified remedies cannot imply independently authenticated proof
+ok 22 - NEW10 P03: self-declared verified remedies cannot imply independently authenticated proof
+  ---
+  duration_ms: 0.679527
+  type: 'test'
+  ...
+# Subtest: NEW11 PRIVACY: raw statement quarantined without echoing raw text
+ok 23 - NEW11 PRIVACY: raw statement quarantined without echoing raw text
+  ---
+  duration_ms: 0.570209
+  type: 'test'
+  ...
+# Subtest: NEW12 GOVERNANCE: valid work kept and no autonomous guilt, immunity, release or numerical score
+ok 24 - NEW12 GOVERNANCE: valid work kept and no autonomous guilt, immunity, release or numerical score
+  ---
+  duration_ms: 0.232556
+  type: 'test'
+  ...
+# Subtest: NEW13 malformed collection rejected with named error
+ok 25 - NEW13 malformed collection rejected with named error
+  ---
+  duration_ms: 0.551519
+  type: 'test'
+  ...
+# Subtest: 01 duplicate statements collapse into one claim, without weight inflation
+ok 26 - 01 duplicate statements collapse into one claim, without weight inflation
+  ---
+  duration_ms: 2.917623
+  type: 'test'
+  ...
+# Subtest: 02 normalized whitespace does not alter the meaning
+ok 27 - 02 normalized whitespace does not alter the meaning
+  ---
+  duration_ms: 0.448513
+  type: 'test'
+  ...
+# Subtest: 03 differing duplicate summary requires human merge review
+ok 28 - 03 differing duplicate summary requires human merge review
+  ---
+  duration_ms: 0.336429
+  type: 'test'
+  ...
+# Subtest: 04 direct and hearsay labels are not silently converted
+ok 29 - 04 direct and hearsay labels are not silently converted
+  ---
+  duration_ms: 0.576355
+  type: 'test'
+  ...
+# Subtest: 05 raw private transcript rejected
+ok 30 - 05 raw private transcript rejected
+  ---
+  duration_ms: 0.608579
+  type: 'test'
+  ...
+# Subtest: 06 nonsynthetic input rejected
+ok 31 - 06 nonsynthetic input rejected
+  ---
+  duration_ms: 0.253813
+  type: 'test'
+  ...
+# Subtest: 07 document-linked missing record calls for explanation and preservation review
+ok 32 - 07 document-linked missing record calls for explanation and preservation review
+  ---
+  duration_ms: 0.393357
+  type: 'test'
+  ...
+# Subtest: 08 claim-only missing record cannot become investigation finding
+ok 33 - 08 claim-only missing record cannot become investigation finding
+  ---
+  duration_ms: 0.300441
+  type: 'test'
+  ...
+# Subtest: 09 documented status requires actual source reference
+ok 34 - 09 documented status requires actual source reference
+  ---
+  duration_ms: 1.542588
+  type: 'test'
+  ...
+# Subtest: 10 payment does not close investigation or material remedy
+ok 35 - 10 payment does not close investigation or material remedy
+  ---
+  duration_ms: 0.546035
+  type: 'test'
+  ...
+# Subtest: 11 unverified remedy component cannot count as verified
+ok 36 - 11 unverified remedy component cannot count as verified
+  ---
+  duration_ms: 0.233144
+  type: 'test'
+  ...
+# Subtest: 12 no automatic causality/guilt/adverse inference, score null
+ok 37 - 12 no automatic causality/guilt/adverse inference, score null
+  ---
+  duration_ms: 0.767872
+  type: 'test'
+  ...
+# Subtest: 13 no outbound dispatch
+ok 38 - 13 no outbound dispatch
+  ---
+  duration_ms: 0.143344
+  type: 'test'
+  ...
+# Subtest: 14 distinct claim keys preserved independently
+ok 39 - 14 distinct claim keys preserved independently
+  ---
+  duration_ms: 0.158417
+  type: 'test'
+  ...
+# Subtest: 15 missing record remains missing even if controller uses authority
+ok 40 - 15 missing record remains missing even if controller uses authority
+  ---
+  duration_ms: 0.095832
+  type: 'test'
+  ...
+# Subtest: 16 empty statements supported without fabricating victim statement
+ok 41 - 16 empty statements supported without fabricating victim statement
+  ---
+  duration_ms: 0.089848
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 138.60636

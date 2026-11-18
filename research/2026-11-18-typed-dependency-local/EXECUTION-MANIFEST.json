@@ -1,0 +1,346 @@
+{
+  "schema": "SGP-QSV-EXECUTION-MANIFEST/2026-11-14",
+  "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01",
+  "generated_utc": "2026-11-17T23:23:38.978446+00:00",
+  "generated_KST": "2026-11-18T08:23:38.978446+09:00",
+  "previous_record_sha256": "8c9ff5ef844b844ac6be9bf8f83c0e2f9f1229cc2960b145e9468d07abcf35da",
+  "previous_record_name": "2026-11-17/EXECUTION-MANIFEST.json",
+  "hash_chain_status": "LINKED_TO_PRIOR_FILE_BYTES",
+  "main_commit_SHA": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+  "baseline_commit_SHA": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "comparison_to_prior_main": "IDENTICAL_COMMIT; 0 new commits since prior check",
+  "comparison_to_integrated_baseline": "AHEAD_BY_33_COMMITS",
+  "source_confirmation": {
+    "retrieval": "GitHub connector; read-only; code excerpts and README",
+    "paths_with_git_blob_sha1": {
+      "research/0.3-local-correction.3/vos_support.py": "dbfc2bbf36a58c4d5be12604d7b3653c928b7d06",
+      "research/0.3-local-correction.3/bridge.mjs": "a54dff90be1d621cd405d813c98bc67dc854de1b",
+      "research/0.3-local-correction.4/guard-candidate-v0.2/correction4_guard.py": "cd165d4267c1f3958e3103ce2876756fe387c91f",
+      "research/0.2-core-guard-integration.v1/core_guard.mjs": "32e24c3f13b4871b04ae281cbf9db9610b392e2b"
+    },
+    "git_blobs_are_not_SHA256": true,
+    "public_code_download_to_runtime": "BLOCKED_BY_DNS; only previous synthetic local candidate copied"
+  },
+  "change": {
+    "scope": "ADD_NEW_EXPLICIT_SYNTHETIC_ROUTE_ONLY",
+    "path": "candidate/testimony-controller.mjs",
+    "old_sha256": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+    "new_sha256": "806ea457edc6b4d58ed126c2ec356cb757a6652a39002a08be56ae468a9b700b",
+    "patch": "candidate.patch",
+    "patch_sha256": "ebe04488cfb20c215ce9ec5789d06d93749414ef20eaca890b1f121cd7246e87",
+    "new_tests": "candidate/linked-12.test.mjs",
+    "new_tests_sha256": "3024350438cb0278270bb7c0c1e94db8de71a8f1db1bd3766159897c2dd7f7be",
+    "fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+    "issue": "typed cross-collection dependency absent in 2026-11-17 local candidate; held record could not isolate dependent statement or remedy",
+    "outcome": "new research-only route applies typed dependency graph across statements, records, remedies; withholds cyclic/invalid/dependent nodes and preserves independent work",
+    "new_approval_requested": false,
+    "git_write": false,
+    "production_release": false,
+    "rollback_required": false,
+    "rollback_status": "NOT_APPLICABLE; verified pre-snapshot and post-hash"
+  },
+  "test_entries": [
+    {
+      "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/BASE_LEGACY41",
+      "executed_utc": "2026-11-17T23:21:12.183157+00:00",
+      "executed_KST": "2026-11-18T08:21:12.183157+09:00",
+      "commit_main": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+      "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "cwd": "baseline",
+      "command": "node --test testimony-controller.test.mjs adversarial.test.mjs item-level-12.test.mjs",
+      "command_sha256": "d0a7ffb3538bd178ced579d312717920a8447a511b729f76c4f424efdc7c9447",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "Python 3.13.5",
+        "os": "linux",
+        "no_external_packages": true
+      },
+      "input_fixture": "baseline/synthetic-fixture.json",
+      "input_fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+      "test_file_shas256": {
+        "testimony-controller.test.mjs": "6fb55a42db25e87c3a56606022dcd828a22072a7831cda9fa761cb735def1984",
+        "adversarial.test.mjs": "65c1b6f8daad6ab72d5ea3fb8c9733f3802f40d259c334db572de595fbf7f122",
+        "item-level-12.test.mjs": "b7ee3da169d459aa0598c1f53983a210ba202f8598883bcbfb6644ded6572c52"
+      },
+      "code_file": "baseline/testimony-controller.mjs",
+      "code_sha256_before": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "code_sha256_after": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "patch_sha256": null,
+      "stdout_file": "BASE_LEGACY41.stdout.log",
+      "stdout_sha256": "88643006bcedec8b0609e4580deb055c9c5fcf167e302f3465fe856b128dacd3",
+      "stderr_file": "BASE_LEGACY41.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected": {
+        "pass": 41,
+        "fail": 0
+      },
+      "actual": {
+        "total": 41,
+        "pass": 41,
+        "fail": 0,
+        "unexecuted": 0
+      },
+      "previous_results_reused": false,
+      "classification": "EXECUTED_PASS",
+      "rollback": false,
+      "retest_reference": null,
+      "traceability": "VERIFIED_LOCAL_LOGS_AND_HASHES"
+    },
+    {
+      "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/PRE_LINK12",
+      "executed_utc": "2026-11-17T23:20:10.711397+00:00",
+      "executed_KST": "2026-11-18T08:20:10.711397+09:00",
+      "commit_main": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+      "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "cwd": "baseline",
+      "command": "node --test linked-12.test.mjs",
+      "command_sha256": "cf062658b9052df8a7a77bdf6aabab389aeab0a82b6dfcf7913adf618cdcd873",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "Python 3.13.5",
+        "os": "linux",
+        "no_external_packages": true
+      },
+      "input_fixture": "baseline/synthetic-fixture.json",
+      "input_fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+      "test_file_shas256": {
+        "linked-12.test.mjs": "3024350438cb0278270bb7c0c1e94db8de71a8f1db1bd3766159897c2dd7f7be"
+      },
+      "code_file": "baseline/testimony-controller.mjs",
+      "code_sha256_before": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "code_sha256_after": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "patch_sha256": null,
+      "stdout_file": "PRE_LINK12.stdout.log",
+      "stdout_sha256": "7cb3e46954ec63e261f9ac6615e428c02cbb5d3857be68b3b0bd40b476ac000e",
+      "stderr_file": "PRE_LINK12.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 1,
+      "expected": {
+        "pass": 0,
+        "fail": 12
+      },
+      "actual": {
+        "total": 12,
+        "pass": 0,
+        "fail": 12,
+        "unexecuted": 0
+      },
+      "previous_results_reused": false,
+      "classification": "EXPECTED_RED_PREPATCH",
+      "rollback": false,
+      "retest_reference": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/POST_LINK12",
+      "traceability": "VERIFIED_LOCAL_LOGS_AND_HASHES"
+    },
+    {
+      "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/POST_LINK12",
+      "executed_utc": "2026-11-17T23:20:42.823184+00:00",
+      "executed_KST": "2026-11-18T08:20:42.823184+09:00",
+      "commit_main": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+      "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "cwd": "candidate",
+      "command": "node --test linked-12.test.mjs",
+      "command_sha256": "cf062658b9052df8a7a77bdf6aabab389aeab0a82b6dfcf7913adf618cdcd873",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "Python 3.13.5",
+        "os": "linux",
+        "no_external_packages": true
+      },
+      "input_fixture": "candidate/synthetic-fixture.json",
+      "input_fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+      "test_file_shas256": {
+        "linked-12.test.mjs": "3024350438cb0278270bb7c0c1e94db8de71a8f1db1bd3766159897c2dd7f7be"
+      },
+      "code_file": "candidate/testimony-controller.mjs",
+      "code_sha256_before": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "code_sha256_after": "806ea457edc6b4d58ed126c2ec356cb757a6652a39002a08be56ae468a9b700b",
+      "patch_sha256": "ebe04488cfb20c215ce9ec5789d06d93749414ef20eaca890b1f121cd7246e87",
+      "stdout_file": "POST_LINK12.stdout.log",
+      "stdout_sha256": "ecabb747186eb667f4d5438bde6aada2fb6c68586820784502d840b4355d3936",
+      "stderr_file": "POST_LINK12.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected": {
+        "pass": 12,
+        "fail": 0
+      },
+      "actual": {
+        "total": 12,
+        "pass": 12,
+        "fail": 0,
+        "unexecuted": 0
+      },
+      "previous_results_reused": false,
+      "classification": "EXECUTED_PASS",
+      "rollback": false,
+      "retest_reference": null,
+      "traceability": "VERIFIED_LOCAL_LOGS_AND_HASHES"
+    },
+    {
+      "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/POST_LEGACY41",
+      "executed_utc": "2026-11-17T23:21:12.343156+00:00",
+      "executed_KST": "2026-11-18T08:21:12.343156+09:00",
+      "commit_main": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+      "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "cwd": "candidate",
+      "command": "node --test testimony-controller.test.mjs adversarial.test.mjs item-level-12.test.mjs",
+      "command_sha256": "d0a7ffb3538bd178ced579d312717920a8447a511b729f76c4f424efdc7c9447",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "Python 3.13.5",
+        "os": "linux",
+        "no_external_packages": true
+      },
+      "input_fixture": "candidate/synthetic-fixture.json",
+      "input_fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+      "test_file_shas256": {
+        "testimony-controller.test.mjs": "6fb55a42db25e87c3a56606022dcd828a22072a7831cda9fa761cb735def1984",
+        "adversarial.test.mjs": "65c1b6f8daad6ab72d5ea3fb8c9733f3802f40d259c334db572de595fbf7f122",
+        "item-level-12.test.mjs": "b7ee3da169d459aa0598c1f53983a210ba202f8598883bcbfb6644ded6572c52"
+      },
+      "code_file": "candidate/testimony-controller.mjs",
+      "code_sha256_before": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "code_sha256_after": "806ea457edc6b4d58ed126c2ec356cb757a6652a39002a08be56ae468a9b700b",
+      "patch_sha256": "ebe04488cfb20c215ce9ec5789d06d93749414ef20eaca890b1f121cd7246e87",
+      "stdout_file": "POST_LEGACY41.stdout.log",
+      "stdout_sha256": "0aade74a80fded10145a858bd1690cab916be57745721a8d68c925e810def3f9",
+      "stderr_file": "POST_LEGACY41.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected": {
+        "pass": 41,
+        "fail": 0
+      },
+      "actual": {
+        "total": 41,
+        "pass": 41,
+        "fail": 0,
+        "unexecuted": 0
+      },
+      "previous_results_reused": false,
+      "classification": "EXECUTED_PASS",
+      "rollback": false,
+      "retest_reference": null,
+      "traceability": "VERIFIED_LOCAL_LOGS_AND_HASHES"
+    },
+    {
+      "run_id": "ADONIS-0.3-20261118-P02-TYPED-DEPS-LOCAL-01/POST_COMBINED53",
+      "executed_utc": "2026-11-17T23:21:12.555156+00:00",
+      "executed_KST": "2026-11-18T08:21:12.555156+09:00",
+      "commit_main": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+      "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+      "cwd": "candidate",
+      "command": "node --test testimony-controller.test.mjs adversarial.test.mjs item-level-12.test.mjs linked-12.test.mjs",
+      "command_sha256": "af487f08cd18f391d84a1b828577bcda53e0e90b016ce648dfcf8f927fe3e5eb",
+      "environment": {
+        "node": "v22.16.0",
+        "python": "Python 3.13.5",
+        "os": "linux",
+        "no_external_packages": true
+      },
+      "input_fixture": "candidate/synthetic-fixture.json",
+      "input_fixture_sha256": "7f47e1de7dfcf3a6af0751536cf29274e3997e3c4367ca4018ceee8413eac2b8",
+      "test_file_shas256": {
+        "testimony-controller.test.mjs": "6fb55a42db25e87c3a56606022dcd828a22072a7831cda9fa761cb735def1984",
+        "adversarial.test.mjs": "65c1b6f8daad6ab72d5ea3fb8c9733f3802f40d259c334db572de595fbf7f122",
+        "item-level-12.test.mjs": "b7ee3da169d459aa0598c1f53983a210ba202f8598883bcbfb6644ded6572c52",
+        "linked-12.test.mjs": "3024350438cb0278270bb7c0c1e94db8de71a8f1db1bd3766159897c2dd7f7be"
+      },
+      "code_file": "candidate/testimony-controller.mjs",
+      "code_sha256_before": "76416b47f3411b885674364c6661c4962da5d711477beb2d8836cc37e296e8f5",
+      "code_sha256_after": "806ea457edc6b4d58ed126c2ec356cb757a6652a39002a08be56ae468a9b700b",
+      "patch_sha256": "ebe04488cfb20c215ce9ec5789d06d93749414ef20eaca890b1f121cd7246e87",
+      "stdout_file": "POST_COMBINED53.stdout.log",
+      "stdout_sha256": "2030cf8e9c42373f4657a27e562ec7690a83128beeb9cac7a690ae685c83e359",
+      "stderr_file": "POST_COMBINED53.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected": {
+        "pass": 53,
+        "fail": 0
+      },
+      "actual": {
+        "total": 53,
+        "pass": 53,
+        "fail": 0,
+        "unexecuted": 0
+      },
+      "previous_results_reused": false,
+      "classification": "EXECUTED_PASS",
+      "rollback": false,
+      "retest_reference": null,
+      "traceability": "VERIFIED_LOCAL_LOGS_AND_HASHES"
+    }
+  ],
+  "adversarial_design": {
+    "spec_file": "ADVERSARIAL-SPEC-20261118.json",
+    "cases_designed": 12,
+    "spec_only": 12,
+    "executed_from_spec": 0,
+    "separate_new_automated_acceptance_tests": 12,
+    "g1_g9_number_mapping": "UNVERIFIED_OFFICIAL_DEFINITIONS"
+  },
+  "legacy_audit": {
+    "CentralCore24": {
+      "historical_reported_count": 24,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "Python132": {
+      "historical_reported_count": 132,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "Bridge14": {
+      "historical_reported_count": 14,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "correction3": {
+      "historical_reported_count": null,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "guard68": {
+      "historical_reported_count": 68,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "integration33": {
+      "historical_reported_count": 33,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    },
+    "independent_audit35": {
+      "historical_reported_count": 35,
+      "executed_this_run": 0,
+      "status": "UNVERIFIED_THIS_RUN"
+    }
+  },
+  "selected_legacy_priority": "guard68: public source and tests confirmed in GitHub tree, not downloaded; cannot honestly mark rerun",
+  "invariants": {
+    "CIVIC_TRACE_045": "APPROVED_UNCHANGED",
+    "CIVIC_TRACE_046": "DEFERRED_NOT_RELEASED",
+    "AX_01_to_09": "UNCHANGED",
+    "total_score": null,
+    "R3_final_release_authority": "PRESERVED",
+    "automatic_guilt": false,
+    "automatic_immunity": false,
+    "automatic_adverse_inference": false,
+    "automatic_benefit_from_obstruction": false,
+    "external_dispatch": false
+  },
+  "residual_limitations": [
+    "Linked route remains opt-in and not integrated with public CentralCore/correction3/guard",
+    "No independent provenance, actor, or source authentication: typed graph validates declared identifiers only",
+    "No legitimate cross-record proof inference; explicit links are dependency assertions, not evidence",
+    "No official G1–G9 numbering verification",
+    "No resource-limit tests on huge hostile inputs",
+    "Legacy public tests not rerun due to repository download unavailable"
+  ],
+  "test_harness_note": "An initial exploratory import-error output was overwritten before receipt capture and is not represented as a verified run; FINAL recorded PRE_LINK12 red-run is preserved. The test file was regenerated from local authoring script after the import correction. No repository source was altered by that exploratory step.",
+  "traceability_warning": "CERTIFIED_TRIALS_ONLY; early exploratory preflight unverified; no claims of full historical trace chain for transient drafts",
+  "source_scope": "PUBLIC_SYNTHETIC_ONLY",
+  "real_LP728_data_used": false
+}

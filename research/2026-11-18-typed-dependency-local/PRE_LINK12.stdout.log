@@ -1,0 +1,236 @@
+TAP version 13
+# Subtest: LINK01 P02 held record blocks dependent testimony but preserves unrelated S1
+not ok 1 - LINK01 P02 held record blocks dependent testimony but preserves unrelated S1
+  ---
+  duration_ms: 0.86522
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:14:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: LINK02 P02 a held statement blocks dependent record, not sibling record
+not ok 2 - LINK02 P02 a held statement blocks dependent record, not sibling record
+  ---
+  duration_ms: 0.185774
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:18:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:19:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: LINK03 P02 transitive typed dependencies quarantine downstream remedy
+not ok 3 - LINK03 P02 transitive typed dependencies quarantine downstream remedy
+  ---
+  duration_ms: 0.076895
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:22:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:23:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK04 P02 cross-category dependency cycle quarantined without full abort
+not ok 4 - LINK04 P02 cross-category dependency cycle quarantined without full abort
+  ---
+  duration_ms: 0.309476
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:26:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:27:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK05 P02 unrelated valid statements remain even when all records depend on invalid source
+not ok 5 - LINK05 P02 unrelated valid statements remain even when all records depend on invalid source
+  ---
+  duration_ms: 0.291623
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:31:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK06 P03 a bare string source reference is never independent evidence authentication
+not ok 6 - LINK06 P03 a bare string source reference is never independent evidence authentication
+  ---
+  duration_ms: 0.095737
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:35:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:36:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK07 P04 scope mismatch for record blocks linked remedy only, not original statement
+not ok 7 - LINK07 P04 scope mismatch for record blocks linked remedy only, not original statement
+  ---
+  duration_ms: 0.127648
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:39:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:40:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK08 P05 an accepted independent_review label still does not close the case
+not ok 8 - LINK08 P05 an accepted independent_review label still does not close the case
+  ---
+  duration_ms: 0.100455
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:43:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:44:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK09 G-pattern data absence must not imply victim proof failure
+not ok 9 - LINK09 G-pattern data absence must not imply victim proof failure
+  ---
+  duration_ms: 0.533913
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:47:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:48:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK10 G-pattern multiple AI source IDs do not prove source authenticity
+not ok 10 - LINK10 G-pattern multiple AI source IDs do not prove source authenticity
+  ---
+  duration_ms: 0.273848
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:51:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:52:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK11 governance boundary preserved under cross-scope partial failure
+not ok 11 - LINK11 governance boundary preserved under cross-scope partial failure
+  ---
+  duration_ms: 0.161195
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:55:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:56:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: LINK12 malformed typed links quarantine one item only; no global approval
+not ok 12 - LINK12 malformed typed links quarantine one item only; no global approval
+  ---
+  duration_ms: 0.220223
+  type: 'test'
+  location: '/mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:60:1'
+  failureType: 'testCodeFailure'
+  error: 'LINKED_SCOPE_REVIEW_UNIMPLEMENTED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    run (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:7:75)
+    TestContext.<anonymous> (file:///mnt/data/adonis_20261118_run/baseline/linked-12.test.mjs:61:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 0
+# fail 12
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 81.434974
