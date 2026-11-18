@@ -1,0 +1,28 @@
+{
+  "executed_at": "2026-11-18T12:19:59.294049+00:00",
+  "baseline_commit": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+  "upstream_tracked_files_unchanged": true,
+  "tests": {
+    "new_integration": 9,
+    "p02": 45,
+    "v2": 61,
+    "core_node": 24,
+    "correction3": 132,
+    "bridge": 14,
+    "guard": 68
+  },
+  "all_listed_suites_passed": true,
+  "default_cli_changed": false,
+  "published": false,
+  "deployed": false,
+  "commands": [
+    "npm test",
+    "node --test research/0.2-core-guard-integration.v2/integration.test.mjs research/0.2-core-guard-integration.v2/review-identity.test.mjs",
+    "cd research/0.3-local-correction.3 && python3 -B -m unittest discover -v",
+    "node --test research/0.3-local-correction.3/bridge.test.mjs",
+    "cd research/0.3-local-correction.4/guard-candidate-v0.2 && python3 -B -m unittest discover -v",
+    "node --test research/2026-11-18-context-core-integration/p02/*.test.mjs",
+    "node --test research/2026-11-18-context-core-integration/integration.test.mjs",
+    "node research/2026-11-18-context-core-integration/run-example.mjs"
+  ]
+}
