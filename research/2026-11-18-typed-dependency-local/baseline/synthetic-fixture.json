@@ -1,0 +1,10 @@
+{
+  "schema":"ADONIS-0.3-CONTEXT/SYNTHETIC-1", "synthetic":true,"case_id":"SYN-CASE-A",
+  "statements":[
+    {"id":"S1","claim_key":"CLAIM-1","summary":"  자료를 요청했지만 회신은 범위를 밝히지 않았습니다. ","speaker_role":"SYNTHETIC_CLAIMANT","basis":"DIRECT","event_time":"2026-01-01","report_time":"2026-01-02"},
+    {"id":"S2","claim_key":"CLAIM-1","summary":"자료를 요청했지만 회신은 범위를 밝히지 않았습니다.","speaker_role":"SYNTHETIC_CLAIMANT","basis":"DIRECT","event_time":"2026-01-01","report_time":"2026-01-03"}
+  ],
+  "records":[{"id":"REC1","controller":"SYNTHETIC_AGENCY","item":"SYNTHETIC_LOG","state":"REPORTED_MISSING","evidence_status":"DOCUMENT_LINKED","source_refs":["SYN-LETTER-1"]}],
+  "remedies":[{"id":"R1","type":"monetary","status":"INDEPENDENTLY_VERIFIED","source_refs":["SYN-RECEIPT-1"]}],
+  "unresolved_duration_note":"합성 사례의 절차 미해결 기간(점수화하지 않음)"
+}
