@@ -1,0 +1,17 @@
+✔ actual core and P02 composition succeeds, input unchanged (147.048351ms)
+✔ conflicting statements and source identities survive final payload (108.816992ms)
+✔ self-asserted independent status downgraded and explanation retained (142.608004ms)
+✔ malformed item held while valid work survives (107.675059ms)
+✔ case mismatch rejected (1.665428ms)
+✔ review mismatch rejected (0.7305ms)
+✔ duplicate binding rejected (0.539689ms)
+✔ real input rejected (0.494485ms)
+✔ P02 failure cannot be reported as total success (111.992921ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 794.109258
