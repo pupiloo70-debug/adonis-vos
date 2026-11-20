@@ -1,0 +1,36 @@
+# TEMPLATE ONLY: not active until reviewed and copied to .github/workflows/ on default branch.
+name: Adonis RSI synthetic research verification
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 23 * * *' # ~08:00 KST; GitHub schedule may be delayed
+permissions:
+  contents: read
+concurrency:
+  group: adonis-rsi-research
+  cancel-in-progress: false
+jobs:
+  readonly-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test existing core and synthetic candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification-runs
+          (node --version; git rev-parse HEAD; npm test; node --test research/2026-11-20-rsi-centralcore-candidate/rsi-gate.test.mjs) 2>&1 | tee verification-runs/test.log
+          sha256sum verification-runs/test.log research/2026-11-20-rsi-centralcore-candidate/rsi-gate.mjs > verification-runs/SHA256SUMS
+          git status --porcelain > verification-runs/git-status.txt
+      - name: Preserve synthetic-only audit files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adonis-rsi-synthetic-regression
+          path: verification-runs/
+          retention-days: 14
+          if-no-files-found: warn
