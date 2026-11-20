@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: uses real CentralCore and records matching receipts
+ok 1 - uses real CentralCore and records matching receipts
+  ---
+  duration_ms: 3.281012
+  type: 'test'
+  ...
+# Subtest: rejects private and unmarked inputs
+ok 2 - rejects private and unmarked inputs
+  ---
+  duration_ms: 0.361943
+  type: 'test'
+  ...
+# Subtest: detects circular justification, preserves explanation duty
+ok 3 - detects circular justification, preserves explanation duty
+  ---
+  duration_ms: 0.565442
+  type: 'test'
+  ...
+# Subtest: reported benefit is not confirmed remedy
+ok 4 - reported benefit is not confirmed remedy
+  ---
+  duration_ms: 0.367932
+  type: 'test'
+  ...
+# Subtest: independent dissent survives consensus or authority override
+ok 5 - independent dissent survives consensus or authority override
+  ---
+  duration_ms: 0.738998
+  type: 'test'
+  ...
+# Subtest: unreviewed provision is not a verified answer
+ok 6 - unreviewed provision is not a verified answer
+  ---
+  duration_ms: 0.484333
+  type: 'test'
+  ...
+# Subtest: correction is pending independent verification
+ok 7 - correction is pending independent verification
+  ---
+  duration_ms: 0.309256
+  type: 'test'
+  ...
+# Subtest: ethical declaration cannot certify ASI
+ok 8 - ethical declaration cannot certify ASI
+  ---
+  duration_ms: 0.36664
+  type: 'test'
+  ...
+# Subtest: does not silently merge questions or events
+ok 9 - does not silently merge questions or events
+  ---
+  duration_ms: 0.398848
+  type: 'test'
+  ...
+# Subtest: duplicate event ID and absent evidence reference rejected
+ok 10 - duplicate event ID and absent evidence reference rejected
+  ---
+  duration_ms: 0.435682
+  type: 'test'
+  ...
+# Subtest: does not mutate input
+ok 11 - does not mutate input
+  ---
+  duration_ms: 0.325669
+  type: 'test'
+  ...
+# Subtest: boundaries remain invariant
+ok 12 - boundaries remain invariant
+  ---
+  duration_ms: 0.234315
+  type: 'test'
+  ...
+# Subtest: recursive revision vetoes removed dissent despite faster code
+ok 13 - recursive revision vetoes removed dissent despite faster code
+  ---
+  duration_ms: 0.450203
+  type: 'test'
+  ...
+# Subtest: recursive revision vetoes dropped source and unverified tests
+ok 14 - recursive revision vetoes dropped source and unverified tests
+  ---
+  duration_ms: 0.24453
+  type: 'test'
+  ...
+# Subtest: successful research comparison still requires human review
+ok 15 - successful research comparison still requires human review
+  ---
+  duration_ms: 0.21034
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 75.649094
