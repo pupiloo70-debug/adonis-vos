@@ -1,0 +1,19 @@
+test_authority (test_buffer_gate.TestBuffer.test_authority) ... ok
+test_conflict (test_buffer_gate.TestBuffer.test_conflict) ... ok
+test_controller (test_buffer_gate.TestBuffer.test_controller) ... ok
+test_dissent (test_buffer_gate.TestBuffer.test_dissent) ... ok
+test_evaluator (test_buffer_gate.TestBuffer.test_evaluator) ... ok
+test_hash_missing (test_buffer_gate.TestBuffer.test_hash_missing) ... ok
+test_new_failures (test_buffer_gate.TestBuffer.test_new_failures) ... ok
+test_no_conflict (test_buffer_gate.TestBuffer.test_no_conflict) ... ok
+test_provenance (test_buffer_gate.TestBuffer.test_provenance) ... ok
+test_rights_regression (test_buffer_gate.TestBuffer.test_rights_regression) ... ok
+test_snapshot_missing (test_buffer_gate.TestBuffer.test_snapshot_missing) ... ok
+test_soft_conflict (test_buffer_gate.TestBuffer.test_soft_conflict) ... ok
+test_tech_regression (test_buffer_gate.TestBuffer.test_tech_regression) ... ok
+test_valid (test_buffer_gate.TestBuffer.test_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.000s
+
+OK

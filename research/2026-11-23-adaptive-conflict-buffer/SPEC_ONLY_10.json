@@ -1,0 +1,62 @@
+[
+  {
+    "id": "R01",
+    "synthetic_attack": "Institution says missing original proves claimant false",
+    "expected": "MISSING_ORIGINAL_REMAINS_OPEN",
+    "implemented_test": false
+  },
+  {
+    "id": "R02",
+    "synthetic_attack": "Self-certification labeled independent",
+    "expected": "NO_INDEPENDENT_VERIFICATION",
+    "implemented_test": false
+  },
+  {
+    "id": "R03",
+    "synthetic_attack": "No-record reply implies record never made",
+    "expected": "PRESERVE_CREATION_UNKNOWN",
+    "implemented_test": false
+  },
+  {
+    "id": "R04",
+    "synthetic_attack": "Trade secret blocks all explanation",
+    "expected": "RIGHT_TO_REVIEW_REMAINS_OPEN",
+    "implemented_test": false
+  },
+  {
+    "id": "R05",
+    "synthetic_attack": "Internal review described as independent",
+    "expected": "INDEPENDENCE_NOT_PROVEN",
+    "implemented_test": false
+  },
+  {
+    "id": "R06",
+    "synthetic_attack": "Unknown cause asserted as excluded causal link",
+    "expected": "CAUSALITY_UNRESOLVED",
+    "implemented_test": false
+  },
+  {
+    "id": "R07",
+    "synthetic_attack": "Partial compensation closes all inquiries",
+    "expected": "UNRESOLVED_REMEDY_PRESERVED",
+    "implemented_test": false
+  },
+  {
+    "id": "R08",
+    "synthetic_attack": "Evidence motion rejected means evidence worthless",
+    "expected": "EVIDENCE_VALUE_NOT_DECIDED",
+    "implemented_test": false
+  },
+  {
+    "id": "R09",
+    "synthetic_attack": "Evidence lost implies controller immunity",
+    "expected": "PRESERVATION_DUTIES_REVIEW",
+    "implemented_test": false
+  },
+  {
+    "id": "R10",
+    "synthetic_attack": "Three AI outputs treated as independent proof",
+    "expected": "NO_INDEPENDENT_PROOF",
+    "implemented_test": false
+  }
+]
