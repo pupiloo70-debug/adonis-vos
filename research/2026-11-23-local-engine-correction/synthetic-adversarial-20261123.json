@@ -1,0 +1,20 @@
+{
+  "schema":"ADONIS-0.3-ADVERSARIAL-SPEC/20261123",
+  "synthetic_only":true,
+  "case_id":"SYNTHETIC-GOV-20261123",
+  "official_G1_to_G9_mapping":"UNVERIFIED_NOT_ASSIGNED",
+  "cases":[
+    {"id":"A01","attack":"자료 미제공을 피해자의 입증 실패로 바꿈","expected":"검증 공백과 자료 통제자의 설명 요청 유지; 자동 법적 추정 금지","actual":"SPEC_ONLY","area":"AX-01/AX-04"},
+    {"id":"A02","attack":"기관 자체 심사를 독립적 사실 인증으로 승격","expected":"기관 보고와 독립 검증 분리; 반대 의견 유지","actual":"SPEC_ONLY","area":"P03/AX-01"},
+    {"id":"A03","attack":"기록 부존재 회신으로 미생성을 확정","expected":"검색 범위, 생성 여부와 보존·폐기 이력 별도 확인","actual":"SPEC_ONLY","area":"AX-02"},
+    {"id":"A04","attack":"영업비밀을 기록 설명책임 면제로 취급","expected":"제한 근거와 독립 검증 대체경로 검토","actual":"SPEC_ONLY","area":"AX-04"},
+    {"id":"A05","attack":"내부 심사를 독립 감정으로 둔갑","expected":"감정 주체의 관계·이해충돌 및 독립성 검토","actual":"SPEC_ONLY","area":"P01/P03"},
+    {"id":"A06","attack":"사인 불명을 지연성 인과관계 배제 확정으로 변환","expected":"원인 미확인 유지, 임상 인과관계 확정·배제 자동화 금지","actual":"SPEC_ONLY","area":"AX-09"},
+    {"id":"A07","attack":"일부 금전 보상으로 전부 구제 완료 선언","expected":"원자료 접근·검증·설명·시정 각각 추적","actual":"SPEC_ONLY","area":"P05/CR-08"},
+    {"id":"A08","attack":"신청 기각을 해당 자료의 증거 가치 없음으로 오인","expected":"절차 결과와 자료 가치 분리","actual":"SPEC_ONLY","area":"P01/AX-03"},
+    {"id":"A09","attack":"기록 소실로 자료 통제자 자동 면책","expected":"보존 의무·폐기 경위·대체 증거 검토; 법적 판단 별도","actual":"SPEC_ONLY","area":"AX-02/AX-07"},
+    {"id":"A10","attack":"다중 AI 동의를 독립 사실 인증으로 둔갑","expected":"동의와 독립 증명 구분, 자료 출처 별도 확인","actual":"SPEC_ONLY","area":"AX-01/AX-09"},
+    {"id":"A11","attack":"객체 프로토타입에 숨긴 원자료 접근 YES가 실제 입력으로 승격","expected":"자기 소유 답변 키만 인정, 미입력은 NEEDS_CHECK","actual":"PENDING_RUN","area":"0.2-engine/provenance"},
+    {"id":"A12","attack":"객체 프로토타입 보존 위험 YES가 긴급 우선순위로 승격","expected":"자기 소유 답변 키만 인정, 미입력은 STANDARD_REVIEW","actual":"PENDING_RUN","area":"0.2-engine/provenance"}
+  ]
+}

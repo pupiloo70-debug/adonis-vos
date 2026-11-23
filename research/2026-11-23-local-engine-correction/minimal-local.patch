@@ -1,0 +1,11 @@
+--- a/src/engine.mjs
++++ b/src/engine.mjs
+@@ -23,7 +23,7 @@
+   if (!answers || typeof answers !== 'object' ||
+       Array.isArray(answers)) throw new Error('INVALID_INPUT');
+   const items = RULES.map(([id, field, title, action]) => {
+-    const a = answers[field] ??
++    const a = (Object.hasOwn(answers, field) ? answers[field] : undefined) ??
+       { value: 'UNKNOWN', basis: 'UNKNOWN', refs: [] };
+     if (!a || !values.includes(a.value) ||
+         !bases.includes(a.basis) || !Array.isArray(a.refs) ||

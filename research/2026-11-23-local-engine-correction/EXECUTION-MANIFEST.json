@@ -1,0 +1,210 @@
+{
+  "adversarial_research": {
+    "G1_G9_official_definition": "UNVERIFIED; no numbered mapping assigned",
+    "additional_engine_attacks": "A11-A12 EXECUTED fail-before pass-after",
+    "existing_positive_controls": "A13-A14 EXECUTED pass-before and after",
+    "ten_governance_scenarios": "SPEC_ONLY (A01-A10), execution 0"
+  },
+  "adversarial_test_source": "tests/prototype-adversarial.test.mjs",
+  "adversarial_test_source_sha256": "584353c894173f0604facb23544ef0491fc4d2c00c34b8878102f2431190734a",
+  "baseline_commit_SHA": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "environment": {
+    "dependencies": "node builtins; no external packages",
+    "node": "v22.16.0",
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "external_transmission": false,
+  "fix": {
+    "after": "4 adversarial test passes / 0 failures; original 12 checks continue passing",
+    "before": "2 adversarial test failures / 2 passes",
+    "issue": "Prototype inherited answer properties become reported evidence signals without an own source field",
+    "minimal_change": "Require Object.hasOwn before reading each rule answer; preserve old null fallback",
+    "modified_sha256": "ca5a0caae0965a55094e2ca826828ea5a842d4359c13abc1472b12891c72b5ee",
+    "original_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "patch_file": "minimal-local.patch",
+    "patch_sha256": "3c2b0b79ae29517271dd44d93cb3fe0c2efca37d010989c2779791b03aec7db6",
+    "retest_receipt_ref": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/POST_PROBE4",
+    "rollback": {
+      "original_snapshot": "baseline/engine.mjs",
+      "reason": "Patch accepted only as local research proposal; no unsafe traceability detected",
+      "required": false,
+      "status": "NOT_PERFORMED; ORIGINAL SNAPSHOT SHA256 VERIFIED"
+    },
+    "scope": "LOCAL_RESEARCH_ONLY; NOT_COMMITTED_NOT_DEPLOYED",
+    "source_file": "src/engine.mjs"
+  },
+  "generated_KST": "2026-11-23T08:42:40+09:00",
+  "generated_utc": "2026-11-22T23:42:40+00:00",
+  "github_write": false,
+  "hash_chain_status": "UNLINKED_PREVIOUS_MANIFEST_BYTES_NOT_PRESENT_LOCAL; DO_NOT_CLAIM_CONTINUOUS_CHAIN",
+  "legacy_run_status": {
+    "0.2_CentralCore_24": "UNVERIFIED_THIS_RUN",
+    "Bridge_14": "UNVERIFIED_THIS_RUN",
+    "Python_132": "UNVERIFIED_THIS_RUN",
+    "correction3": "UNVERIFIED_THIS_RUN",
+    "correction4_guard_68": "UNVERIFIED_THIS_RUN",
+    "independent_audit_35": "UNVERIFIED_THIS_RUN",
+    "integration_v1_33": "UNVERIFIED_THIS_RUN",
+    "legacy_0.1_engine_checks_12": "EXECUTED_PASS"
+  },
+  "main_commit_SHA": "c6a6567ae4401d77c0dc6c3e4d143aa37ba084d5",
+  "main_comparison": {
+    "latest_main_commit_date_utc": "2026-11-19T03:26:37Z",
+    "vs_integration_baseline": "+48 commits (connector compare)",
+    "vs_older_20261118_local_run": "+15 commits (connector compare)"
+  },
+  "policy_unchanged": {
+    "AX_01_09": "UNCHANGED",
+    "CIVIC_TRACE": "0.4.5 retained; 0.4.6 deferred",
+    "R3_final_release_authority": true,
+    "no_automatic_guilt_or_immunity": true,
+    "no_benefit_from_obstruction": true,
+    "total_score": null
+  },
+  "previous_record_reference": "research/2026-11-18-typed-dependency-local/EXECUTION-MANIFEST.json",
+  "previous_record_sha256": null,
+  "prior_checked_main_SHA": "6e8afd5c8aa3023e48b85cc171f80d6be7828ade",
+  "private_case_data_used": false,
+  "production_deploy": false,
+  "release": false,
+  "rsi_candidate_20261120": "NOT_FOUND_IN_CURRENT_MAIN_TREE; existence in other branches not excluded",
+  "run_id": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01",
+  "schema": "SGP-QSV-EXECUTION-MANIFEST/2026-11-14",
+  "source_limits": "Only verified exact 0.1 engine/test files recreated in runtime; not a full repository regression nor legal/medical evidence proof",
+  "source_provenance": {
+    "full_main_test_executed": false,
+    "method": "GitHub connector fetch_file; content reconstructed exactly and verified as original Git blob hash; SHA-1 blob does not equal SHA-256",
+    "paths": {
+      "src/engine.mjs": {
+        "git_blob_sha1": "43ad65aa1227fef66fd6e3ed7a939e32c7e0d089",
+        "raw_original_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430"
+      },
+      "src/test.mjs": {
+        "git_blob_sha1": "1c9fbaf0bc24cf2718405cb1a82e082493aee9bc",
+        "raw_original_sha256": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+      }
+    },
+    "repo_full_clone_available": false
+  },
+  "synthetic_fixture": "synthetic-adversarial-20261123.json",
+  "synthetic_fixture_sha256": "4a53d954d6fa6e91e03c977000bae9d1880658fcc9f9ce7f1f29a979edcaf03e",
+  "test_entries": [
+    {
+      "actual": {
+        "failed": 0,
+        "passed": 12,
+        "skipped": 0,
+        "unexecuted": 0
+      },
+      "changed_code_sha256": null,
+      "classification": "EXECUTED_PASS",
+      "command": "node src/test.mjs",
+      "command_sha256": "205115e26dc7e415dbcb1111f0f5ce2aaceade4f4b4a0457257650a5d0ed4323",
+      "executed_KST": "2026-11-23T08:41:54+09:00",
+      "executed_utc": "2026-11-22T23:41:54+00:00",
+      "exit_code": 0,
+      "expected": {
+        "fail": 0,
+        "pass": 12
+      },
+      "original_code_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+      "phase": "BEFORE_PATCH",
+      "prior_results_reused": false,
+      "retest_reference": null,
+      "stderr_path": "logs/PRE_CORE12.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "logs/PRE_CORE12.stdout.log",
+      "stdout_sha256": "2d1000699248f36053ec2bdedd3b4613b3f3e92de665f12ceca4f1cd783d4dd8",
+      "test_id": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/PRE_CORE12",
+      "working_dir": "/mnt/data/adonis-research-20261123"
+    },
+    {
+      "actual": {
+        "failed": 2,
+        "passed": 2,
+        "skipped": 0,
+        "unexecuted": 0
+      },
+      "changed_code_sha256": null,
+      "classification": "EXPECTED_RED_PRE_PATCH",
+      "command": "node --test tests/prototype-adversarial.test.mjs",
+      "command_sha256": "7c912b08fa1ebe6ffea68aee5e74aafa55d0cd1875b7b32b942d093c95826cde",
+      "executed_KST": "2026-11-23T08:41:54+09:00",
+      "executed_utc": "2026-11-22T23:41:54+00:00",
+      "exit_code": 1,
+      "expected": {
+        "fail": 0,
+        "pass": 4
+      },
+      "original_code_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+      "phase": "EXPECTED_RED",
+      "prior_results_reused": false,
+      "retest_reference": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/POST_PROBE4",
+      "stderr_path": "logs/PRE_PROBE4.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "logs/PRE_PROBE4.stdout.log",
+      "stdout_sha256": "dc14f3ab7317c317f65c40054948d579e5fc0026ff29ed406c630967a43d0454",
+      "test_id": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/PRE_PROBE4",
+      "working_dir": "/mnt/data/adonis-research-20261123"
+    },
+    {
+      "actual": {
+        "failed": 0,
+        "passed": 12,
+        "skipped": 0,
+        "unexecuted": 0
+      },
+      "changed_code_sha256": "ca5a0caae0965a55094e2ca826828ea5a842d4359c13abc1472b12891c72b5ee",
+      "classification": "EXECUTED_PASS",
+      "command": "node src/test.mjs",
+      "command_sha256": "205115e26dc7e415dbcb1111f0f5ce2aaceade4f4b4a0457257650a5d0ed4323",
+      "executed_KST": "2026-11-23T08:42:07+09:00",
+      "executed_utc": "2026-11-22T23:42:07+00:00",
+      "exit_code": 0,
+      "expected": {
+        "fail": 0,
+        "pass": 12
+      },
+      "original_code_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+      "phase": "AFTER_PATCH",
+      "prior_results_reused": false,
+      "retest_reference": null,
+      "stderr_path": "logs/POST_CORE12.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "logs/POST_CORE12.stdout.log",
+      "stdout_sha256": "2d1000699248f36053ec2bdedd3b4613b3f3e92de665f12ceca4f1cd783d4dd8",
+      "test_id": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/POST_CORE12",
+      "working_dir": "/mnt/data/adonis-research-20261123"
+    },
+    {
+      "actual": {
+        "failed": 0,
+        "passed": 4,
+        "skipped": 0,
+        "unexecuted": 0
+      },
+      "changed_code_sha256": "ca5a0caae0965a55094e2ca826828ea5a842d4359c13abc1472b12891c72b5ee",
+      "classification": "EXECUTED_PASS",
+      "command": "node --test tests/prototype-adversarial.test.mjs",
+      "command_sha256": "7c912b08fa1ebe6ffea68aee5e74aafa55d0cd1875b7b32b942d093c95826cde",
+      "executed_KST": "2026-11-23T08:42:07+09:00",
+      "executed_utc": "2026-11-22T23:42:07+00:00",
+      "exit_code": 0,
+      "expected": {
+        "fail": 0,
+        "pass": 4
+      },
+      "original_code_sha256": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+      "phase": "AFTER_PATCH",
+      "prior_results_reused": false,
+      "retest_reference": null,
+      "stderr_path": "logs/POST_PROBE4.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "logs/POST_PROBE4.stdout.log",
+      "stdout_sha256": "415f788265eda178ad831c30e2ef267f2cb2bc30d82c65a34c3f3182690cce7e",
+      "test_id": "ADONIS-0.3-20261123-ENGINE-PROVENANCE-LOCAL-01/POST_PROBE4",
+      "working_dir": "/mnt/data/adonis-research-20261123"
+    }
+  ]
+}
