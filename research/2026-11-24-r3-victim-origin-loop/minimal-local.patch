@@ -1,0 +1,16 @@
+--- synthetic_flawed_baseline.py
++++ victim_origin_trace.py
+@@ -54,11 +54,11 @@
+             held.append({'id':key,'reason':'VERIFICATION_FLAG_INVALID'});continue
+         has_response=any(x['state'] in {'RESPONDED','PARTIAL'} for x in responses)
+         has_submission=any(x['state'] in {'SUBMITTED','RESPONDED','PARTIAL'} for x in submissions)
+-        open_question=not has_submission  # INTENTIONALLY FLAWED SYNTHETIC BASELINE
++        open_question=not (item.get('raw_evidence_verified') is True and item.get('legal_conditions_verified') is True and has_response)
+         result.append({'id':key,'question':item['question'],
+                        'evidence_status':'VERIFIED' if item.get('raw_evidence_verified') is True else 'UNVERIFIED',
+                        'submission_status':'SUBMITTED' if has_submission else 'NOT_CONFIRMED',
+-                       'counsel_response':'DOCUMENTED_RESPONSE' if has_submission else 'RESPONSE_NOT_CONFIRMED',
++                       'counsel_response':'DOCUMENTED_RESPONSE' if has_response else 'RESPONSE_NOT_CONFIRMED',
+                        'counsel_misconduct':'NOT_DETERMINED',
+                        'controller_explanation_due_for_review':bool(controller and controller.get('access_state') in {'WITHHELD','NOT_SEARCHED','UNKNOWN','LOST','DESTROYED'}),
+                        'unresolved':open_question,

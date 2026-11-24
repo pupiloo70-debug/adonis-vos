@@ -1,0 +1,21 @@
+test_A01 (test_victim_origin_trace.Attacks.test_A01) ... ok
+test_A02 (test_victim_origin_trace.Attacks.test_A02) ... ok
+test_A03 (test_victim_origin_trace.Attacks.test_A03) ... ok
+test_A04 (test_victim_origin_trace.Attacks.test_A04) ... ok
+test_A05 (test_victim_origin_trace.Attacks.test_A05) ... ok
+test_A06 (test_victim_origin_trace.Attacks.test_A06) ... ok
+test_A07 (test_victim_origin_trace.Attacks.test_A07) ... ok
+test_A08 (test_victim_origin_trace.Attacks.test_A08) ... ok
+test_A09 (test_victim_origin_trace.Attacks.test_A09) ... ok
+test_A10 (test_victim_origin_trace.Attacks.test_A10) ... ok
+test_A11 (test_victim_origin_trace.Attacks.test_A11) ... ok
+test_A12 (test_victim_origin_trace.Attacks.test_A12) ... ok
+test_duplicate_is_held (test_victim_origin_trace.GuardTests.test_duplicate_is_held) ... ok
+test_false_string_rejected (test_victim_origin_trace.GuardTests.test_false_string_rejected) ... ok
+test_scope_isolation (test_victim_origin_trace.GuardTests.test_scope_isolation) ... ok
+test_synthetic_only (test_victim_origin_trace.GuardTests.test_synthetic_only) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK

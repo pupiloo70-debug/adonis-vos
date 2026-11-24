@@ -1,0 +1,82 @@
+{
+  "run_id": "R3-VICTIM-ORIGIN-20261124-LOCAL-01",
+  "executed_at_utc": "2026-11-24T08:41:18.739051+00:00",
+  "executed_at_kst": "2026-11-24T17:41:18.739051+09:00",
+  "github_main_sha_verified_via_connector": "f9a575a663ad13cb90165ec2ed1fcad0d3511b62",
+  "integration_reference_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "source_code_status": "LOCAL_SYNTHETIC_CANDIDATE_NOT_PUBLIC_REPO_CODE",
+  "source_repository_reviewed": [
+    "research/0.3-local-correction.3/README.md",
+    "research/0.3-local-correction.4/README.md",
+    "research/2026-11-23-adaptive-conflict-buffer/buffer_gate.py"
+  ],
+  "fixture": {
+    "path": "SYNTHETIC-ATTACKS-12.json",
+    "sha256": "6a399f22e364d2b000080bb49b49db6496c5f8a0ae8e85ad21be0ca663bb1e69"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "platform": "linux"
+  },
+  "commands": [
+    "python -B -m unittest -v test_flawed",
+    "python -B -m unittest -v test_victim_origin_trace"
+  ],
+  "before_sha256": "2618a4d734a9264ec455b0486bbc59dcb6589909087d5752298f5d8a6b774371",
+  "after_sha256": "f2ccf4305dc7c395a04ed613dadddee12f742a9ee5892eb2ce6e83ab4ee5bd9a",
+  "patch_sha256": "82d14e14cc223d19d35ec5c982fbe11ba23f6f67de5d5c9e954c562c21515d20",
+  "tests": {
+    "pre": {
+      "command": "python -B -m unittest -v test_flawed",
+      "exit_code": 1,
+      "total": 16,
+      "failed": 4,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e1cc716b730d92835acab2629c37c809ade0c81ecd8c1375c8a71a82cd935c09",
+      "status": "FAILED_EXPECTED_SYNTHETIC"
+    },
+    "post": {
+      "command": "python -B -m unittest -v test_victim_origin_trace",
+      "exit_code": 0,
+      "total": 16,
+      "failed": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "25a6ca83ee8ed874859b5a8d80a2a1d28716eb4e1e49ced9ecc3041520871e44",
+      "status": "PASSED"
+    }
+  },
+  "files_sha256": {
+    "victim_origin_trace.py": "f2ccf4305dc7c395a04ed613dadddee12f742a9ee5892eb2ce6e83ab4ee5bd9a",
+    "synthetic_flawed_baseline.py": "2618a4d734a9264ec455b0486bbc59dcb6589909087d5752298f5d8a6b774371",
+    "SYNTHETIC-ATTACKS-12.json": "6a399f22e364d2b000080bb49b49db6496c5f8a0ae8e85ad21be0ca663bb1e69",
+    "test_victim_origin_trace.py": "ecdfe1ea65715c65efe1bda713ff22d9d791e53973b93e50acdfb7ce55a9934c",
+    "post.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pre.exit_code.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "pre.stderr.log": "e1cc716b730d92835acab2629c37c809ade0c81ecd8c1375c8a71a82cd935c09",
+    "test_flawed.py": "f77f677abf4d6000b7f35eb4022bab8f5010edf2f3c75740fa25275d7722d4cd",
+    "pre.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "post.exit_code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "minimal-local.patch": "82d14e14cc223d19d35ec5c982fbe11ba23f6f67de5d5c9e954c562c21515d20",
+    "README-KO.md": "32c2947e05731cf80a40de15b45b036c2f5eb2fd0dc7910d58b2ebafedf7a035",
+    "post.stderr.log": "25a6ca83ee8ed874859b5a8d80a2a1d28716eb4e1e49ced9ecc3041520871e44"
+  },
+  "previous_manifest_sha256": null,
+  "chain_status": "NEW_LOCAL_CHAIN_PREVIOUS_NOT_VERIFIED",
+  "historical_result_reused_as_today": false,
+  "rollback_required": false,
+  "rollback_test_status": "NOT_EXECUTED_NO_EXISTING_REPO_FILE_MUTATED",
+  "modified_existing_repo_files": false,
+  "github_write": "NOT_PERFORMED",
+  "publication": "NOT_PERFORMED",
+  "total_score": null,
+  "automatic_guilt": false,
+  "automatic_immunity": false,
+  "default_path_connected": false,
+  "unverified_legacy_sets": [
+    "correction.3 Python 132",
+    "Bridge 14",
+    "correction.4 guard 68",
+    "integration 33",
+    "audit 35"
+  ]
+}

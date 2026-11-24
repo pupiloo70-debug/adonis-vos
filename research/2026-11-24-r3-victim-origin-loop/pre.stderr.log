@@ -1,0 +1,66 @@
+test_A01 (test_flawed.Attacks.test_A01) ... FAIL
+test_A02 (test_flawed.Attacks.test_A02) ... ok
+test_A03 (test_flawed.Attacks.test_A03) ... ok
+test_A04 (test_flawed.Attacks.test_A04) ... ok
+test_A05 (test_flawed.Attacks.test_A05) ... FAIL
+test_A06 (test_flawed.Attacks.test_A06) ... FAIL
+test_A07 (test_flawed.Attacks.test_A07) ... ok
+test_A08 (test_flawed.Attacks.test_A08) ... ok
+test_A09 (test_flawed.Attacks.test_A09) ... ok
+test_A10 (test_flawed.Attacks.test_A10) ... ok
+test_A11 (test_flawed.Attacks.test_A11) ... FAIL
+test_A12 (test_flawed.Attacks.test_A12) ... ok
+test_duplicate_is_held (test_flawed.GuardTests.test_duplicate_is_held) ... ok
+test_false_string_rejected (test_flawed.GuardTests.test_false_string_rejected) ... ok
+test_scope_isolation (test_flawed.GuardTests.test_scope_isolation) ... ok
+test_synthetic_only (test_flawed.GuardTests.test_synthetic_only) ... ok
+
+======================================================================
+FAIL: test_A01 (test_flawed.Attacks.test_A01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Adonis_VOS_20261124_R3_victim_origin_loop/test_flawed.py", line 9, in check
+    obj=review(r['input']); self.assertEqual(obj['accepted'][0]['counsel_response'],r['expected']['response']);self.assertEqual(obj['accepted'][0]['unresolved'],r['expected']['unresolved']);self.assertIsNone(obj['total_score']);self.assertFalse(obj['automatic_guilt']);self.assertFalse(obj['automatic_immunity'])
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'DOCUMENTED_RESPONSE' != 'RESPONSE_NOT_CONFIRMED'
+- DOCUMENTED_RESPONSE
++ RESPONSE_NOT_CONFIRMED
+
+
+======================================================================
+FAIL: test_A05 (test_flawed.Attacks.test_A05)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Adonis_VOS_20261124_R3_victim_origin_loop/test_flawed.py", line 9, in check
+    obj=review(r['input']); self.assertEqual(obj['accepted'][0]['counsel_response'],r['expected']['response']);self.assertEqual(obj['accepted'][0]['unresolved'],r['expected']['unresolved']);self.assertIsNone(obj['total_score']);self.assertFalse(obj['automatic_guilt']);self.assertFalse(obj['automatic_immunity'])
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'DOCUMENTED_RESPONSE' != 'RESPONSE_NOT_CONFIRMED'
+- DOCUMENTED_RESPONSE
++ RESPONSE_NOT_CONFIRMED
+
+
+======================================================================
+FAIL: test_A06 (test_flawed.Attacks.test_A06)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Adonis_VOS_20261124_R3_victim_origin_loop/test_flawed.py", line 9, in check
+    obj=review(r['input']); self.assertEqual(obj['accepted'][0]['counsel_response'],r['expected']['response']);self.assertEqual(obj['accepted'][0]['unresolved'],r['expected']['unresolved']);self.assertIsNone(obj['total_score']);self.assertFalse(obj['automatic_guilt']);self.assertFalse(obj['automatic_immunity'])
+                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'RESPONSE_NOT_CONFIRMED' != 'DOCUMENTED_RESPONSE'
+- RESPONSE_NOT_CONFIRMED
++ DOCUMENTED_RESPONSE
+
+
+======================================================================
+FAIL: test_A11 (test_flawed.Attacks.test_A11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/Adonis_VOS_20261124_R3_victim_origin_loop/test_flawed.py", line 9, in check
+    obj=review(r['input']); self.assertEqual(obj['accepted'][0]['counsel_response'],r['expected']['response']);self.assertEqual(obj['accepted'][0]['unresolved'],r['expected']['unresolved']);self.assertIsNone(obj['total_score']);self.assertFalse(obj['automatic_guilt']);self.assertFalse(obj['automatic_immunity'])
+                                                                                                               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+FAILED (failures=4)

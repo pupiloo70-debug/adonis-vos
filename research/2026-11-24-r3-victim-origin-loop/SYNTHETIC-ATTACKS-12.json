@@ -1,0 +1,419 @@
+[
+  {
+    "id": "A01",
+    "description": "submitted is not reviewed",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A01",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: submitted is not reviewed",
+          "claims": [],
+          "submissions": [
+            {
+              "issue_id": "A01",
+              "source_ref": "S1",
+              "state": "SUBMITTED"
+            }
+          ],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A02",
+    "description": "claimant missing controller record",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A02",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: claimant missing controller record",
+          "claims": [],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false,
+          "controller": {
+            "actor": "C",
+            "material_ref": "M",
+            "access_state": "WITHHELD"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A03",
+    "description": "legal inference not automatic",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A03",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: legal inference not automatic",
+          "claims": [],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": true,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A04",
+    "description": "internal claim no certification",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A04",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: internal claim no certification",
+          "claims": [
+            {
+              "actor": "agency",
+              "source_ref": "letter",
+              "evidence_state": "CLAIM"
+            }
+          ],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A05",
+    "description": "counsel lacks filed response",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A05",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: counsel lacks filed response",
+          "claims": [],
+          "submissions": [
+            {
+              "issue_id": "A05",
+              "source_ref": "clientemail",
+              "state": "SUBMITTED"
+            }
+          ],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A06",
+    "description": "partial relief cannot close",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A06",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: partial relief cannot close",
+          "claims": [],
+          "submissions": [],
+          "responses": [
+            {
+              "issue_id": "A06",
+              "source_ref": "F",
+              "state": "PARTIAL"
+            }
+          ],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "DOCUMENTED_RESPONSE",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A07",
+    "description": "procedural rejected not proof zero",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A07",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: procedural rejected not proof zero",
+          "claims": [],
+          "submissions": [
+            {
+              "issue_id": "A07",
+              "source_ref": "COURT",
+              "state": "WITHDRAWN"
+            }
+          ],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A08",
+    "description": "missing record not never created",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A08",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: missing record not never created",
+          "claims": [],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false,
+          "controller": {
+            "actor": "C",
+            "material_ref": "M",
+            "access_state": "NOT_SEARCHED"
+          }
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A09",
+    "description": "AI consensus not independent",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A09",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: AI consensus not independent",
+          "claims": [
+            {
+              "actor": "AI1",
+              "source_ref": "A",
+              "evidence_state": "CLAIM"
+            },
+            {
+              "actor": "AI2",
+              "source_ref": "B",
+              "evidence_state": "CLAIM"
+            }
+          ],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A10",
+    "description": "unknown cause not excluded",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A10",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: unknown cause not excluded",
+          "claims": [
+            {
+              "actor": "expert",
+              "source_ref": "EXP",
+              "evidence_state": "UNVERIFIED"
+            }
+          ],
+          "submissions": [],
+          "responses": [],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "RESPONSE_NOT_CONFIRMED",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A11",
+    "description": "response and submission not enough",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A11",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: response and submission not enough",
+          "claims": [],
+          "submissions": [
+            {
+              "issue_id": "A11",
+              "source_ref": "S",
+              "state": "SUBMITTED"
+            }
+          ],
+          "responses": [
+            {
+              "issue_id": "A11",
+              "source_ref": "R",
+              "state": "RESPONDED"
+            }
+          ],
+          "raw_evidence_verified": false,
+          "legal_conditions_verified": false
+        }
+      ]
+    },
+    "expected": {
+      "response": "DOCUMENTED_RESPONSE",
+      "unresolved": true
+    }
+  },
+  {
+    "id": "A12",
+    "description": "complete only verified response",
+    "input": {
+      "synthetic": true,
+      "case_id": "SYN-001",
+      "track_id": "CIVIL",
+      "subject_id": "SUB-A",
+      "issues": [
+        {
+          "id": "A12",
+          "case_id": "SYN-001",
+          "track_id": "CIVIL",
+          "subject_id": "SUB-A",
+          "question": "Test: complete only verified response",
+          "claims": [],
+          "submissions": [
+            {
+              "issue_id": "A12",
+              "source_ref": "S",
+              "state": "SUBMITTED"
+            }
+          ],
+          "responses": [
+            {
+              "issue_id": "A12",
+              "source_ref": "R",
+              "state": "RESPONDED"
+            }
+          ],
+          "raw_evidence_verified": true,
+          "legal_conditions_verified": true
+        }
+      ]
+    },
+    "expected": {
+      "response": "DOCUMENTED_RESPONSE",
+      "unresolved": false
+    }
+  }
+]
