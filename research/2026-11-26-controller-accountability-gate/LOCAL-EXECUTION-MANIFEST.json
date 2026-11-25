@@ -1,0 +1,21 @@
+{
+  "schema": "ADONIS-CAG-01-PACKAGE-MANIFEST",
+  "date": "2026-11-26",
+  "status": "RESEARCH_ONLY_NOT_INTEGRATED_NOT_RELEASED",
+  "github_base_main_checked": "1cfe0698680170b820d4a32af37a6971c68b1465",
+  "execution": {
+    "node": "v22.16.0",
+    "local_new_synthetic_tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "full_npm_test": "NOT_RUN",
+    "github_after_upload": "NOT_RUN"
+  },
+  "files": {
+    "src/controller-accountability-gate.mjs": "27bf729c10eb2ee7f9baf967b1202363032d22c1fb7742c10fae881e5b1da65f",
+    "tests/controller-accountability-gate.test.mjs": "7b6110460d86fcd6499151f0773b5790c0f69346c1dfc93055d88462acfab1c9",
+    "research/2026-11-26-controller-accountability-gate/README-KO.md": "268aaac7246baf87466006ad001cd4d0b7a1ba4ee3bc4b32375e71835a30be64",
+    ".github/workflows/adonis-research-regression.yml": "f2388ec4a8507f692bb2649b5e0fdeaaa1627e08a5a3066f5cca6be362a6725c"
+  },
+  "workflow_status": "PREPARED_NOT_REGISTERED_NOT_EXECUTED"
+}
