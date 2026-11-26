@@ -1,0 +1,31 @@
+name: Adonis VOS research regression
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'research/2026-11-18-typed-dependency-local/candidate/**'
+      - '.github/workflows/adonis-research-regression.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'research/2026-11-18-typed-dependency-local/candidate/**'
+      - '.github/workflows/adonis-research-regression.yml'
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Research gate synthetic tests
+        run: node --test tests/controller-accountability-gate.test.mjs
+      - name: P02 targeted tests
+        run: node --test tests/p02-input-boundary.test.mjs tests/p02-research-bridge.test.mjs
+      - name: Existing default-core tests
+        run: npm test
