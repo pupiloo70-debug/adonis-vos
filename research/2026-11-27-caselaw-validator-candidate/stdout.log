@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: fabricated ID
+ok 1 - fabricated ID
+  ---
+  duration_ms: 1.732366
+  type: 'test'
+  ...
+# Subtest: wrong court
+ok 2 - wrong court
+  ---
+  duration_ms: 0.207712
+  type: 'test'
+  ...
+# Subtest: wrong date
+ok 3 - wrong date
+  ---
+  duration_ms: 0.271088
+  type: 'test'
+  ...
+# Subtest: wrong jurisdiction
+ok 4 - wrong jurisdiction
+  ---
+  duration_ms: 0.165689
+  type: 'test'
+  ...
+# Subtest: wrong procedure
+ok 5 - wrong procedure
+  ---
+  duration_ms: 0.336787
+  type: 'test'
+  ...
+# Subtest: wrong issue
+ok 6 - wrong issue
+  ---
+  duration_ms: 0.168063
+  type: 'test'
+  ...
+# Subtest: fabricated quotation
+ok 7 - fabricated quotation
+  ---
+  duration_ms: 0.21936
+  type: 'test'
+  ...
+# Subtest: unsupported proposition
+ok 8 - unsupported proposition
+  ---
+  duration_ms: 0.183226
+  type: 'test'
+  ...
+# Subtest: missing dissent
+ok 9 - missing dissent
+  ---
+  duration_ms: 0.427723
+  type: 'test'
+  ...
+# Subtest: summary only
+ok 10 - summary only
+  ---
+  duration_ms: 1.799627
+  type: 'test'
+  ...
+# Subtest: changed source bytes
+ok 11 - changed source bytes
+  ---
+  duration_ms: 0.163516
+  type: 'test'
+  ...
+# Subtest: stale status
+ok 12 - stale status
+  ---
+  duration_ms: 0.071567
+  type: 'test'
+  ...
+# Subtest: party argument
+ok 13 - party argument
+  ---
+  duration_ms: 0.054903
+  type: 'test'
+  ...
+# Subtest: valid synthetic match preserved with invalid sibling
+ok 14 - valid synthetic match preserved with invalid sibling
+  ---
+  duration_ms: 0.151017
+  type: 'test'
+  ...
+# Subtest: ambiguous registry blocks
+ok 15 - ambiguous registry blocks
+  ---
+  duration_ms: 0.073291
+  type: 'test'
+  ...
+# Subtest: caller cannot override registry
+ok 16 - caller cannot override registry
+  ---
+  duration_ms: 0.094863
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 93.171543

@@ -1,0 +1,49 @@
+{
+  "run_id": "CASELAW-20261127-LOCAL-01",
+  "utc": "2026-11-26T22:13:22.162078+00:00",
+  "kst": "2026-11-27T07:13:22.162078+09:00",
+  "main_commit": "52b4791a95eb81060abd41780bf456dbddc47352",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "command": [
+    "node",
+    "--test",
+    "validator.test.mjs"
+  ],
+  "environment": {
+    "node": "v22.16.0"
+  },
+  "fixture_sha256": "54289d9a70346ee1dbe40c01c435a0130c8c350c15073f12433b0ce204009a0d",
+  "before": {
+    "caselaw-validator.mjs": "fe9053a9a4fb19ae6ccc384de5addc1548f00181da331522e6d6bf94e4f6219d",
+    "fixture.mjs": "54289d9a70346ee1dbe40c01c435a0130c8c350c15073f12433b0ce204009a0d",
+    "validator.test.mjs": "20e142f1a6277dcb1c5726807f9d7299fe0642409b3010160d08979ee19be6c6"
+  },
+  "after": {
+    "caselaw-validator.mjs": "fe9053a9a4fb19ae6ccc384de5addc1548f00181da331522e6d6bf94e4f6219d",
+    "fixture.mjs": "54289d9a70346ee1dbe40c01c435a0130c8c350c15073f12433b0ce204009a0d",
+    "validator.test.mjs": "20e142f1a6277dcb1c5726807f9d7299fe0642409b3010160d08979ee19be6c6"
+  },
+  "patch_sha256": null,
+  "stdout_sha256": "3cad53934ea01043c3f7166652b94cf584cd2a413f9359cd78eed821e9cc84ee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code": 0,
+  "expected": "16 synthetic tests pass; no real citation authorized",
+  "actual": [
+    "# tests 16",
+    "# suites 0",
+    "# pass 16",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0",
+    "# duration_ms 93.171543"
+  ],
+  "passed": 16,
+  "failed": 0,
+  "centralcore_integration": "UNVERIFIED_THIS_RUN",
+  "prior_results_reused": false,
+  "previous_manifest_sha256": null,
+  "traceability": "LOCAL_NEW_FILES_ONLY; prior chain unavailable",
+  "rollback": "NOT_APPLICABLE_NO_UPSTREAM_MODIFICATION",
+  "retest_receipt": null
+}
