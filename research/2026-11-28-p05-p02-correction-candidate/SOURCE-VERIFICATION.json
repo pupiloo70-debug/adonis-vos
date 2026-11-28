@@ -1,0 +1,20 @@
+{
+  "repository":"pupiloo70-debug/adonis-vos",
+  "main_commit":"9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "previous_run_main_commit":"9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "main_change_since_previous_run":false,
+  "historical_integration_anchor":"42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "verified_public_git_blob_sha1":{
+    "research/0.3-local-correction.4/guard-candidate-v0.2/correction4_guard.py":"cd165d4267c1f3958e3103ce2876756fe387c91f",
+    "research/0.3-local-correction.4/guard-candidate-v0.2/test_correction4_guard.py":"c875d6f21ff82522bb4f42a22b5ba8e41dc61cd8",
+    "research/0.3-local-correction.4/guard-candidate-v0.2/test_correction4_regressions.py":"4a03b1ab0801553bd0984770a8308f15cdc743af",
+    "src/engine.mjs":"43ad65aa1227fef66fd6e3ed7a939e32c7e0d089",
+    "src/test.mjs":"1c9fbaf0bc24cf2718405cb1a82e082493aee9bc"
+  },
+  "read_only_source_review":["research/0.3-local-correction.3/README.md","research/0.3-local-correction.3/design-delta.json","research/0.3-local-correction.3/bridge.mjs","research/0.3-local-correction.3/vos_support.py (selected functions)","research/0.3-local-correction.4/README.md","research/0.3-local-correction.4/review-record.json","research/0.3-local-correction.4/guard-candidate-v0.2/execution-record.json","research/0.2-core-guard-integration.v1/execution-record.json at historical integration anchor"],
+  "rsi_centralcore_candidate_path":"NOT_FOUND_IN_MAIN_RECURSIVE_TREE",
+  "public_baseline_reconstruction":"initial manual transport corrupt; never executed; recovered exact 43-test bytes verified against published Git blob before test",
+  "G1_G9":"public canonical definitions not located; no arbitrary numbered mapping",
+  "git_clone":"DNS_FAILURE; connector read succeeded",
+  "github_write":"NOT_ATTEMPTED; local research only per authorization boundary"
+}

@@ -1,0 +1,19 @@
+{
+  "schema":"ADONIS-SPEC-REDTEAM/1.0",
+  "scope":"SYNTHETIC_SPEC_ONLY; no legal conclusions or executable test count",
+  "G1_G9_mapping":"UNVERIFIED_THIS_RUN; searched public repositories for G1 without result; no inferred mapping",
+  "ordered_review":["raw_source_and_fact","authority_duty_performance","counterevidence_and_responsibility_review","legal_prerequisites_before_adverse_inference"],
+  "cases":[
+    {"id":"SPEC-01","input":{"request":"synthetic original report","controller":"agency-A","provided":false,"claimant_has_compulsion_power":false,"proposed_result":"claimant proof failed"},"expected":"keep evidence question open and request controller explanation","failure":"claimant burden inferred solely from nonproduction"},
+    {"id":"SPEC-02","input":{"source":"institution-A's own assessment","independent_review":false,"contrary_source":"unreviewed independent observation","proposed_result":"objective fact"},"expected":"retain assessment as attributed and preserve contrary source","failure":"authority substitutes for independent verification"},
+    {"id":"SPEC-03","input":{"reply":"no record held","creation_register":"not searched","proposed_result":"never created"},"expected":"separate nonexistence report from actual creation status; ask about search and retention","failure":"reported absence becomes event absence"},
+    {"id":"SPEC-04","input":{"restriction":"trade secret","redacted_or_independent_review":"not examined","proposed_result":"no duty to explain"},"expected":"review lawful authority, proportionality and possible controlled access without automatic disclosure","failure":"restriction automatically erases duty"},
+    {"id":"SPEC-05","input":{"reviewer":"same controller's internal unit","independence_evidence":"unknown","proposed_result":"independent review completed"},"expected":"internal review recorded; independence unresolved","failure":"internal approval becomes independent proof"},
+    {"id":"SPEC-06","input":{"cause":"unknown","source_access":"restricted","proposed_result":"causality excluded"},"expected":"keep causal question open and independent source review separate","failure":"unknown converted into negative causal finding"},
+    {"id":"SPEC-07","input":{"compensation":"one question partially remedied","remaining_originals":"not produced","proposed_result":"all remedies completed"},"expected":"separate monetary and verification remedies; preserve prior burdens","failure":"partial relief erases open obligations"},
+    {"id":"SPEC-08","input":{"procedure":"application denied","merits_review":"not established","proposed_result":"document has no probative value"},"expected":"distinguish procedural denial, submission, and substantive review","failure":"procedural refusal substitutes for evidence assessment"},
+    {"id":"SPEC-09","input":{"record":"loss reported","retention_rule":"not yet reviewed","proposed_result":"controller immune"},"expected":"inspect retention duty, search, copies and loss timeline before responsibility review; do not demand claimant prove intent to start","failure":"loss grants immunity or automatic guilt"},
+    {"id":"SPEC-10","input":{"model_outputs":["same conclusion","same conclusion","dissent"],"shared_origin":"single unverified summary","proposed_result":"independent proof by majority"},"expected":"preserve dissent and source dependence; no vote-based proof","failure":"model agreement replaces independent sources"}
+  ],
+  "execution_status":"SPEC_ONLY; 0 executable cases in this file"
+}

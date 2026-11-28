@@ -1,0 +1,81 @@
+--- a/correction4_guard.py
++++ b/correction4_guard.py
+@@ -310,12 +310,33 @@
+         except (TypeError, ValueError):
+             err.append('INVALID_EVENT_TIME')
+             dt = None
++        # A reported timestamp is not an independently authenticated event time.
++        # If the linked source supplies an explicit time/attribution, it must
++        # agree. Legacy sources lacking these fields remain report-only.
++        time_binding = 'REPORTED_TIME_NOT_SOURCE_BOUND'
++        if isinstance(source, dict):
++            if 'occurred_at' in source:
++                try:
++                    source_dt = datetime.fromisoformat(source['occurred_at'])
++                    if source_dt.tzinfo is None or source_dt.utcoffset() is None:
++                        raise ValueError('naive source datetime')
++                    if dt is None or dt != source_dt:
++                        err.append('REMEDY_SOURCE_TIME_CONFLICT')
++                    else:
++                        time_binding = 'SOURCE_TIME_MATCHED_NOT_AUTHENTICATED'
++                except (TypeError, ValueError, OverflowError):
++                    err.append('INVALID_REMEDY_SOURCE_TIME')
++            for key in ('actor_id', 'actor_role', 'statement_role'):
++                if key in source and (not _identifier(source[key]) or source[key] != event.get(key)):
++                    err.append('REMEDY_SOURCE_' + key.upper() + '_CONFLICT')
+         if err:
+-            held.append({'id': eid, 'reason': sorted(set(err))})
++            held.append({'id': eid, 'reason': sorted(set(err)),
++                         'source_ref': event.get('source_ref'), 'occurred_at': date})
+         else:
+             accepted.append({'id': eid, 'type': event['type'], 'question_id': event['question_id'],
+                              'subject_id': event['subject_id'], 'material_id': event['material_id'],
+-                             'occurred_at': date, 'source_ref': event['source_ref'], '_sort': dt})
++                             'occurred_at': date, 'source_ref': event['source_ref'], '_sort': dt,
++                             'time_binding': time_binding})
+     by_context = defaultdict(list)
+     for item in sorted(accepted, key=lambda x: (x['_sort'], x['id'])):
+         key = (item['question_id'], item['subject_id'], item['material_id'])
+@@ -344,6 +365,7 @@
+                 'reported_types': sorted(types),
+                 'conflicting_types': conflict,
+                 'order_within_timestamp_established': len(batch) == 1,
++                'time_binding_by_event': {item['id']: item['time_binding'] for item in batch},
+             })
+         states.append(rec)
+     return {'question_material_states': states, 'held_events': held,
+@@ -360,8 +382,14 @@
+     review_list = project.get('support_reviews', [])
+     if not isinstance(review_list, list):
+         raise ValueError('SUPPORT_REVIEWS_NOT_ARRAY')
+-    for review in review_list:
++    review_ids = Counter(r['id'] for r in review_list
++                         if isinstance(r, dict) and _identifier(r.get('id')))
++    for review_index, review in enumerate(review_list):
+         if not isinstance(review, dict):
++            reports.append({'id': None, 'review_index': review_index,
++                            'status': 'REVIEW_SCOPE_HELD', 'held_reason': ['REVIEW_NOT_OBJECT'],
++                            'warnings': [], 'accepted_observations': [], 'held_observations': [],
++                            'remediation': {}, 'items_not_evaluated_due_to_review_scope': True})
+             continue
+         review_target = {**target, 'material_id': review.get('material_id'),
+                          'question_id': review.get('question_id')}
+@@ -370,6 +398,9 @@
+         review_metadata = {key: value for key, value in review.items()
+                            if key not in ('observations', 'remediation_events')}
+         reasons = _scope_conflicts(review_metadata, review_target)
++        rid = review.get('id')
++        if not _identifier(rid) or review_ids[rid] > 1:
++            reasons.append('INVALID_OR_DUPLICATE_REVIEW_ID')
+         for key in SCOPE_KEYS:
+             if not _identifier(project.get(key)):
+                 reasons.append('PROJECT_' + key.upper() + '_UNSPECIFIED')
+@@ -381,7 +412,7 @@
+         if review.get('purpose') != 'VICTIM_SUPPORT':
+             reasons.append('PURPOSE_NOT_AUTHORIZED')
+         if reasons:
+-            reports.append({'id': review.get('id'), 'status': 'REVIEW_SCOPE_HELD',
++            reports.append({'id': review.get('id'), 'review_index': review_index, 'status': 'REVIEW_SCOPE_HELD',
+                             'held_reason': sorted(set(reasons)), 'warnings': [],
+                             'accepted_observations': [],
+                             'held_observations': [], 'remediation': {},

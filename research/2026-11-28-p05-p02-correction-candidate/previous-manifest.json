@@ -1,0 +1,155 @@
+{
+  "schema": "ADONIS-LOCAL-RESEARCH-EXECUTION/1.0",
+  "main_commit": "9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "run_id": "VOS-20261127-P02-JSON-LOSS",
+  "previous_manifest_sha256": "fdc7142bd1794184c8e8c1385962cfe83706639d0dc56f6607903853168b99d8",
+  "previous_daily_chain": "UNAVAILABLE; linked only to verified public CASELAW manifest",
+  "receipts": [
+    {
+      "path": "logs/published-caselaw.receipt.json",
+      "sha256": "eb0782a6a5c2444c8f88d5fcd52e51c593df50139c3c04c718de644e547526f5",
+      "actual": {
+        "tests": 16,
+        "pass": 16,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "exit_code": 0
+    },
+    {
+      "path": "logs/p02-before.receipt.json",
+      "sha256": "fe54f1c5c0bff85955ddb343b3fe323487aee726852752c192e127fa2f77fd34",
+      "actual": {
+        "tests": 21,
+        "pass": 9,
+        "fail": 12,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "exit_code": 1
+    },
+    {
+      "path": "logs/p02-after.receipt.json",
+      "sha256": "a87cedd814b5f2b8159098f43551e4aa1ab17b5ec04cc220528fc80d87a9be56",
+      "actual": {
+        "tests": 21,
+        "pass": 21,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "exit_code": 0
+    },
+    {
+      "path": "logs/cag-before.receipt.json",
+      "sha256": "79e8d00a3fcb86273476ad7bad3aa7387454176fdebdd39535fbf1b66d333c46",
+      "actual": {
+        "tests": 33,
+        "pass": 19,
+        "fail": 14,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "exit_code": 1
+    },
+    {
+      "path": "logs/cag-after.receipt.json",
+      "sha256": "3db3a0f3503b66a963495b7eb7b2124afb690840eec7b8b4dc2f42285ec436e6",
+      "actual": {
+        "tests": 33,
+        "pass": 33,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "exit_code": 0
+    },
+    {
+      "path": "logs/guard-legacy-original25.receipt.json",
+      "sha256": "43b381ae1a19f1ee72c509a238ab64e74edced427adb56bc80252660fa4470e6",
+      "actual": {
+        "tests": 25,
+        "pass": 25,
+        "fail": 0,
+        "skipped": 0
+      },
+      "exit_code": 0
+    }
+  ],
+  "last_receipt_sha256": "43b381ae1a19f1ee72c509a238ab64e74edced427adb56bc80252660fa4470e6",
+  "patch_sha256": "31c653fd2adbeaf90171f7dbb3215e34fe14816df9075627dfc019ea9bb7af0a",
+  "legacy_sets": {
+    "guard_25": "PARTIALLY_VERIFIED_THIS_RUN",
+    "guard_remaining_43": "UNVERIFIED_THIS_RUN",
+    "correction3_132": "UNVERIFIED_THIS_RUN",
+    "bridge_14": "UNVERIFIED_THIS_RUN",
+    "integration_33": "UNVERIFIED_THIS_RUN",
+    "audit_35": "UNVERIFIED_THIS_RUN",
+    "core02_24": "UNVERIFIED_THIS_RUN"
+  },
+  "status": "LOCAL_RESEARCH_CANDIDATE_ONLY",
+  "default_path_connected": false,
+  "total_score": null,
+  "published": false,
+  "rollback": "NOT_REQUIRED_BASELINE_PRESERVED",
+  "r3_release_changed": false,
+  "previous_package_manifest_sha256": "4cb893448136f89a9d47484f9b53598def7c2ced1648fef2597b8625785b956e",
+  "cag_patch_sha256": "247b15565228d7779bfa2f2df57e2f0e4351c1ad6d80d63b3857e88f8a85e41d",
+  "smoke_test": {
+    "command": "node --test tests/*.test.mjs | tail -12",
+    "observed": "33 passed; pipeline summary only",
+    "full_stdout_and_stderr": "NOT_RETAINED; not counted as verified execution; repeated with full receipts"
+  },
+  "legacy_source_recovery": {
+    "older_guard_sha256": "666298647dfef07875a34d2a8a48fe5fd495527a2370f362809d645d7a31068d",
+    "older_guard_executed": false,
+    "current_guard_sha256": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+    "current_guard_git_blob": "cd165d4267c1f3958e3103ce2876756fe387c91f",
+    "test_git_blob": "c875d6f21ff82522bb4f42a22b5ba8e41dc61cd8",
+    "method": "public raw text reconstructed, exact git blob and published SHA256 matched before execution; original test recovered from Library and exact blob matched"
+  },
+  "public_comparison": {
+    "previous_main": "52b4791a95eb81060abd41780bf456dbddc47352",
+    "ahead_by": 2,
+    "changed_scope": "research/2026-11-27-caselaw-validator-candidate/ only",
+    "actions_runs_for_main": 0,
+    "caseLaw_public_files_verified_by_git_blob": 8,
+    "public_blob_checks": {
+      "baseline/EXECUTION-MANIFEST.json": "ced3e70fb2b68b7b495a8d2925ba0c8a9d79f718",
+      "baseline/SHA256SUMS": "137ddb702b8d3fbcd57a5733d59937321bc3e786",
+      "baseline/stderr.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseline/validator.test.mjs": "8a686860fdae519743d2c3d62345521449ce21ff",
+      "baseline/caselaw-validator.mjs": "79a630d08166c00b299b98aaf1f97d9be8fe7d73",
+      "baseline/stdout.log": "df3c3f7cff5d8248dceed5ea8a912e46060b94bf",
+      "baseline/fixture.mjs": "de224d65947c412affe645f9359d83855380563c",
+      "baseline/README-KO.md": "f72d6a00eb121f7898b293953f12760ba08432a3",
+      "p02-baseline/src/p02-input-boundary.mjs": "c738dae941fc8d187f825852c65247f9098c51d4",
+      "p02-baseline/tests/p02-input-boundary.test.mjs": "e5c1632d93663f6773e0d91a0d31ff7f4dd7cd05",
+      "cag-baseline/src/controller-accountability-gate.mjs": "fc72e7764fbb8f8d98645e99e886a59cb90951fb",
+      "cag-baseline/tests/controller-accountability-gate.test.mjs": "a226d7fea10ef20fc3ed9e89ce3ff8da13c4cf01",
+      "legacy-guard/correction4_guard.py": "cd165d4267c1f3958e3103ce2876756fe387c91f",
+      "legacy-guard/test_correction4_guard.py": "c875d6f21ff82522bb4f42a22b5ba8e41dc61cd8"
+    }
+  },
+  "new_research": {
+    "cag_isolation": "12 adversarial + 5 control/boundary tests; original 16 unchanged",
+    "p02_json_loss": "reconfirmed prior defect family; exact overlap with Nov26 cases unavailable; no new count claim",
+    "spec_redteam": 10,
+    "spec_redteam_sha256": "35c55af5c8b5135564c3d81edb12d5f6fcd19d5964c8ce9abb135297ea3ed1bd",
+    "spec_redteam_executed": 0,
+    "g1_g9": "CANONICAL_DEFINITIONS_NOT_VERIFIED"
+  },
+  "baseline_legacy_history": {
+    "integration_v1": 33,
+    "separate_audit": 35,
+    "guard": 68,
+    "historical_counts_not_current_run": true
+  }
+}
