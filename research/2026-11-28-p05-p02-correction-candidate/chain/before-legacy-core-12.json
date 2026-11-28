@@ -1,0 +1,16 @@
+{
+  "schema": "ADONIS-LOCAL-RESEARCH-EXECUTION/1.0",
+  "run_id": "VOS-20261128-P05-P02",
+  "main_commit": "9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "previous_manifest_sha256": "5945d89ae4bc2c536e0c7527f65969c0bb69bca71e73e81e84a95f543da9bc0b",
+  "previous_manifest_local_copy": "previous-manifest.json",
+  "previous_results_reused_as_new_tests": false,
+  "previous_source_bytes_reused_and_git_blob_verified": true,
+  "source_transfer_reconstruction": "initial encoding transfer mismatch; discarded; final 43-test source exact Git blob match before execution",
+  "receipts": [],
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "default_path_connected": false,
+  "repository_written": false,
+  "total_score": null
+}
