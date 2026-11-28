@@ -1,0 +1,63 @@
+{
+  "run_id": "VOS-20261128-legacy-core-12",
+  "started": {
+    "utc": "2026-11-27T23:43:31.129455+00:00",
+    "kst": "2026-11-28T08:43:31.129455+09:00"
+  },
+  "ended": {
+    "utc": "2026-11-27T23:43:31.225667+00:00",
+    "kst": "2026-11-28T08:43:31.225667+09:00"
+  },
+  "main_commit": "9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "related_file_paths": [
+    "legacy-core/engine.mjs",
+    "legacy-core/test.mjs"
+  ],
+  "fixture_and_source_sha256": {
+    "legacy-core/engine.mjs": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "legacy-core/test.mjs": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+  },
+  "command": [
+    "node",
+    "test.mjs"
+  ],
+  "cwd": "legacy-core",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "node": "v22.16.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "synthetic_only": true
+  },
+  "pre_file_sha256": {
+    "legacy-core/engine.mjs": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "legacy-core/test.mjs": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+  },
+  "post_file_sha256": {
+    "legacy-core/engine.mjs": "520a39ea8cd899efcd83a91037ec625386c7e4bf1ed7f2de223a530a14842430",
+    "legacy-core/test.mjs": "fc7c2968043c4f55e9e5f272948d19df1fab784dee2de8958da6f741fa40ab23"
+  },
+  "patch_sha256": null,
+  "stdout": {
+    "path": "logs/legacy-core-12.stdout.log",
+    "sha256": "2d1000699248f36053ec2bdedd3b4613b3f3e92de665f12ceca4f1cd783d4dd8"
+  },
+  "stderr": {
+    "path": "logs/legacy-core-12.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exit_code": 0,
+  "expected": "12 legacy core checks, not CentralCore 24",
+  "actual": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "not_run": 0
+  },
+  "previous_result_reused": false,
+  "traceability": "VERIFIED_LOCAL_BYTES",
+  "rollback": false,
+  "rollback_reason": "NO_IN_PLACE_BASELINE_MODIFICATION",
+  "retest_of": null,
+  "previous_manifest_sha256": "9d443f145f5ca36d9f782ccb6ac801637f2a34ebfa02c21f5e3ad5dc13134473"
+}

@@ -1,0 +1,81 @@
+{
+  "run_id": "VOS-20261128-guard-before",
+  "started": {
+    "utc": "2026-11-27T23:43:31.235668+00:00",
+    "kst": "2026-11-28T08:43:31.235668+09:00"
+  },
+  "ended": {
+    "utc": "2026-11-27T23:43:32.420756+00:00",
+    "kst": "2026-11-28T08:43:32.420756+09:00"
+  },
+  "main_commit": "9bddb55a8f47a14adfa5c0360319602478e9389b",
+  "baseline_commit": "42122a759b1bdf9d9c4d692988ea7320cd983a72",
+  "related_file_paths": [
+    "baseline/correction4_guard.py",
+    "baseline/test_correction4_regressions.py",
+    "baseline/test_new_boundary.py",
+    "baseline/test_correction4_guard.py",
+    "fixtures.json"
+  ],
+  "fixture_and_source_sha256": {
+    "baseline/correction4_guard.py": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+    "baseline/test_correction4_regressions.py": "70c5fe9daed9f2e561c5a41fc5334ca5a59a3bce57947e96e91ef83e7ee91e55",
+    "baseline/test_new_boundary.py": "f949d6553f122892c5bef57772f577c9d66b6a0b21be1eac2be7d78a1f0831ac",
+    "baseline/test_correction4_guard.py": "aecfc92b4ac7ce94344a0ed1224a5262ef7a67b79bd82e800b986480c21b9ea1",
+    "fixtures.json": "ccf802902ec943cf3ec4d8e3816e584257a60954f1c043bd70d38625d9d0c110"
+  },
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_correction4_guard",
+    "test_correction4_regressions",
+    "test_new_boundary"
+  ],
+  "cwd": "baseline",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "node": "v22.16.0",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "synthetic_only": true
+  },
+  "pre_file_sha256": {
+    "baseline/correction4_guard.py": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+    "baseline/test_correction4_regressions.py": "70c5fe9daed9f2e561c5a41fc5334ca5a59a3bce57947e96e91ef83e7ee91e55",
+    "baseline/test_new_boundary.py": "f949d6553f122892c5bef57772f577c9d66b6a0b21be1eac2be7d78a1f0831ac",
+    "baseline/test_correction4_guard.py": "aecfc92b4ac7ce94344a0ed1224a5262ef7a67b79bd82e800b986480c21b9ea1",
+    "fixtures.json": "ccf802902ec943cf3ec4d8e3816e584257a60954f1c043bd70d38625d9d0c110"
+  },
+  "post_file_sha256": {
+    "baseline/correction4_guard.py": "1af214770c2068c97d5969a3321489699e26c5f6e75937372733fdf28cf1a56a",
+    "baseline/test_correction4_regressions.py": "70c5fe9daed9f2e561c5a41fc5334ca5a59a3bce57947e96e91ef83e7ee91e55",
+    "baseline/test_new_boundary.py": "f949d6553f122892c5bef57772f577c9d66b6a0b21be1eac2be7d78a1f0831ac",
+    "baseline/test_correction4_guard.py": "aecfc92b4ac7ce94344a0ed1224a5262ef7a67b79bd82e800b986480c21b9ea1",
+    "fixtures.json": "ccf802902ec943cf3ec4d8e3816e584257a60954f1c043bd70d38625d9d0c110"
+  },
+  "patch_sha256": null,
+  "stdout": {
+    "path": "logs/guard-before.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "logs/guard-before.stderr.log",
+    "sha256": "5f535a3792dbc26244b0a7a67b71ce7bde68f8056ef214b2ba7f701c442050a0"
+  },
+  "exit_code": 1,
+  "expected": "68 historical tests plus 14 new attacks/controls; expect gaps in new assertions",
+  "actual": {
+    "total": 82,
+    "passed": 69,
+    "failed": 13,
+    "not_run": 0
+  },
+  "previous_result_reused": false,
+  "traceability": "VERIFIED_LOCAL_BYTES",
+  "rollback": false,
+  "rollback_reason": "NO_IN_PLACE_BASELINE_MODIFICATION",
+  "retest_of": null,
+  "previous_manifest_sha256": "b056365ac38d91eb0103df09270166ccf8e08b5b6af831b9e455f445f43fd56b"
+}
